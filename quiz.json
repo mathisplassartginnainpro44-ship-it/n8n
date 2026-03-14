@@ -1,247 +1,260 @@
 {
-  "titre": "Ondes",
-  "matiere": "Physique",
+  "titre": "Description d'un fluide",
+  "matiere": "Physique-Chimie",
   "questions": [
     {
-      "question": "Qu'est-ce qu'une onde progressive ?",
+      "question": "Qu'est-ce qu'un fluide?",
       "type": "qcm",
       "choix": [
-        "Onde qui se propage de proche en proche dans un milieu",
-        "Onde qui déforme la matière",
-        "Onde qui transporte de la matière",
-        "Onde qui ne transporte pas d'énergie"
+        "Un état de la matière solide",
+        "Un état de la matière liquide ou gazeuse",
+        "Un état de la matière plasmatique",
+        "Un état de la matière inconnu"
       ],
-      "reponse": "A.",
-      "explication": "Une onde progressive est une onde qui se propage de proche en proche dans un milieu, transportant de l'énergie sans déplacer de matière"
+      "reponse": "B",
+      "explication": "Un fluide est un état de la matière qui n'est pas solide, il peut être liquide ou gazeux."
     },
     {
-      "question": "Qu'est-ce qu'une onde mécanique ?",
+      "question": "Quelle est la caractéristique principale d'un fluide?",
       "type": "qcm",
       "choix": [
-        "Perturbation s'accompagnant d'une déformation de la matière",
-        "Perturbation ne déformant pas la matière",
-        "Déplacement de matière dans un milieu",
-        "Déplacement d'énergie dans un milieu"
+        "Il a une forme propre",
+        "Il prend la forme du récipient qui le contient",
+        "Il est toujours dans un état solide",
+        "Il est toujours dans un état gazeux"
       ],
-      "reponse": "A.",
-      "explication": "Une onde mécanique est une perturbation s'accompagnant d'une déformation de la matière"
+      "reponse": "B",
+      "explication": "Un fluide prend la forme du récipient qui le contient car il n'a pas de forme propre."
     },
     {
-      "question": "Qu'est-ce qu'une onde longitudinale ?",
+      "question": "Qu'est-ce qui caractérise l'état solide?",
       "type": "qcm",
       "choix": [
-        "La déformation du milieu est perpendiculaire au déplacement de l'onde",
-        "La déformation du milieu est parallèle au déplacement de l'onde",
-        "La déformation du milieu est circulaire",
-        "La déformation du milieu est elliptique"
+        "Les molécules sont éloignées les unes des autres",
+        "Les molécules sont proches les unes des autres et peuvent se déplacer",
+        "Les molécules sont proches les unes des autres et ne peuvent pas se déplacer",
+        "Les molécules sont dans un état de vibration intense"
       ],
-      "reponse": "B.",
-      "explication": "Une onde longitudinale est une onde où la déformation du milieu est parallèle au déplacement de l'onde"
+      "reponse": "C",
+      "explication": "À l'état solide, les molécules sont proches les unes des autres et ne peuvent pas se déplacer."
     },
     {
-      "question": "Qu'est-ce qu'une onde transversale ?",
+      "question": "Qu'est-ce qui caractérise l'état liquide?",
       "type": "qcm",
       "choix": [
-        "La déformation du milieu est parallèle au déplacement de l'onde",
-        "La déformation du milieu est perpendiculaire au déplacement de l'onde",
-        "La déformation du milieu est circulaire",
-        "La déformation du milieu est elliptique"
+        "Les molécules sont éloignées les unes des autres",
+        "Les molécules sont proches les unes des autres et ne peuvent pas se déplacer",
+        "Les molécules sont proches les unes des autres et peuvent se déplacer",
+        "Les molécules sont dans un état de vibration intense"
       ],
-      "reponse": "B.",
-      "explication": "Une onde transversale est une onde où la déformation du milieu est perpendiculaire au déplacement de l'onde"
+      "reponse": "C",
+      "explication": "À l'état liquide, les molécules sont proches les unes des autres et peuvent se déplacer."
     },
     {
-      "question": "Qu'est-ce qu'une onde non mécanique ?",
+      "question": "Qu'est-ce qui caractérise l'état gazeux?",
       "type": "qcm",
       "choix": [
-        "Onde déformant la matière",
-        "Onde ne déformant pas la matière",
-        "Onde transportant de la matière",
-        "Onde ne transportant pas d'énergie"
+        "Les molécules sont éloignées les unes des autres",
+        "Les molécules sont proches les unes des autres et ne peuvent pas se déplacer",
+        "Les molécules sont proches les unes des autres et peuvent se déplacer",
+        "Les molécules occupent tout l'espace disponible"
       ],
-      "reponse": "B.",
-      "explication": "Une onde non mécanique est une onde ne déformant pas la matière"
+      "reponse": "D",
+      "explication": "À l'état gazeux, les molécules occupent tout l'espace disponible."
     },
     {
-      "question": "Qu'est-ce qu'une propagation ?",
+      "question": "Qu'est-ce que le mouvement brownien?",
       "type": "qcm",
       "choix": [
-        "Une onde se propage dans une seule direction",
-        "Une onde se propage dans toutes les directions possibles",
-        "Une onde ne se propage pas",
-        "Une onde se propage de manière aléatoire"
+        "Un mouvement ordonné des particules",
+        "Un mouvement désordonné des particules",
+        "Un mouvement vibratoire des particules",
+        "Un mouvement rotationnel des particules"
       ],
-      "reponse": "B.",
-      "explication": "Une propagation est le fait qu'une onde se propage dans toutes les directions possibles"
+      "reponse": "B",
+      "explication": "Le mouvement brownien est un mouvement désordonné des particules."
     },
     {
-      "question": "Qu'est-ce qu'un phénomène périodique ?",
+      "question": "À quel état de la matière est associé le mouvement brownien?",
       "type": "qcm",
       "choix": [
-        "Phénomène qui se répète à l'identique",
-        "Phénomène qui ne se répète pas",
-        "Phénomène aléatoire",
-        "Phénomène constant"
+        "État solide",
+        "État liquide",
+        "État gazeux",
+        "État plasmatique"
       ],
-      "reponse": "A.",
-      "explication": "Un phénomène périodique est un phénomène qui se répète à l'identique"
+      "reponse": "B",
+      "explication": "Le mouvement brownien est associé à l'état liquide."
     },
     {
-      "question": "Qu'est-ce que la période (T) ?",
+      "question": "Quelle est la principale différence entre l'état solide et l'état liquide?",
       "type": "qcm",
       "choix": [
-        "Écart le plus petit entre deux points à position verticale différente",
-        "Écart le plus petit entre deux points à position verticale identique",
-        "Temps de propagation d'une onde",
-        "Distance de propagation d'une onde"
+        "La distance entre les particules",
+        "La capacité des particules à se déplacer",
+        "La température",
+        "La pression"
       ],
-      "reponse": "B.",
-      "explication": "La période (T) est l'écart le plus petit entre deux points à position verticale identique"
+      "reponse": "B",
+      "explication": "La principale différence entre l'état solide et l'état liquide est la capacité des particules à se déplacer."
     },
     {
-      "question": "Qu'est-ce que la double périodicité ?",
+      "question": "Qu'est-ce qui se passe aux particules à l'état solide lorsque la température augmente?",
       "type": "qcm",
       "choix": [
-        "Périodicité spatiale et temporelle",
-        "Périodicité spatiale ou temporelle",
-        "Périodicité aléatoire",
-        "Périodicité constante"
+        "Elles se rapprochent les unes des autres",
+        "Elles s'éloignent les unes des autres",
+        "Elles commencent à se déplacer",
+        "Elles commencent à vibrer"
       ],
-      "reponse": "A.",
-      "explication": "La double périodicité est la périodicité spatiale (λ) et temporelle (T)"
+      "reponse": "D",
+      "explication": "Lorsque la température augmente, les particules à l'état solide commencent à vibrer."
     },
     {
-      "question": "Qu'est-ce que la vitesse d'une onde ?",
+      "question": "Qu'est-ce qui se passe aux particules à l'état liquide lorsque la température augmente?",
       "type": "qcm",
       "choix": [
-        "Distance parcourue par l'onde par unité de temps",
-        "Temps mis par l'onde pour parcourir une distance",
-        "Énergie transportée par l'onde",
-        "Fréquence de l'onde"
+        "Elles se rapprochent les unes des autres",
+        "Elles s'éloignent les unes des autres",
+        "Elles commencent à se déplacer plus rapidement",
+        "Elles commencent à vibrer plus intensément"
       ],
-      "reponse": "A.",
-      "explication": "La vitesse d'une onde est la distance parcourue par l'onde par unité de temps"
+      "reponse": "C",
+      "explication": "Lorsque la température augmente, les particules à l'état liquide commencent à se déplacer plus rapidement."
     },
     {
-      "question": "Qu'est-ce que la fréquence d'une onde ?",
+      "question": "Qu'est-ce qui se passe aux particules à l'état gazeux lorsque la température augmente?",
       "type": "qcm",
       "choix": [
-        "Nombre d'oscillations par unité de temps",
-        "Distance parcourue par l'onde par unité de temps",
-        "Temps mis par l'onde pour parcourir une distance",
-        "Énergie transportée par l'onde"
+        "Elles se rapprochent les unes des autres",
+        "Elles s'éloignent les unes des autres",
+        "Elles commencent à se déplacer plus rapidement",
+        "Elles occupent un volume plus grand"
       ],
-      "reponse": "A.",
-      "explication": "La fréquence d'une onde est le nombre d'oscillations par unité de temps"
+      "reponse": "D",
+      "explication": "Lorsque la température augmente, les particules à l'état gazeux occupent un volume plus grand."
     },
     {
-      "question": "Qu'est-ce que la longueur d'onde d'une onde ?",
+      "question": "Qu'est-ce que les forces intermoléculaires?",
       "type": "qcm",
       "choix": [
-        "Distance entre deux points à position verticale identique",
-        "Distance entre deux points à position verticale différente",
-        "Temps de propagation d'une onde",
-        "Énergie transportée par l'onde"
+        "Des forces qui lient les molécules entre elles",
+        "Des forces qui repoussent les molécules les unes des autres",
+        "Des forces qui attirent les molécules les unes vers les autres",
+        "Des forces qui maintiennent les molécules à leur place"
       ],
-      "reponse": "A.",
-      "explication": "La longueur d'onde d'une onde est la distance entre deux points à position verticale identique"
+      "reponse": "A",
+      "explication": "Les forces intermoléculaires sont des forces qui lient les molécules entre elles."
     },
     {
-      "question": "Qu'est-ce que l'amplitude d'une onde ?",
+      "question": "Qu'est-ce qui caractérise les forces intermoléculaires à l'état solide?",
       "type": "qcm",
       "choix": [
-        "Distance entre le point le plus haut et le point le plus bas de l'onde",
-        "Distance entre deux points à position verticale identique",
-        "Temps de propagation d'une onde",
-        "Énergie transportée par l'onde"
+        "Elles sont faibles",
+        "Elles sont fortes",
+        "Elles sont nulles",
+        "Elles sont variables"
       ],
-      "reponse": "A.",
-      "explication": "L'amplitude d'une onde est la distance entre le point le plus haut et le point le plus bas de l'onde"
+      "reponse": "B",
+      "explication": "Les forces intermoléculaires à l'état solide sont fortes."
     },
     {
-      "question": "Qu'est-ce que la phase d'une onde ?",
+      "question": "Qu'est-ce qui caractérise les forces intermoléculaires à l'état liquide?",
       "type": "qcm",
       "choix": [
-        "Position de l'onde à un instant donné",
-        "Vitesse de l'onde",
-        "Fréquence de l'onde",
-        "Longueur d'onde de l'onde"
+        "Elles sont faibles",
+        "Elles sont fortes",
+        "Elles sont nulles",
+        "Elles sont variables"
       ],
-      "reponse": "A.",
-      "explication": "La phase d'une onde est la position de l'onde à un instant donné"
+      "reponse": "A",
+      "explication": "Les forces intermoléculaires à l'état liquide sont faibles."
     },
     {
-      "question": "Qu'est-ce qu'un front d'onde ?",
+      "question": "Qu'est-ce qui caractérise les forces intermoléculaires à l'état gazeux?",
       "type": "qcm",
       "choix": [
-        "Ligne qui relie les points de même phase",
-        "Ligne qui relie les points de phase opposée",
-        "Ligne qui relie les points de même vitesse",
-        "Ligne qui relie les points de même fréquence"
+        "Elles sont faibles",
+        "Elles sont fortes",
+        "Elles sont nulles",
+        "Elles sont variables"
       ],
-      "reponse": "A.",
-      "explication": "Un front d'onde est la ligne qui relie les points de même phase"
+      "reponse": "C",
+      "explication": "Les forces intermoléculaires à l'état gazeux sont nulles."
     },
     {
-      "question": "Qu'est-ce que la réflexion d'une onde ?",
+      "question": "Qu'est-ce que la liaison chimique?",
       "type": "qcm",
       "choix": [
-        "Phénomène par lequel une onde est renvoyée par une surface",
-        "Phénomène par lequel une onde est absorbée par une surface",
-        "Phénomène par lequel une onde est transmise à travers une surface",
-        "Phénomène par lequel une onde est déviée par une surface"
+        "Une force qui lie les molécules entre elles",
+        "Une force qui repousse les molécules les unes des autres",
+        "Une force qui attire les molécules les unes vers les autres",
+        "Une force qui maintient les molécules à leur place"
       ],
-      "reponse": "A.",
-      "explication": "La réflexion d'une onde est le phénomène par lequel une onde est renvoyée par une surface"
+      "reponse": "A",
+      "explication": "La liaison chimique est une force qui lie les molécules entre elles."
     },
     {
-      "question": "Qu'est-ce que la réfraction d'une onde ?",
+      "question": "Qu'est-ce qui caractérise la liaison chimique?",
       "type": "qcm",
       "choix": [
-        "Phénomène par lequel une onde est déviée en passant d'un milieu à un autre",
-        "Phénomène par lequel une onde est renvoyée par une surface",
-        "Phénomène par lequel une onde est absorbée par une surface",
-        "Phénomène par lequel une onde est transmise à travers une surface"
+        "Elle est faible",
+        "Elle est forte",
+        "Elle est nulle",
+        "Elle est variable"
       ],
-      "reponse": "A.",
-      "explication": "La réfraction d'une onde est le phénomène par lequel une onde est déviée en passant d'un milieu à un autre"
+      "reponse": "B",
+      "explication": "La liaison chimique est forte."
     },
     {
-      "question": "Qu'est-ce que la diffraction d'une onde ?",
+      "question": "Qu'est-ce qui se passe lorsqu'une liaison chimique se forme?",
       "type": "qcm",
       "choix": [
-        "Phénomène par lequel une onde est déviée en passant par un obstacle",
-        "Phénomène par lequel une onde est renvoyée par une surface",
-        "Phénomène par lequel une onde est absorbée par une surface",
-        "Phénomène par lequel une onde est transmise à travers une surface"
+        "Les molécules s'éloignent les unes des autres",
+        "Les molécules se rapprochent les unes des autres",
+        "Les molécules se combinent pour former une nouvelle molécule",
+        "Les molécules se décomposent en molécules plus petites"
       ],
-      "reponse": "A.",
-      "explication": "La diffraction d'une onde est le phénomène par lequel une onde est déviée en passant par un obstacle"
+      "reponse": "C",
+      "explication": "Lorsqu'une liaison chimique se forme, les molécules se combinent pour former une nouvelle molécule."
     },
     {
-      "question": "Qu'est-ce que l'interférence d'une onde ?",
+      "question": "Qu'est-ce qui se passe lorsqu'une liaison chimique se rompt?",
       "type": "qcm",
       "choix": [
-        "Phénomène par lequel deux ondes se superposent",
-        "Phénomène par lequel deux ondes se détruisent",
-        "Phénomène par lequel deux ondes se renforcent",
-        "Phénomène par lequel deux ondes se dévient"
+        "Les molécules s'éloignent les unes des autres",
+        "Les molécules se rapprochent les unes des autres",
+        "Les molécules se combinent pour former une nouvelle molécule",
+        "Les molécules se décomposent en molécules plus petites"
       ],
-      "reponse": "A.",
-      "explication": "L'interférence d'une ode est le phénomène par lequel deux ondes se superposent"
+      "reponse": "D",
+      "explication": "Lorsqu'une liaison chimique se rompt, les molécules se décomposent en molécules plus petites."
     },
     {
-      "question": "Qu'est-ce que la polarisation d'une onde ?",
+      "question": "Qu'est-ce que l'agitation thermique?",
       "type": "qcm",
       "choix": [
-        "Phénomène par lequel une onde est orientée dans une direction particulière",
-        "Phénomène par lequel une onde est déviée en passant par un obstacle",
-        "Phénomène par lequel une onde est renvoyée par une surface",
-        "Phénomène par lequel une onde est transmise à travers une surface"
+        "Un mouvement des particules dues à la température",
+        "Un mouvement des particules dues à la pression",
+        "Un mouvement des particules dues à la liaison chimique",
+        "Un mouvement des particules dues à la force intermoléculaire"
       ],
-      "reponse": "A.",
-      "explication": "La polarisation d'une onde est le phénomène par lequel une onde est orientée dans une direction particulière"
+      "reponse": "A",
+      "explication": "L'agitation thermique est un mouvement des particules dues à la température."
     }
   ],
-  "exercices": []
+  "exercices": [
+    {
+      "enonce": "Un conteneur contient 1 litre d'eau à 20°C. Quel est l'état de l'eau dans le conteneur?",
+      "corrige": "L'eau est à l'état liquide car la température est inférieure à 100°C."
+    },
+    {
+      "enonce": "Un ballon contient de l'air à 20°C. Quel est l'état de l'air dans le ballon?",
+      "corrige": "L'air est à l'état gazeux car la température est supérieure à -200°C."
+    },
+    {
+      "enonce": "Un bloc de glace est à 0°C. Quel est l'état de la glace?",
+      "corrige": "La glace est à l'état solide car la température est égale à 0°C."
+    }
+  ]
 }
