@@ -39,69 +39,60 @@
             z-index: 1000; text-align: center; padding: 20px;
             transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1);
         }
-
         .welcome-content { animation: scaleIn 1s ease-out forwards; }
-        
         .welcome-title {
             font-family: 'Syne', sans-serif; font-size: clamp(40px, 10vw, 120px);
             font-weight: 800; line-height: 0.9; letter-spacing: -3px;
             background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
             margin-bottom: 20px;
         }
-
         .welcome-sub { color: var(--muted); font-size: 14px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 40px; }
 
         /* --- DASHBOARD --- */
         .container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; display: none; animation: fadeIn 0.8s ease-out; }
-
-        header { text-align: left; margin-bottom: 60px; display: flex; justify-content: space-between; align-items: flex-end; }
+        header { text-align: left; margin-bottom: 60px; display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 20px; }
         h1 { font-family: 'Syne', sans-serif; font-size: 40px; font-weight: 800; letter-spacing: -1px; }
 
         /* --- QUIZ GRID --- */
-        .dashboard-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
-        }
-
+        .dashboard-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; }
         .quiz-card {
-            background: var(--surface);
-            border: 1px solid rgba(255,255,255,0.05);
-            border-radius: 20px; padding: 30px; cursor: pointer;
-            transition: 0.3s; position: relative;
+            background: var(--surface); border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 20px; padding: 30px; cursor: pointer; transition: 0.3s; position: relative;
         }
-
         .quiz-card:hover { border-color: var(--accent); transform: translateY(-5px); background: var(--surface-hover); }
-
         .empty-state {
-            grid-column: 1 / -1; text-align: center; padding: 100px 20px;
-            border: 2px dashed rgba(255,255,255,0.05); border-radius: 20px;
-            color: var(--muted);
+            grid-column: 1 / -1; text-align: center; padding: 80px 20px;
+            border: 2px dashed rgba(255,255,255,0.1); border-radius: 24px; color: var(--muted);
         }
 
         /* --- BUTTONS --- */
         .btn {
-            padding: 16px 32px; border-radius: 12px; border: none;
+            padding: 14px 28px; border-radius: 12px; border: none;
             font-family: 'Syne', sans-serif; font-weight: 700; cursor: pointer;
-            transition: 0.3s; font-size: 14px; text-transform: uppercase;
+            transition: 0.3s; font-size: 13px; text-transform: uppercase; letter-spacing: 1px;
+            display: inline-flex; align-items: center; gap: 10px;
         }
         .btn-primary { background: var(--accent); color: white; box-shadow: 0 10px 20px var(--accent-glow); }
         .btn-secondary { background: rgba(255,255,255,0.05); color: var(--text); border: 1px solid rgba(255,255,255,0.1); }
         .btn:hover { transform: scale(1.05); filter: brightness(1.2); }
 
-        /* --- QUIZ PLAYER --- */
-        #quiz-player {
-            position: fixed; inset: 0; background: var(--bg); z-index: 100;
-            padding: 40px 20px; display: none; overflow-y: auto;
+        /* --- IMPORT ZONE (MODAL) --- */
+        #import-zone { position: fixed; inset: 0; background: rgba(0,0,0,0.95); display: none; align-items: center; justify-content: center; z-index: 500; padding: 20px; }
+        .upload-area {
+            border: 2px dashed rgba(124, 106, 255, 0.3); border-radius: 16px; padding: 30px;
+            text-align: center; margin-bottom: 20px; transition: 0.3s; cursor: pointer;
         }
+        .upload-area:hover, .upload-area.dragover { background: rgba(124, 106, 255, 0.05); border-color: var(--accent); }
+
+        /* --- QUIZ PLAYER --- */
+        #quiz-player { position: fixed; inset: 0; background: var(--bg); z-index: 100; padding: 40px 20px; display: none; overflow-y: auto; }
         .close-player { position: absolute; top: 30px; right: 30px; font-size: 40px; cursor: pointer; color: var(--muted); line-height: 0.5; }
         .q-card { background: var(--surface); padding: 40px; border-radius: 24px; max-width: 700px; margin: 0 auto; border: 1px solid rgba(255,255,255,0.05); }
         
         .choice-btn {
             width: 100%; padding: 18px; margin-top: 12px; border-radius: 12px;
             background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05);
-            color: var(--text); text-align: left; cursor: pointer; font-family: inherit; font-size: 15px;
-            transition: 0.2s;
+            color: var(--text); text-align: left; cursor: pointer; font-family: inherit; font-size: 15px; transition: 0.2s;
         }
         .choice-btn:hover { background: rgba(124, 106, 255, 0.1); border-color: var(--accent); }
         .choice-btn.correct { border-color: var(--correct); color: var(--correct); background: rgba(45, 255, 158, 0.05); }
@@ -110,29 +101,28 @@
         .progress-bar { width: 100%; height: 6px; background: rgba(255,255,255,0.05); margin-bottom: 40px; border-radius: 3px; overflow: hidden; }
         .progress-fill { height: 100%; background: var(--grad); width: 0%; transition: 0.4s; }
 
-        /* --- MODAL IMPORT --- */
-        #import-zone { position: fixed; inset: 0; background: rgba(0,0,0,0.95); display: none; align-items: center; justify-content: center; z-index: 500; padding: 20px; }
         .hidden { display: none !important; }
-
     </style>
 </head>
 <body>
 
 <div id="welcome-screen">
     <div class="welcome-content">
-        <div class="welcome-sub">Intelligence Artificielle & Apprentissage</div>
+        <div class="welcome-sub">Prêt pour la session ?</div>
         <h1 class="welcome-title">QUIZ<br>ENGINE</h1>
-        <button class="btn btn-primary" onclick="enterApp()">Ouvrir le Hub</button>
+        <button class="btn btn-primary" onclick="enterApp()">Entrer dans le Hub</button>
     </div>
 </div>
 
 <div class="container" id="main-hub">
     <header>
         <div>
-            <p style="color: var(--accent); font-size: 12px; letter-spacing: 2px;">TABLEAU DE BORD</p>
+            <p style="color: var(--accent); font-size: 11px; letter-spacing: 2px; font-weight: bold;">WORKSPACE</p>
             <h1>Mes Modules</h1>
         </div>
-        <button class="btn btn-primary" onclick="toggleImport(true)">+ Nouveau</button>
+        <div style="display: flex; gap: 10px;">
+            <button class="btn btn-secondary" onclick="toggleImport(true)">📂 Importer</button>
+        </div>
     </header>
 
     <div class="dashboard-grid" id="quiz-list">
@@ -149,11 +139,20 @@
 
 <div id="import-zone">
     <div class="q-card" style="width: 100%; max-width: 600px;">
-        <h2 style="font-family: Syne; margin-bottom: 10px;">Importer un Quiz</h2>
-        <p style="color: var(--muted); font-size: 13px; margin-bottom: 20px;">Colle le code JSON généré par l'IA ci-dessous.</p>
-        <textarea id="json-input" style="width:100%; height: 250px; background: #000; color: var(--correct); border: 1px solid rgba(255,255,255,0.1); padding: 15px; border-radius: 12px; font-family: 'DM Mono'; font-size: 12px; outline: none;" placeholder='{ "titre": "...", "questions": [...] }'></textarea>
+        <h2 style="font-family: Syne; margin-bottom: 10px;">Ajouter un Quiz</h2>
+        
+        <div class="upload-area" id="drop-zone" onclick="document.getElementById('file-input').click()">
+            <span style="font-size: 30px; display: block; margin-bottom: 10px;">📄</span>
+            <p id="file-label">Glisse un fichier <strong>.json</strong> ici ou clique pour parcourir</p>
+            <input type="file" id="file-input" hidden accept=".json" onchange="handleFileSelect(event)">
+        </div>
+
+        <p style="text-align: center; color: var(--muted); font-size: 12px; margin-bottom: 20px;">— OU COLLE LE JSON CI-DESSOUS —</p>
+        
+        <textarea id="json-input" style="width:100%; height: 150px; background: #000; color: var(--correct); border: 1px solid rgba(255,255,255,0.1); padding: 15px; border-radius: 12px; font-family: 'DM Mono'; font-size: 12px; outline: none;" placeholder='{ "titre": "...", "questions": [...] }'></textarea>
+        
         <div style="display: flex; gap: 10px; margin-top: 25px;">
-            <button class="btn btn-primary" style="flex: 2;" onclick="saveImport()">Ajouter à la bibliothèque</button>
+            <button class="btn btn-primary" style="flex: 2;" onclick="saveImport()">Valider</button>
             <button class="btn btn-secondary" style="flex: 1;" onclick="toggleImport(false)">Annuler</button>
         </div>
     </div>
@@ -167,20 +166,20 @@
 
     // --- NAVIGATION ---
     function enterApp() {
-        const screen = document.getElementById('welcome-screen');
-        screen.style.opacity = '0';
+        document.getElementById('welcome-screen').style.opacity = '0';
         setTimeout(() => {
-            screen.style.display = 'none';
+            document.getElementById('welcome-screen').style.display = 'none';
             document.getElementById('main-hub').style.display = 'block';
             init();
         }, 800);
     }
 
-    // --- LOGIQUE BIBLIOTHÈQUE ---
+    // --- INITIALISATION ---
     function init() {
         const saved = localStorage.getItem('quiz_engine_lib');
         library = saved ? JSON.parse(saved) : [];
         renderLibrary();
+        setupDragAndDrop();
     }
 
     function renderLibrary() {
@@ -188,8 +187,8 @@
         if (library.length === 0) {
             list.innerHTML = `
                 <div class="empty-state">
-                    <p style="font-size: 18px; color: var(--text); margin-bottom: 10px;">Aucun module trouvé</p>
-                    <p>Importe ton premier JSON pour commencer à réviser.</p>
+                    <p style="font-size: 18px; color: var(--text); margin-bottom: 10px;">Votre bibliothèque est vide</p>
+                    <button class="btn btn-primary" style="margin-top:15px" onclick="toggleImport(true)">Importer un module</button>
                 </div>
             `;
             return;
@@ -197,11 +196,44 @@
 
         list.innerHTML = library.map((quiz, i) => `
             <div class="quiz-card" onclick="startQuiz(${i})">
-                <p style="color: var(--accent); font-size: 10px; font-weight: bold; margin-bottom: 5px;">${quiz.questions.length} QUESTIONS</p>
+                <p style="color: var(--accent); font-size: 10px; font-weight: bold; margin-bottom: 5px; text-transform: uppercase;">${quiz.questions.length} Questions</p>
                 <h3 style="font-family: Syne; font-size: 22px;">${quiz.titre}</h3>
-                <button class="btn-secondary" style="margin-top:20px; padding: 5px 10px; font-size: 10px; border-radius: 5px;" onclick="event.stopPropagation(); deleteQuiz(${i})">Supprimer</button>
+                <button class="btn-secondary" style="margin-top:20px; padding: 6px 12px; font-size: 10px; border-radius: 6px;" onclick="event.stopPropagation(); deleteQuiz(${i})">Supprimer</button>
             </div>
         `).join('');
+    }
+
+    // --- GESTION DES FICHIERS ---
+    function handleFileSelect(event) {
+        const file = event.target.files[0];
+        if (file) readFile(file);
+    }
+
+    function readFile(file) {
+        const reader = new FileReader();
+        reader.onload = (e) => {
+            document.getElementById('json-input').value = e.target.result;
+            document.getElementById('file-label').innerHTML = `Fichier prêt : <strong>${file.name}</strong>`;
+        };
+        reader.readAsText(file);
+    }
+
+    function setupDragAndDrop() {
+        const dz = document.getElementById('drop-zone');
+        ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(evt => {
+            dz.addEventListener(evt, (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+            }, false);
+        });
+
+        dz.addEventListener('dragover', () => dz.classList.add('dragover'));
+        dz.addEventListener('dragleave', () => dz.classList.remove('dragover'));
+        dz.addEventListener('drop', (e) => {
+            dz.classList.remove('dragover');
+            const file = e.dataTransfer.files[0];
+            if (file && file.type === "application/json") readFile(file);
+        });
     }
 
     // --- LOGIQUE QUIZ ---
@@ -220,14 +252,14 @@
 
         container.innerHTML = `
             <div class="q-card">
-                <p style="color: var(--accent); font-size: 11px; margin-bottom: 15px; font-weight: bold;">OBJECTIF : ${currentIdx + 1} / ${currentQuiz.questions.length}</p>
+                <p style="color: var(--accent); font-size: 11px; margin-bottom: 15px; font-weight: bold;">PROGRESSION : ${currentIdx + 1} / ${currentQuiz.questions.length}</p>
                 <h2 style="font-family: Syne; margin-bottom: 30px; font-size: 26px; line-height: 1.2;">${q.question}</h2>
                 <div id="options">
                     ${q.choix.map(c => `<button class="choice-btn" onclick="checkAnswer(this, '${c.replace(/'/g, "\\'")}')">${c}</button>`).join('')}
                 </div>
                 <div id="feedback" class="hidden" style="margin-top: 30px; padding: 20px; background: rgba(124,106,255,0.08); border-left: 4px solid var(--accent); border-radius: 0 12px 12px 0;">
-                    <p style="font-size: 14px; line-height: 1.6;">${q.explication || "Pas d'explication fournie."}</p>
-                    <button class="btn btn-primary" style="margin-top: 20px; width: 100%;" onclick="nextStep()">Question Suivante →</button>
+                    <p style="font-size: 14px; line-height: 1.6;">${q.explication || "Vérifiez vos fondamentaux."}</p>
+                    <button class="btn btn-primary" style="margin-top: 20px; width: 100%;" onclick="nextStep()">Suivant →</button>
                 </div>
             </div>
         `;
@@ -258,16 +290,21 @@
         const pct = Math.round((score / currentQuiz.questions.length) * 100);
         document.getElementById('player-content').innerHTML = `
             <div class="q-card" style="text-align: center;">
-                <p style="color: var(--muted); margin-bottom: 10px;">SESSION TERMINÉE</p>
                 <h1 style="font-size: 80px; font-family: Syne; background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">${pct}%</h1>
-                <p style="margin-bottom: 30px; font-size: 18px;">${score} réponses correctes sur ${currentQuiz.questions.length}</p>
+                <p style="margin-bottom: 30px; font-size: 18px;">${score} bonnes réponses sur ${currentQuiz.questions.length}</p>
                 <button class="btn btn-primary" onclick="closePlayer()">Retour au Dashboard</button>
             </div>
         `;
     }
 
     // --- ACTIONS ---
-    function toggleImport(show) { document.getElementById('import-zone').style.display = show ? 'flex' : 'none'; }
+    function toggleImport(show) { 
+        document.getElementById('import-zone').style.display = show ? 'flex' : 'none';
+        if(!show) {
+            document.getElementById('json-input').value = '';
+            document.getElementById('file-label').innerHTML = `Glisse un fichier <strong>.json</strong> ici ou clique pour parcourir`;
+        }
+    }
 
     function saveImport() {
         try {
@@ -277,12 +314,11 @@
             localStorage.setItem('quiz_engine_lib', JSON.stringify(library));
             renderLibrary();
             toggleImport(false);
-            document.getElementById('json-input').value = '';
-        } catch { alert("Format JSON invalide. Assure-toi d'avoir un 'titre' et une liste de 'questions'."); }
+        } catch { alert("Erreur : Le fichier ou le texte n'est pas un JSON de quiz valide."); }
     }
 
     function deleteQuiz(index) {
-        if (confirm("Supprimer ce module ?")) {
+        if (confirm("Supprimer ce module définitivement ?")) {
             library.splice(index, 1);
             localStorage.setItem('quiz_engine_lib', JSON.stringify(library));
             renderLibrary();
