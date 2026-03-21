@@ -1,260 +1,256 @@
 {
-  "titre": "Description d'un fluide",
-  "matiere": "Physique-Chimie",
+  "titre": "Figures de style",
+  "matiere": "Français",
   "questions": [
     {
-      "question": "Qu'est-ce qu'un fluide?",
+      "question": "Qu'est-ce qu'une métaphore ?",
       "type": "qcm",
       "choix": [
-        "Un état de la matière solide",
-        "Un état de la matière liquide ou gazeuse",
-        "Un état de la matière plasmatique",
-        "Un état de la matière inconnu"
+        "Comparaison avec un outil grammatical",
+        "Comparaison sans outil grammatical",
+        "Description d'un objet",
+        "Définition d'un mot"
       ],
       "reponse": "B",
-      "explication": "Un fluide est un état de la matière qui n'est pas solide, il peut être liquide ou gazeux."
+      "explication": "Une métaphore est une comparaison sans outil grammatical, qui fusionne deux idées pour créer un univers poétique ou symbolique."
     },
     {
-      "question": "Quelle est la caractéristique principale d'un fluide?",
+      "question": "Quel est l'effet recherché par la personnification ?",
       "type": "qcm",
       "choix": [
-        "Il a une forme propre",
-        "Il prend la forme du récipient qui le contient",
-        "Il est toujours dans un état solide",
-        "Il est toujours dans un état gazeux"
+        "Rendre le décor statique",
+        "Rendre le décor vivant, complice ou menaçant",
+        "Créer un effet comique",
+        "Souligner la passion"
       ],
       "reponse": "B",
-      "explication": "Un fluide prend la forme du récipient qui le contient car il n'a pas de forme propre."
+      "explication": "La personnification rend le décor vivant, complice ou menaçant pour les personnages."
     },
     {
-      "question": "Qu'est-ce qui caractérise l'état solide?",
+      "question": "Qu'est-ce qu'une allégorie ?",
       "type": "qcm",
       "choix": [
-        "Les molécules sont éloignées les unes des autres",
-        "Les molécules sont proches les unes des autres et peuvent se déplacer",
-        "Les molécules sont proches les unes des autres et ne peuvent pas se déplacer",
-        "Les molécules sont dans un état de vibration intense"
-      ],
-      "reponse": "C",
-      "explication": "À l'état solide, les molécules sont proches les unes des autres et ne peuvent pas se déplacer."
-    },
-    {
-      "question": "Qu'est-ce qui caractérise l'état liquide?",
-      "type": "qcm",
-      "choix": [
-        "Les molécules sont éloignées les unes des autres",
-        "Les molécules sont proches les unes des autres et ne peuvent pas se déplacer",
-        "Les molécules sont proches les unes des autres et peuvent se déplacer",
-        "Les molécules sont dans un état de vibration intense"
-      ],
-      "reponse": "C",
-      "explication": "À l'état liquide, les molécules sont proches les unes des autres et peuvent se déplacer."
-    },
-    {
-      "question": "Qu'est-ce qui caractérise l'état gazeux?",
-      "type": "qcm",
-      "choix": [
-        "Les molécules sont éloignées les unes des autres",
-        "Les molécules sont proches les unes des autres et ne peuvent pas se déplacer",
-        "Les molécules sont proches les unes des autres et peuvent se déplacer",
-        "Les molécules occupent tout l'espace disponible"
-      ],
-      "reponse": "D",
-      "explication": "À l'état gazeux, les molécules occupent tout l'espace disponible."
-    },
-    {
-      "question": "Qu'est-ce que le mouvement brownien?",
-      "type": "qcm",
-      "choix": [
-        "Un mouvement ordonné des particules",
-        "Un mouvement désordonné des particules",
-        "Un mouvement vibratoire des particules",
-        "Un mouvement rotationnel des particules"
-      ],
-      "reponse": "B",
-      "explication": "Le mouvement brownien est un mouvement désordonné des particules."
-    },
-    {
-      "question": "À quel état de la matière est associé le mouvement brownien?",
-      "type": "qcm",
-      "choix": [
-        "État solide",
-        "État liquide",
-        "État gazeux",
-        "État plasmatique"
-      ],
-      "reponse": "B",
-      "explication": "Le mouvement brownien est associé à l'état liquide."
-    },
-    {
-      "question": "Quelle est la principale différence entre l'état solide et l'état liquide?",
-      "type": "qcm",
-      "choix": [
-        "La distance entre les particules",
-        "La capacité des particules à se déplacer",
-        "La température",
-        "La pression"
-      ],
-      "reponse": "B",
-      "explication": "La principale différence entre l'état solide et l'état liquide est la capacité des particules à se déplacer."
-    },
-    {
-      "question": "Qu'est-ce qui se passe aux particules à l'état solide lorsque la température augmente?",
-      "type": "qcm",
-      "choix": [
-        "Elles se rapprochent les unes des autres",
-        "Elles s'éloignent les unes des autres",
-        "Elles commencent à se déplacer",
-        "Elles commencent à vibrer"
-      ],
-      "reponse": "D",
-      "explication": "Lorsque la température augmente, les particules à l'état solide commencent à vibrer."
-    },
-    {
-      "question": "Qu'est-ce qui se passe aux particules à l'état liquide lorsque la température augmente?",
-      "type": "qcm",
-      "choix": [
-        "Elles se rapprochent les unes des autres",
-        "Elles s'éloignent les unes des autres",
-        "Elles commencent à se déplacer plus rapidement",
-        "Elles commencent à vibrer plus intensément"
-      ],
-      "reponse": "C",
-      "explication": "Lorsque la température augmente, les particules à l'état liquide commencent à se déplacer plus rapidement."
-    },
-    {
-      "question": "Qu'est-ce qui se passe aux particules à l'état gazeux lorsque la température augmente?",
-      "type": "qcm",
-      "choix": [
-        "Elles se rapprochent les unes des autres",
-        "Elles s'éloignent les unes des autres",
-        "Elles commencent à se déplacer plus rapidement",
-        "Elles occupent un volume plus grand"
-      ],
-      "reponse": "D",
-      "explication": "Lorsque la température augmente, les particules à l'état gazeux occupent un volume plus grand."
-    },
-    {
-      "question": "Qu'est-ce que les forces intermoléculaires?",
-      "type": "qcm",
-      "choix": [
-        "Des forces qui lient les molécules entre elles",
-        "Des forces qui repoussent les molécules les unes des autres",
-        "Des forces qui attirent les molécules les unes vers les autres",
-        "Des forces qui maintiennent les molécules à leur place"
+        "Représentation concrète d'une idée abstraite",
+        "Description d'un objet",
+        "Définition d'un mot",
+        "Comparaison entre deux idées"
       ],
       "reponse": "A",
-      "explication": "Les forces intermoléculaires sont des forces qui lient les molécules entre elles."
+      "explication": "Une allégorie est une représentation concrète d'une idée abstraite, qui rend une notion complexe visuelle et mémorable."
     },
     {
-      "question": "Qu'est-ce qui caractérise les forces intermoléculaires à l'état solide?",
+      "question": "Quel est l'effet de l'hyperbole ?",
       "type": "qcm",
       "choix": [
-        "Elles sont faibles",
-        "Elles sont fortes",
-        "Elles sont nulles",
-        "Elles sont variables"
-      ],
-      "reponse": "B",
-      "explication": "Les forces intermoléculaires à l'état solide sont fortes."
-    },
-    {
-      "question": "Qu'est-ce qui caractérise les forces intermoléculaires à l'état liquide?",
-      "type": "qcm",
-      "choix": [
-        "Elles sont faibles",
-        "Elles sont fortes",
-        "Elles sont nulles",
-        "Elles sont variables"
+        "Souligner la passion, le tragique ou créer un effet comique",
+        "Rendre le décor vivant",
+        "Créer un effet de surprise",
+        "Décrire un objet de manière réaliste"
       ],
       "reponse": "A",
-      "explication": "Les forces intermoléculaires à l'état liquide sont faibles."
+      "explication": "L'hyperbole souligne la passion, le tragique ou crée un effet comique."
     },
     {
-      "question": "Qu'est-ce qui caractérise les forces intermoléculaires à l'état gazeux?",
+      "question": "Qu'est-ce qu'une litote ?",
       "type": "qcm",
       "choix": [
-        "Elles sont faibles",
-        "Elles sont fortes",
-        "Elles sont nulles",
-        "Elles sont variables"
-      ],
-      "reponse": "C",
-      "explication": "Les forces intermoléculaires à l'état gazeux sont nulles."
-    },
-    {
-      "question": "Qu'est-ce que la liaison chimique?",
-      "type": "qcm",
-      "choix": [
-        "Une force qui lie les molécules entre elles",
-        "Une force qui repousse les molécules les unes des autres",
-        "Une force qui attire les molécules les unes vers les autres",
-        "Une force qui maintient les molécules à leur place"
+        "Dire le moins pour suggérer le plus",
+        "Dire le plus pour suggérer le moins",
+        "Description d'un objet",
+        "Définition d'un mot"
       ],
       "reponse": "A",
-      "explication": "La liaison chimique est une force qui lie les molécules entre elles."
+      "explication": "Une litote est dire le moins pour suggérer le plus, ce qui révèle une émotion intense sous une fausse retenue."
     },
     {
-      "question": "Qu'est-ce qui caractérise la liaison chimique?",
+      "question": "Quel est l'effet de la gradation ?",
       "type": "qcm",
       "choix": [
-        "Elle est faible",
-        "Elle est forte",
-        "Elle est nulle",
-        "Elle est variable"
+        "Marquer une montée de la tension ou un emballement émotionnel",
+        "Rendre le décor vivant",
+        "Créer un effet comique",
+        "Souligner la passion"
       ],
-      "reponse": "B",
-      "explication": "La liaison chimique est forte."
+      "reponse": "A",
+      "explication": "La gradation marque une montée de la tension ou un emballement émotionnel."
     },
     {
-      "question": "Qu'est-ce qui se passe lorsqu'une liaison chimique se forme?",
+      "question": "Qu'est-ce qu'une antithèse ?",
       "type": "qcm",
       "choix": [
-        "Les molécules s'éloignent les unes des autres",
-        "Les molécules se rapprochent les unes des autres",
-        "Les molécules se combinent pour former une nouvelle molécule",
-        "Les molécules se décomposent en molécules plus petites"
+        "Coexistence de deux termes opposés dans une phrase",
+        "Description d'un objet",
+        "Définition d'un mot",
+        "Comparaison entre deux idées"
       ],
-      "reponse": "C",
-      "explication": "Lorsqu'une liaison chimique se forme, les molécules se combinent pour former une nouvelle molécule."
+      "reponse": "A",
+      "explication": "Une antithèse est la coexistence de deux termes opposés dans une phrase, qui met en relief un conflit intérieur ou un dilemme moral."
     },
     {
-      "question": "Qu'est-ce qui se passe lorsqu'une liaison chimique se rompt?",
+      "question": "Quel est l'effet de l'oxymore ?",
       "type": "qcm",
       "choix": [
-        "Les molécules s'éloignent les unes des autres",
-        "Les molécules se rapprochent les unes des autres",
-        "Les molécules se combinent pour former une nouvelle molécule",
-        "Les molécules se décomposent en molécules plus petites"
+        "Créer un effet de surprise",
+        "Rendre le décor vivant",
+        "Souligner la passion",
+        "Décrire un objet de manière réaliste"
+      ],
+      "reponse": "A",
+      "explication": "L'oxymore crée un effet de surprise en associant deux termes opposés."
+    },
+    {
+      "question": "Qu'est-ce qu'une métaphore qui compare un être humain à un animal ?",
+      "type": "qcm",
+      "choix": [
+        "Personnification",
+        "Allégorie",
+        "Hyperbole",
+        "Métaphore"
       ],
       "reponse": "D",
-      "explication": "Lorsqu'une liaison chimique se rompt, les molécules se décomposent en molécules plus petites."
+      "explication": "Une métaphore qui compare un être humain à un animal est bien une métaphore."
     },
     {
-      "question": "Qu'est-ce que l'agitation thermique?",
+      "question": "Quel est l'effet de la personnification d'un objet inanimé ?",
       "type": "qcm",
       "choix": [
-        "Un mouvement des particules dues à la température",
-        "Un mouvement des particules dues à la pression",
-        "Un mouvement des particules dues à la liaison chimique",
-        "Un mouvement des particules dues à la force intermoléculaire"
+        "Rendre l'objet statique",
+        "Rendre l'objet vivant",
+        "Créer un effet comique",
+        "Souligner la passion"
+      ],
+      "reponse": "B",
+      "explication": "La personnification d'un objet inanimé le rend vivant."
+    },
+    {
+      "question": "Qu'est-ce qu'une allégorie qui représente la mort ?",
+      "type": "qcm",
+      "choix": [
+        "Une représentation concrète de la mort",
+        "Une description de la mort",
+        "Une définition de la mort",
+        "Une comparaison entre la mort et la vie"
       ],
       "reponse": "A",
-      "explication": "L'agitation thermique est un mouvement des particules dues à la température."
+      "explication": "Une allégorie qui représente la mort est une représentation concrète de la mort."
+    },
+    {
+      "question": "Quel est l'effet de l'hyperbole dans un poème ?",
+      "type": "qcm",
+      "choix": [
+        "Souligner la passion",
+        "Rendre le décor vivant",
+        "Créer un effet comique",
+        "Décrire un objet de manière réaliste"
+      ],
+      "reponse": "A",
+      "explication": "L'hyperbole dans un poème souligne la passion."
+    },
+    {
+      "question": "Qu'est-ce qu'une litote qui décrit une émotion intense ?",
+      "type": "qcm",
+      "choix": [
+        "Une litote qui décrit une émotion faible",
+        "Une litote qui décrit une émotion intense",
+        "Une description d'une émotion",
+        "Une définition d'une émotion"
+      ],
+      "reponse": "B",
+      "explication": "Une litote qui décrit une émotion intense est une litote qui révèle cette émotion sous une fausse retenue."
+    },
+    {
+      "question": "Quel est l'effet de la gradation dans un récit ?",
+      "type": "qcm",
+      "choix": [
+        "Marquer une montée de la tension",
+        "Rendre le décor vivant",
+        "Créer un effet comique",
+        "Souligner la passion"
+      ],
+      "reponse": "A",
+      "explication": "La gradation dans un récit marque une montée de la tension."
+    },
+    {
+      "question": "Qu'est-ce qu'une antithèse qui oppose deux idées ?",
+      "type": "qcm",
+      "choix": [
+        "Une antithèse qui oppose deux idées",
+        "Une description de deux idées",
+        "Une définition de deux idées",
+        "Une comparaison entre deux idées"
+      ],
+      "reponse": "A",
+      "explication": "Une antithèse qui oppose deux idées est une antithèse qui met en relief un conflit intérieur ou un dilemme moral."
+    },
+    {
+      "question": "Quel est l'effet de l'oxymore dans un poème ?",
+      "type": "qcm",
+      "choix": [
+        "Créer un effet de surprise",
+        "Rendre le décor vivant",
+        "Souligner la passion",
+        "Décrire un objet de manière réaliste"
+      ],
+      "reponse": "A",
+      "explication": "L'oxymore dans un poème crée un effet de surprise."
+    },
+    {
+      "question": "Qu'est-ce qu'une métaphore qui compare deux idées abstraites ?",
+      "type": "qcm",
+      "choix": [
+        "Une métaphore qui compare deux idées concrètes",
+        "Une métaphore qui compare deux idées abstraites",
+        "Une description de deux idées",
+        "Une définition de deux idées"
+      ],
+      "reponse": "B",
+      "explication": "Une métaphore qui compare deux idées abstraites est bien une métaphore."
+    },
+    {
+      "question": "Quel est l'effet de la personnification d'un animal ?",
+      "type": "qcm",
+      "choix": [
+        "Rendre l'animal statique",
+        "Rendre l'animal vivant",
+        "Créer un effet comique",
+        "Souligner la passion"
+      ],
+      "reponse": "B",
+      "explication": "La personnification d'un animal le rend vivant."
+    },
+    {
+      "question": "Qu'est-ce qu'une allégorie qui représente une idée complexe ?",
+      "type": "qcm",
+      "choix": [
+        "Une représentation concrète d'une idée simple",
+        "Une représentation concrète d'une idée complexe",
+        "Une description d'une idée",
+        "Une définition d'une idée"
+      ],
+      "reponse": "B",
+      "explication": "Une allégorie qui représente une idée complexe est une représentation concrète de cette idée."
     }
   ],
   "exercices": [
     {
-      "enonce": "Un conteneur contient 1 litre d'eau à 20°C. Quel est l'état de l'eau dans le conteneur?",
-      "corrige": "L'eau est à l'état liquide car la température est inférieure à 100°C."
+      "enonce": "Analysez les figures de style utilisées dans le poème suivant : 'Mon cœur est un oiseau qui vole vers toi'.",
+      "corrige": "Le poème utilise une métaphore qui compare le cœur à un oiseau, et une personnification de l'oiseau qui vole vers la personne aimée."
     },
     {
-      "enonce": "Un ballon contient de l'air à 20°C. Quel est l'état de l'air dans le ballon?",
-      "corrige": "L'air est à l'état gazeux car la température est supérieure à -200°C."
+      "enonce": "Identifiez les figures de style utilisées dans le texte suivant : 'La mort est une reine qui règne sur le monde'.",
+      "corrige": "Le texte utilise une allégorie qui représente la mort comme une reine, et une personnification de la mort qui règne sur le monde."
     },
     {
-      "enonce": "Un bloc de glace est à 0°C. Quel est l'état de la glace?",
-      "corrige": "La glace est à l'état solide car la température est égale à 0°C."
+      "enonce": "Expliquez l'effet de l'hyperbole dans le texte suivant : 'Je t'aime plus que tout au monde'.",
+      "corrige": "L'hyperbole souligne la passion et l'intensité de l'amour, en exagérant la mesure de cet amour."
+    },
+    {
+      "enonce": "Analysez les figures de style utilisées dans le poème suivant : 'Mon amour est un feu qui brûle en moi'.",
+      "corrige": "Le poème utilise une métaphore qui compare l'amour à un feu, et une personnification du feu qui brûle en moi."
+    },
+    {
+      "enonce": "Identifiez les figures de style utilisées dans le texte suivant : 'La vie est un puzzle qui doit être résolu'.",
+      "corrige": "Le texte utilise une allégorie qui représente la vie comme un puzzle, et une personnification du puzzle qui doit être résolu."
     }
   ]
 }
