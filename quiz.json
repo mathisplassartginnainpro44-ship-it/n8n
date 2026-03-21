@@ -1,236 +1,280 @@
 {
-  "titre": "Tonalités en français",
-  "matiere": "français",
+  "titre": "Méthodologie : L'introduction de commentaire composé",
+  "matiere": "Français",
   "questions": [
     {
-      "question": "Quelle est la définition de la tonalité lyrique en français ?",
+      "question": "Qu'est-ce qui caractérise l'histoire de la littérature selon le cours?",
       "type": "qcm",
       "choix": [
-        "Expression des sentiments personnels",
-        "Célébration des exploits d'un héros",
-        "Présentation d'un personnage face à un destin inéluctable",
-        "Mise en scène de souffrances poignantes"
-      ],
-      "reponse": "A",
-      "explication": "La tonalité lyrique est une expression des sentiments personnels, tels que l'amour, la mélancolie ou le regret."
-    },
-    {
-      "question": "Quels sont les procédés fréquents utilisés dans la tonalité lyrique ?",
-      "type": "qcm",
-      "choix": [
-        "Emploi du 'je', métaphores, ponctuation expressive",
-        "Hyperboles, énumérations, pluriel ('nous')",
-        "Vocabulaire de la fatalité, du sacrifice, de la souffrance",
-        "Champ lexical de la douleur, larmes, plaintes"
-      ],
-      "reponse": "A",
-      "explication": "La tonalité lyrique utilise souvent l'emploi du 'je', des métaphores et d'une ponctuation expressive pour exprimer les sentiments personnels."
-    },
-    {
-      "question": "Quel est l'effet de la tonalité lyrique sur le lecteur/spectateur ?",
-      "type": "qcm",
-      "choix": [
-        "Admiration, enthousiasme, sentiment de grandeur",
-        "Terreur et pitié",
-        "Compassion, tristesse, empathie profonde",
-        "Partager une émotion intime, créer une communion"
-      ],
-      "reponse": "D",
-      "explication": "La tonalité lyrique permet de partager une émotion intime avec le lecteur/spectateur et de créer une communion."
-    },
-    {
-      "question": "Quelle est la définition de la tonalité épique en français ?",
-      "type": "qcm",
-      "choix": [
-        "Expression des sentiments personnels",
-        "Célébration des exploits d'un héros ou d'un groupe dépassant les forces humaines",
-        "Présentation d'un personnage face à un destin inéluctable",
-        "Mise en scène de souffrances poignantes"
+        "Un long fleuve tranquille",
+        "Une succession de réactions et de ruptures",
+        "Un mouvement linéaire",
+        "Un cercle vicieux"
       ],
       "reponse": "B",
-      "explication": "La tonalité épique est une célébration des exploits d'un héros ou d'un groupe dépassant les forces humaines."
+      "explication": "L'histoire de la littérature est décrite comme une succession de réactions et de ruptures, plutôt que comme un long fleuve tranquille."
     },
     {
-      "question": "Quels sont les procédés fréquents utilisés dans la tonalité épique ?",
+      "question": "Quel est le rôle de la littérature selon le mouvement de l'auteur?",
       "type": "qcm",
       "choix": [
-        "Emploi du 'je', métaphores, ponctuation expressive",
-        "Hyperboles, énumérations, pluriel ('nous')",
-        "Vocabulaire de la fatalité, du sacrifice, de la souffrance",
-        "Champ lexical de la douleur, larmes, plaintes"
+        "L'expression du moi",
+        "La critique sociale",
+        "La quête de vérité",
+        "Toutes les réponses précédentes"
       ],
-      "reponse": "B",
-      "explication": "La tonalité épique utilise souvent des hyperboles, des énumérations et le pluriel ('nous') pour décrire les exploits du héros."
+      "reponse": "D",
+      "explication": "Selon le cours, la littérature devient le lieu de la quête de vérité, de l'expression du moi et de la critique sociale."
     },
     {
-      "question": "Quel est l'effet de la tonalité épique sur le lecteur/spectateur ?",
+      "question": "Qui est l'auteur mentionné dans le cours?",
       "type": "qcm",
       "choix": [
-        "Admiration, enthousiasme, sentiment de grandeur",
-        "Terreur et pitié",
-        "Compassion, tristesse, empathie profonde",
-        "Partager une émotion intime, créer une communion"
+        "Marivaux",
+        "Zola",
+        "Un auteur anonyme",
+        "Un philosophe"
       ],
       "reponse": "A",
-      "explication": "La tonalité épique inspire l'admiration, l'enthousiasme et le sentiment de grandeur chez le lecteur/spectateur."
+      "explication": "Le cours mentionne l'auteur Marivaux comme exemple."
     },
     {
-      "question": "Quelle est la définition de la tonalité tragique en français ?",
+      "question": "Quel est le thème général exploré dans l'œuvre de l'auteur?",
       "type": "qcm",
       "choix": [
-        "Expression des sentiments personnels",
-        "Célébration des exploits d'un héros ou d'un groupe dépassant les forces humaines",
-        "Présentation d'un personnage face à un destin inéluctable ou à la mort",
-        "Mise en scène de souffrances poignantes"
+        "La double énonciation",
+        "Le déterminisme",
+        "La quête de vérité",
+        "La critique sociale"
       ],
       "reponse": "C",
-      "explication": "La tonalité tragique présente un personnage face à un destin inéluctable ou à la mort."
+      "explication": "Selon le cours, l'auteur explore la quête de vérité à travers son œuvre."
     },
     {
-      "question": "Quels sont les procédés fréquents utilisés dans la tonalité tragique ?",
+      "question": "Qu'est-ce que l'amorce dans le contexte du cours?",
       "type": "qcm",
       "choix": [
-        "Emploi du 'je', métaphores, ponctuation expressive",
-        "Hyperboles, énumérations, pluriel ('nous')",
-        "Vocabulaire de la fatalité, du sacrifice, de la souffrance",
-        "Champ lexical de la douleur, larmes, plaintes"
+        "Le contexte et la rupture",
+        "La présentation de l'auteur et de l'œuvre",
+        "La méthode de commentary",
+        "La conclusion"
+      ],
+      "reponse": "A",
+      "explication": "L'amorce est définie comme le contexte et la rupture dans le cours."
+    },
+    {
+      "question": "Quel est le but de la présentation de l'auteur et de l'œuvre?",
+      "type": "qcm",
+      "choix": [
+        "De présenter l'auteur et son œuvre",
+        "De critiquer l'œuvre",
+        "De comparer avec d'autres œuvres",
+        "De résumer le contenu"
+      ],
+      "reponse": "A",
+      "explication": "La présentation de l'auteur et de l'œuvre vise à les présenter dans leur contexte."
+    },
+    {
+      "question": "Qu'est-ce que la littérature devient avec le mouvement de l'auteur?",
+      "type": "qcm",
+      "choix": [
+        "Un simple divertissement",
+        "Un outil de critique sociale",
+        "Un lieu de quête de vérité",
+        "Un moyen d'expression du moi"
       ],
       "reponse": "C",
-      "explication": "La tonalité tragique utilise souvent un vocabulaire de la fatalité, du sacrifice et de la souffrance pour créer une atmosphère solennelle."
+      "explication": "La littérature devient un lieu de quête de vérité avec le mouvement de l'auteur."
     },
     {
-      "question": "Quel est l'effet de la tonalité tragique sur le lecteur/spectateur ?",
+      "question": "Quel est le rôle de l'auteur dans son œuvre?",
       "type": "qcm",
       "choix": [
-        "Admiration, enthousiasme, sentiment de grandeur",
-        "Terreur et pitié",
-        "Compassion, tristesse, empathie profonde",
-        "Partager une émotion intime, créer une communion"
+        "De simplement raconter une histoire",
+        "D'explorer un thème général",
+        "De critiquer la société",
+        "De se exprimer lui-même"
       ],
       "reponse": "B",
-      "explication": "La tonalité tragique inspire la terreur et la pitié chez le lecteur/spectateur, conduisant à la catharsis au théâtre."
+      "explication": "L'auteur explore un thème général à travers son œuvre."
     },
     {
-      "question": "Quelle est la définition de la tonalité pathétique en français ?",
+      "question": "Qu'est-ce que la double énonciation chez Marivaux?",
       "type": "qcm",
       "choix": [
-        "Expression des sentiments personnels",
-        "Célébration des exploits d'un héros ou d'un groupe dépassant les forces humaines",
-        "Présentation d'un personnage face à un destin inéluctable ou à la mort",
-        "Mise en scène de souffrances poignantes pour susciter la compassion"
+        "Un style d'écriture",
+        "Une technique de narration",
+        "Un thème littéraire",
+        "Une caractéristique de l'auteur"
+      ],
+      "reponse": "B",
+      "explication": "La double énonciation est une technique de narration utilisée par Marivaux."
+    },
+    {
+      "question": "Quel est le contexte intellectuel dans lequel s'inscrit l'auteur?",
+      "type": "qcm",
+      "choix": [
+        "Un contexte de stabilité",
+        "Un contexte de mutation",
+        "Un contexte de crise",
+        "Un contexte de révolution"
+      ],
+      "reponse": "B",
+      "explication": "L'auteur s'inscrit dans un contexte intellectuel en pleine mutation."
+    },
+    {
+      "question": "Quel est le but de la méthode de commentary?",
+      "type": "qcm",
+      "choix": [
+        "De critiquer l'œuvre",
+        "De résumer le contenu",
+        "De présenter l'auteur et son œuvre",
+        "De comprendre le contexte"
       ],
       "reponse": "D",
-      "explication": "La tonalité pathétique met en scène des souffrances poignantes pour susciter la compassion du lecteur/spectateur."
+      "explication": "La méthode de commentary vise à comprendre le contexte de l'œuvre."
     },
     {
-      "question": "Quels sont les procédés fréquents utilisés dans la tonalité pathétique ?",
+      "question": "Qu'est-ce que la quête de vérité dans le contexte du cours?",
       "type": "qcm",
       "choix": [
-        "Emploi du 'je', métaphores, ponctuation expressive",
-        "Hyperboles, énumérations, pluriel ('nous')",
-        "Vocabulaire de la fatalité, du sacrifice, de la souffrance",
-        "Champ lexical de la douleur, larmes, plaintes"
+        "Une recherche de la vérité absolue",
+        "Une exploration de thèmes littéraires",
+        "Une critique de la société",
+        "Une expression du moi"
+      ],
+      "reponse": "B",
+      "explication": "La quête de vérité est une exploration de thèmes littéraires dans le contexte du cours."
+    },
+    {
+      "question": "Quel est le rôle de la littérature dans la société?",
+      "type": "qcm",
+      "choix": [
+        "De divertir",
+        "De critiquer",
+        "De éduquer",
+        "De refléter la réalité"
       ],
       "reponse": "D",
-      "explication": "La tonalité pathétique utilise souvent un champ lexical de la douleur, des larmes et des plaintes pour décrire les souffrances."
+      "explication": "La littérature reflète la réalité de la société."
     },
     {
-      "question": "Quel est l'effet de la tonalité pathétique sur le lecteur/spectateur ?",
+      "question": "Qu'est-ce que le déterminisme chez Zola?",
       "type": "qcm",
       "choix": [
-        "Admiration, enthousiasme, sentiment de grandeur",
-        "Terreur et pitié",
-        "Compassion, tristesse, empathie profonde",
-        "Partager une émotion intime, créer une communion"
+        "Un thème littéraire",
+        "Une technique de narration",
+        "Une caractéristique de l'auteur",
+        "Un style d'écriture"
+      ],
+      "reponse": "A",
+      "explication": "Le déterminisme est un thème littéraire exploré par Zola."
+    },
+    {
+      "question": "Quel est le lien entre l'auteur et son œuvre?",
+      "type": "qcm",
+      "choix": [
+        "L'auteur est indépendant de son œuvre",
+        "L'auteur est dépendant de son œuvre",
+        "L'auteur est une partie de son œuvre",
+        "L'auteur est distinct de son œuvre"
       ],
       "reponse": "C",
-      "explication": "La tonalité pathétique inspire la compassion, la tristesse et l'empathie profonde chez le lecteur/spectateur."
+      "explication": "L'auteur est une partie de son œuvre, car il l'a créée."
     },
     {
-      "question": "Quelle est la différence entre la tonalité lyrique et la tonalité tragique ?",
+      "question": "Qu'est-ce que la critique sociale dans le contexte du cours?",
       "type": "qcm",
       "choix": [
-        "La tonalité lyrique est plus solennelle que la tonalité tragique",
-        "La tonalité tragique est plus personnelle que la tonalité lyrique",
-        "La tonalité lyrique exprime des sentiments personnels, tandis que la tonalité tragique présente un personnage face à la mort",
-        "La tonalité tragique est plus comique que la tonalité lyrique"
+        "Une critique de la société",
+        "Une exploration de thèmes littéraires",
+        "Une expression du moi",
+        "Une recherche de la vérité"
       ],
-      "reponse": "C",
-      "explication": "La tonalité lyrique se concentre sur l'expression des sentiments personnels, tandis que la tonalité tragique présente un personnage face à la mort ou à un destin inéluctable."
+      "reponse": "A",
+      "explication": "La critique sociale est une critique de la société dans le contexte du cours."
     },
     {
-      "question": "Quel est le rôle de la ponctuation expressive dans la tonalité lyrique ?",
+      "question": "Quel est le but de la présentation de l'auteur?",
       "type": "qcm",
       "choix": [
-        "Elle permet de créer une atmosphère solennelle",
-        "Elle inspire l'admiration et l'enthousiasme",
-        "Elle exprime les sentiments personnels de manière plus intense",
-        "Elle détourne l'attention du lecteur/spectateur"
-      ],
-      "reponse": "C",
-      "explication": "La ponctuation expressive dans la tonalité lyrique permet d'exprimer les sentiments personnels de manière plus intense et de créer une communion avec le lecteur/spectateur."
-    },
-    {
-      "question": "Comment la tonalité épique contribue-t-elle à la création d'un héros ?",
-      "type": "qcm",
-      "choix": [
-        "En le présentant comme un personnage ordinaire",
-        "En le dotant de qualités surhumaines",
-        "En le confrontant à des défis quotidiens",
-        "En le décrivant avec des hyperboles et des énumérations"
+        "De présenter son œuvre",
+        "De critiquer son œuvre",
+        "De comparer avec d'autres auteurs",
+        "De comprendre son contexte"
       ],
       "reponse": "D",
-      "explication": "La tonalité épique contribue à la création d'un héros en le décrivant avec des hyperboles et des énumérations, mettant ainsi en avant ses exploits et ses qualités exceptionnelles."
+      "explication": "La présentation de l'auteur vise à comprendre son contexte."
     },
     {
-      "question": "Quelle est la fonction de la catharsis dans la tonalité tragique ?",
+      "question": "Qu'est-ce que la méthode de commentary dans le contexte du cours?",
       "type": "qcm",
       "choix": [
-        "Elle permet de créer une atmosphère de peur",
-        "Elle inspire la compassion et l'empathie",
-        "Elle permet au lecteur/spectateur de purger ses émotions",
-        "Elle détourne l'attention du lecteur/spectateur"
+        "Une méthode de critique",
+        "Une méthode de résumé",
+        "Une méthode de présentation",
+        "Une méthode de compréhension"
       ],
-      "reponse": "C",
-      "explication": "La catharsis dans la tonalité tragique permet au lecteur/spectateur de purger ses émotions, en particulier la terreur et la pitié, à travers l'identification avec le personnage tragique."
+      "reponse": "D",
+      "explication": "La méthode de commentary est une méthode de compréhension du contexte de l'œuvre."
     },
     {
-      "question": "Comment la tonalité pathétique diffère-t-elle de la tonalité tragique ?",
+      "question": "Quel est le rôle de l'auteur dans la littérature?",
       "type": "qcm",
       "choix": [
-        "La tonalité pathétique est plus solennelle que la tonalité tragique",
-        "La tonalité tragique est plus personnelle que la tonalité pathétique",
-        "La tonalité pathétique se concentre sur les souffrances pour susciter la compassion, tandis que la tonalité tragique se concentre sur la mort et le destin",
-        "La tonalité pathétique est plus comique que la tonalité tragique"
+        "De créer une œuvre",
+        "De critiquer la société",
+        "De refléter la réalité",
+        "De divertir le lecteur"
       ],
-      "reponse": "C",
-      "explication": "La tonalité pathétique se distingue de la tonalité tragique en ce qu'elle se concentre sur les souffrances pour susciter la compassion, tandis que la tonalité tragique se concentre sur la mort et le destin inéluctable."
+      "reponse": "A",
+      "explication": "L'auteur crée une œuvre littéraire."
     },
     {
-      "question": "Quel est l'effet de la tonalité comique sur le lecteur/spectateur ?",
+      "question": "Qu'est-ce que la littérature dans le contexte du cours?",
       "type": "qcm",
       "choix": [
-        "Il provoque la terreur et la pitié",
-        "Il inspire l'admiration et l'enthousiasme",
-        "Il crée une atmosphere de gaieté et de rire",
-        "Il exprime des sentiments personnels de manière intense"
+        "Un simple divertissement",
+        "Un outil de critique sociale",
+        "Un lieu de quête de vérité",
+        "Un moyen d'expression du moi"
       ],
       "reponse": "C",
-      "explication": "La tonalité comique a pour but de créer une atmosphère de gaieté et de rire, en utilisant souvent l'ironie, l'humour et les situations absurdement drôles."
+      "explication": "La littérature est un lieu de quête de vérité dans le contexte du cours."
+    },
+    {
+      "question": "Quel est le but de la méthode de commentary dans le contexte du cours?",
+      "type": "qcm",
+      "choix": [
+        "De critiquer l'œuvre",
+        "De résumer le contenu",
+        "De présenter l'auteur et son œuvre",
+        "De comprendre le contexte"
+      ],
+      "reponse": "D",
+      "explication": "La méthode de commentary vise à comprendre le contexte de l'œuvre."
     }
   ],
   "exercices": [
     {
-      "enonce": "Analysez la tonalité d'un poème lyrique et identifiez les procédés utilisés pour exprimer les sentiments personnels.",
-      "corrige": "Le poème lyrique utilise l'emploi du 'je', des métaphores et une ponctuation expressive pour exprimer les sentiments personnels. L'utilisation de ces procédés crée une communion avec le lecteur et permet de partager une émotion intime."
+      "enonce": "Écrivez un commentaire composé sur un œuvre littéraire de votre choix.",
+      "corrige": "Un commentaire composé doit comporter une introduction, un développement et une conclusion. L'introduction doit présenter l'auteur et son œuvre, le développement doit explorer les thèmes et les techniques littéraires, et la conclusion doit résumer les points principaux."
     },
     {
-      "enonce": "Écrivez un court paragraphe décrivant un personnage dans une tonalité tragique et utilisez des procédés appropriés pour créer une atmosphère solennelle.",
-      "corrige": "Le personnage se tenait debout, les yeux fixés sur l'horizon, son destin inéluctable déjà scellé. Le vent gémissait autour de lui, comme pour souligner la fatalité de sa situation. Les mots 'jamais' et 'toujours' résonnaient dans son esprit, symbolisant l'irréversibilité de son sort."
+      "enonce": "Analysez le rôle de la littérature dans la société.",
+      "corrige": "La littérature reflète la réalité de la société et permet de critiquer et de comprendre les problèmes sociaux. Elle peut également être un outil de divertissement et d'éducation."
     },
     {
-      "enonce": "Concevez un dialogue comique entre deux personnages et utilisez des procédés pour créer une atmosphère de gaieté et de rire.",
-      "corrige": "Personnage A : 'J'ai acheté un chien qui pense qu'il est un chat !' Personnage B : 'C'est ridicule ! Et comment le sais-tu ?' Personnage A : 'Parce qu'il miaule toute la journée et essaie de grimper aux rideaux !' Les deux personnages éclatent de rire à cette absurdité."
+      "enonce": "Présentez un auteur et son œuvre.",
+      "corrige": "Un auteur doit être présenté dans son contexte historique et littéraire. Son œuvre doit être décrite et analysée pour comprendre ses thèmes et ses techniques littéraires."
+    },
+    {
+      "enonce": "Écrivez un essai sur le thème de la quête de vérité dans la littérature.",
+      "corrige": "Un essai sur le thème de la quête de vérité doit explorer les différentes façons dont les auteurs abordent ce thème dans leurs œuvres. Il doit également analyser les techniques littéraires utilisées pour transmettre ce thème."
+    },
+    {
+      "enonce": "Créez un plan de commentaire composé sur un œuvre littéraire.",
+      "corrige": "Un plan de commentaire composé doit comporter une introduction, un développement et une conclusion. L'introduction doit présenter l'auteur et son œuvre, le développement doit explorer les thèmes et les techniques littéraires, et la conclusion doit résumer les points principaux."
     }
   ]
 }
