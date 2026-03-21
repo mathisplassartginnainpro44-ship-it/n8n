@@ -1,280 +1,208 @@
 {
-  "titre": "Méthodologie : L'introduction de commentaire composé",
+  "titre": "Intro Théâtre contemporain",
   "matiere": "Français",
   "questions": [
     {
-      "question": "Qu'est-ce qui caractérise l'histoire de la littérature selon le cours?",
+      "question": "Quel siècle voit le théâtre connaître une profonde mutation?",
       "type": "qcm",
       "choix": [
-        "Un long fleuve tranquille",
-        "Une succession de réactions et de ruptures",
-        "Un mouvement linéaire",
-        "Un cercle vicieux"
+        "XIXe",
+        "XXe",
+        "XXIe",
+        "XXIIe"
       ],
       "reponse": "B",
-      "explication": "L'histoire de la littérature est décrite comme une succession de réactions et de ruptures, plutôt que comme un long fleuve tranquille."
+      "explication": "Le XXe siècle est marqué par une mutation profonde dans le théâtre, caractérisée par une éloignement des conventions classiques."
     },
     {
-      "question": "Quel est le rôle de la littérature selon le mouvement de l'auteur?",
+      "question": "Quelle caracteristique du théâtre contemporain est soulignée dans le cours?",
       "type": "qcm",
       "choix": [
-        "L'expression du moi",
-        "La critique sociale",
-        "La quête de vérité",
-        "Toutes les réponses précédentes"
+        "Le respect des conventions classiques",
+        "L'exploration de l'absurdité de la condition humaine",
+        "La focalisation sur les tensions familiales",
+        "La recherche de la perfection linguistique"
       ],
-      "reponse": "D",
-      "explication": "Selon le cours, la littérature devient le lieu de la quête de vérité, de l'expression du moi et de la critique sociale."
+      "reponse": "B",
+      "explication": "Le théâtre contemporain se caractérise notamment par l'exploration de l'absurdité de la condition humaine."
     },
     {
-      "question": "Qui est l'auteur mentionné dans le cours?",
+      "question": "Quelle est la fonction des didascalies dans le théâtre moderne?",
       "type": "qcm",
       "choix": [
-        "Marivaux",
-        "Zola",
-        "Un auteur anonyme",
-        "Un philosophe"
-      ],
-      "reponse": "A",
-      "explication": "Le cours mentionne l'auteur Marivaux comme exemple."
-    },
-    {
-      "question": "Quel est le thème général exploré dans l'œuvre de l'auteur?",
-      "type": "qcm",
-      "choix": [
-        "La double énonciation",
-        "Le déterminisme",
-        "La quête de vérité",
-        "La critique sociale"
+        "Décrire les personnages",
+        "Décrire les décors",
+        "Donner des indications de mise en scène",
+        "Développer l'intrigue"
       ],
       "reponse": "C",
-      "explication": "Selon le cours, l'auteur explore la quête de vérité à travers son œuvre."
+      "explication": "Les didascalies offrent des indications de mise en scène dans le théâtre moderne."
     },
     {
-      "question": "Qu'est-ce que l'amorce dans le contexte du cours?",
+      "question": "Qu'est-ce que le théâtre contemporain joue souvent sur?",
       "type": "qcm",
       "choix": [
-        "Le contexte et la rupture",
-        "La présentation de l'auteur et de l'œuvre",
-        "La méthode de commentary",
-        "La conclusion"
+        "Une scène décorée et une temporalité linéaire",
+        "Une scène dépouillée et une temporalité éclatée",
+        "Une scène décorée et une temporalité éclatée",
+        "Une scène dépouillée et une temporalité linéaire"
       ],
-      "reponse": "A",
-      "explication": "L'amorce est définie comme le contexte et la rupture dans le cours."
+      "reponse": "B",
+      "explication": "Le théâtre contemporain joue souvent sur une scène dépouillée et une temporalité éclatée, caractérisant son éloignement du théâtre classique."
     },
     {
-      "question": "Quel est le but de la présentation de l'auteur et de l'œuvre?",
+      "question": "Que met en scène le théâtre contemporain?",
       "type": "qcm",
       "choix": [
-        "De présenter l'auteur et son œuvre",
-        "De critiquer l'œuvre",
-        "De comparer avec d'autres œuvres",
-        "De résumer le contenu"
+        "La perfection de la communication humaine",
+        "L'impossibilité de communiquer",
+        "La fragilité du langage",
+        "La solidité des relations familiales"
       ],
-      "reponse": "A",
-      "explication": "La présentation de l'auteur et de l'œuvre vise à les présenter dans leur contexte."
+      "reponse": "B",
+      "explication": "Le théâtre contemporain explore souvent les difficultés et les échecs de la communication entre les personnages."
     },
     {
-      "question": "Qu'est-ce que la littérature devient avec le mouvement de l'auteur?",
+      "question": "Comment le théâtre contemporain s'éloigne-t-il des conventions classiques?",
       "type": "qcm",
       "choix": [
-        "Un simple divertissement",
-        "Un outil de critique sociale",
-        "Un lieu de quête de vérité",
-        "Un moyen d'expression du moi"
+        "En respectant scrupuleusement les règles anciennes",
+        "En explorant l'absurdité de la condition humaine",
+        "En simplifiant les intrigues",
+        "En accentuant les descriptions de décor"
+      ],
+      "reponse": "B",
+      "explication": "Le théâtre contemporain s'éloigne des conventions classiques en explorant notamment l'absurdité de la condition humaine."
+    },
+    {
+      "question": "Qu'est-ce que le théâtre contemporain explorent souvent?",
+      "type": "qcm",
+      "choix": [
+        "La perfection de la condition humaine",
+        "L'absurdité de la condition humaine",
+        "La simplicité des relations humaines",
+        "La beauté du langage"
+      ],
+      "reponse": "B",
+      "explication": "Le théâtre contemporain se concentre souvent sur l'exploration de l'absurdité de la condition humaine, mettant en lumière les aspects contradictoires et incompréhensibles de l'existence humaine."
+    },
+    {
+      "question": "Quel est le role de l'auteur dans le théâtre contemporain?",
+      "type": "qcm",
+      "choix": [
+        "De se conformer aux règles anciennes",
+        "D'explorer de nouvelles formes d'expression",
+        "De simplifier les intrigues",
+        "De créer des personnages parfaits"
+      ],
+      "reponse": "B",
+      "explication": "Les auteurs de théâtre contemporain jouent un rôle important dans l'exploration de nouvelles formes d'expression et la remise en question des conventions établies."
+    },
+    {
+      "question": "Que signifie 'didascalies' dans le contexte du théâtre?",
+      "type": "qcm",
+      "choix": [
+        "Des descriptions de personnages",
+        "Des indications de mise en scène",
+        "Des dialogues entre les acteurs",
+        "Des réflexions des spectateurs"
+      ],
+      "reponse": "B",
+      "explication": "Les didascalies font référence aux indications de mise en scène dans un texte théâtral."
+    },
+    {
+      "question": "Qu'est-ce que le théâtre contemporain met en scène?",
+      "type": "qcm",
+      "choix": [
+        "La simplicité et la clarté du langage",
+        "La complexité et l'ambiguïté du langage",
+        "La beauté et la perfection des décors",
+        "La rapidité et la simplicité de l'intrigue"
+      ],
+      "reponse": "B",
+      "explication": "Le théâtre contemporain se caractérise par la mise en scène de la complexité et de l'ambiguïté du langage, reflétant les incertitudes et les contradictions de la condition humaine."
+    },
+    {
+      "question": "Quelle période est caractérisée par une mutation profonde dans le théâtre?",
+      "type": "qcm",
+      "choix": [
+        "XVIIIe siècle",
+        "XIXe siècle",
+        "XXe siècle",
+        "XXIe siècle"
       ],
       "reponse": "C",
-      "explication": "La littérature devient un lieu de quête de vérité avec le mouvement de l'auteur."
+      "explication": "Le XXe siècle est marqué par une mutation significative dans le théâtre, caractérisée par l'éloignement des conventions classiques et l'exploration de nouvelles formes d'expression."
     },
     {
-      "question": "Quel est le rôle de l'auteur dans son œuvre?",
+      "question": "Que fait le théâtre contemporain?",
       "type": "qcm",
       "choix": [
-        "De simplement raconter une histoire",
-        "D'explorer un thème général",
-        "De critiquer la société",
-        "De se exprimer lui-même"
+        "Il suit les conventions classiques",
+        "Il explore l'absurdité de la condition humaine",
+        "Il se concentre sur les descriptions de décor",
+        "Il accentue la simplicité des intrigues"
       ],
       "reponse": "B",
-      "explication": "L'auteur explore un thème général à travers son œuvre."
+      "explication": "Le théâtre contemporain se caractérise par l'exploration de l'absurdité de la condition humaine et la remise en question des conventions établies."
     },
     {
-      "question": "Qu'est-ce que la double énonciation chez Marivaux?",
+      "question": "Qu'est-ce que les didascalies offrent?",
       "type": "qcm",
       "choix": [
-        "Un style d'écriture",
-        "Une technique de narration",
-        "Un thème littéraire",
-        "Une caractéristique de l'auteur"
+        "Des descriptions de personnages",
+        "Des indications de mise en scène",
+        "Des dialogues entre les acteurs",
+        "Des réflexions des spectateurs"
       ],
       "reponse": "B",
-      "explication": "La double énonciation est une technique de narration utilisée par Marivaux."
+      "explication": "Les didascalies offrent des indications de mise en scène dans les textes théâtraux."
     },
     {
-      "question": "Quel est le contexte intellectuel dans lequel s'inscrit l'auteur?",
+      "question": "Quelle est la caracteristique principale du théâtre contemporain?",
       "type": "qcm",
       "choix": [
-        "Un contexte de stabilité",
-        "Un contexte de mutation",
-        "Un contexte de crise",
-        "Un contexte de révolution"
+        "Le respect des conventions classiques",
+        "L'exploration de l'absurdité de la condition humaine",
+        "La focalisation sur les descriptions de décor",
+        "La simplification des intrigues"
       ],
       "reponse": "B",
-      "explication": "L'auteur s'inscrit dans un contexte intellectuel en pleine mutation."
+      "explication": "La caractéristique principale du théâtre contemporain est l'exploration de l'absurdité de la condition humaine et la remise en question des conventions établies."
     },
     {
-      "question": "Quel est le but de la méthode de commentary?",
+      "question": "Qu'est-ce que le théâtre contemporain met en scène?",
       "type": "qcm",
       "choix": [
-        "De critiquer l'œuvre",
-        "De résumer le contenu",
-        "De présenter l'auteur et son œuvre",
-        "De comprendre le contexte"
-      ],
-      "reponse": "D",
-      "explication": "La méthode de commentary vise à comprendre le contexte de l'œuvre."
-    },
-    {
-      "question": "Qu'est-ce que la quête de vérité dans le contexte du cours?",
-      "type": "qcm",
-      "choix": [
-        "Une recherche de la vérité absolue",
-        "Une exploration de thèmes littéraires",
-        "Une critique de la société",
-        "Une expression du moi"
+        "La perfection et la clarté du langage",
+        "La complexité et l'ambiguïté du langage",
+        "La beauté et la perfection des décors",
+        "La rapidité et la simplicité de l'intrigue"
       ],
       "reponse": "B",
-      "explication": "La quête de vérité est une exploration de thèmes littéraires dans le contexte du cours."
+      "explication": "Le théâtre contemporain se caractérise par la mise en scène de la complexité et de l'ambiguïté du langage, reflétant les incertitudes et les contradictions de la condition humaine."
     },
     {
-      "question": "Quel est le rôle de la littérature dans la société?",
+      "question": "Que signifie 'théâtre contemporain'?",
       "type": "qcm",
       "choix": [
-        "De divertir",
-        "De critiquer",
-        "De éduquer",
-        "De refléter la réalité"
+        "Un théâtre qui suit les conventions classiques",
+        "Un théâtre qui explore l'absurdité de la condition humaine",
+        "Un théâtre qui se concentre sur les descriptions de décor",
+        "Un théâtre qui accentue la simplicité des intrigues"
       ],
-      "reponse": "D",
-      "explication": "La littérature reflète la réalité de la société."
-    },
-    {
-      "question": "Qu'est-ce que le déterminisme chez Zola?",
-      "type": "qcm",
-      "choix": [
-        "Un thème littéraire",
-        "Une technique de narration",
-        "Une caractéristique de l'auteur",
-        "Un style d'écriture"
-      ],
-      "reponse": "A",
-      "explication": "Le déterminisme est un thème littéraire exploré par Zola."
-    },
-    {
-      "question": "Quel est le lien entre l'auteur et son œuvre?",
-      "type": "qcm",
-      "choix": [
-        "L'auteur est indépendant de son œuvre",
-        "L'auteur est dépendant de son œuvre",
-        "L'auteur est une partie de son œuvre",
-        "L'auteur est distinct de son œuvre"
-      ],
-      "reponse": "C",
-      "explication": "L'auteur est une partie de son œuvre, car il l'a créée."
-    },
-    {
-      "question": "Qu'est-ce que la critique sociale dans le contexte du cours?",
-      "type": "qcm",
-      "choix": [
-        "Une critique de la société",
-        "Une exploration de thèmes littéraires",
-        "Une expression du moi",
-        "Une recherche de la vérité"
-      ],
-      "reponse": "A",
-      "explication": "La critique sociale est une critique de la société dans le contexte du cours."
-    },
-    {
-      "question": "Quel est le but de la présentation de l'auteur?",
-      "type": "qcm",
-      "choix": [
-        "De présenter son œuvre",
-        "De critiquer son œuvre",
-        "De comparer avec d'autres auteurs",
-        "De comprendre son contexte"
-      ],
-      "reponse": "D",
-      "explication": "La présentation de l'auteur vise à comprendre son contexte."
-    },
-    {
-      "question": "Qu'est-ce que la méthode de commentary dans le contexte du cours?",
-      "type": "qcm",
-      "choix": [
-        "Une méthode de critique",
-        "Une méthode de résumé",
-        "Une méthode de présentation",
-        "Une méthode de compréhension"
-      ],
-      "reponse": "D",
-      "explication": "La méthode de commentary est une méthode de compréhension du contexte de l'œuvre."
-    },
-    {
-      "question": "Quel est le rôle de l'auteur dans la littérature?",
-      "type": "qcm",
-      "choix": [
-        "De créer une œuvre",
-        "De critiquer la société",
-        "De refléter la réalité",
-        "De divertir le lecteur"
-      ],
-      "reponse": "A",
-      "explication": "L'auteur crée une œuvre littéraire."
-    },
-    {
-      "question": "Qu'est-ce que la littérature dans le contexte du cours?",
-      "type": "qcm",
-      "choix": [
-        "Un simple divertissement",
-        "Un outil de critique sociale",
-        "Un lieu de quête de vérité",
-        "Un moyen d'expression du moi"
-      ],
-      "reponse": "C",
-      "explication": "La littérature est un lieu de quête de vérité dans le contexte du cours."
-    },
-    {
-      "question": "Quel est le but de la méthode de commentary dans le contexte du cours?",
-      "type": "qcm",
-      "choix": [
-        "De critiquer l'œuvre",
-        "De résumer le contenu",
-        "De présenter l'auteur et son œuvre",
-        "De comprendre le contexte"
-      ],
-      "reponse": "D",
-      "explication": "La méthode de commentary vise à comprendre le contexte de l'œuvre."
+      "reponse": "B",
+      "explication": "Le théâtre contemporain se caractérise par l'exploration de l'absurdité de la condition humaine et la remise en question des conventions établies."
     }
   ],
   "exercices": [
     {
-      "enonce": "Écrivez un commentaire composé sur un œuvre littéraire de votre choix.",
-      "corrige": "Un commentaire composé doit comporter une introduction, un développement et une conclusion. L'introduction doit présenter l'auteur et son œuvre, le développement doit explorer les thèmes et les techniques littéraires, et la conclusion doit résumer les points principaux."
+      "enonce": "Analysez comment le théâtre contemporain explore l'absurdité de la condition humaine.",
+      "corrige": "Le théâtre contemporain explore l'absurdité de la condition humaine à travers des personnages et des situations qui mettent en lumière les contradictions et les incertitudes de la vie. Cela peut être réalisé par des dialogues qui remettent en question les conventions, des actions qui défient la logique, ou des mises en scène qui créent un sentiment d'étrangeté et d'incertitude. L'objectif est de montrer que la condition humaine est complexe et multiple, et que les réponses simplistes ou conventionnelles ne suffisent pas pour comprendre la réalité de la vie."
     },
     {
-      "enonce": "Analysez le rôle de la littérature dans la société.",
-      "corrige": "La littérature reflète la réalité de la société et permet de critiquer et de comprendre les problèmes sociaux. Elle peut également être un outil de divertissement et d'éducation."
-    },
-    {
-      "enonce": "Présentez un auteur et son œuvre.",
-      "corrige": "Un auteur doit être présenté dans son contexte historique et littéraire. Son œuvre doit être décrite et analysée pour comprendre ses thèmes et ses techniques littéraires."
-    },
-    {
-      "enonce": "Écrivez un essai sur le thème de la quête de vérité dans la littérature.",
-      "corrige": "Un essai sur le thème de la quête de vérité doit explorer les différentes façons dont les auteurs abordent ce thème dans leurs œuvres. Il doit également analyser les techniques littéraires utilisées pour transmettre ce thème."
-    },
-    {
-      "enonce": "Créez un plan de commentaire composé sur un œuvre littéraire.",
-      "corrige": "Un plan de commentaire composé doit comporter une introduction, un développement et une conclusion. L'introduction doit présenter l'auteur et son œuvre, le développement doit explorer les thèmes et les techniques littéraires, et la conclusion doit résumer les points principaux."
+      "enonce": "Décrivez le rôle des didascalies dans le théâtre moderne.",
+      "corrige": "Les didascalies jouent un rôle important dans le théâtre moderne en offrant des indications de mise en scène qui aident à créer l'atmosphère et à guider l'interprétation des acteurs. Elles peuvent inclure des descriptions de décor, des mouvements de caméra, des éclairages, des sons, etc. Les didascalies permettent ainsi aux metteurs en scène de transmettre leur vision et leur intention aux acteurs et à l'équipe technique, et de créer une expérience théâtrale cohérente et immersive pour le public."
     }
   ]
 }
