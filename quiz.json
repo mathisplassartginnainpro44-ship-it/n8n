@@ -1,256 +1,236 @@
 {
-  "titre": "Figures de style",
-  "matiere": "Français",
+  "titre": "Tonalités en français",
+  "matiere": "français",
   "questions": [
     {
-      "question": "Qu'est-ce qu'une métaphore ?",
+      "question": "Quelle est la définition de la tonalité lyrique en français ?",
       "type": "qcm",
       "choix": [
-        "Comparaison avec un outil grammatical",
-        "Comparaison sans outil grammatical",
-        "Description d'un objet",
-        "Définition d'un mot"
-      ],
-      "reponse": "B",
-      "explication": "Une métaphore est une comparaison sans outil grammatical, qui fusionne deux idées pour créer un univers poétique ou symbolique."
-    },
-    {
-      "question": "Quel est l'effet recherché par la personnification ?",
-      "type": "qcm",
-      "choix": [
-        "Rendre le décor statique",
-        "Rendre le décor vivant, complice ou menaçant",
-        "Créer un effet comique",
-        "Souligner la passion"
-      ],
-      "reponse": "B",
-      "explication": "La personnification rend le décor vivant, complice ou menaçant pour les personnages."
-    },
-    {
-      "question": "Qu'est-ce qu'une allégorie ?",
-      "type": "qcm",
-      "choix": [
-        "Représentation concrète d'une idée abstraite",
-        "Description d'un objet",
-        "Définition d'un mot",
-        "Comparaison entre deux idées"
+        "Expression des sentiments personnels",
+        "Célébration des exploits d'un héros",
+        "Présentation d'un personnage face à un destin inéluctable",
+        "Mise en scène de souffrances poignantes"
       ],
       "reponse": "A",
-      "explication": "Une allégorie est une représentation concrète d'une idée abstraite, qui rend une notion complexe visuelle et mémorable."
+      "explication": "La tonalité lyrique est une expression des sentiments personnels, tels que l'amour, la mélancolie ou le regret."
     },
     {
-      "question": "Quel est l'effet de l'hyperbole ?",
+      "question": "Quels sont les procédés fréquents utilisés dans la tonalité lyrique ?",
       "type": "qcm",
       "choix": [
-        "Souligner la passion, le tragique ou créer un effet comique",
-        "Rendre le décor vivant",
-        "Créer un effet de surprise",
-        "Décrire un objet de manière réaliste"
+        "Emploi du 'je', métaphores, ponctuation expressive",
+        "Hyperboles, énumérations, pluriel ('nous')",
+        "Vocabulaire de la fatalité, du sacrifice, de la souffrance",
+        "Champ lexical de la douleur, larmes, plaintes"
       ],
       "reponse": "A",
-      "explication": "L'hyperbole souligne la passion, le tragique ou crée un effet comique."
+      "explication": "La tonalité lyrique utilise souvent l'emploi du 'je', des métaphores et d'une ponctuation expressive pour exprimer les sentiments personnels."
     },
     {
-      "question": "Qu'est-ce qu'une litote ?",
+      "question": "Quel est l'effet de la tonalité lyrique sur le lecteur/spectateur ?",
       "type": "qcm",
       "choix": [
-        "Dire le moins pour suggérer le plus",
-        "Dire le plus pour suggérer le moins",
-        "Description d'un objet",
-        "Définition d'un mot"
-      ],
-      "reponse": "A",
-      "explication": "Une litote est dire le moins pour suggérer le plus, ce qui révèle une émotion intense sous une fausse retenue."
-    },
-    {
-      "question": "Quel est l'effet de la gradation ?",
-      "type": "qcm",
-      "choix": [
-        "Marquer une montée de la tension ou un emballement émotionnel",
-        "Rendre le décor vivant",
-        "Créer un effet comique",
-        "Souligner la passion"
-      ],
-      "reponse": "A",
-      "explication": "La gradation marque une montée de la tension ou un emballement émotionnel."
-    },
-    {
-      "question": "Qu'est-ce qu'une antithèse ?",
-      "type": "qcm",
-      "choix": [
-        "Coexistence de deux termes opposés dans une phrase",
-        "Description d'un objet",
-        "Définition d'un mot",
-        "Comparaison entre deux idées"
-      ],
-      "reponse": "A",
-      "explication": "Une antithèse est la coexistence de deux termes opposés dans une phrase, qui met en relief un conflit intérieur ou un dilemme moral."
-    },
-    {
-      "question": "Quel est l'effet de l'oxymore ?",
-      "type": "qcm",
-      "choix": [
-        "Créer un effet de surprise",
-        "Rendre le décor vivant",
-        "Souligner la passion",
-        "Décrire un objet de manière réaliste"
-      ],
-      "reponse": "A",
-      "explication": "L'oxymore crée un effet de surprise en associant deux termes opposés."
-    },
-    {
-      "question": "Qu'est-ce qu'une métaphore qui compare un être humain à un animal ?",
-      "type": "qcm",
-      "choix": [
-        "Personnification",
-        "Allégorie",
-        "Hyperbole",
-        "Métaphore"
+        "Admiration, enthousiasme, sentiment de grandeur",
+        "Terreur et pitié",
+        "Compassion, tristesse, empathie profonde",
+        "Partager une émotion intime, créer une communion"
       ],
       "reponse": "D",
-      "explication": "Une métaphore qui compare un être humain à un animal est bien une métaphore."
+      "explication": "La tonalité lyrique permet de partager une émotion intime avec le lecteur/spectateur et de créer une communion."
     },
     {
-      "question": "Quel est l'effet de la personnification d'un objet inanimé ?",
+      "question": "Quelle est la définition de la tonalité épique en français ?",
       "type": "qcm",
       "choix": [
-        "Rendre l'objet statique",
-        "Rendre l'objet vivant",
-        "Créer un effet comique",
-        "Souligner la passion"
+        "Expression des sentiments personnels",
+        "Célébration des exploits d'un héros ou d'un groupe dépassant les forces humaines",
+        "Présentation d'un personnage face à un destin inéluctable",
+        "Mise en scène de souffrances poignantes"
       ],
       "reponse": "B",
-      "explication": "La personnification d'un objet inanimé le rend vivant."
+      "explication": "La tonalité épique est une célébration des exploits d'un héros ou d'un groupe dépassant les forces humaines."
     },
     {
-      "question": "Qu'est-ce qu'une allégorie qui représente la mort ?",
+      "question": "Quels sont les procédés fréquents utilisés dans la tonalité épique ?",
       "type": "qcm",
       "choix": [
-        "Une représentation concrète de la mort",
-        "Une description de la mort",
-        "Une définition de la mort",
-        "Une comparaison entre la mort et la vie"
-      ],
-      "reponse": "A",
-      "explication": "Une allégorie qui représente la mort est une représentation concrète de la mort."
-    },
-    {
-      "question": "Quel est l'effet de l'hyperbole dans un poème ?",
-      "type": "qcm",
-      "choix": [
-        "Souligner la passion",
-        "Rendre le décor vivant",
-        "Créer un effet comique",
-        "Décrire un objet de manière réaliste"
-      ],
-      "reponse": "A",
-      "explication": "L'hyperbole dans un poème souligne la passion."
-    },
-    {
-      "question": "Qu'est-ce qu'une litote qui décrit une émotion intense ?",
-      "type": "qcm",
-      "choix": [
-        "Une litote qui décrit une émotion faible",
-        "Une litote qui décrit une émotion intense",
-        "Une description d'une émotion",
-        "Une définition d'une émotion"
+        "Emploi du 'je', métaphores, ponctuation expressive",
+        "Hyperboles, énumérations, pluriel ('nous')",
+        "Vocabulaire de la fatalité, du sacrifice, de la souffrance",
+        "Champ lexical de la douleur, larmes, plaintes"
       ],
       "reponse": "B",
-      "explication": "Une litote qui décrit une émotion intense est une litote qui révèle cette émotion sous une fausse retenue."
+      "explication": "La tonalité épique utilise souvent des hyperboles, des énumérations et le pluriel ('nous') pour décrire les exploits du héros."
     },
     {
-      "question": "Quel est l'effet de la gradation dans un récit ?",
+      "question": "Quel est l'effet de la tonalité épique sur le lecteur/spectateur ?",
       "type": "qcm",
       "choix": [
-        "Marquer une montée de la tension",
-        "Rendre le décor vivant",
-        "Créer un effet comique",
-        "Souligner la passion"
+        "Admiration, enthousiasme, sentiment de grandeur",
+        "Terreur et pitié",
+        "Compassion, tristesse, empathie profonde",
+        "Partager une émotion intime, créer une communion"
       ],
       "reponse": "A",
-      "explication": "La gradation dans un récit marque une montée de la tension."
+      "explication": "La tonalité épique inspire l'admiration, l'enthousiasme et le sentiment de grandeur chez le lecteur/spectateur."
     },
     {
-      "question": "Qu'est-ce qu'une antithèse qui oppose deux idées ?",
+      "question": "Quelle est la définition de la tonalité tragique en français ?",
       "type": "qcm",
       "choix": [
-        "Une antithèse qui oppose deux idées",
-        "Une description de deux idées",
-        "Une définition de deux idées",
-        "Une comparaison entre deux idées"
+        "Expression des sentiments personnels",
+        "Célébration des exploits d'un héros ou d'un groupe dépassant les forces humaines",
+        "Présentation d'un personnage face à un destin inéluctable ou à la mort",
+        "Mise en scène de souffrances poignantes"
       ],
-      "reponse": "A",
-      "explication": "Une antithèse qui oppose deux idées est une antithèse qui met en relief un conflit intérieur ou un dilemme moral."
+      "reponse": "C",
+      "explication": "La tonalité tragique présente un personnage face à un destin inéluctable ou à la mort."
     },
     {
-      "question": "Quel est l'effet de l'oxymore dans un poème ?",
+      "question": "Quels sont les procédés fréquents utilisés dans la tonalité tragique ?",
       "type": "qcm",
       "choix": [
-        "Créer un effet de surprise",
-        "Rendre le décor vivant",
-        "Souligner la passion",
-        "Décrire un objet de manière réaliste"
+        "Emploi du 'je', métaphores, ponctuation expressive",
+        "Hyperboles, énumérations, pluriel ('nous')",
+        "Vocabulaire de la fatalité, du sacrifice, de la souffrance",
+        "Champ lexical de la douleur, larmes, plaintes"
       ],
-      "reponse": "A",
-      "explication": "L'oxymore dans un poème crée un effet de surprise."
+      "reponse": "C",
+      "explication": "La tonalité tragique utilise souvent un vocabulaire de la fatalité, du sacrifice et de la souffrance pour créer une atmosphère solennelle."
     },
     {
-      "question": "Qu'est-ce qu'une métaphore qui compare deux idées abstraites ?",
+      "question": "Quel est l'effet de la tonalité tragique sur le lecteur/spectateur ?",
       "type": "qcm",
       "choix": [
-        "Une métaphore qui compare deux idées concrètes",
-        "Une métaphore qui compare deux idées abstraites",
-        "Une description de deux idées",
-        "Une définition de deux idées"
-      ],
-      "reponse": "B",
-      "explication": "Une métaphore qui compare deux idées abstraites est bien une métaphore."
-    },
-    {
-      "question": "Quel est l'effet de la personnification d'un animal ?",
-      "type": "qcm",
-      "choix": [
-        "Rendre l'animal statique",
-        "Rendre l'animal vivant",
-        "Créer un effet comique",
-        "Souligner la passion"
+        "Admiration, enthousiasme, sentiment de grandeur",
+        "Terreur et pitié",
+        "Compassion, tristesse, empathie profonde",
+        "Partager une émotion intime, créer une communion"
       ],
       "reponse": "B",
-      "explication": "La personnification d'un animal le rend vivant."
+      "explication": "La tonalité tragique inspire la terreur et la pitié chez le lecteur/spectateur, conduisant à la catharsis au théâtre."
     },
     {
-      "question": "Qu'est-ce qu'une allégorie qui représente une idée complexe ?",
+      "question": "Quelle est la définition de la tonalité pathétique en français ?",
       "type": "qcm",
       "choix": [
-        "Une représentation concrète d'une idée simple",
-        "Une représentation concrète d'une idée complexe",
-        "Une description d'une idée",
-        "Une définition d'une idée"
+        "Expression des sentiments personnels",
+        "Célébration des exploits d'un héros ou d'un groupe dépassant les forces humaines",
+        "Présentation d'un personnage face à un destin inéluctable ou à la mort",
+        "Mise en scène de souffrances poignantes pour susciter la compassion"
       ],
-      "reponse": "B",
-      "explication": "Une allégorie qui représente une idée complexe est une représentation concrète de cette idée."
+      "reponse": "D",
+      "explication": "La tonalité pathétique met en scène des souffrances poignantes pour susciter la compassion du lecteur/spectateur."
+    },
+    {
+      "question": "Quels sont les procédés fréquents utilisés dans la tonalité pathétique ?",
+      "type": "qcm",
+      "choix": [
+        "Emploi du 'je', métaphores, ponctuation expressive",
+        "Hyperboles, énumérations, pluriel ('nous')",
+        "Vocabulaire de la fatalité, du sacrifice, de la souffrance",
+        "Champ lexical de la douleur, larmes, plaintes"
+      ],
+      "reponse": "D",
+      "explication": "La tonalité pathétique utilise souvent un champ lexical de la douleur, des larmes et des plaintes pour décrire les souffrances."
+    },
+    {
+      "question": "Quel est l'effet de la tonalité pathétique sur le lecteur/spectateur ?",
+      "type": "qcm",
+      "choix": [
+        "Admiration, enthousiasme, sentiment de grandeur",
+        "Terreur et pitié",
+        "Compassion, tristesse, empathie profonde",
+        "Partager une émotion intime, créer une communion"
+      ],
+      "reponse": "C",
+      "explication": "La tonalité pathétique inspire la compassion, la tristesse et l'empathie profonde chez le lecteur/spectateur."
+    },
+    {
+      "question": "Quelle est la différence entre la tonalité lyrique et la tonalité tragique ?",
+      "type": "qcm",
+      "choix": [
+        "La tonalité lyrique est plus solennelle que la tonalité tragique",
+        "La tonalité tragique est plus personnelle que la tonalité lyrique",
+        "La tonalité lyrique exprime des sentiments personnels, tandis que la tonalité tragique présente un personnage face à la mort",
+        "La tonalité tragique est plus comique que la tonalité lyrique"
+      ],
+      "reponse": "C",
+      "explication": "La tonalité lyrique se concentre sur l'expression des sentiments personnels, tandis que la tonalité tragique présente un personnage face à la mort ou à un destin inéluctable."
+    },
+    {
+      "question": "Quel est le rôle de la ponctuation expressive dans la tonalité lyrique ?",
+      "type": "qcm",
+      "choix": [
+        "Elle permet de créer une atmosphère solennelle",
+        "Elle inspire l'admiration et l'enthousiasme",
+        "Elle exprime les sentiments personnels de manière plus intense",
+        "Elle détourne l'attention du lecteur/spectateur"
+      ],
+      "reponse": "C",
+      "explication": "La ponctuation expressive dans la tonalité lyrique permet d'exprimer les sentiments personnels de manière plus intense et de créer une communion avec le lecteur/spectateur."
+    },
+    {
+      "question": "Comment la tonalité épique contribue-t-elle à la création d'un héros ?",
+      "type": "qcm",
+      "choix": [
+        "En le présentant comme un personnage ordinaire",
+        "En le dotant de qualités surhumaines",
+        "En le confrontant à des défis quotidiens",
+        "En le décrivant avec des hyperboles et des énumérations"
+      ],
+      "reponse": "D",
+      "explication": "La tonalité épique contribue à la création d'un héros en le décrivant avec des hyperboles et des énumérations, mettant ainsi en avant ses exploits et ses qualités exceptionnelles."
+    },
+    {
+      "question": "Quelle est la fonction de la catharsis dans la tonalité tragique ?",
+      "type": "qcm",
+      "choix": [
+        "Elle permet de créer une atmosphère de peur",
+        "Elle inspire la compassion et l'empathie",
+        "Elle permet au lecteur/spectateur de purger ses émotions",
+        "Elle détourne l'attention du lecteur/spectateur"
+      ],
+      "reponse": "C",
+      "explication": "La catharsis dans la tonalité tragique permet au lecteur/spectateur de purger ses émotions, en particulier la terreur et la pitié, à travers l'identification avec le personnage tragique."
+    },
+    {
+      "question": "Comment la tonalité pathétique diffère-t-elle de la tonalité tragique ?",
+      "type": "qcm",
+      "choix": [
+        "La tonalité pathétique est plus solennelle que la tonalité tragique",
+        "La tonalité tragique est plus personnelle que la tonalité pathétique",
+        "La tonalité pathétique se concentre sur les souffrances pour susciter la compassion, tandis que la tonalité tragique se concentre sur la mort et le destin",
+        "La tonalité pathétique est plus comique que la tonalité tragique"
+      ],
+      "reponse": "C",
+      "explication": "La tonalité pathétique se distingue de la tonalité tragique en ce qu'elle se concentre sur les souffrances pour susciter la compassion, tandis que la tonalité tragique se concentre sur la mort et le destin inéluctable."
+    },
+    {
+      "question": "Quel est l'effet de la tonalité comique sur le lecteur/spectateur ?",
+      "type": "qcm",
+      "choix": [
+        "Il provoque la terreur et la pitié",
+        "Il inspire l'admiration et l'enthousiasme",
+        "Il crée une atmosphere de gaieté et de rire",
+        "Il exprime des sentiments personnels de manière intense"
+      ],
+      "reponse": "C",
+      "explication": "La tonalité comique a pour but de créer une atmosphère de gaieté et de rire, en utilisant souvent l'ironie, l'humour et les situations absurdement drôles."
     }
   ],
   "exercices": [
     {
-      "enonce": "Analysez les figures de style utilisées dans le poème suivant : 'Mon cœur est un oiseau qui vole vers toi'.",
-      "corrige": "Le poème utilise une métaphore qui compare le cœur à un oiseau, et une personnification de l'oiseau qui vole vers la personne aimée."
+      "enonce": "Analysez la tonalité d'un poème lyrique et identifiez les procédés utilisés pour exprimer les sentiments personnels.",
+      "corrige": "Le poème lyrique utilise l'emploi du 'je', des métaphores et une ponctuation expressive pour exprimer les sentiments personnels. L'utilisation de ces procédés crée une communion avec le lecteur et permet de partager une émotion intime."
     },
     {
-      "enonce": "Identifiez les figures de style utilisées dans le texte suivant : 'La mort est une reine qui règne sur le monde'.",
-      "corrige": "Le texte utilise une allégorie qui représente la mort comme une reine, et une personnification de la mort qui règne sur le monde."
+      "enonce": "Écrivez un court paragraphe décrivant un personnage dans une tonalité tragique et utilisez des procédés appropriés pour créer une atmosphère solennelle.",
+      "corrige": "Le personnage se tenait debout, les yeux fixés sur l'horizon, son destin inéluctable déjà scellé. Le vent gémissait autour de lui, comme pour souligner la fatalité de sa situation. Les mots 'jamais' et 'toujours' résonnaient dans son esprit, symbolisant l'irréversibilité de son sort."
     },
     {
-      "enonce": "Expliquez l'effet de l'hyperbole dans le texte suivant : 'Je t'aime plus que tout au monde'.",
-      "corrige": "L'hyperbole souligne la passion et l'intensité de l'amour, en exagérant la mesure de cet amour."
-    },
-    {
-      "enonce": "Analysez les figures de style utilisées dans le poème suivant : 'Mon amour est un feu qui brûle en moi'.",
-      "corrige": "Le poème utilise une métaphore qui compare l'amour à un feu, et une personnification du feu qui brûle en moi."
-    },
-    {
-      "enonce": "Identifiez les figures de style utilisées dans le texte suivant : 'La vie est un puzzle qui doit être résolu'.",
-      "corrige": "Le texte utilise une allégorie qui représente la vie comme un puzzle, et une personnification du puzzle qui doit être résolu."
+      "enonce": "Concevez un dialogue comique entre deux personnages et utilisez des procédés pour créer une atmosphère de gaieté et de rire.",
+      "corrige": "Personnage A : 'J'ai acheté un chien qui pense qu'il est un chat !' Personnage B : 'C'est ridicule ! Et comment le sais-tu ?' Personnage A : 'Parce qu'il miaule toute la journée et essaie de grimper aux rideaux !' Les deux personnages éclatent de rire à cette absurdité."
     }
   ]
 }
