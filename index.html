@@ -183,6 +183,16 @@ input[type=color]::-webkit-color-swatch{border:none;border-radius:6px}
 .sync-badge{display:none;align-items:center;gap:8px;background:var(--accent-soft);border:1px solid rgba(124,106,255,.25);border-radius:20px;padding:7px 14px;font-size:10px;color:var(--accent);letter-spacing:.1em}
 .sync-dot{width:6px;height:6px;border-radius:50%;background:var(--accent);animation:blink 1s ease infinite}
 
+/* ══ GROUPES MATIÈRES ══ */
+.matiere-group{margin-bottom:36px}
+.matiere-header{display:flex;align-items:center;gap:10px;margin-bottom:14px;cursor:pointer;user-select:none}
+.matiere-chevron{font-size:10px;color:var(--muted);transition:transform .22s;display:inline-block}
+.matiere-chevron.open{transform:rotate(90deg)}
+.matiere-label{font-family:'Syne',sans-serif;font-size:15px;font-weight:700}
+.matiere-count{font-size:10px;color:var(--muted);background:var(--surface-2);border:1px solid var(--border);border-radius:20px;padding:2px 9px}
+.matiere-body{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px}
+.matiere-body.collapsed{display:none}
+
 /* ══ QUIZ GRID ══ */
 .quiz-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px}
 .quiz-card{background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:26px;cursor:pointer;transition:border-color .25s,transform .25s,background .25s;animation:fadeUp .5s ease forwards;opacity:0;position:relative;overflow:hidden}
@@ -721,24 +731,55 @@ function deleteQuiz(index) {
   }
 }
 
+// État ouvert/fermé des groupes matières
+const _groupOpen = {};
+
+function toggleGroup(matiere) {
+  _groupOpen[matiere] = !(_groupOpen[matiere] !== false);
+  renderLibrary();
+}
+
 function renderLibrary() {
   const grid = document.getElementById('quiz-grid');
   if (S.library.length === 0) {
     grid.innerHTML = '<div class="empty-state"><div class="empty-icon">📭</div><h3>Bibliothèque vide</h3><p style="margin-bottom:20px">Clique sur "Sync" ou importe un fichier JSON</p><button class="btn btn-primary" onclick="openImportModal()">Importer</button></div>';
     return;
   }
-  grid.innerHTML = S.library.map((quiz, i) => {
-    const sc = quiz._score;
-    const badge = sc
-      ? '<span class="card-badge badge-done">'+sc.correct+'/'+sc.total+' · '+Math.round(sc.pct)+'%</span>'
-      : '<span class="card-badge badge-new">Nouveau</span>';
-    return `<div class="quiz-card" onclick="startQuiz(${i})">
-      <div class="card-meta">${quiz.matiere || 'Quiz'} · ${quiz.questions.length} questions</div>
-      <div class="card-title">${esc(quiz.titre)}</div>
-      <div class="card-footer">
-        ${badge}
-        <button class="btn btn-sm btn-danger" onclick="event.stopPropagation(); deleteQuiz(${i})">Supprimer</button>
+
+  // Grouper par matière
+  const groups = {};
+  S.library.forEach((quiz, i) => {
+    const m = quiz.matiere || 'Sans matière';
+    if (!groups[m]) groups[m] = [];
+    groups[m].push({ quiz, i });
+  });
+
+  grid.innerHTML = Object.entries(groups).map(([matiere, items]) => {
+    const isOpen = _groupOpen[matiere] !== false; // ouvert par défaut
+    const cards = items.map(({ quiz, i }) => {
+      const sc = quiz._score;
+      const badge = sc
+        ? '<span class="card-badge badge-done">'+sc.correct+'/'+sc.total+' · '+Math.round(sc.pct)+'%</span>'
+        : '<span class="card-badge badge-new">Nouveau</span>';
+      return `<div class="quiz-card" onclick="startQuiz(${i})">
+        <div class="card-meta">${quiz.questions.length} questions</div>
+        <div class="card-title">${esc(quiz.titre)}</div>
+        <div class="card-footer">
+          ${badge}
+          <button class="btn btn-sm btn-danger" onclick="event.stopPropagation(); deleteQuiz(${i})">Supprimer</button>
+        </div>
+      </div>`;
+    }).join('');
+
+    const safeM = matiere.replace(/'/g, "\\'");
+    return `<div class="matiere-group">
+      <div class="matiere-header" onclick="toggleGroup('${safeM}')">
+        <span class="matiere-chevron ${isOpen ? 'open' : ''}">▶</span>
+        <span style="font-size:18px">📁</span>
+        <span class="matiere-label">${esc(matiere)}</span>
+        <span class="matiere-count">${items.length}</span>
       </div>
+      <div class="matiere-body ${isOpen ? '' : 'collapsed'}">${cards}</div>
     </div>`;
   }).join('');
 }
