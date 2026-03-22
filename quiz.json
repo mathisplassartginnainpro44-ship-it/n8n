@@ -1,9 +1,9 @@
 {
-  "titre": "Poésie Française",
+  "titre": "Les Poètes Symbolistes",
   "matiere": "Français",
   "questions": [
     {
-      "question": "Qui est le poète français connu pour son œuvre 'Une saison en enfer' ?",
+      "question": "Qui est le poète auteur de 'Une saison en enfer' ?",
       "type": "qcm",
       "choix": [
         "Arthur Rimbaud",
@@ -11,20 +11,20 @@
         "Verlaine",
         "Mallarmé"
       ],
-      "reponse": "Arthur Rimbaud",
-      "explication": "Arthur Rimbaud est un poète français qui a écrit 'Une saison en enfer' en 1873, considéré comme l'un de ses chefs-d'œuvre."
+      "reponse": "A",
+      "explication": "Arthur Rimbaud a écrit 'Une saison en enfer' en 1873"
     },
     {
-      "question": "Quel mouvement littéraire est associé à Charles Baudelaire ?",
+      "question": "Quel est le mouvement littéraire de Charles Baudelaire ?",
       "type": "qcm",
       "choix": [
         "Romantisme",
+        "Réalistme",
         "Symbolisme",
-        "Surréalisme",
-        "Realisme"
+        "Surréalisme"
       ],
-      "reponse": "Symbolisme",
-      "explication": "Charles Baudelaire est souvent considéré comme l'un des premiers poètes symbolistes, bien qu'il ait écrit avant la naissance officielle du mouvement."
+      "reponse": "C",
+      "explication": "Charles Baudelaire est considéré comme l'un des premiers poètes symbolistes"
     },
     {
       "question": "Qui est l'auteur de 'Les Fleurs du mal' ?",
@@ -35,95 +35,107 @@
         "Verlaine",
         "Mallarmé"
       ],
-      "reponse": "Charles Baudelaire",
-      "explication": "Charles Baudelaire a publié 'Les Fleurs du mal' en 1857, un recueil de poèmes qui a suscité scandale et admiration."
+      "reponse": "B",
+      "explication": "Charles Baudelaire a écrit 'Les Fleurs du mal' en 1857"
     },
     {
-      "question": "Quel est le titre de l'œuvre de Verlaine qui est un hommage aux poètes maudits ?",
-      "type": "qcm",
-      "choix": [
-        "Les Poètes Maudits",
-        "Les Fleurs du mal",
-        "Une saison en enfer",
-        "Le Bateau ivre"
-      ],
-      "reponse": "Les Poètes Maudits",
-      "explication": "Verlaine a écrit 'Les Poètes Maudits' en 1884 et 1888, un ouvrage qui rend hommage aux poètes qui ont vécu une vie tumultueuse et marginale."
-    },
-    {
-      "question": "Qui est le poète français associé au mouvement surréaliste ?",
+      "question": "Qui est le compagnon de Verlaine ?",
       "type": "qcm",
       "choix": [
         "Arthur Rimbaud",
         "Charles Baudelaire",
-        "Verlaine",
+        "Mallarmé",
         "Francis Ponge"
       ],
-      "reponse": "Francis Ponge",
-      "explication": "Francis Ponge est un poète français qui a été influencé par le surréalisme, un mouvement qui explore les possibilités de l'inconscient et du rêve."
+      "reponse": "A",
+      "explication": "Verlaine était amoureux d'Arthur Rimbaud"
     },
     {
-      "question": "Quel est le titre de l'œuvre de Francis Ponge qui explore la relation entre l'homme et les objets ?",
+      "question": "Quel est le titre de l'œuvre de Francis Ponge parue en 1942 ?",
       "type": "qcm",
       "choix": [
         "Le Parti pris des Choses",
         "La rage de l'expression",
         "Les Poètes Maudits",
-        "Les Fleurs du mal"
+        "Une saison en enfer"
       ],
-      "reponse": "Le Parti pris des Choses",
-      "explication": "Francis Ponge a publié 'Le Parti pris des Choses' en 1942, un recueil de poèmes qui explore la relation entre l'homme et les objets du quotidien."
+      "reponse": "A",
+      "explication": "Francis Ponge a écrit 'Le Parti pris des Choses' en 1942"
     },
     {
-      "question": "Qui est l'amant de Arthur Rimbaud ?",
+      "question": "Qui est l'auteur de 'Les Poètes Maudits' ?",
       "type": "qcm",
       "choix": [
+        "Arthur Rimbaud",
         "Charles Baudelaire",
         "Verlaine",
-        "Mallarmé",
+        "Mallarmé"
+      ],
+      "reponse": "C",
+      "explication": "Verlaine a écrit 'Les Poètes Maudits' en 1884 et 1888"
+    },
+    {
+      "question": "Quel est le mouvement littéraire de Francis Ponge ?",
+      "type": "qcm",
+      "choix": [
+        "Romantisme",
+        "Réalistme",
+        "Symbolisme",
+        "Surréalisme"
+      ],
+      "reponse": "D",
+      "explication": "Francis Ponge est considéré comme un poète surréaliste"
+    },
+    {
+      "question": "Qui est le poète auteur de 'Le bateau Ivre' ?",
+      "type": "qcm",
+      "choix": [
+        "Arthur Rimbaud",
+        "Charles Baudelaire",
+        "Verlaine",
+        "Mallarmé"
+      ],
+      "reponse": "A",
+      "explication": "Arthur Rimbaud a écrit 'Le bateau Ivre' en 1871"
+    },
+    {
+      "question": "Quel est le titre de l'œuvre de Charles Baudelaire parue en 1857 ?",
+      "type": "qcm",
+      "choix": [
+        "Les Fleurs du mal",
+        "Une saison en enfer",
+        "Les Poètes Maudits",
+        "Le Parti pris des Choses"
+      ],
+      "reponse": "A",
+      "explication": "Charles Baudelaire a écrit 'Les Fleurs du mal' en 1857"
+    },
+    {
+      "question": "Qui est l'auteur de 'La rage de l'expression' ?",
+      "type": "qcm",
+      "choix": [
+        "Arthur Rimbaud",
+        "Charles Baudelaire",
+        "Verlaine",
         "Francis Ponge"
       ],
-      "reponse": "Verlaine",
-      "explication": "Verlaine et Arthur Rimbaud ont eu une relation amoureuse qui a duré plusieurs années, et qui a eu une grande influence sur leur travail littéraire."
+      "reponse": "D",
+      "explication": "Francis Ponge a écrit 'La rage de l'expression' en 1952"
     },
     {
-      "question": "Quel est le titre de l'œuvre de Arthur Rimbaud qui explore la révolte et la désillusion ?",
-      "type": "qcm",
-      "choix": [
-        "Une saison en enfer",
-        "Le Bateau ivre",
-        "Les Fleurs du mal",
-        "Les Poètes Maudits"
-      ],
-      "reponse": "Une saison en enfer",
-      "explication": "Arthur Rimbaud a écrit 'Une saison en enfer' en 1873, un poème qui explore la révolte et la désillusion de la jeunesse."
-    },
-    {
-      "question": "Qui est le poète français qui a écrit 'La rage de l'expression' ?",
-      "type": "qcm",
-      "choix": [
-        "Francis Ponge",
-        "Arthur Rimbaud",
-        "Charles Baudelaire",
-        "Verlaine"
-      ],
-      "reponse": "Francis Ponge",
-      "explication": "Francis Ponge a publié 'La rage de l'expression' en 1952, un recueil de poèmes qui explore la relation entre l'homme et le langage."
-    },
-    {
-      "question": "Quel mouvement littéraire est associé à Mallarmé ?",
+      "question": "Quel est le mouvement littéraire de Verlaine ?",
       "type": "qcm",
       "choix": [
         "Romantisme",
+        "Réalistme",
         "Symbolisme",
-        "Surréalisme",
-        "Realisme"
+        "Surréalisme"
       ],
-      "reponse": "Symbolisme",
-      "explication": "Mallarmé est souvent considéré comme l'un des principaux représentants du symbolisme, un mouvement qui explore les possibilités de la suggestion et de l'évocation dans la poésie."
+      "reponse": "C",
+      "explication": "Verlaine est considéré comme un poète symboliste"
     },
     {
-      "question": "Qui est l'auteur de 'Le Bateau ivre' ?",
+      "question": "Qui est le poète auteur de 'Les Poètes Maudits' ?",
       "type": "qcm",
       "choix": [
         "Arthur Rimbaud",
@@ -131,92 +143,92 @@
         "Verlaine",
         "Mallarmé"
       ],
-      "reponse": "Arthur Rimbaud",
-      "explication": "Arthur Rimbaud a écrit 'Le Bateau ivre' en 1871, un poème qui explore la liberté et la révolte de la jeunesse."
+      "reponse": "C",
+      "explication": "Verlaine a écrit 'Les Poètes Maudits' en 1884 et 1888"
     },
     {
-      "question": "Quel est le titre de l'œuvre de Verlaine qui est un recueil de poèmes >",
+      "question": "Quel est le titre de l'œuvre de Arthur Rimbaud parue en 1873 ?",
       "type": "qcm",
       "choix": [
+        "Une saison en enfer",
+        "Les Fleurs du mal",
         "Les Poètes Maudits",
-        "Les Fleurs du mal",
-        "Une saison en enfer",
-        "Le Bateau ivre"
+        "Le Parti pris des Choses"
       ],
-      "reponse": "Les Poètes Maudits",
-      "explication": "Verlaine a écrit 'Les Poètes Maudits' en 1884 et 1888, un ouvrage qui rend hommage aux poètes qui ont vécu une vie tumultueuse et marginale."
+      "reponse": "A",
+      "explication": "Arthur Rimbaud a écrit 'Une saison en enfer' en 1873"
     },
     {
-      "question": "Qui est le poète français qui a exploré la relation entre l'homme et les objets ?",
+      "question": "Qui est l'auteur de 'Le bateau Ivre' ?",
       "type": "qcm",
       "choix": [
-        "Francis Ponge",
         "Arthur Rimbaud",
         "Charles Baudelaire",
-        "Verlaine"
-      ],
-      "reponse": "Francis Ponge",
-      "explication": "Francis Ponge a publié 'Le Parti pris des Choses' en 1942, un recueil de poèmes qui explore la relation entre l'homme et les objets du quotidien."
-    },
-    {
-      "question": "Quel est le titre de l'œuvre de Arthur Rimbaud qui explore la révolte et la désillusion ?",
-      "type": "qcm",
-      "choix": [
-        "Une saison en enfer",
-        "Le Bateau ivre",
-        "Les Fleurs du mal",
-        "Les Poètes Maudits"
-      ],
-      "reponse": "Une saison en enfer",
-      "explication": "Arthur Rimbaud a écrit 'Une saison en enfer' en 1873, un poème qui explore la révolte et la désillusion de la jeunesse."
-    },
-    {
-      "question": "Qui est l'auteur de 'Les Fleurs du mal' ?",
-      "type": "qcm",
-      "choix": [
-        "Charles Baudelaire",
-        "Arthur Rimbaud",
         "Verlaine",
         "Mallarmé"
       ],
-      "reponse": "Charles Baudelaire",
-      "explication": "Charles Baudelaire a publié 'Les Fleurs du mal' en 1857, un recueil de poèmes qui a suscité scandale et admiration."
+      "reponse": "A",
+      "explication": "Arthur Rimbaud a écrit 'Le bateau Ivre' en 1871"
     },
     {
-      "question": "Quel mouvement littéraire est associé à Francis Ponge ?",
+      "question": "Quel est le mouvement littéraire de Charles Baudelaire ?",
       "type": "qcm",
       "choix": [
         "Romantisme",
+        "Réalistme",
         "Symbolisme",
-        "Surréalisme",
-        "Realisme"
+        "Surréalisme"
       ],
-      "reponse": "Surréalisme",
-      "explication": "Francis Ponge est un poète français qui a été influencé par le surréalisme, un mouvement qui explore les possibilités de l'inconscient et du rêve."
+      "reponse": "C",
+      "explication": "Charles Baudelaire est considéré comme l'un des premiers poètes symbolistes"
     },
     {
-      "question": "Qui est le poète français qui a écrit 'La rage de l'expression' ?",
+      "question": "Qui est le poète auteur de 'Les Fleurs du mal' ?",
       "type": "qcm",
       "choix": [
-        "Francis Ponge",
         "Arthur Rimbaud",
         "Charles Baudelaire",
-        "Verlaine"
+        "Verlaine",
+        "Mallarmé"
       ],
-      "reponse": "Francis Ponge",
-      "explication": "Francis Ponge a publié 'La rage de l'expression' en 1952, un recueil de poèmes qui explore la relation entre l'homme et le langage."
+      "reponse": "B",
+      "explication": "Charles Baudelaire a écrit 'Les Fleurs du mal' en 1857"
     },
     {
-      "question": "Quel est le titre de l'œuvre de Arthur Rimbaud qui explore la liberté et la révolte de la jeunesse ?",
+      "question": "Quel est le titre de l'œuvre de Francis Ponge parue en 1942 ?",
       "type": "qcm",
       "choix": [
-        "Le Bateau ivre",
-        "Une saison en enfer",
-        "Les Fleurs du mal",
-        "Les Poètes Maudits"
+        "Le Parti pris des Choses",
+        "La rage de l'expression",
+        "Les Poètes Maudits",
+        "Une saison en enfer"
       ],
-      "reponse": "Le Bateau ivre",
-      "explication": "Arthur Rimbaud a écrit 'Le Bateau ivre' en 1871, un poème qui explore la liberté et la révolte de la jeunesse."
+      "reponse": "A",
+      "explication": "Francis Ponge a écrit 'Le Parti pris des Choses' en 1942"
+    },
+    {
+      "question": "Qui est l'auteur de 'Les Poètes Maudits' ?",
+      "type": "qcm",
+      "choix": [
+        "Arthur Rimbaud",
+        "Charles Baudelaire",
+        "Verlaine",
+        "Mallarmé"
+      ],
+      "reponse": "C",
+      "explication": "Verlaine a écrit 'Les Poètes Maudits' en 1884 et 1888"
+    },
+    {
+      "question": "Quel est le mouvement littéraire de Francis Ponge ?",
+      "type": "qcm",
+      "choix": [
+        "Romantisme",
+        "Réalistme",
+        "Symbolisme",
+        "Surréalisme"
+      ],
+      "reponse": "D",
+      "explication": "Francis Ponge est considéré comme un poète surréaliste"
     }
   ],
   "exercices": []
