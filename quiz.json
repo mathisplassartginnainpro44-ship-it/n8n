@@ -1,268 +1,208 @@
 {
-  "titre": "Les écoles amérindiennes",
+  "titre": "Histoire des écoles amérindiennes",
   "matiere": "Histoire-Géographie",
   "questions": [
     {
-      "question": "Quel était l'objectif principal de ces écoles?",
+      "question": "Quel est l'objectif principal de ces écoles ?",
       "type": "qcm",
       "choix": [
-        "A) Diviser les communautés amérindiennes",
-        "B) Unir et assimiler les Amérindiens à la société américaine",
-        "C) Enseigner les langues amérindiennes",
-        "D) Promouvoir la culture amérindienne"
-      ],
-      "reponse": "B",
-      "explication": "L'objectif principal de ces écoles était d'unir et d'assimiler les Amérindiens à la société américaine, en les dépossédant de leur identité culturelle et linguistique."
-    },
-    {
-      "question": "Quelles étaient les mesures disciplinaires infligées aux enfants qui ne parlaient pas anglais?",
-      "type": "qcm",
-      "choix": [
-        "A) Les aider à apprendre l'anglais",
-        "B) Les encourager à conserver leur langue maternelle",
-        "C) Les fouetter et les affamer",
-        "D) Les renvoyer chez leurs parents"
-      ],
-      "reponse": "C",
-      "explication": "Les enfants qui ne parlaient pas anglais étaient punis, fouettés et affamés, ce qui a entraîné la mort de 500 enfants à cause de ces conditions."
-    },
-    {
-      "question": "Quelles tâches les filles devaient-elles effectuer à l'école?",
-      "type": "qcm",
-      "choix": [
-        "A) Le jardinage et la mécanique",
-        "B) La lessive, la cuisine et la couture",
-        "C) La construction et l'électricité",
-        "D) La plomberie et la peinture"
-      ],
-      "reponse": "B",
-      "explication": "Les filles devaient effectuer des tâches ménagères telles que la lessive, la cuisine et la couture, tandis que les garçons apprenaient des métiers tels que l'agriculture, la métallurgie et la menuiserie."
-    },
-    {
-      "question": "Pourquoi les États-Unis ont-ils commencé à donner aux tribus le contrôle des écoles en 1975?",
-      "type": "qcm",
-      "choix": [
-        "A) Pour augmenter le financement des écoles",
-        "B) Pour promouvoir la culture amérindienne",
-        "C) Pour répondre aux critiques de la politique d'assimilation",
-        "D) Pour réduire les coûts de fonctionnement"
-      ],
-      "reponse": "C",
-      "explication": "Les États-Unis ont commencé à donner aux tribus le contrôle des écoles en 1975 en réponse aux critiques de la politique d'assimilation et pour reconnaître les droits des communautés amérindiennes à gérer leurs propres écoles."
-    },
-    {
-      "question": "Qu'est-ce qui s'est passé aux enfants qui refusaient de changer de nom ou de religion?",
-      "type": "qcm",
-      "choix": [
-        "A) Ils étaient encouragés à conserver leur identité",
-        "B) Ils étaient autorisés à pratiquer leur religion",
-        "C) Ils étaient punis et obligés de se conformer",
-        "D) Ils étaient renvoyés chez leurs parents"
-      ],
-      "reponse": "C",
-      "explication": "Les enfants qui refusaient de changer de nom ou de religion étaient punis et obligés de se conformer, ce qui les a privés de leur identité culturelle et religieuse."
-    },
-    {
-      "question": "Quel était l'impact de la politique d'assimilation sur les communautés amérindiennes?",
-      "type": "qcm",
-      "choix": [
-        "A) Elle a renforcé leur identité culturelle",
-        "B) Elle a promu la diversité linguistique",
-        "C) Elle a entraîné la perte de leur culture et de leur langue",
-        "D) Elle a amélioré leurs conditions de vie"
-      ],
-      "reponse": "C",
-      "explication": "La politique d'assimilation a eu un impact dévastateur sur les communautés amérindiennes, entraînant la perte de leur culture et de leur langue, et les privant de leur identité."
-    },
-    {
-      "question": "Qu'est-ce que les écoles ont cherché à effacer chez les enfants amérindiens?",
-      "type": "qcm",
-      "choix": [
-        "A) Leur connaissance de la langue anglaise",
-        "B) Leur identité culturelle et leur langue maternelle",
-        "C) Leur capacité à apprendre",
-        "D) Leur intérêt pour les sports"
-      ],
-      "reponse": "B",
-      "explication": "Les écoles ont cherché à effacer l'identité culturelle et la langue maternelle des enfants amérindiens, en les forçant à adopter la culture et la langue anglaise."
-    },
-    {
-      "question": "Qu'est-ce qui a été imposé aux enfants amérindiens dans les écoles?",
-      "type": "qcm",
-      "choix": [
-        "A) La liberté de choisir leur langue et leur culture",
-        "B) La possibilité de pratiquer leur religion",
-        "C) L'adoption de la culture et de la langue anglaise",
-        "D) L'apprentissage de la musique et de la danse"
-      ],
-      "reponse": "C",
-      "explication": "Les enfants amérindiens ont été contraints d'adopter la culture et la langue anglaise, et de abandonner leur identité culturelle et leur langue maternelle."
-    },
-    {
-      "question": "Quel a été le résultat de la politique d'assimilation pour les enfants amérindiens?",
-      "type": "qcm",
-      "choix": [
-        "A) Ils ont pu conserver leur identité culturelle",
-        "B) Ils ont perdu leur langue et leur culture",
-        "C) Ils ont appris à parler plusieurs langues",
-        "D) Ils ont amélioré leurs conditions de vie"
-      ],
-      "reponse": "B",
-      "explication": "La politique d'assimilation a entraîné la perte de la langue et de la culture amérindiennes pour les enfants, qui ont été forcés de se conformer à la culture dominante."
-    },
-    {
-      "question": "Qu'est-ce que les écoles ont cherché à faire avec les enfants amérindiens?",
-      "type": "qcm",
-      "choix": [
-        "A) Les aider à conserver leur identité culturelle",
-        "B) Les intégrer à la société américaine",
-        "C) Les former à des métiers",
-        "D) Les préparer à l'université"
-      ],
-      "reponse": "B",
-      "explication": "Les écoles ont cherché à intégrer les enfants amérindiens à la société américaine, en les forçant à abandonner leur identité culturelle et à adopter la culture dominante."
-    },
-    {
-      "question": "Quel est l'équivalent de 'brain wash' en français?",
-      "type": "qcm",
-      "choix": [
-        "A) Lavage de cerveau",
-        "B) Effacement de la mémoire",
-        "C) Changement de nom",
-        "D) Perte de la langue maternelle"
+        "Intégrer les Amérindiens à la société américaine",
+        "Préserver les cultures amérindiennes",
+        "Donner une éducation classique",
+        "Former des chefs tribaux"
       ],
       "reponse": "A",
-      "explication": "Le terme 'brain wash' peut être traduit en français par 'lavage de cerveau', ce qui signifie manipuler ou influencer quelqu'un pour qu'il adopte une idéologie ou une croyance particulière."
+      "explication": "L'objectif principal de ces écoles est d'unir et d'assimiler les Amérindiens à la société américaine."
     },
     {
-      "question": "Qu'est-ce qu'un 'boarding school'?",
+      "question": "Que faisaient les enfants de force ?",
       "type": "qcm",
       "choix": [
-        "A) Une école qui dispense des cours à distance",
-        "B) Une école qui offre des cours de langues",
-        "C) Un internat où les élèves vivent et étudient",
-        "D) Une école qui se spécialise dans les sports"
+        "Ils étaient libres de faire ce qu'ils voulaient",
+        "Ils devaient suivre des cours de culture amérindienne",
+        "Ils devaient avoir les cheveux courts, porter un uniforme, changer de nom, parler anglais et changer de religion",
+        "Ils devaient faire du sport"
       ],
       "reponse": "C",
-      "explication": "Un 'boarding school' est un internat où les élèves vivent et étudient, souvent avec des règles et des règlements stricts."
+      "explication": "Les enfants étaient forcés de suivre ces règles pour s'intégrer à la société américaine."
     },
     {
-      "question": "Qu'est-ce qui se passe lorsqu'on 'erase' quelque chose?",
+      "question": "Quelles étaient les tâches ménagères des filles et des garçons ?",
       "type": "qcm",
       "choix": [
-        "A) On le rend plus visible",
-        "B) On le fait disparaître",
-        "C) On le change de nom",
-        "D) On le déplace"
+        "Les filles faisaient la lessive, la cuisine et la couture, tandis que les garçons apprenaient l'agriculture, le travail du métal et la menuiserie",
+        "Les filles apprenaient l'agriculture, le travail du métal et la menuiserie, tandis que les garçons faisaient la lessive, la cuisine et la couture",
+        "Les filles et les garçons faisaient les mêmes tâches",
+        "Les filles et les garçons n'avaient pas de tâches ménagères"
+      ],
+      "reponse": "A",
+      "explication": "Les filles et les garçons avaient des tâches ménagères différentes."
+    },
+    {
+      "question": "Comment les enfants étaient-ils punis s'ils ne parlaient pas anglais ?",
+      "type": "qcm",
+      "choix": [
+        "Ils étaient félicités pour leur effort",
+        "Ils étaient punis, fouettés et affamés",
+        "Ils devaient faire des devoirs supplémentaires",
+        "Ils étaient renvoyés chez eux"
       ],
       "reponse": "B",
-      "explication": "Lorsqu'on 'erase' quelque chose, on le fait disparaître ou on l'efface, ce qui signifie qu'il n'est plus visible ou qu'il a été supprimé."
+      "explication": "Les enfants étaient sévèrement punis s'ils ne parlaient pas anglais."
     },
     {
-      "question": "Qu'est-ce qu'un 'eraser'?",
+      "question": "Pourquoi et quand les États-Unis ont-ils commencé à donner aux tribus le contrôle des écoles ?",
       "type": "qcm",
       "choix": [
-        "A) Un outil pour écrire",
-        "B) Un outil pour effacer",
-        "C) Un outil pour dessiner",
-        "D) Un outil pour peindre"
+        "En 1975, pour améliorer l'éducation des Amérindiens",
+        "En 1950, pour préserver les cultures amérindiennes",
+        "En 2000, pour former des chefs tribaux",
+        "En 1980, pour donner une éducation classique"
+      ],
+      "reponse": "A",
+      "explication": "Les États-Unis ont commencé à donner aux tribus le contrôle des écoles en 1975 pour améliorer l'éducation des Amérindiens."
+    },
+    {
+      "question": "Quel est le terme qui décrit l'action de forcer les Amérindiens à s'assimiler à la société américaine ?",
+      "type": "qcm",
+      "choix": [
+        "Indoctrination",
+        "Assimilation",
+        "Intégration",
+        "Acculturation"
       ],
       "reponse": "B",
-      "explication": "Un 'eraser' est un outil utilisé pour effacer ou supprimer des marques ou des écritures, souvent fait de caoutchouc ou de plastique."
+      "explication": "L'assimilation est le processus de forcer les Amérindiens à adopter la culture américaine."
     },
     {
-      "question": "Qu'est-ce qu'une 'threat'?",
+      "question": "Qu'est-ce qu'un internat ?",
       "type": "qcm",
       "choix": [
-        "A) Une promesse",
-        "B) Une menace",
-        "C) Une offre",
-        "D) Une demande"
+        "Un type d'école qui permet aux élèves de rentrer chez eux le soir",
+        "Un type d'école qui oblige les élèves à vivre sur place",
+        "Un type d'école qui se spécialise dans l'enseignement des langues",
+        "Un type d'école qui se spécialise dans les sports"
       ],
       "reponse": "B",
-      "explication": "Une 'threat' est une menace, c'est-à-dire une déclaration qui indique qu'il y aura des conséquences négatives si une certaine action n'est pas prise ou si un certain comportement n'est pas adopté."
+      "explication": "Un internat est un type d'école où les élèves vivent sur place."
     },
     {
-      "question": "Qu'est-ce que signifie 'indoctrinate'?",
+      "question": "Qu'est-ce que l'expression 'brain wash' signifie ?",
       "type": "qcm",
       "choix": [
-        "A) Enseigner des compétences pratiques",
-        "B) Transmettre des connaissances",
-        "C) Endoctriner ou manipuler",
-        "D) Encourager la pensée critique"
+        "Laver le cerveau pour effacer les souvenirs",
+        "Laver le cerveau pour endoctriner quelqu'un",
+        "Laver le cerveau pour soigner une maladie",
+        "Laver le cerveau pour améliorer la mémoire"
+      ],
+      "reponse": "B",
+      "explication": "L'expression 'brain wash' signifie endoctriner quelqu'un pour qu'il adopte une idéologie ou une croyance particulière."
+    },
+    {
+      "question": "Qu'est-ce qu'un effaceur ?",
+      "type": "qcm",
+      "choix": [
+        "Un outil pour écrire",
+        "Un outil pour dessiner",
+        "Un outil pour effacer les traces d'écriture",
+        "Un outil pour couper le papier"
       ],
       "reponse": "C",
-      "explication": "Le terme 'indoctrinate' signifie endoctriner ou manipuler, c'est-à-dire influencer ou contrôler les pensées et les croyances de quelqu'un de manière à ce qu'il adopte une idéologie ou une croyance particulière."
+      "explication": "Un effaceur est un outil utilisé pour effacer les traces d'écriture ou de dessin."
     },
     {
-      "question": "Qu'est-ce que signifie 'to sew'?",
+      "question": "Qu'est-ce qu'une menace ?",
       "type": "qcm",
       "choix": [
-        "A) Coudre",
-        "B) Tricoter",
-        "C) Tisser",
-        "D) Broder"
+        "Une promesse de récompense",
+        "Une promesse de punition",
+        "Une expression de colère",
+        "Une expression de joie"
+      ],
+      "reponse": "B",
+      "explication": "Une menace est une promesse de punition ou de conséquence négative si une action ou un comportement n'est pas adopté."
+    },
+    {
+      "question": "Qu'est-ce que l'endoctrinement ?",
+      "type": "qcm",
+      "choix": [
+        "Le processus de forcer quelqu'un à adopter une idéologie ou une croyance",
+        "Le processus de convaincre quelqu'un de quelque chose",
+        "Le processus de punir quelqu'un pour son comportement",
+        "Le processus de récompenser quelqu'un pour son comportement"
       ],
       "reponse": "A",
-      "explication": "Le verbe 'to sew' signifie coudre, c'est-à-dire réunir ou assembler des pièces de tissu à l'aide d'une aiguille et de fil."
+      "explication": "L'endoctrinement est le processus de forcer quelqu'un à adopter une idéologie ou une croyance particulière."
     },
     {
-      "question": "Qu'est-ce que signifie 'whipped'?",
+      "question": "Qu'est-ce que coudre ?",
       "type": "qcm",
       "choix": [
-        "A) Fouetté",
-        "B) Battu",
-        "C) Frappé",
-        "D) Puni"
+        "L'action de couper le tissu",
+        "L'action de coudre le tissu",
+        "L'action de teindre le tissu",
+        "L'action de broder le tissu"
       ],
-      "reponse": "A",
-      "explication": "Le terme 'whipped' signifie fouetté, c'est-à-dire frappé avec une corde ou un fouet, souvent comme forme de punition."
+      "reponse": "B",
+      "explication": "Coudre est l'action de joindre deux pièces de tissu ensemble à l'aide d'une aiguille et de fil."
     },
     {
-      "question": "Quel est le but de l'endoctrinement dans les écoles?",
+      "question": "Qu'est-ce que fouetter ?",
       "type": "qcm",
       "choix": [
-        "A) Promouvoir la pensée critique",
-        "B) Encourager la créativité",
-        "C) Endoctriner les élèves à une idéologie particulière",
-        "D) Fournir des compétences pratiques"
-      ],
-      "reponse": "C",
-      "explication": "L'endoctrinement dans les écoles a pour but de transmettre une idéologie ou une croyance particulière aux élèves, souvent en les influençant ou en les manipulant pour qu'ils adoptent une certaine vision du monde."
-    },
-    {
-      "question": "Qu'est-ce qui se passe lorsqu'un enfant est en danger?",
-      "type": "qcm",
-      "choix": [
-        "A) Il est protégé et aidé",
-        "B) Il est ignoré et abandonné",
-        "C) Il est puni et critiqué",
-        "D) Il est menacé et intimidé"
-      ],
-      "reponse": "A",
-      "explication": "Lorsqu'un enfant est en danger, il devrait être protégé et aidé, ce qui signifie qu'il devrait recevoir de l'assistance et des soins pour lui permettre de se sentir en sécurité et de se développer de manière saine."
-    },
-    {
-      "question": "Qu'est-ce qu'une 'menace'?",
-      "type": "qcm",
-      "choix": [
-        "A) Une promesse",
-        "B) Une offre",
-        "C) Une demande",
-        "D) Une menace"
+        "L'action de frapper quelqu'un avec une ceinture",
+        "L'action de frapper quelqu'un avec une main",
+        "L'action de frapper quelqu'un avec un bâton",
+        "L'action de frapper quelqu'un avec un fouet"
       ],
       "reponse": "D",
-      "explication": "Une 'menace' est une déclaration qui indique qu'il y aura des conséquences négatives si une certaine action n'est pas prise ou si un certain comportement n'est pas adopté."
+      "explication": "Fouetter est l'action de frapper quelqu'un avec un fouet, souvent utilisé comme punition."
+    },
+    {
+      "question": "Quel est le nombre d'enfants qui sont morts à cause des punitions ?",
+      "type": "qcm",
+      "choix": [
+        "100",
+        "200",
+        "300",
+        "500"
+      ],
+      "reponse": "D",
+      "explication": "500 enfants sont morts à cause des punitions infligées dans les écoles."
+    },
+    {
+      "question": "Quelle est la date à laquelle les États-Unis ont commencé à donner aux tribus le contrôle des écoles ?",
+      "type": "qcm",
+      "choix": [
+        "1970",
+        "1975",
+        "1980",
+        "1985"
+      ],
+      "reponse": "B",
+      "explication": "Les États-Unis ont commencé à donner aux tribus le contrôle des écoles en 1975."
+    },
+    {
+      "question": "Qu'est-ce que l'expression 'to erase' signifie ?",
+      "type": "qcm",
+      "choix": [
+        "L'action de supprimer quelque chose",
+        "L'action de créer quelque chose",
+        "L'action de modifier quelque chose",
+        "L'action de détruire quelque chose"
+      ],
+      "reponse": "A",
+      "explication": "L'expression 'to erase' signifie supprimer ou effacer quelque chose."
     }
   ],
   "exercices": [
     {
-      "enonce": "Imaginez que vous êtes un enfant amérindien dans une école de missionnaires. Décrivez comment vous vous sentez et ce que vous pensez.",
-      "corrige": "Je me sens seul et effrayé. Je pense que je vais perdre mon identité culturelle et ma langue maternelle. Je ne comprends pas pourquoi les missionnaires veulent que je change de nom et que je parle anglais. Je me sens comme si j'étais en danger et que je devais me protéger."
+      "enonce": "Imaginez que vous êtes un élève dans une école amérindienne en 1950. Décrivez votre journée typique.",
+      "corrige": "Un élève dans une école amérindienne en 1950 aurait une journée typique qui commence tôt le matin avec des corvées ménagères, suivie de cours de langue anglaise, d'histoire américaine et de culture américaine. Les élèves seraient également obligés de porter des uniformes et de suivre des règles strictes. Les filles feraient la lessive, la cuisine et la couture, tandis que les garçons apprendraient l'agriculture, le travail du métal et la menuiserie."
     },
     {
-      "enonce": "Qu'est-ce que vous pensez que les écoles de missionnaires devraient faire pour améliorer la situation des enfants amérindiens?",
-      "corrige": "Je pense que les écoles de missionnaires devraient respecter la culture et la langue des enfants amérindiens. Ils devraient leur permettre de conserver leur identité et de pratiquer leur religion. Ils devraient également fournir des ressources et des soutiens pour aider les enfants à apprendre et à grandir de manière saine."
+      "enonce": "Quels sont les avantages et les inconvénients de l'assimilation des Amérindiens à la société américaine ?",
+      "corrige": "Les avantages de l'assimilation incluent l'accès à l'éducation et aux opportunités économiques, tandis que les inconvénients incluent la perte de la culture et de l'identité amérindienne, ainsi que les conséquences négatives de la suppression de la langue et de la culture maternelle."
     }
   ]
 }
