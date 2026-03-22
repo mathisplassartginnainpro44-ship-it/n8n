@@ -1,232 +1,248 @@
 {
-  "titre": "L'Épopée du Roman Français",
-  "matiere": "Français",
+  "titre": "L'Évolution du Théâtre Français",
+  "matiere": "français",
   "questions": [
     {
-      "question": "Quel mouvement littéraire du XVIe siècle met l'homme au centre de l'univers ?",
+      "question": "Quel est le style théâtral qui caractérise le début du XVIIe siècle ?",
       "type": "qcm",
       "choix": [
-        "L'Humanisme",
         "Le Classicisme",
-        "Les Lumières",
-        "Le Romantisme"
+        "Le Baroque",
+        "Le Romantisme",
+        "Le Drame Bourgeois"
+      ],
+      "reponse": "B",
+      "explication": "Le Baroque est une période de liberté totale et d'instabilité reflétant un monde en changement, avant l'imposition de règles strictes."
+    },
+    {
+      "question": "Qui sont les principaux auteurs du Classicisme ?",
+      "type": "qcm",
+      "choix": [
+        "Molière, Racine et Corneille",
+        "Marivaux, Beaumarchais et Diderot",
+        "Victor Hugo, Alexandre Dumas et Eugène Delacroix",
+        "Gustave Flaubert, Honoré de Balzac et Stendhal"
       ],
       "reponse": "A",
-      "explication": "L'Humanisme est un mouvement littéraire du XVIe siècle qui se caractérise par la rupture avec l'obscurantisme médiéval et la mise de l'homme au centre de l'univers."
+      "explication": "Molière, Racine et Corneille sont les principaux auteurs du Classicisme, qui caractérise la seconde moitié du XVIIe siècle."
     },
     {
-      "question": "Quelle est la caractéristique principale de l'esthétique du XVIIe siècle ?",
+      "question": "Quel est le but du théâtre pendant les Lumières ?",
       "type": "qcm",
       "choix": [
-        "La liberté d'expression",
-        "La mesure et la clarté",
-        "La sensibilité et la mélancolie",
-        "La raison et l'argumentation"
+        "Divertir le public",
+        "Instruire et combattre les préjugés",
+        "Promouvoir la monarchie",
+        "Défendre la religion"
       ],
       "reponse": "B",
-      "explication": "L'esthétique du XVIIe siècle, caractérisée par le Classicisme, se distingue par la mesure, la clarté et la rigueur."
+      "explication": "Le théâtre devient un outil pour instruire et combattre les préjugés pendant les Lumières, avec des auteurs comme Marivaux et Beaumarchais."
     },
     {
-      "question": "Quel est le but du roman pendant le siècle des Lumières ?",
+      "question": "Qui a théorisé le Drame Bourgeois ?",
       "type": "qcm",
       "choix": [
-        "De divertir le lecteur",
-        "De promouvoir la raison et le progrès social",
-        "De décrire la nature",
-        "De exprimer la subjectivité"
+        "Diderot",
+        "Molière",
+        "Racine",
+        "Corneille"
       ],
-      "reponse": "B",
-      "explication": "Pendant le siècle des Lumières, le roman devient une arme de persuasion pour promouvoir la raison et le progrès social."
+      "reponse": "A",
+      "explication": "Diderot a théorisé le Drame Bourgeois, qui refuse la séparation stricte entre comédie et tragédie pour montrer une réalité quotidienne."
     },
     {
-      "question": "Quel mouvement littéraire exalte la subjectivité et la sensibilité ?",
+      "question": "Quel est le style théâtral qui caractérise le début du XIXe siècle ?",
+      "type": "qcm",
+      "choix": [
+        "Le Classicisme",
+        "Le Romantisme",
+        "Le Drame Bourgeois",
+        "Le Baroque"
+      ],
+      "reponse": "B",
+      "explication": "Le Romantisme est un style théâtral qui caractérise le début du XIXe siècle, marqué par une révolution de la sensibilité qui rejette les unités classiques."
+    },
+    {
+      "question": "Quel événement marque le tournant du Romantisme ?",
+      "type": "qcm",
+      "choix": [
+        "La Révolution française",
+        "La Bataille d'Hernani",
+        "La publication de 'Les Misérables'",
+        "La création de la Comédie-Française"
+      ],
+      "reponse": "B",
+      "explication": "La Bataille d'Hernani en 1830 marque le tournant du Romantisme, avec la création de l'œuvre d'Hugo qui symbolise la révolution du théâtre."
+    },
+    {
+      "question": "Qui est l'auteur de 'Hernani' ?",
+      "type": "qcm",
+      "choix": [
+        "Victor Hugo",
+        "Alexandre Dumas",
+        "Gustave Flaubert",
+        "Honoré de Balzac"
+      ],
+      "reponse": "A",
+      "explication": "Victor Hugo est l'auteur de 'Hernani', une œuvre qui symbolise la révolution du théâtre romantique."
+    },
+    {
+      "question": "Quel est le but du Drame Bourgeois ?",
+      "type": "qcm",
+      "choix": [
+        "Montrer la vie des aristocrates",
+        "Décrire les paysages naturels",
+        "Présenter la réalité quotidienne",
+        "Défendre la monarchie"
+      ],
+      "reponse": "C",
+      "explication": "Le Drame Bourgeois vise à montrer la réalité quotidienne, en refusant la séparation stricte entre comédie et tragédie."
+    },
+    {
+      "question": "Qui sont les principaux auteurs des Lumières ?",
+      "type": "qcm",
+      "choix": [
+        "Marivaux, Beaumarchais et Diderot",
+        "Molière, Racine et Corneille",
+        "Victor Hugo, Alexandre Dumas et Eugène Delacroix",
+        "Gustave Flaubert, Honoré de Balzac et Stendhal"
+      ],
+      "reponse": "A",
+      "explication": "Marivaux, Beaumarchais et Diderot sont les principaux auteurs des Lumières, qui ont utilisé le théâtre pour instruire et combattre les préjugés."
+    },
+    {
+      "question": "Quel est le style théâtral qui caractérise la fin du XVIIe siècle ?",
+      "type": "qcm",
+      "choix": [
+        "Le Baroque",
+        "Le Classicisme",
+        "Le Romantisme",
+        "Le Drame Bourgeois"
+      ],
+      "reponse": "B",
+      "explication": "Le Classicisme est le style théâtral qui caractérise la fin du XVIIe siècle, avec des auteurs comme Molière, Racine et Corneille."
+    },
+    {
+      "question": "Quel événement a marqué le début du Classicisme ?",
+      "type": "qcm",
+      "choix": [
+        "La Révolution française",
+        "La Bataille d'Hernani",
+        "L'avènement de Louis XIV",
+        "La création de la Comédie-Française"
+      ],
+      "reponse": "C",
+      "explication": "L'avènement de Louis XIV a marqué le début du Classicisme, avec la création d'un théâtre qui devient un modèle de moralité, de clarté et de mesure."
+    },
+    {
+      "question": "Qui est le roi qui a imposé les règles strictes au théâtre ?",
+      "type": "qcm",
+      "choix": [
+        "Louis XIII",
+        "Louis XIV",
+        "Louis XV",
+        "Louis XVI"
+      ],
+      "reponse": "B",
+      "explication": "Louis XIV est le roi qui a imposé les règles strictes au théâtre, avec la création d'un théâtre qui devient un modèle de moralité, de clarté et de mesure."
+    },
+    {
+      "question": "Quel est le but du théâtre pendant le Classicisme ?",
+      "type": "qcm",
+      "choix": [
+        "Divertir le public",
+        "Instruire et combattre les préjugés",
+        "Promouvoir la monarchie",
+        "Défendre la religion"
+      ],
+      "reponse": "C",
+      "explication": "Le théâtre pendant le Classicisme vise à promouvoir la monarchie, en créant un modèle de moralité, de clarté et de mesure."
+    },
+    {
+      "question": "Qui est l'auteur de 'Tartuffe' ?",
+      "type": "qcm",
+      "choix": [
+        "Molière",
+        "Racine",
+        "Corneille",
+        "Marivaux"
+      ],
+      "reponse": "A",
+      "explication": "Molière est l'auteur de 'Tartuffe', une œuvre qui symbolise la satire et la critique de la société"
+    },
+    {
+      "question": "Quel est le style théâtral qui caractérise le XVIIIe siècle ?",
+      "type": "qcm",
+      "choix": [
+        "Le Classicisme",
+        "Le Romantisme",
+        "Le Drame Bourgeois",
+        "Les Lumières"
+      ],
+      "reponse": "D",
+      "explication": "Les Lumières sont le style théâtral qui caractérise le XVIIIe siècle, avec des auteurs comme Marivaux et Beaumarchais qui utilisent le théâtre pour instruire et combattre les préjugés."
+    },
+    {
+      "question": "Qui est l'auteur de 'Le Mariage de Figaro' ?",
+      "type": "qcm",
+      "choix": [
+        "Beaumarchais",
+        "Marivaux",
+        "Molière",
+        "Racine"
+      ],
+      "reponse": "A",
+      "explication": "Beaumarchais est l'auteur de 'Le Mariage de Figaro', une œuvre qui symbolise la satire et la critique de la société"
+    },
+    {
+      "question": "Quel est le but du théâtre pendant le Romantisme ?",
+      "type": "qcm",
+      "choix": [
+        "Divertir le public",
+        "Instruire et combattre les préjugés",
+        "Promouvoir la monarchie",
+        "Libérer la créativité et l'émotion"
+      ],
+      "reponse": "D",
+      "explication": "Le théâtre pendant le Romantisme vise à libérer la créativité et l'émotion, en rejetant les unités classiques et en créant une nouvelle forme de théâtre"
+    },
+    {
+      "question": "Qui est le principal auteur du Romantisme ?",
+      "type": "qcm",
+      "choix": [
+        "Victor Hugo",
+        "Alexandre Dumas",
+        "Gustave Flaubert",
+        "Honoré de Balzac"
+      ],
+      "reponse": "A",
+      "explication": "Victor Hugo est le principal auteur du Romantisme, avec des œuvres comme 'Hernani' qui symbolisent la révolution du théâtre"
+    },
+    {
+      "question": "Quel est le style théâtral qui caractérise la fin du XIXe siècle ?",
       "type": "qcm",
       "choix": [
         "Le Romantisme",
         "Le Réalisme",
-        "Le Classicisme",
-        "Les Lumières"
-      ],
-      "reponse": "A",
-      "explication": "Le Romantisme est un mouvement littéraire qui exalte la subjectivité, la sensibilité et le « mal du siècle »."
-    },
-    {
-      "question": "Quelle est la caractéristique principale du Réalisme ?",
-      "type": "qcm",
-      "choix": [
-        "L'observation de la réalité",
-        "La promotion de la raison",
-        "L'exaltation de la subjectivité",
-        "La description de la nature"
-      ],
-      "reponse": "A",
-      "explication": "Le Réalisme est un mouvement littéraire qui se caractérise par l'observation de la réalité."
-    },
-    {
-      "question": "Quel événement a contribué à la diffusion des idées humanistes ?",
-      "type": "qcm",
-      "choix": [
-        "L'invention de l'imprimerie",
-        "La découverte de l'Amérique",
-        "La Réforme protestante",
-        "La Révolution française"
-      ],
-      "reponse": "A",
-      "explication": "L'invention de l'imprimerie a contribué à la diffusion des idées humanistes en permettant la multiplication des textes et leur dissemination à grande échelle."
-    },
-    {
-      "question": "Quel est le rôle de la nature dans le Romantisme ?",
-      "type": "qcm",
-      "choix": [
-        "Un miroir des états d'âme",
-        "Un décor pour les actions héroïques",
-        "Un objet de description scientifique",
-        "Un symbole de la raison"
-      ],
-      "reponse": "A",
-      "explication": "Dans le Romantisme, la nature devient un miroir des états d'âme et de la mélancolie du héros solitaire."
-    },
-    {
-      "question": "Quel est le conflit qui oppose les écrivains du XVIIe siècle ?",
-      "type": "qcm",
-      "choix": [
-        "Raison et Passion",
-        "Raison et Foi",
-        "Passion et Imagination",
-        "Foi et Morale"
-      ],
-      "reponse": "A",
-      "explication": "Le conflit qui oppose les écrivains du XVIIe siècle est celui entre la Raison et la Passion."
-    },
-    {
-      "question": "Quel mouvement littéraire s'oppose au despotisme et à l'ignorance ?",
-      "type": "qcm",
-      "choix": [
-        "Les Lumières",
-        "Le Romantisme",
-        "Le Classicisme",
-        "Le Réalisme"
-      ],
-      "reponse": "A",
-      "explication": "Les Lumières sont un mouvement littéraire qui combat le despotisme et l'ignorance en promouvant la raison et le progrès social."
-    },
-    {
-      "question": "Quel est le but de l'esthétique classique ?",
-      "type": "qcm",
-      "choix": [
-        "De plaire et d'instruire",
-        "De divertir et d'amuser",
-        "De promouvoir la raison",
-        "De décrire la nature"
-      ],
-      "reponse": "A",
-      "explication": "L'esthétique classique vise à plaire et à instruire, en quête d'une vérité morale universelle."
-    },
-    {
-      "question": "Quel siècle voit l'apparition du Romantisme ?",
-      "type": "qcm",
-      "choix": [
-        "XVIe siècle",
-        "XVIIe siècle",
-        "XVIIIe siècle",
-        "XIXe siècle"
-      ],
-      "reponse": "D",
-      "explication": "Le Romantisme apparaît au début du XIXe siècle."
-    },
-    {
-      "question": "Quel est le rôle de l'ironie dans les Lumières ?",
-      "type": "qcm",
-      "choix": [
-        "De promouvoir la raison",
-        "De décrire la nature",
-        "D'exprimer la subjectivité",
-        "D'argumenter en faveur du progrès social"
-      ],
-      "reponse": "D",
-      "explication": "L'ironie est utilisée dans les Lumières pour argumenter en faveur du progrès social et pour viser le progrès social."
-    },
-    {
-      "question": "Quel mouvement littéraire se caractérise par la recherche de la vérité morale universelle ?",
-      "type": "qcm",
-      "choix": [
-        "Le Classicisme",
-        "Les Lumières",
-        "Le Romantisme",
-        "Le Réalisme"
-      ],
-      "reponse": "A",
-      "explication": "Le Classicisme se caractérise par la recherche de la vérité morale universelle."
-    },
-    {
-      "question": "Quel est le lien entre le mouvement littéraire et la société ?",
-      "type": "qcm",
-      "choix": [
-        "Le mouvement littéraire reflète la société",
-        "Le mouvement littéraire influence la société",
-        "Le mouvement littéraire est indépendant de la société",
-        "Le mouvement littéraire est en opposition avec la société"
-      ],
-      "reponse": "B",
-      "explication": "Le mouvement littéraire influence la société en promouvant des idées et des valeurs qui peuvent façonner les mentalités et les comportements."
-    },
-    {
-      "question": "Quel est le rôle de la raison dans les Lumières ?",
-      "type": "qcm",
-      "choix": [
-        "De promouvoir la foi",
-        "De promouvoir la raison",
-        "De décrire la nature",
-        "D'exprimer la subjectivité"
-      ],
-      "reponse": "B",
-      "explication": "La raison est au cœur des Lumières, qui visent à promouvoir la raison et le progrès social."
-    },
-    {
-      "question": "Quel est le but du roman au XVIIIe siècle ?",
-      "type": "qcm",
-      "choix": [
-        "De divertir le lecteur",
-        "De promouvoir la raison et le progrès social",
-        "De décrire la nature",
-        "D'exprimer la subjectivité"
-      ],
-      "reponse": "B",
-      "explication": "Au XVIIIe siècle, le roman devient une arme de persuasion pour promouvoir la raison et le progrès social."
-    },
-    {
-      "question": "Quel mouvement littéraire se caractérise par l'observation de la réalité ?",
-      "type": "qcm",
-      "choix": [
-        "Le Classicisme",
-        "Les Lumières",
-        "Le Romantisme",
-        "Le Réalisme"
-      ],
-      "reponse": "D",
-      "explication": "Le Réalisme se caractérise par l'observation de la réalité."
-    },
-    {
-      "question": "Quel est le lien entre le Romantisme et la nature ?",
-      "type": "qcm",
-      "choix": [
-        "Le Romantisme décrit la nature de manière scientifique",
-        "Le Romantisme utilise la nature comme un décor",
-        "Le Romantisme voit la nature comme un miroir des états d'âme",
-        "Le Romantisme ignore la nature"
+        "Le Naturalisme",
+        "Le Symbolisme"
       ],
       "reponse": "C",
-      "explication": "Le Romantisme voit la nature comme un miroir des états d'âme et de la mélancolie du héros solitaire."
+      "explication": "Le Naturalisme est le style théâtral qui caractérise la fin du XIXe siècle, avec des auteurs comme Émile Zola qui créent une nouvelle forme de théâtre"
     }
   ],
   "exercices": [
     {
-      "enonce": "Analysez les caractéristiques du Classicisme et de son influence sur la littérature française.",
-      "corrige": "Le Classicisme se caractérise par la recherche de la vérité morale universelle, la mesure, la clarté et la rigueur. Il a eu une influence considérable sur la littérature française en promouvant des idées et des valeurs qui ont façonné les mentalités et les comportements."
+      "enonce": "Analysez les caractéristiques du théâtre pendant le Classicisme",
+      "corrige": "Le théâtre pendant le Classicisme est caractérisé par la création d'un modèle de moralité, de clarté et de mesure, avec des auteurs comme Molière, Racine et Corneille. Il vise à promouvoir la monarchie et à créer un théâtre qui est à la fois divertissant et édifiant."
     },
     {
-      "enonce": "Comparez les mouvements littéraires du XVIIe et du XVIIIe siècle.",
-      "corrige": "Le XVIIe siècle est caractérisé par le Classicisme, qui recherche la vérité morale universelle et promeut la raison et la mesure. Le XVIIIe siècle, quant à lui, est marqué par les Lumières, qui visent à promouvoir la raison et le progrès social en utilisant l'ironie et l'argumentation."
+      "enonce": "Décrivez les principaux auteurs des Lumières",
+      "corrige": "Les principaux auteurs des Lumières sont Marivaux, Beaumarchais et Diderot. Ils utilisent le théâtre pour instruire et combattre les préjugés, en créant des œuvres qui sont à la fois divertissantes et édifiantes."
+    },
+    {
+      "enonce": "Expliquez les caractéristiques du théâtre pendant le Romantisme",
+      "corrige": "Le théâtre pendant le Romantisme est caractérisé par la libération de la créativité et de l'émotion, en rejetant les unités classiques et en créant une nouvelle forme de théâtre. Il vise à créer une atmosphère de liberté et de passion, avec des auteurs comme Victor Hugo qui créent des œuvres qui sont à la fois poétiques et révolutionnaires."
     }
   ]
 }
