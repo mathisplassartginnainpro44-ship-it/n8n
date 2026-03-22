@@ -1,346 +1,873 @@
-<div class="modal-actions">
-        <button class="btn btn-primary" onclick="importQuiz()">Importer</button>
-        <button class="btn btn-ghost" onclick="closeImportModal()">Annuler</button>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz Engine</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#050508;--surface:#0d0d14;--surface-2:#13131c;
+  --border:rgba(255,255,255,.06);
+  --a1:#7c6aff;--a2:#ff6a9e;
+  --accent:var(--a1);--accent-soft:rgba(124,106,255,.14);--accent-glow:rgba(124,106,255,.28);
+  --green:#2dff9e;--red:#ff4d6d;--orange:#ffb347;
+  --text:#e8e8f0;--muted:#50506a;
+  --grad:linear-gradient(135deg,var(--a1) 0%,var(--a2) 100%);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'DM Mono',monospace;min-height:100vh;overflow-x:hidden;transition:background .5s}
+
+@keyframes fadeUp  {from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+@keyframes scaleIn {from{opacity:0;transform:scale(.92)}to{opacity:1;transform:scale(1)}}
+@keyframes orbFlt  {0%,100%{transform:translate(0,0)}40%{transform:translate(30px,-20px)}70%{transform:translate(-20px,30px)}}
+@keyframes gradSh  {0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+@keyframes blink   {0%,100%{opacity:1}50%{opacity:.2}}
+@keyframes scoreIn {from{opacity:0;transform:scale(.5)}to{opacity:1;transform:scale(1)}}
+@keyframes slideUp {from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+@keyframes shake   {0%,100%{transform:translateX(0)}20%{transform:translateX(-6px)}60%{transform:translateX(6px)}80%{transform:translateX(-3px)}}
+@keyframes cpulse  {0%{box-shadow:0 0 0 0 rgba(45,255,158,.4)}100%{box-shadow:0 0 0 16px rgba(45,255,158,0)}}
+@keyframes panelIn {from{opacity:0;transform:translateX(-10px)}to{opacity:1;transform:translateX(0)}}
+@keyframes starPop {0%{transform:scale(0) rotate(-20deg)}70%{transform:scale(1.2) rotate(5deg)}100%{transform:scale(1) rotate(0)}}
+
+/* ══ WELCOME ══ */
+#welcome{position:fixed;inset:0;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:1000;text-align:center;padding:24px;transition:opacity .7s ease}
+.orb{position:absolute;border-radius:50%;filter:blur(90px);animation:orbFlt ease-in-out infinite;pointer-events:none}
+.orb-1{width:520px;height:520px;background:rgba(124,106,255,.12);top:-160px;right:-120px;animation-duration:10s}
+.orb-2{width:420px;height:420px;background:rgba(255,106,158,.09);bottom:-120px;left:-120px;animation-duration:13s;animation-delay:-5s}
+.grid-bg{position:absolute;inset:0;background-image:linear-gradient(rgba(124,106,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(124,106,255,.04) 1px,transparent 1px);background-size:56px 56px;mask-image:radial-gradient(ellipse 70% 70% at 50% 50%,black,transparent)}
+.welcome-inner{position:relative;z-index:2;animation:scaleIn .9s cubic-bezier(.2,0,0,1) forwards}
+.eyebrow{font-size:10px;letter-spacing:.45em;text-transform:uppercase;color:var(--accent);margin-bottom:28px;display:flex;align-items:center;justify-content:center;gap:14px}
+.eyebrow::before,.eyebrow::after{content:'';width:36px;height:1px;background:var(--accent)}
+.welcome-title{font-family:'Syne',sans-serif;font-size:clamp(56px,13vw,140px);font-weight:800;line-height:.86;letter-spacing:-.04em;margin-bottom:28px;background:linear-gradient(135deg,#fff 0%,#cfc8ff 30%,#ff6a9e 70%,#ffb347 100%);background-size:200% 200%;animation:gradSh 5s ease infinite;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.welcome-sub{color:var(--muted);font-size:13px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:44px;line-height:2}
+.welcome-btn{padding:18px 52px;border-radius:8px;border:none;background:linear-gradient(135deg,var(--a1),var(--a2));background-size:200% 200%;animation:gradSh 4s ease infinite;color:white;font-family:'Syne',sans-serif;font-size:14px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:transform .2s,box-shadow .2s}
+.welcome-btn:hover{transform:translateY(-4px) scale(1.03);box-shadow:0 28px 60px rgba(124,106,255,.35)}
+.hint{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);font-size:9px;color:rgba(80,80,106,.5);letter-spacing:.25em;text-transform:uppercase;white-space:nowrap}
+
+/* ══ LAYOUT ══ */
+#app{display:none;min-height:100vh}
+
+/* ══ SIDEBAR ══ */
+#sidebar{position:fixed;top:0;left:0;bottom:0;width:72px;border-right:1px solid var(--border);display:flex;flex-direction:column;align-items:center;padding:24px 0 20px;background:var(--surface);z-index:50;overflow:hidden;transition:width .32s cubic-bezier(.2,0,0,1)}
+#sidebar:hover{width:230px}
+.side-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:20px;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:20px;white-space:nowrap;width:100%;text-align:center;flex-shrink:0}
+.logo-s{display:block}.logo-f{display:none}
+#sidebar:hover .logo-s{display:none}#sidebar:hover .logo-f{display:block}
+.side-sep{width:44px;height:1px;background:var(--border);margin:6px 0;flex-shrink:0;transition:width .32s}
+#sidebar:hover .side-sep{width:196px}
+.side-btn{width:44px;height:44px;border-radius:12px;background:none;border:1px solid var(--border);color:var(--muted);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:18px;transition:all .2s;flex-shrink:0;white-space:nowrap;overflow:hidden}
+#sidebar:hover .side-btn{width:196px;justify-content:flex-start;padding:0 14px;gap:10px;font-size:14px;font-family:'Syne',sans-serif;font-weight:700;letter-spacing:.05em;text-transform:uppercase}
+.side-btn:hover{border-color:var(--accent);color:var(--text);background:var(--accent-soft)}
+.side-btn-label{display:none;font-size:12px}
+#sidebar:hover .side-btn-label{display:inline}
+.gsw{margin-top:auto;width:52px;cursor:pointer;background:var(--surface-2);border:1px solid var(--border);border-radius:14px;padding:12px 8px;text-align:center;flex-shrink:0;transition:width .32s cubic-bezier(.2,0,0,1),padding .32s,border-color .2s}
+#sidebar:hover .gsw{width:196px;padding:16px}
+.gsw:hover{border-color:var(--accent)}
+.gsw-label{font-size:8px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:6px;white-space:nowrap}
+.gsw-num{font-family:'Syne',sans-serif;font-weight:800;font-size:22px;line-height:1;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;transition:font-size .2s}
+#sidebar:hover .gsw-num{font-size:38px}
+.gsw-denom{font-size:9px;color:var(--muted);margin-top:2px}
+.gsw-bar-track{height:3px;background:rgba(255,255,255,.05);border-radius:2px;margin-top:10px;overflow:hidden;display:none}
+#sidebar:hover .gsw-bar-track{display:block}
+.gsw-bar-fill{height:100%;background:var(--grad);border-radius:2px;transition:width .6s cubic-bezier(.2,0,0,1)}
+.gsw-sub{font-size:9px;color:var(--muted);margin-top:6px;display:none;white-space:nowrap}
+.gsw-hint{font-size:8px;color:var(--accent);opacity:.6;margin-top:3px;display:none;letter-spacing:.08em}
+#sidebar:hover .gsw-sub,#sidebar:hover .gsw-hint{display:block}
+
+/* ══ PANELS ══ */
+.side-panel{position:fixed;top:0;left:72px;bottom:0;background:var(--surface);border-right:1px solid var(--border);z-index:49;display:none;flex-direction:column;overflow-y:auto}
+.side-panel.open{display:flex;animation:panelIn .28s cubic-bezier(.2,0,0,1)}
+.panel-hdr{padding:28px 22px 18px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:flex-start;flex-shrink:0}
+.panel-lbl{font-size:9px;letter-spacing:.35em;color:var(--accent);text-transform:uppercase;margin-bottom:4px}
+.panel-title{font-family:'Syne',sans-serif;font-size:17px;font-weight:800}
+.panel-hdr-r{display:flex;align-items:center;gap:8px}
+.panel-close{background:none;border:none;color:var(--muted);font-size:22px;cursor:pointer;line-height:1;padding:4px;transition:color .2s}
+.panel-close:hover{color:var(--text)}
+.p-section{padding:14px 20px 8px;font-size:9px;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);flex-shrink:0}
+.p-list{padding:0 20px 8px;display:flex;flex-direction:column;gap:8px}
+
+/* ══ STATS ══ */
+#stats-panel{width:360px}
+.sp-avg{margin:18px 20px 0;padding:18px;border-radius:14px;background:var(--surface-2);border:1px solid var(--border);text-align:center;flex-shrink:0}
+.sp-avg-lbl{font-size:9px;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.sp-avg-num{font-family:'Syne',sans-serif;font-size:50px;font-weight:800;line-height:1;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:scoreIn .5s cubic-bezier(.2,0,0,1)}
+.sp-avg-den{font-size:12px;color:var(--muted);margin-top:4px}
+.sp-avg-bar{height:4px;background:rgba(255,255,255,.05);border-radius:2px;margin-top:12px;overflow:hidden}
+.sp-avg-bar-fill{height:100%;background:var(--grad);border-radius:2px;transition:width .8s cubic-bezier(.2,0,0,1)}
+.sp-item{background:var(--surface-2);border:1px solid var(--border);border-radius:12px;padding:13px 15px;animation:slideUp .3s ease both}
+.sp-item-title{font-family:'Syne',sans-serif;font-size:12px;font-weight:700;margin-bottom:8px;line-height:1.3}
+.sp-item-row{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.sp-stat{font-size:11px;color:var(--muted);white-space:nowrap}
+.sp-note{font-family:'Syne',sans-serif;font-size:14px;font-weight:800;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;white-space:nowrap}
+.sp-bar{flex:1;height:3px;background:rgba(255,255,255,.05);border-radius:2px;overflow:hidden}
+.sp-bar-fill{height:100%;border-radius:2px;transition:width .6s cubic-bezier(.2,0,0,1)}
+.err-block{background:var(--surface-2);border:1px solid var(--border);border-radius:12px;overflow:hidden;animation:slideUp .3s ease both}
+.err-hdr{padding:11px 15px;display:flex;justify-content:space-between;align-items:center;cursor:pointer;transition:background .2s}
+.err-hdr:hover{background:rgba(255,255,255,.03)}
+.err-name{font-family:'Syne',sans-serif;font-size:12px;font-weight:700}
+.err-count{font-size:10px;padding:3px 8px;border-radius:10px;background:rgba(255,77,109,.1);color:var(--red);border:1px solid rgba(255,77,109,.2)}
+.err-list{display:none;border-top:1px solid var(--border)}
+.err-list.open{display:block}
+.err-item{padding:11px 15px;border-bottom:1px solid var(--border);font-size:11px;line-height:1.7}
+.err-item:last-child{border-bottom:none}
+.err-q{color:var(--text);margin-bottom:3px}
+.err-given{color:var(--red)}
+.err-correct{color:var(--green)}
+.p-empty{padding:4px 20px 16px;color:var(--muted);font-size:12px;text-align:center;line-height:2}
+
+/* ══ AVIS ══ */
+#reviews-panel{width:360px}
+.review-form{margin:18px 20px 0;background:var(--surface-2);border:1px solid var(--border);border-radius:14px;padding:18px;flex-shrink:0}
+.review-form-lbl{font-size:9px;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+.stars-row{display:flex;gap:6px;margin-bottom:12px}
+.star{font-size:24px;cursor:pointer;transition:transform .15s;filter:grayscale(1) brightness(.5);user-select:none}
+.star:hover,.star.on{filter:none;transform:scale(1.15);animation:starPop .2s ease}
+.review-text{width:100%;background:rgba(0,0,0,.3);border:1px solid var(--border);color:var(--text);padding:11px 14px;border-radius:10px;font-family:'DM Mono',monospace;font-size:12px;outline:none;resize:none;height:80px;transition:border-color .2s}
+.review-text:focus{border-color:var(--accent)}
+.review-text::placeholder{color:var(--muted)}
+.review-submit{width:100%;margin-top:10px;padding:11px;border-radius:10px;border:none;background:var(--grad);color:white;font-family:'Syne',sans-serif;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;cursor:pointer;transition:opacity .2s,transform .2s}
+.review-submit:hover{opacity:.85;transform:translateY(-1px)}
+.review-card{background:var(--surface-2);border:1px solid var(--border);border-radius:12px;padding:14px 16px}
+.review-card-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+.review-stars{font-size:13px;letter-spacing:1px}
+.review-date{font-size:9px;color:var(--muted)}
+.review-body{font-size:12px;line-height:1.7;color:rgba(232,232,240,.85);margin-bottom:10px}
+.review-delete{background:none;border:none;color:var(--muted);font-size:11px;cursor:pointer;padding:2px 6px;border-radius:6px;transition:all .15s;font-family:'DM Mono',monospace}
+.review-delete:hover{color:var(--red);background:rgba(255,77,109,.1)}
+.review-empty{text-align:center;padding:32px 20px;color:var(--muted);font-size:12px;line-height:2}
+.review-empty-icon{font-size:32px;margin-bottom:12px;opacity:.4}
+
+/* ══ THEME ══ */
+#theme-panel{width:310px}
+.accent-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;padding:0 20px 16px}
+.a-swatch{width:100%;aspect-ratio:1;border-radius:10px;cursor:pointer;border:2px solid transparent;transition:transform .18s,border-color .18s;position:relative}
+.a-swatch:hover{transform:scale(1.1)}
+.a-swatch.active{border-color:white;box-shadow:0 0 0 2px rgba(255,255,255,.2)}
+.a-swatch::after{content:'✓';position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:13px;color:white;font-weight:800;opacity:0;transition:opacity .15s}
+.a-swatch.active::after{opacity:1}
+.bg-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:7px;padding:0 20px 12px}
+.bg-swatch{width:100%;aspect-ratio:1;border-radius:8px;cursor:pointer;border:2px solid transparent;transition:transform .15s,border-color .15s;position:relative}
+.bg-swatch:hover{transform:scale(1.12)}
+.bg-swatch.active{border-color:rgba(255,255,255,.8)}
+.bg-swatch::after{content:'✓';position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:11px;color:white;font-weight:800;text-shadow:0 1px 3px rgba(0,0,0,.5);opacity:0;transition:opacity .15s}
+.bg-swatch.active::after{opacity:1}
+.tp-row{padding:0 20px 16px;display:flex;flex-direction:column;gap:8px}
+.tp-row-lbl{font-size:10px;color:var(--muted)}
+.color-picker-wrap{display:flex;align-items:center;gap:10px}
+input[type=color]{width:44px;height:36px;border:1px solid var(--border);border-radius:9px;background:none;cursor:pointer;padding:3px;outline:none}
+input[type=color]::-webkit-color-swatch-wrapper{padding:0}
+input[type=color]::-webkit-color-swatch{border:none;border-radius:6px}
+.color-hex{background:var(--surface-2);border:1px solid var(--border);border-radius:8px;padding:6px 10px;font-family:'DM Mono',monospace;font-size:12px;color:var(--text);width:90px;outline:none;transition:border-color .2s}
+.color-hex:focus{border-color:var(--accent)}
+
+/* ══ MAIN ══ */
+#main{margin-left:72px;padding:48px 40px;max-width:1100px;transition:margin-left .32s cubic-bezier(.2,0,0,1)}
+.page-header{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:16px;margin-bottom:40px;animation:fadeUp .6s ease forwards}
+.page-title-lbl{font-size:10px;letter-spacing:.35em;color:var(--accent);text-transform:uppercase;margin-bottom:6px}
+.page-title{font-family:'Syne',sans-serif;font-size:36px;font-weight:800;letter-spacing:-1px}
+.header-actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+
+/* ══ BUTTONS ══ */
+.btn{padding:11px 22px;border-radius:10px;border:none;font-family:'Syne',sans-serif;font-weight:700;cursor:pointer;transition:transform .2s,filter .2s;font-size:12px;text-transform:uppercase;letter-spacing:.08em;display:inline-flex;align-items:center;gap:8px}
+.btn:hover{transform:translateY(-2px);filter:brightness(1.15)}
+.btn-primary{background:var(--accent);color:white;box-shadow:0 8px 24px var(--accent-glow)}
+.btn-ghost{background:rgba(255,255,255,.04);color:var(--text);border:1px solid var(--border)}
+.btn-ghost:hover{background:rgba(255,255,255,.07)}
+.btn-sm{padding:6px 12px;font-size:10px;border-radius:7px}
+.btn-danger{background:rgba(255,77,109,.1);color:var(--red);border:1px solid rgba(255,77,109,.2)}
+.btn-danger:hover{background:rgba(255,77,109,.2)}
+.btn-warn{background:rgba(255,179,71,.1);color:var(--orange);border:1px solid rgba(255,179,71,.2);font-size:10px;padding:6px 12px;border-radius:7px}
+.btn-warn:hover{background:rgba(255,179,71,.2)}
+.sync-badge{display:none;align-items:center;gap:8px;background:var(--accent-soft);border:1px solid rgba(124,106,255,.25);border-radius:20px;padding:7px 14px;font-size:10px;color:var(--accent);letter-spacing:.1em}
+.sync-dot{width:6px;height:6px;border-radius:50%;background:var(--accent);animation:blink 1s ease infinite}
+
+/* ══ QUIZ GRID ══ */
+.quiz-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px}
+.quiz-card{background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:26px;cursor:pointer;transition:border-color .25s,transform .25s,background .25s;animation:fadeUp .5s ease forwards;opacity:0;position:relative;overflow:hidden}
+.quiz-card:hover{border-color:rgba(124,106,255,.4);transform:translateY(-5px);background:var(--surface-2)}
+.quiz-card:nth-child(1){animation-delay:0s}.quiz-card:nth-child(2){animation-delay:.07s}.quiz-card:nth-child(3){animation-delay:.14s}.quiz-card:nth-child(4){animation-delay:.21s}.quiz-card:nth-child(5){animation-delay:.28s}
+.card-meta{font-size:9px;letter-spacing:.25em;color:var(--accent);text-transform:uppercase;margin-bottom:10px;font-weight:700}
+.card-title{font-family:'Syne',sans-serif;font-size:19px;font-weight:700;line-height:1.25;margin-bottom:18px}
+.card-footer{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.card-badge{font-size:10px;padding:4px 10px;border-radius:20px;font-weight:700;letter-spacing:.05em;flex-shrink:0}
+.badge-done{background:rgba(45,255,158,.1);color:var(--green);border:1px solid rgba(45,255,158,.2)}
+.badge-new{background:rgba(124,106,255,.1);color:var(--accent);border:1px solid rgba(124,106,255,.2)}
+.empty-state{grid-column:1/-1;text-align:center;padding:80px 20px;border:2px dashed rgba(255,255,255,.07);border-radius:20px;color:var(--muted);animation:fadeUp .6s ease forwards}
+.empty-icon{font-size:40px;margin-bottom:20px;opacity:.5}
+.empty-state h3{font-family:'Syne',sans-serif;font-size:20px;color:var(--text);margin-bottom:8px}
+
+/* ══ MODAL IMPORT ══ */
+#modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.92);display:none;align-items:center;justify-content:center;z-index:200;padding:20px;backdrop-filter:blur(8px)}
+.modal-box{width:100%;max-width:560px;background:var(--surface);border:1px solid var(--border);border-radius:24px;padding:36px;animation:scaleIn .3s cubic-bezier(.2,0,0,1)}
+.modal-title{font-family:'Syne',sans-serif;font-size:22px;font-weight:800;margin-bottom:24px}
+.drop-zone{border:2px dashed rgba(124,106,255,.2);border-radius:14px;padding:32px;text-align:center;cursor:pointer;transition:border-color .2s,background .2s;margin-bottom:20px}
+.drop-zone:hover,.drop-zone.over{border-color:var(--accent);background:var(--accent-soft)}
+.drop-zone-icon{font-size:32px;margin-bottom:10px;display:block}
+#file-input{display:none}
+.divider{display:flex;align-items:center;gap:12px;color:var(--muted);font-size:10px;letter-spacing:.2em;text-transform:uppercase;margin-bottom:16px}
+.divider::before,.divider::after{content:'';flex:1;height:1px;background:var(--border)}
+textarea#json-input{width:100%;height:140px;background:rgba(0,0,0,.4);color:#7cff9e;border:1px solid var(--border);padding:14px;border-radius:12px;font-family:'DM Mono',monospace;font-size:12px;outline:none;resize:vertical;transition:border-color .2s}
+textarea#json-input:focus{border-color:rgba(124,106,255,.4)}
+.modal-actions{display:flex;gap:10px;margin-top:22px}
+
+/* ══ PLAYER ══ */
+#player{position:fixed;inset:0;background:var(--bg);z-index:100;display:none;overflow-y:auto}
+.player-inner{max-width:720px;margin:0 auto;padding:40px 24px 80px}
+.player-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:36px;gap:16px}
+.player-back{background:none;border:none;color:var(--muted);cursor:pointer;font-size:22px;transition:color .2s;padding:4px}
+.player-back:hover{color:var(--text)}
+.player-quiz-title{font-family:'Syne',sans-serif;font-size:14px;font-weight:700;color:var(--muted);text-align:center;flex:1}
+.live-score{display:flex;align-items:center;background:var(--surface-2);border:1px solid var(--border);border-radius:40px;padding:8px 16px;font-family:'Syne',sans-serif;font-weight:800;transition:transform .25s cubic-bezier(.2,0,0,1)}
+.ls-num{font-size:20px;line-height:1;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.ls-den{font-size:12px;color:var(--muted)}
+.ls-lbl{font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:2px}
+.progress-track{height:4px;background:rgba(255,255,255,.05);border-radius:2px;margin-bottom:40px;overflow:hidden}
+.progress-fill{height:100%;background:var(--grad);border-radius:2px;width:0%;transition:width .5s cubic-bezier(.2,0,0,1)}
+.q-wrap{animation:slideUp .4s ease forwards}
+.q-num{font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
+.q-text{font-family:'Syne',sans-serif;font-size:clamp(18px,3vw,26px);font-weight:700;line-height:1.35;margin-bottom:32px}
+.choices{display:flex;flex-direction:column;gap:10px}
+.choice{width:100%;padding:16px 20px;border-radius:12px;background:rgba(255,255,255,.03);border:1px solid var(--border);color:var(--text);text-align:left;cursor:pointer;font-family:'DM Mono',monospace;font-size:14px;transition:border-color .2s,background .2s,transform .15s;display:flex;align-items:center;gap:14px}
+.choice:hover:not(:disabled){border-color:rgba(124,106,255,.5);background:rgba(124,106,255,.06);transform:translateX(4px)}
+.choice:disabled{cursor:default}
+.choice-letter{width:26px;height:26px;border-radius:7px;flex-shrink:0;background:rgba(255,255,255,.05);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;font-family:'Syne',sans-serif;transition:all .2s}
+.choice.correct{border-color:var(--green)!important;background:rgba(45,255,158,.07)!important;color:var(--green)!important;animation:cpulse .6s ease-out}
+.choice.correct .choice-letter{background:rgba(45,255,158,.2)!important;border-color:var(--green)!important;color:var(--green)!important}
+.choice.wrong{border-color:var(--red)!important;background:rgba(255,77,109,.07)!important;color:var(--red)!important;animation:shake .4s ease}
+.choice.wrong .choice-letter{background:rgba(255,77,109,.2)!important;border-color:var(--red)!important;color:var(--red)!important}
+.feedback-box{margin-top:24px;padding:20px 24px;background:var(--surface-2);border-left:3px solid var(--accent);border-radius:0 12px 12px 0;animation:slideUp .3s ease}
+.feedback-icon{font-size:20px;margin-bottom:8px}
+.feedback-text{font-size:13px;line-height:1.7;color:rgba(232,232,240,.8)}
+.next-btn{margin-top:20px;width:100%}
+.results-wrap{text-align:center;animation:fadeUp .6s ease}
+.result-label{font-size:10px;letter-spacing:.35em;text-transform:uppercase;color:var(--muted);margin-bottom:20px}
+.result-score-big{font-family:'Syne',sans-serif;font-size:clamp(80px,20vw,130px);font-weight:800;line-height:.9;letter-spacing:-.04em;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:scoreIn .6s cubic-bezier(.2,0,0,1);margin-bottom:12px}
+.result-detail{font-size:14px;color:var(--muted);margin-bottom:8px}
+.result-note-20{display:inline-block;margin:16px auto 32px;background:var(--surface-2);border:1px solid var(--border);border-radius:12px;padding:12px 28px;font-family:'Syne',sans-serif;font-size:22px;font-weight:800}
+.result-note-lbl{font-size:9px;color:var(--muted);letter-spacing:.2em;text-transform:uppercase;display:block;margin-bottom:4px}
+.note-val{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.result-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+
+#toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--surface-2);border:1px solid var(--border);color:var(--text);padding:12px 24px;border-radius:30px;font-size:13px;z-index:9999;opacity:0;transition:opacity .3s,transform .3s;white-space:nowrap;pointer-events:none}
+#toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+@media(max-width:600px){#main{padding:32px 16px}.page-header{flex-direction:column;align-items:flex-start}}
+</style>
+</head>
+<body>
+
+<!-- WELCOME -->
+<div id="welcome" onclick="enterApp()">
+  <div class="orb orb-1"></div><div class="orb orb-2"></div>
+  <div class="grid-bg"></div>
+  <div class="welcome-inner">
+    <div class="eyebrow">Mes Révisions</div>
+    <h1 class="welcome-title">Quiz<br>Engine</h1>
+    <p class="welcome-sub">Tes cours transformés<br>en quiz interactifs</p>
+    <button class="welcome-btn" onclick="event.stopPropagation();enterApp()">Commencer →</button>
+  </div>
+  <div class="hint">Cliquer n'importe où pour continuer</div>
+</div>
+
+<!-- APP -->
+<div id="app">
+
+  <nav id="sidebar">
+    <div class="side-logo"><span class="logo-s">Q</span><span class="logo-f">Quiz Engine</span></div>
+    <button class="side-btn" onclick="openPanel('stats')"><span>📊</span><span class="side-btn-label">Statistiques</span></button>
+    <button class="side-btn" onclick="openPanel('reviews')"><span>⭐</span><span class="side-btn-label">Mes Avis</span></button>
+    <div class="side-sep"></div>
+    <button class="side-btn" onclick="openPanel('theme')"><span>🎨</span><span class="side-btn-label">Apparence</span></button>
+    <div class="gsw" onclick="openPanel('stats')">
+      <div class="gsw-label">Score</div>
+      <div class="gsw-num" id="gsw-num">—</div>
+      <div class="gsw-denom">/20</div>
+      <div class="gsw-bar-track"><div class="gsw-bar-fill" id="gsw-bar" style="width:0%"></div></div>
+      <div class="gsw-sub" id="gsw-sub">Aucun quiz complété</div>
+      <div class="gsw-hint">↗ Voir le détail</div>
+    </div>
+  </nav>
+
+  <!-- Stats panel -->
+  <div id="stats-panel" class="side-panel">
+    <div class="panel-hdr">
+      <div><div class="panel-lbl">Statistiques</div><div class="panel-title">Mes Résultats</div></div>
+      <div class="panel-hdr-r">
+        <button class="btn-warn" onclick="resetStats()">↺ Reset</button>
+        <button class="panel-close" onclick="closePanel()">×</button>
+      </div>
+    </div>
+    <div class="sp-avg">
+      <div class="sp-avg-lbl">Moyenne générale</div>
+      <div class="sp-avg-num" id="sp-avg-num">—</div>
+      <div class="sp-avg-den">/20</div>
+      <div class="sp-avg-bar"><div class="sp-avg-bar-fill" id="sp-avg-bar" style="width:0%"></div></div>
+    </div>
+    <div class="p-section">Erreurs par quiz</div>
+    <div class="p-list" id="sp-errors"></div>
+    <div class="p-section">Scores par quiz</div>
+    <div class="p-list" id="sp-list"></div>
+    <div class="p-empty" id="sp-empty" style="display:none">Aucun quiz complété 🚀</div>
+  </div>
+
+  <!-- Avis panel -->
+  <div id="reviews-panel" class="side-panel">
+    <div class="panel-hdr">
+      <div><div class="panel-lbl">Journal perso</div><div class="panel-title">Mes Avis</div></div>
+      <button class="panel-close" onclick="closePanel()">×</button>
+    </div>
+    <div class="review-form">
+      <div class="review-form-lbl">Note ta session</div>
+      <div class="stars-row" id="stars-row">
+        <span class="star" data-v="1">⭐</span><span class="star" data-v="2">⭐</span>
+        <span class="star" data-v="3">⭐</span><span class="star" data-v="4">⭐</span>
+        <span class="star" data-v="5">⭐</span>
+      </div>
+      <textarea class="review-text" id="review-text" placeholder="Comment ça s'est passé ?"></textarea>
+      <button class="review-submit" onclick="submitReview()">Enregistrer</button>
+    </div>
+    <div class="p-section">Avis enregistrés</div>
+    <div class="p-list" id="reviews-list"></div>
+    <div class="review-empty" id="reviews-empty">
+      <div class="review-empty-icon">📝</div>
+      Aucun avis pour l'instant.
+    </div>
+  </div>
+
+  <!-- Theme panel -->
+  <div id="theme-panel" class="side-panel">
+    <div class="panel-hdr">
+      <div><div class="panel-lbl">Personnalisation</div><div class="panel-title">Apparence</div></div>
+      <button class="panel-close" onclick="closePanel()">×</button>
+    </div>
+    <div class="p-section">Couleur accent</div>
+    <div class="accent-grid" id="accent-grid"></div>
+    <div class="p-section">Couleur du fond</div>
+    <div class="bg-grid" id="bg-grid"></div>
+    <div class="p-section">Fond personnalisé</div>
+    <div class="tp-row">
+      <span class="tp-row-lbl">Choisis n'importe quelle couleur</span>
+      <div class="color-picker-wrap">
+        <input type="color" id="bg-picker" value="#050508" oninput="onBgPicker(this.value)">
+        <input type="text" class="color-hex" id="bg-hex" value="#050508" maxlength="7" onchange="onBgHex(this.value)">
+      </div>
+    </div>
+    <div class="p-section">Accent personnalisé</div>
+    <div class="tp-row">
+      <span class="tp-row-lbl">Couleur de départ</span>
+      <div class="color-picker-wrap">
+        <input type="color" id="a1-picker" value="#7c6aff" oninput="onA1Picker(this.value)">
+        <input type="text" class="color-hex" id="a1-hex" value="#7c6aff" maxlength="7" onchange="onA1Hex(this.value)">
+      </div>
+      <span class="tp-row-lbl" style="margin-top:6px">Couleur de fin</span>
+      <div class="color-picker-wrap">
+        <input type="color" id="a2-picker" value="#ff6a9e" oninput="onA2Picker(this.value)">
+        <input type="text" class="color-hex" id="a2-hex" value="#ff6a9e" maxlength="7" onchange="onA2Hex(this.value)">
       </div>
     </div>
   </div>
 
-  <div id="toast">Message</div>
+  <!-- Dashboard -->
+  <main id="main">
+    <div class="page-header">
+      <div>
+        <div class="page-title-lbl">Workspace</div>
+        <h1 class="page-title">Mes Modules</h1>
+      </div>
+      <div class="header-actions">
+        <div class="sync-badge" id="sync-badge"><div class="sync-dot"></div> Sync…</div>
+        <button class="btn btn-ghost" onclick="syncGithub()">🔄 Sync</button>
+        <button class="btn btn-ghost" onclick="openImportModal()">📂 Importer</button>
+      </div>
+    </div>
+    <div class="quiz-grid" id="quiz-grid"></div>
+  </main>
 
-</div> <script>
-/* ══ CONFIGURATION & DATA ══ */
-let quizzes = JSON.parse(localStorage.getItem('quizzes')) || [];
-let stats = JSON.parse(localStorage.getItem('quiz_stats')) || {};
-let reviews = JSON.parse(localStorage.getItem('quiz_reviews')) || [];
-let currentQuiz = null;
-let currentQIdx = 0;
-let userScore = 0;
-let sessionErrors = [];
+  <!-- Player -->
+  <div id="player">
+    <div class="player-inner">
+      <div class="player-header">
+        <button class="player-back" onclick="closePlayer()">←</button>
+        <div class="player-quiz-title" id="player-title"></div>
+        <div class="live-score">
+          <div>
+            <div class="ls-lbl">Score</div>
+            <div style="display:flex;align-items:baseline;gap:2px">
+              <span class="ls-num" id="ls-num">0</span>
+              <span class="ls-den" id="ls-den">/0</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="progress-track"><div class="progress-fill" id="prog-fill"></div></div>
+      <div id="player-content"></div>
+    </div>
+  </div>
 
-/* ══ NAVIGATION ══ */
-function enterApp() {
-  document.getElementById('welcome').style.opacity = '0';
-  setTimeout(() => {
-    document.getElementById('welcome').style.display = 'none';
-    document.getElementById('app').style.display = 'block';
-    renderQuizzes();
-    updateGlobalStats();
-    renderReviews();
-  }, 700);
+  <!-- Modal import -->
+  <div id="modal-backdrop" onclick="if(event.target===this)closeImportModal()">
+    <div class="modal-box">
+      <div class="modal-title">Ajouter un Quiz</div>
+      <div class="drop-zone" id="drop-zone" onclick="document.getElementById('file-input').click()">
+        <span class="drop-zone-icon">📄</span>
+        <p id="file-label">Glisse un fichier <strong>.json</strong> ici ou clique</p>
+        <input type="file" id="file-input" accept=".json" onchange="handleFile(event)">
+      </div>
+      <div class="divider">ou colle le JSON</div>
+      <textarea id="json-input" placeholder='{"titre":"...","questions":[]}'></textarea>
+      <div class="modal-actions">
+        <button class="btn btn-primary" style="flex:2" onclick="saveImport()">✓ Valider</button>
+        <button class="btn btn-ghost" style="flex:1" onclick="closeImportModal()">Annuler</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+<div id="toast"></div>
+
+<script>
+const GITHUB_USER = 'mathisplassartginnainpro44-ship-it';
+const GITHUB_REPO = 'n8n';
+const GITHUB_FILE = 'quiz.json';
+const STORE_KEY   = 'qe_v5';
+const LETTERS     = ['A','B','C','D','E'];
+
+const ACCENTS = [
+  {n:'Violet',a1:'#7c6aff',a2:'#ff6a9e'},{n:'Cyan',a1:'#00d4ff',a2:'#0099cc'},
+  {n:'Emeraude',a1:'#00e57a',a2:'#00b4c8'},{n:'Or',a1:'#ffb347',a2:'#ff7c20'},
+  {n:'Rose',a1:'#ff6a9e',a2:'#c850c0'},{n:'Bleu',a1:'#4a9eff',a2:'#7c6aff'},
+  {n:'Corail',a1:'#ff6b6b',a2:'#ffa07a'},{n:'Menthe',a1:'#43e97b',a2:'#38f9d7'},
+  {n:'Pêche',a1:'#f7971e',a2:'#ffd200'},{n:'Lavande',a1:'#a18cd1',a2:'#fbc2eb'},
+  {n:'Indigo',a1:'#4776e6',a2:'#8e54e9'},{n:'Turquoise',a1:'#11998e',a2:'#38ef7d'},
+  {n:'Fuchsia',a1:'#f953c6',a2:'#b91d73'},{n:'Saphir',a1:'#1a6dff',a2:'#c822ff'},
+  {n:'Aube',a1:'#f77062',a2:'#fe5196'},{n:'Forêt',a1:'#56ab2f',a2:'#a8e063'},
+  {n:'Rubis',a1:'#dc143c',a2:'#ff6b6b'},{n:'Ciel',a1:'#89f7fe',a2:'#66a6ff'},
+  {n:'Nuit',a1:'#667eea',a2:'#764ba2'},{n:'Soleil',a1:'#f6d365',a2:'#fda085'},
+];
+
+const BG_PRESETS = [
+  '#050508','#0a0a0f','#080810','#0d0d14','#050d05','#08100a',
+  '#0a0f08','#051005','#08050d','#0d0814','#14081c','#1a0a26',
+  '#100505','#180808','#1a0a0a','#200d0d','#05080d','#080d14',
+  '#0a1018','#0d1520','#0a0808','#141010','#1a1414','#201818',
+  '#080808','#101010','#181818','#202020','#050a0a','#0a1414',
+];
+
+// ── STATE ──────────────────────────────────────────
+let S = {
+  library: [],
+  theme: { ai:0, bg:'#050508', a1:'#7c6aff', a2:'#ff6a9e' },
+  reviews: []
+};
+let session     = { quiz:null, idx:0, correct:0, errors:[] };
+let activePanel = null;
+let reviewStars = 0;
+
+// ── PERSISTANCE ────────────────────────────────────
+function save() { localStorage.setItem(STORE_KEY, JSON.stringify(S)); }
+function load() {
+  try {
+    const raw = localStorage.getItem(STORE_KEY);
+    if (raw) S = Object.assign({library:[],theme:{ai:0,bg:'#050508',a1:'#7c6aff',a2:'#ff6a9e'},reviews:[]}, JSON.parse(raw));
+    if (!S.library) S.library = [];
+    if (!S.reviews) S.reviews = [];
+    // migration clés précédentes
+    if (!S.library.length) {
+      for (const k of ['qe_v5','quiz_engine_v4','quiz_engine_v3','quiz_engine_lib']) {
+        const old = localStorage.getItem(k);
+        if (old) {
+          try { const p = JSON.parse(old); const lib = p.library||(Array.isArray(p)?p:[p]); if (lib.length){S.library=lib;break;} } catch(e){}
+        }
+      }
+    }
+  } catch(e) {}
 }
 
-function openPanel(id) {
-  closePanel();
-  document.getElementById(id + '-panel').classList.add('open');
+// ── THEME ──────────────────────────────────────────
+function hexToRgb(h) { h=h.replace('#',''); return [parseInt(h.slice(0,2),16),parseInt(h.slice(2,4),16),parseInt(h.slice(4,6),16)]; }
+function hexRgba(h,a) { try{const[r,g,b]=hexToRgb(h);return 'rgba('+r+','+g+','+b+','+a+')';}catch(e){return 'rgba(124,106,255,'+a+')';} }
+function isHex(h) { return /^#[0-9a-fA-F]{6}$/.test(h); }
+
+function applyAccent(a1,a2,idx) {
+  document.documentElement.style.setProperty('--a1',a1);
+  document.documentElement.style.setProperty('--a2',a2);
+  document.documentElement.style.setProperty('--accent',a1);
+  document.documentElement.style.setProperty('--accent-soft',hexRgba(a1,.14));
+  document.documentElement.style.setProperty('--accent-glow',hexRgba(a1,.28));
+  S.theme.a1=a1; S.theme.a2=a2; if(idx>=0) S.theme.ai=idx;
+  document.getElementById('a1-picker').value=a1; document.getElementById('a1-hex').value=a1;
+  document.getElementById('a2-picker').value=a2; document.getElementById('a2-hex').value=a2;
+  document.querySelectorAll('.a-swatch').forEach((s,i)=>s.classList.toggle('active',i===S.theme.ai));
+}
+function applyBg(hex,pi) {
+  if(!isHex(hex)) return;
+  document.documentElement.style.setProperty('--bg',hex);
+  const[r,g,b]=hexToRgb(hex);
+  const c=(v,a,m)=>Math.min(v+a,m);
+  document.documentElement.style.setProperty('--surface','rgb('+c(r,8,40)+','+c(g,8,40)+','+c(b,15,45)+')');
+  document.documentElement.style.setProperty('--surface-2','rgb('+c(r,15,55)+','+c(g,15,55)+','+c(b,22,60)+')');
+  S.theme.bg=hex;
+  document.getElementById('bg-picker').value=hex; document.getElementById('bg-hex').value=hex;
+  document.querySelectorAll('.bg-swatch').forEach((s,i)=>s.classList.toggle('active',i===pi));
+}
+function onBgPicker(v){applyBg(v,-1);save();}
+function onBgHex(v){if(isHex(v)){applyBg(v,-1);save();}}
+function onA1Picker(v){applyAccent(v,S.theme.a2,-1);save();}
+function onA1Hex(v){if(isHex(v)){applyAccent(v,S.theme.a2,-1);save();}}
+function onA2Picker(v){applyAccent(S.theme.a1,v,-1);save();}
+function onA2Hex(v){if(isHex(v)){applyAccent(S.theme.a1,v,-1);save();}}
+
+function buildThemeGrids() {
+  const ag=document.getElementById('accent-grid');
+  ag.innerHTML=ACCENTS.map((a,i)=>'<div class="a-swatch '+(i===S.theme.ai?'active':'')+'" style="background:linear-gradient(135deg,'+a.a1+','+a.a2+')" title="'+a.n+'" data-i="'+i+'"></div>').join('');
+  ag.onclick=function(e){const s=e.target.closest('.a-swatch');if(!s)return;const i=+s.dataset.i;applyAccent(ACCENTS[i].a1,ACCENTS[i].a2,i);save();};
+  const bg=document.getElementById('bg-grid');
+  bg.innerHTML=BG_PRESETS.map((c,i)=>'<div class="bg-swatch '+(c===S.theme.bg?'active':'')+'" style="background:'+c+'" data-i="'+i+'" data-c="'+c+'"></div>').join('');
+  bg.onclick=function(e){const s=e.target.closest('.bg-swatch');if(!s)return;applyBg(s.dataset.c,+s.dataset.i);save();};
 }
 
+// ── GLOBAL SCORE ───────────────────────────────────
+function computeGlobal() {
+  const done=S.library.filter(q=>q._score);
+  if(!done.length) return null;
+  const avg=done.reduce((s,q)=>s+q._score.pct,0)/done.length;
+  return {note:avg/5,pct:avg,count:done.length,total:S.library.length};
+}
+function renderGlobalScore() {
+  const g=computeGlobal();
+  if(!g){
+    document.getElementById('gsw-num').textContent='—';
+    document.getElementById('gsw-bar').style.width='0%';
+    document.getElementById('gsw-sub').textContent='Aucun quiz complété';
+  } else {
+    document.getElementById('gsw-num').textContent=g.note.toFixed(1).replace('.',',');
+    document.getElementById('gsw-bar').style.width=g.pct+'%';
+    document.getElementById('gsw-sub').textContent=g.count+'/'+g.total+' quiz fait'+(g.count>1?'s':'');
+  }
+}
+
+// ── PANELS ─────────────────────────────────────────
+function openPanel(name) {
+  if(activePanel===name){closePanel();return;}
+  ['stats','reviews','theme'].forEach(n=>document.getElementById(n+'-panel').classList.remove('open'));
+  activePanel=name;
+  const W={stats:360,reviews:360,theme:310};
+  document.getElementById('main').style.marginLeft=(72+W[name])+'px';
+  document.getElementById(name+'-panel').classList.add('open');
+  if(name==='stats') renderStatsPanel();
+  if(name==='reviews') renderReviewsList();
+  if(name==='theme') buildThemeGrids();
+}
 function closePanel() {
-  document.querySelectorAll('.side-panel').forEach(p => p.classList.remove('open'));
+  ['stats','reviews','theme'].forEach(n=>document.getElementById(n+'-panel').classList.remove('open'));
+  document.getElementById('main').style.marginLeft='72px';
+  activePanel=null;
 }
 
-/* ══ GESTION DES QUIZ (AVEC SUPPRESSION) ══ */
-function renderQuizzes() {
-  const grid = document.getElementById('quiz-grid');
-  if (quizzes.length === 0) {
-    grid.innerHTML = `
-      <div class="empty-state">
-        <div class="empty-icon">📂</div>
-        <h3>Aucun quiz trouvé</h3>
-        <p>Importe un fichier JSON pour commencer tes révisions.</p>
-      </div>`;
+// ── STATS ──────────────────────────────────────────
+function renderStatsPanel() {
+  const g=computeGlobal();
+  const done=S.library.filter(q=>q._score);
+  if(!g){
+    document.getElementById('sp-avg-num').textContent='—';
+    document.getElementById('sp-avg-bar').style.width='0%';
+    document.getElementById('sp-list').innerHTML='';
+    document.getElementById('sp-errors').innerHTML='';
+    document.getElementById('sp-empty').style.display='block';
     return;
   }
+  document.getElementById('sp-empty').style.display='none';
+  document.getElementById('sp-avg-num').textContent=g.note.toFixed(2).replace('.',',');
+  setTimeout(()=>{document.getElementById('sp-avg-bar').style.width=g.pct+'%';},50);
 
-  grid.innerHTML = quizzes.map((q, i) => {
-    const isDone = stats[q.id] ? true : false;
-    return `
-      <div class="quiz-card" onclick="startQuiz(${i})">
-        <div class="card-meta">Module ${i+1}</div>
-        <div class="card-title">${q.titre}</div>
-        <div class="card-footer">
-          <span class="card-badge ${isDone ? 'badge-done' : 'badge-new'}">
-            ${isDone ? 'Complété' : 'Nouveau'}
-          </span>
-          <button class="btn-danger btn-sm" onclick="event.stopPropagation(); deleteQuiz(${i})">Effacer</button>
-        </div>
-      </div>
-    `;
+  document.getElementById('sp-list').innerHTML=done.map((q,i)=>{
+    const note=(q._score.correct/q._score.total*20).toFixed(1).replace('.',',');
+    const pct=q._score.pct;
+    const color=pct>=70?'var(--green)':pct>=40?'var(--orange)':'var(--red)';
+    return '<div class="sp-item" style="animation-delay:'+(i*.06)+'s">'
+      +'<div class="sp-item-title">'+esc(q.titre)+'</div>'
+      +'<div class="sp-item-row">'
+      +'<span class="sp-stat">'+q._score.correct+'/'+q._score.total+' · '+Math.round(pct)+'%</span>'
+      +'<div class="sp-bar"><div class="sp-bar-fill" style="width:'+pct+'%;background:'+color+'"></div></div>'
+      +'<span class="sp-note">'+note+'/20</span>'
+      +'</div></div>';
   }).join('');
-}
 
-// FONCTION SUPPRIMER UN QUIZ
-function deleteQuiz(index) {
-  if(confirm("Supprimer ce quiz définitivement ?")) {
-    quizzes.splice(index, 1);
-    saveQuizzes();
-    renderQuizzes();
-    showToast("Quiz supprimé");
-  }
-}
-
-function saveQuizzes() {
-  localStorage.setItem('quizzes', JSON.stringify(quizzes));
-}
-
-/* ══ IMPORTATION ══ */
-function openImportModal() { document.getElementById('modal-backdrop').style.display = 'flex'; }
-function closeImportModal() { document.getElementById('modal-backdrop').style.display = 'none'; }
-
-function handleFile(e) {
-  const file = e.target.files[0];
-  if (!file) return;
-  const reader = new FileReader();
-  reader.onload = (e) => {
-    document.getElementById('json-input').value = e.target.result;
-    document.getElementById('file-label').innerHTML = `Fichier prêt : <strong>${file.name}</strong>`;
-  };
-  reader.readAsText(file);
-}
-
-function importQuiz() {
-  const input = document.getElementById('json-input').value;
-  try {
-    const data = JSON.parse(input);
-    const newQuiz = {
-      id: 'q_' + Date.now(),
-      titre: data.titre || "Quiz sans titre",
-      questions: data.questions || []
-    };
-    quizzes.push(newQuiz);
-    saveQuizzes();
-    renderQuizzes();
-    closeImportModal();
-    showToast("Quiz importé avec succès !");
-    document.getElementById('json-input').value = "";
-  } catch(e) {
-    alert("Erreur dans le format JSON.");
-  }
-}
-
-/* ══ ENGINE DU JOUEUR ══ */
-function startQuiz(idx) {
-  currentQuiz = quizzes[idx];
-  currentQIdx = 0;
-  userScore = 0;
-  sessionErrors = [];
-  document.getElementById('player').style.display = 'block';
-  document.getElementById('player-title').innerText = currentQuiz.titre;
-  showQuestion();
-}
-
-function showQuestion() {
-  const q = currentQuiz.questions[currentQIdx];
-  const total = currentQuiz.questions.length;
-  
-  document.getElementById('ls-num').innerText = userScore;
-  document.getElementById('ls-den').innerText = '/' + total;
-  document.getElementById('prog-fill').style.width = ((currentQIdx / total) * 100) + '%';
-
-  let html = `
-    <div class="q-wrap">
-      <div class="q-num">Question ${currentQIdx + 1}/${total}</div>
-      <div class="q-text">${q.question}</div>
-      <div class="choices">
-        ${q.options.map((opt, i) => `
-          <button class="choice" onclick="checkAnswer(${i})">
-            <span class="choice-letter">${String.fromCharCode(65 + i)}</span>
-            ${opt}
-          </button>
-        `).join('')}
-      </div>
-      <div id="feedback"></div>
-    </div>
-  `;
-  document.getElementById('player-content').innerHTML = html;
-}
-
-function checkAnswer(idx) {
-  const q = currentQuiz.questions[currentQIdx];
-  const choices = document.querySelectorAll('.choice');
-  const isCorrect = idx === q.reponse;
-  
-  choices.forEach(c => c.disabled = true);
-  
-  if (isCorrect) {
-    userScore++;
-    choices[idx].classList.add('correct');
-  } else {
-    choices[idx].classList.add('wrong');
-    choices[q.reponse].classList.add('correct');
-    sessionErrors.push({ q: q.question, given: q.options[idx], correct: q.options[q.reponse] });
-  }
-
-  const feedback = document.getElementById('feedback');
-  feedback.innerHTML = `
-    <div class="feedback-box">
-      <div class="feedback-icon">${isCorrect ? '✅ Excellent' : '❌ Pas tout à fait'}</div>
-      <p class="feedback-text">${q.explication || ""}</p>
-      <button class="btn btn-primary next-btn" onclick="nextQuestion()">
-        ${currentQIdx + 1 < currentQuiz.questions.length ? 'Question suivante' : 'Voir les résultats'}
-      </button>
-    </div>
-  `;
-}
-
-function nextQuestion() {
-  currentQIdx++;
-  if (currentQIdx < currentQuiz.questions.length) {
-    showQuestion();
-  } else {
-    finishQuiz();
-  }
-}
-
-function finishQuiz() {
-  const finalNote = ((userScore / currentQuiz.questions.length) * 20).toFixed(1);
-  stats[currentQuiz.id] = { score: finalNote, errors: sessionErrors };
-  localStorage.setItem('quiz_stats', JSON.stringify(stats));
-  
-  document.getElementById('player-content').innerHTML = `
-    <div class="results-wrap">
-      <div class="result-label">Quiz terminé</div>
-      <div class="result-score-big">${finalNote}</div>
-      <div class="result-detail">Tu as validé ${userScore} questions sur ${currentQuiz.questions.length}</div>
-      <div class="result-note-20">
-        <span class="result-note-lbl">Moyenne</span>
-        <span class="note-val">${finalNote}/20</span>
-      </div>
-      <div class="result-actions">
-        <button class="btn btn-primary" onclick="closePlayer()">Retour au Dashboard</button>
-      </div>
-    </div>
-  `;
-  updateGlobalStats();
-}
-
-function closePlayer() {
-  document.getElementById('player').style.display = 'none';
-  renderQuizzes();
-}
-
-/* ══ STATISTIQUES ══ */
-function updateGlobalStats() {
-  const values = Object.values(stats).map(s => parseFloat(s.score));
-  const avg = values.length ? (values.reduce((a, b) => a + b, 0) / values.length).toFixed(1) : "—";
-  
-  document.getElementById('gsw-num').innerText = avg;
-  document.getElementById('sp-avg-num').innerText = avg;
-  document.getElementById('gsw-bar').style.width = values.length ? (avg * 5) + '%' : '0%';
-  document.getElementById('sp-avg-bar').style.width = values.length ? (avg * 5) + '%' : '0%';
-  document.getElementById('gsw-sub').innerText = values.length + " quiz complétés";
-
-  // Liste des scores
-  const list = document.getElementById('sp-list');
-  list.innerHTML = Object.keys(stats).map(id => {
-    const q = quizzes.find(quiz => quiz.id === id);
-    if(!q) return '';
-    return `
-      <div class="sp-item">
-        <div class="sp-item-title">${q.titre}</div>
-        <div class="sp-item-row">
-          <div class="sp-bar"><div class="sp-bar-fill" style="width:${stats[id].score*5}%; background:var(--accent)"></div></div>
-          <div class="sp-note">${stats[id].score}/20</div>
-        </div>
-      </div>
-    `;
-  }).join('');
+  const withErr=done.filter(q=>q._errors&&q._errors.length);
+  document.getElementById('sp-errors').innerHTML=!withErr.length
+    ? '<div class="p-empty">Aucune erreur 🎉</div>'
+    : withErr.map((q,i)=>
+        '<div class="err-block" style="animation-delay:'+(i*.06)+'s">'
+        +'<div class="err-hdr" onclick="this.nextElementSibling.classList.toggle(\'open\')">'
+        +'<span class="err-name">'+esc(q.titre)+'</span>'
+        +'<span class="err-count">'+q._errors.length+' erreur'+(q._errors.length>1?'s':'')+'</span>'
+        +'</div>'
+        +'<div class="err-list">'
+        +q._errors.map(e=>'<div class="err-item"><div class="err-q">❓ '+esc(e.question)+'</div><div class="err-given">✗ '+esc(e.given)+'</div><div class="err-correct">✓ '+esc(e.correct)+'</div></div>').join('')
+        +'</div></div>'
+      ).join('');
 }
 
 function resetStats() {
-  if(confirm("Réinitialiser tous les scores ?")) {
-    stats = {};
-    localStorage.removeItem('quiz_stats');
-    updateGlobalStats();
-    renderQuizzes();
-    showToast("Stats remises à zéro");
-  }
+  if(!confirm('Réinitialiser tous les scores et erreurs ?')) return;
+  S.library.forEach(q=>{delete q._score;delete q._errors;});
+  save(); renderLibrary(); renderGlobalScore(); renderStatsPanel();
+  toast('✅ Stats réinitialisées');
 }
 
-/* ══ GESTION DES AVIS (SUPPRESSION FIXÉE) ══ */
-let selectedStars = 0;
-document.querySelectorAll('#stars-row .star').forEach(s => {
-  s.onclick = () => {
-    selectedStars = s.dataset.v;
-    document.querySelectorAll('#stars-row .star').forEach(st => {
-      st.classList.toggle('on', st.dataset.v <= selectedStars);
-    });
-  };
+// ── AVIS ───────────────────────────────────────────
+document.addEventListener('DOMContentLoaded',()=>{
+  document.getElementById('stars-row').addEventListener('click',e=>{
+    const s=e.target.closest('.star'); if(!s) return;
+    reviewStars=+s.dataset.v;
+    document.querySelectorAll('.star').forEach((st,i)=>st.classList.toggle('on',i<reviewStars));
+  });
 });
 
 function submitReview() {
-  const text = document.getElementById('review-text').value;
-  if (!selectedStars) return alert("Choisis une note !");
-  
-  const newReview = {
-    stars: selectedStars,
-    text: text,
-    date: new Date().toLocaleDateString('fr-FR')
-  };
-  
-  reviews.unshift(newReview);
-  localStorage.setItem('quiz_reviews', JSON.stringify(reviews));
-  
-  document.getElementById('review-text').value = "";
-  selectedStars = 0;
-  document.querySelectorAll('#stars-row .star').forEach(st => st.classList.remove('on'));
-  
-  renderReviews();
-  showToast("Avis enregistré");
+  const text=document.getElementById('review-text').value.trim();
+  if(!reviewStars){toast('⭐ Choisis une note !');return;}
+  if(!text){toast('✏️ Écris quelque chose !');return;}
+  S.reviews.unshift({id:Date.now(),stars:reviewStars,text,
+    date:new Date().toLocaleDateString('fr-FR',{day:'numeric',month:'short',year:'numeric'})});
+  save();
+  document.getElementById('review-text').value='';
+  reviewStars=0;
+  document.querySelectorAll('.star').forEach(s=>s.classList.remove('on'));
+  renderReviewsList(); toast('✅ Avis enregistré !');
 }
 
-function renderReviews() {
-  const list = document.getElementById('reviews-list');
-  const empty = document.getElementById('reviews-empty');
-  
-  if (reviews.length === 0) {
-    list.innerHTML = "";
-    empty.style.display = "block";
+function deleteReview(id) {
+  S.reviews=S.reviews.filter(r=>r.id!==id); save(); renderReviewsList();
+}
+
+function renderReviewsList() {
+  const list=document.getElementById('reviews-list');
+  const empty=document.getElementById('reviews-empty');
+  if(!S.reviews.length){list.innerHTML='';empty.style.display='block';return;}
+  empty.style.display='none';
+  list.innerHTML=S.reviews.map(r=>
+    '<div class="review-card">'
+    +'<div class="review-card-top"><span class="review-stars">'+'⭐'.repeat(r.stars)+'</span><span class="review-date">'+r.date+'</span></div>'
+    +'<div class="review-body">'+esc(r.text).replace(/\n/g,'<br>')+'</div>'
+    +'<button class="review-delete" onclick="deleteReview('+r.id+')">🗑 Supprimer</button>'
+    +'</div>'
+  ).join('');
+}
+
+// ── WELCOME ────────────────────────────────────────
+function enterApp() {
+  const w=document.getElementById('welcome');
+  w.style.opacity='0';
+  setTimeout(()=>{
+    w.style.display='none';
+    document.getElementById('app').style.display='block';
+    load();
+    applyBg(S.theme.bg||'#050508',-1);
+    applyAccent(S.theme.a1||'#7c6aff',S.theme.a2||'#ff6a9e',S.theme.ai||0);
+    renderLibrary();
+    renderGlobalScore();
+    syncGithub(true);
+  },700);
+}
+
+// ── SYNC ───────────────────────────────────────────
+async function syncGithub(silent) {
+  const badge=document.getElementById('sync-badge');
+  if(badge) badge.style.display='inline-flex';
+  try {
+    const res=await fetch('https://raw.githubusercontent.com/'+GITHUB_USER+'/'+GITHUB_REPO+'/main/'+GITHUB_FILE+'?t='+Date.now());
+    if(!res.ok) throw new Error();
+    const data=await res.json();
+    if(data&&data.titre&&data.questions){
+      upsertQuiz(data); save(); renderLibrary(); renderGlobalScore();
+      if(!silent) toast('✅ Quiz synchronisé !');
+    }
+  } catch(e){ if(!silent) toast('⚠️ Aucun quiz disponible'); }
+  if(badge) badge.style.display='none';
+}
+
+// ── LIBRARY ────────────────────────────────────────
+function upsertQuiz(data) {
+  const idx=S.library.findIndex(q=>q.titre===data.titre);
+  if(idx>=0){
+    const sc=S.library[idx]._score, er=S.library[idx]._errors;
+    S.library[idx]=data;
+    if(sc) S.library[idx]._score=sc;
+    if(er) S.library[idx]._errors=er;
+  } else S.library.unshift(data);
+}
+
+// SUPPRESSION PAR INDEX — comme l'ancien code qui fonctionnait
+function deleteQuiz(index) {
+  if(!confirm('Supprimer ce module ?')) return;
+  S.library.splice(index,1);
+  save(); renderLibrary(); renderGlobalScore();
+  if(activePanel==='stats') renderStatsPanel();
+  toast('🗑️ Module supprimé');
+}
+
+function renderLibrary() {
+  const grid=document.getElementById('quiz-grid');
+  if(!S.library.length){
+    grid.innerHTML='<div class="empty-state"><div class="empty-icon">📭</div><h3>Bibliothèque vide</h3><p style="margin-bottom:20px">Clique sur "Sync" ou importe un fichier JSON</p><button class="btn btn-primary" onclick="openImportModal()">Importer</button></div>';
     return;
   }
-  
-  empty.style.display = "none";
-  list.innerHTML = reviews.map((r, i) => `
-    <div class="review-card">
-      <div class="review-card-top">
-        <div class="review-stars">${"⭐".repeat(r.stars)}</div>
-        <div class="review-date">${r.date}</div>
-      </div>
-      <div class="review-body">${r.text || "Pas de commentaire."}</div>
-      <button class="review-delete" onclick="deleteReview(${i})">Supprimer l'avis</button>
-    </div>
-  `).join('');
+  // On génère le HTML et on l'injecte — les index correspondent à l'état actuel de S.library
+  grid.innerHTML=S.library.map((quiz,i)=>{
+    const sc=quiz._score;
+    const badge=sc
+      ? '<span class="card-badge badge-done">'+sc.correct+'/'+sc.total+' · '+Math.round(sc.pct)+'%</span>'
+      : '<span class="card-badge badge-new">Nouveau</span>';
+    return '<div class="quiz-card" onclick="startQuiz('+i+')">'
+      +'<div class="card-meta">'+(quiz.matiere||'Quiz')+' · '+quiz.questions.length+' questions</div>'
+      +'<div class="card-title">'+esc(quiz.titre)+'</div>'
+      +'<div class="card-footer">'
+      +badge
+      +'<button class="btn btn-sm btn-danger" onclick="event.stopPropagation();deleteQuiz('+i+')">Supprimer</button>'
+      +'</div></div>';
+  }).join('');
 }
 
-// LA FONCTION SUPPRIMER QUI FONCTIONNE MAINTENANT :
-function deleteReview(index) {
-  reviews.splice(index, 1);
-  localStorage.setItem('quiz_reviews', JSON.stringify(reviews));
-  renderReviews();
-  showToast("Avis supprimé");
+// ── PLAYER ─────────────────────────────────────────
+function startQuiz(index) {
+  const quiz=S.library[index];
+  if(!quiz) return;
+  session={quiz,idx:0,correct:0,errors:[]};
+  document.getElementById('player-title').textContent=quiz.titre;
+  document.getElementById('player').style.display='block';
+  document.getElementById('player').scrollTop=0;
+  updateLiveScore(); renderQuestion();
 }
 
-/* ══ THEME & UTILS ══ */
-function showToast(msg) {
-  const t = document.getElementById('toast');
-  t.innerText = msg;
-  t.classList.add('show');
-  setTimeout(() => t.classList.remove('show'), 3000);
+function normalizeAnswer(rep,choix) {
+  const t=(rep||'').trim();
+  if(/^[A-E]$/i.test(t)){const i=LETTERS.indexOf(t.toUpperCase());if(i>=0&&choix&&choix[i])return choix[i];}
+  return t;
 }
 
-// Couleurs par défaut pour le panneau thème
-const accents = ['#7c6aff', '#2dff9e', '#ff6a9e', '#ffb347', '#00d1ff'];
-document.getElementById('accent-grid').innerHTML = accents.map(c => 
-  `<div class="a-swatch" style="background:${c}" onclick="setAccent('${c}')"></div>`
-).join('');
-
-function setAccent(c) {
-  document.documentElement.style.setProperty('--a1', c);
-  showToast("Couleur mise à jour");
+function updateLiveScore() {
+  const total=session.quiz?session.quiz.questions.length:0;
+  document.getElementById('ls-num').textContent=session.correct;
+  document.getElementById('ls-den').textContent='/'+total;
+  const el=document.querySelector('.live-score');
+  if(el){el.style.transform='scale(1.12)';setTimeout(()=>{el.style.transform='scale(1)';},150);}
 }
 
-function syncGithub() {
-  showToast("Synchronisation en cours...");
-  setTimeout(() => showToast("Déjà à jour !"), 1500);
+function renderQuestion() {
+  const q=session.quiz.questions[session.idx];
+  const total=session.quiz.questions.length;
+  document.getElementById('prog-fill').style.width=(session.idx/total*100)+'%';
+  document.getElementById('player-content').innerHTML=
+    '<div class="q-wrap">'
+    +'<div class="q-num">Question '+(session.idx+1)+' sur '+total+'</div>'
+    +'<div class="q-text">'+esc(q.question)+'</div>'
+    +'<div class="choices">'
+    +q.choix.map((c,i)=>
+      '<button class="choice" data-i="'+i+'" onclick="answer(this)">'
+      +'<span class="choice-letter">'+LETTERS[i]+'</span><span>'+esc(c)+'</span>'
+      +'</button>'
+    ).join('')
+    +'</div><div id="feedback" style="display:none"></div></div>';
+}
+
+function answer(btn) {
+  const i=+btn.dataset.i;
+  const q=session.quiz.questions[session.idx];
+  const cor=normalizeAnswer(q.reponse,q.choix);
+  const ok=q.choix[i]===cor;
+  document.querySelectorAll('.choice').forEach(b=>b.disabled=true);
+  if(ok){btn.classList.add('correct');session.correct++;}
+  else{
+    btn.classList.add('wrong');
+    document.querySelectorAll('.choice').forEach((b,j)=>{if(q.choix[j]===cor)b.classList.add('correct');});
+    session.errors.push({question:q.question,given:q.choix[i],correct:cor});
+  }
+  updateLiveScore();
+  const fb=document.getElementById('feedback');
+  fb.style.display='block';
+  fb.innerHTML='<div class="feedback-box">'
+    +'<div class="feedback-icon">'+(ok?'✅':'❌')+'</div>'
+    +'<div class="feedback-text">'+(q.explication||(ok?'Bonne réponse !':'Mauvaise réponse.'))+'</div>'
+    +'<button class="btn btn-primary next-btn" onclick="nextStep()">'
+    +(session.idx+1<session.quiz.questions.length?'Suivant →':'Voir les résultats →')
+    +'</button></div>';
+}
+
+function nextStep() {
+  session.idx++;
+  if(session.idx<session.quiz.questions.length) renderQuestion(); else showResults();
+  document.getElementById('player').scrollTop=0;
+}
+
+function showResults() {
+  const total=session.quiz.questions.length;
+  const pct=Math.round(session.correct/total*100);
+  const note=(session.correct/total*20).toFixed(2).replace('.',',');
+  document.getElementById('prog-fill').style.width='100%';
+  const li=S.library.findIndex(q=>q.titre===session.quiz.titre);
+  if(li>=0){
+    S.library[li]._score={correct:session.correct,total,pct};
+    S.library[li]._errors=session.errors;
+    save(); renderLibrary(); renderGlobalScore();
+    if(activePanel==='stats') renderStatsPanel();
+  }
+  document.getElementById('player-content').innerHTML=
+    '<div class="results-wrap">'
+    +'<div class="result-label">Résultat final</div>'
+    +'<div class="result-score-big">'+pct+'%</div>'
+    +'<div class="result-detail">'+session.correct+' bonne'+(session.correct>1?'s':'')+' réponse'+(session.correct>1?'s':'')+' sur '+total+'</div>'
+    +'<div class="result-note-20"><span class="result-note-lbl">Note sur 20</span><span class="note-val">'+note+' / 20</span></div>'
+    +'<div class="result-actions">'
+    +'<button class="btn btn-ghost" onclick="startQuiz('+li+')">↺ Recommencer</button>'
+    +'<button class="btn btn-primary" onclick="closePlayer()">← Dashboard</button>'
+    +'</div></div>';
+}
+
+function closePlayer(){document.getElementById('player').style.display='none';}
+
+// ── IMPORT ─────────────────────────────────────────
+function openImportModal(){document.getElementById('modal-backdrop').style.display='flex';}
+function closeImportModal(){
+  document.getElementById('modal-backdrop').style.display='none';
+  document.getElementById('json-input').value='';
+  document.getElementById('file-label').innerHTML='Glisse un fichier <strong>.json</strong> ici ou clique';
+}
+
+function saveImport() {
+  try {
+    const raw=document.getElementById('json-input').value;
+    const data=JSON.parse(raw.replace(/```json|```/g,'').trim());
+    if(!data.titre||!data.questions) throw new Error();
+    upsertQuiz(data); save(); renderLibrary(); renderGlobalScore();
+    if(activePanel==='stats') renderStatsPanel();
+    closeImportModal(); toast('✅ Quiz ajouté !');
+  } catch(e){toast('❌ JSON invalide');}
+}
+
+function handleFile(e){
+  const f=e.target.files[0]; if(!f) return;
+  const r=new FileReader();
+  r.onload=ev=>{document.getElementById('json-input').value=ev.target.result;document.getElementById('file-label').innerHTML='<strong>'+f.name+'</strong> prêt ✓';};
+  r.readAsText(f);
+}
+
+const dz=document.getElementById('drop-zone');
+['dragenter','dragover','dragleave','drop'].forEach(ev=>dz.addEventListener(ev,e=>{e.preventDefault();e.stopPropagation();}));
+dz.addEventListener('dragover',()=>dz.classList.add('over'));
+dz.addEventListener('dragleave',()=>dz.classList.remove('over'));
+dz.addEventListener('drop',e=>{dz.classList.remove('over');const f=e.dataTransfer.files[0];if(f){const r=new FileReader();r.onload=ev=>{document.getElementById('json-input').value=ev.target.result;};r.readAsText(f);}});
+
+// ── UTILS ──────────────────────────────────────────
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+
+let _tt;
+function toast(msg){
+  const el=document.getElementById('toast');
+  el.textContent=msg; el.classList.add('show');
+  clearTimeout(_tt); _tt=setTimeout(()=>el.classList.remove('show'),3000);
 }
 </script>
 </body>
