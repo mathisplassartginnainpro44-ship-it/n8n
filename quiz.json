@@ -1,256 +1,228 @@
 {
   "titre": "Les Registres Littéraires",
-  "matiere": "Francais",
+  "matiere": "Français",
   "questions": [
     {
-      "question": "Quel est le but principal du registre lyrique en litterature?",
+      "question": "Quel est le but principal du registre lyrique en littérature ?",
       "type": "qcm",
       "choix": [
-        "A - Exprimer des sentiments personnels",
-        "B - Raconter des evenements historiques",
-        "C - Decrir des paysages",
-        "D - Presenter des personnages"
-      ],
-      "reponse": "A",
-      "explication": "Le registre lyrique est utilise pour exprimer des sentiments personnels tels que la joie, le regret ou la nostalgie, souvent lies a des themes universels comme l'amour, la mort ou le temps qui passe."
-    },
-    {
-      "question": "Quel procede litteraire est souvent utilise dans le registre pathetique?",
-      "type": "qcm",
-      "choix": [
-        "A - Metaphore",
-        "B - Hyperbole",
-        "C - Personnification",
-        "D - Alliteration"
+        "A) Susciter la compassion du lecteur",
+        "B) Exprimer les sentiments personnels",
+        "C) Présenter un héros solitaire",
+        "D) Provoquer le rire"
       ],
       "reponse": "B",
-      "explication": "Le registre pathetique utilise souvent des hyperboles pour exprimer la souffrance ou la compassion du lecteur."
+      "explication": "Le registre lyrique vise à exprimer les sentiments personnels liés à des thèmes universels."
     },
     {
-      "question": "Quel est le ton dominant dans le registre tragique?",
+      "question": "Quel procédé est caractéristique du registre pathétique ?",
       "type": "qcm",
       "choix": [
-        "A - Joyeux",
-        "B - Melancolique",
-        "C - Sombre",
-        "D - Ironique"
-      ],
-      "reponse": "C",
-      "explication": "Le registre tragique presente souvent un ton sombre et solennel, avec un langage soutenu et des deliberations."
-    },
-    {
-      "question": "Quel est l'objectif principal du registre comique?",
-      "type": "qcm",
-      "choix": [
-        "A - Faire rire ou sourire",
-        "B - Eduquer le lecteur",
-        "C - Critiquer la societe",
-        "D - Presenter des faits historiques"
-      ],
-      "reponse": "A",
-      "explication": "Le registre comique vise a provoquer le rire ou le sourire en utilisant des procedes tels que l'exagération ou le decalage entre la realite et la situation decrite."
-    },
-    {
-      "question": "Quel procede litteraire est souvent utilise pour exprimer les sentiments personnels dans le registre lyrique?",
-      "type": "qcm",
-      "choix": [
-        "A - Ponctuation expressive",
-        "B - Langage soutenu",
-        "C - Champ lexical des sentiments",
-        "D - Toutes les reponses"
-      ],
-      "reponse": "D",
-      "explication": "Le registre lyrique utilise souvent un champ lexical des sentiments, l'emploi du 'je' et une ponctuation expressive pour exprimer les sentiments personnels."
-    },
-    {
-      "question": "Quel est le role de l'auteur dans le registre pathetique?",
-      "type": "qcm",
-      "choix": [
-        "A - Il est impartial",
-        "B - Il est objectif",
-        "C - Il cherche a susciter la compassion du lecteur",
-        "D - Il presente des faits historiques"
-      ],
-      "reponse": "C",
-      "explication": "Le registre pathetique vise a susciter la compassion du lecteur face a la souffrance de personnages faibles confrontes a des situations inhumaines."
-    },
-    {
-      "question": "Quel est l'element caracteristique du registre tragique?",
-      "type": "qcm",
-      "choix": [
-        "A - Un heros solitaire",
-        "B - Une situation inhumaine",
-        "C - Un langage soutenu",
-        "D - Toutes les reponses"
-      ],
-      "reponse": "D",
-      "explication": "Le registre tragique presente souvent un heros solitaire luttant en vain contre une fatalite ou des forces qui le depassent, avec un langage soutenu et des deliberations."
-    },
-    {
-      "question": "Quel est le but de l'utilisation de l'hyperbole dans le registre pathetique?",
-      "type": "qcm",
-      "choix": [
-        "A - Exagerer la situation",
-        "B - Diminuer la souffrance",
-        "C - Presenter des faits historiques",
-        "D - Faire rire le lecteur"
-      ],
-      "reponse": "A",
-      "explication": "L'hyperbole est utilisee dans le registre pathetique pour exagerer la situation et ainsi exprimer la souffrance ou la compassion du lecteur."
-    },
-    {
-      "question": "Quel est le ton dominant dans le registre lyrique?",
-      "type": "qcm",
-      "choix": [
-        "A - Joyeux",
-        "B - Melancolique",
-        "C - Sombre",
-        "D - Nostalgique"
-      ],
-      "reponse": "D",
-      "explication": "Le registre lyrique presente souvent un ton nostalgique et emotif, avec des sentiments personnels tels que la joie, le regret ou la nostalgie."
-    },
-    {
-      "question": "Quel procede litteraire est utilise pour presenter des personnages dans le registre comique?",
-      "type": "qcm",
-      "choix": [
-        "A - Caricature",
-        "B - Exagération",
-        "C - Ironie",
-        "D - Toutes les reponses"
-      ],
-      "reponse": "D",
-      "explication": "Le registre comique utilise souvent des procedes tels que la caricature, l'exagération ou l'ironie pour presenter des personnages et provoquer le rire ou le sourire."
-    },
-    {
-      "question": "Quel est le role de la ponctuation expressive dans le registre lyrique?",
-      "type": "qcm",
-      "choix": [
-        "A - Elle est utilisee pour presenter des faits historiques",
-        "B - Elle est utilisee pour exprimer des sentiments personnels",
-        "C - Elle est utilisee pour faire rire le lecteur",
-        "D - Elle est utilisee pour critiquer la societe"
+        "A) Ponctuation expressive",
+        "B) Hyperboles et exclamations",
+        "C) Langage soutenu",
+        "D) Délibérations"
       ],
       "reponse": "B",
-      "explication": "La ponctuation expressive est utilisee dans le registre lyrique pour exprimer des sentiments personnels et ainsi donner un ton emotif au texte."
+      "explication": "Le registre pathétique est caractérisé par l'emploi d'hyperboles et d'exclamations pour susciter la compassion du lecteur."
     },
     {
-      "question": "Quel est l'element caracteristique du registre comique?",
+      "question": "Quel est le thème principal du registre tragique ?",
       "type": "qcm",
       "choix": [
-        "A - Un heros solitaire",
-        "B - Une situation inhumaine",
-        "C - Un decalage entre la realite et la situation decrite",
-        "D - Un langage soutenu"
+        "A) L'amour",
+        "B) La mort et la fatalité",
+        "C) La politique",
+        "D) La morale"
+      ],
+      "reponse": "B",
+      "explication": "Le registre tragique présente un héros solitaire luttant en vain contre une fatalité ou des forces qui le dépassent."
+    },
+    {
+      "question": "Quel est l'effet principal du registre comique en littérature ?",
+      "type": "qcm",
+      "choix": [
+        "A) Susciter la compassion du lecteur",
+        "B) Exprimer les sentiments personnels",
+        "C) Présenter un héros solitaire",
+        "D) Provoquer le rire ou le sourire"
+      ],
+      "reponse": "D",
+      "explication": "Le registre comique vise à provoquer le rire ou le sourire par un décalage entre la réalité et l'attente."
+    },
+    {
+      "question": "Quel est le rôle de la ponctuation expressive dans le registre lyrique ?",
+      "type": "qcm",
+      "choix": [
+        "A) Exprimer la fatalité",
+        "B) Susciter la compassion",
+        "C) Exprimer les sentiments personnels",
+        "D) Provoquer le rire"
       ],
       "reponse": "C",
-      "explication": "Le registre comique presente souvent un decalage entre la realite et la situation decrite, ce qui provoque le rire ou le sourire."
+      "explication": "La ponctuation expressive est utilisée pour exprimer les sentiments personnels dans le registre lyrique."
     },
     {
-      "question": "Quel est le but de l'utilisation de l'ironie dans le registre comique?",
+      "question": "Quel registre littéraire est caractérisé par l'emploi du 'je' ?",
       "type": "qcm",
       "choix": [
-        "A - Exagerer la situation",
-        "B - Diminuer la souffrance",
-        "C - Presenter des faits historiques",
-        "D - Faire rire le lecteur"
+        "A) Registre pathétique",
+        "B) Registre lyrique",
+        "C) Registre tragique",
+        "D) Registre comique"
       ],
-      "reponse": "D",
-      "explication": "L'ironie est utilisee dans le registre comique pour faire rire le lecteur en presentant une situation de maniere inattendue ou contradictoire."
+      "reponse": "B",
+      "explication": "Le registre lyrique est caractérisé par l'emploi du 'je' pour exprimer les sentiments personnels."
     },
     {
-      "question": "Quel est le ton dominant dans le registre pathetique?",
+      "question": "Quel est le but de l'hyperbole dans le registre pathétique ?",
       "type": "qcm",
       "choix": [
-        "A - Joyeux",
-        "B - Melancolique",
-        "C - Sombre",
-        "D - Compassionnel"
+        "A) Exprimer la fatalité",
+        "B) Susciter la compassion du lecteur",
+        "C) Exprimer les sentiments personnels",
+        "D) Provoquer le rire"
       ],
-      "reponse": "D",
-      "explication": "Le registre pathetique presente souvent un ton compassionnel, avec des sentiments de souffrance ou de pitie pour les personnages."
+      "reponse": "B",
+      "explication": "L'hyperbole est utilisée dans le registre pathétique pour susciter la compassion du lecteur."
     },
     {
-      "question": "Quel procede litteraire est utilise pour presenter des situations dans le registre tragique?",
+      "question": "Quel registre littéraire est caractérisé par un langage soutenu ?",
       "type": "qcm",
       "choix": [
-        "A - Description detaillee",
-        "B - Exposition des faits",
-        "C - Deliberations",
-        "D - Toutes les reponses"
-      ],
-      "reponse": "D",
-      "explication": "Le registre tragique utilise souvent des procedes tels que la description detaillee, l'exposition des faits et les deliberations pour presenter des situations et ainsi creer un ton sombre et solennel."
-    },
-    {
-      "question": "Quel est le role de l'auteur dans le registre comique?",
-      "type": "qcm",
-      "choix": [
-        "A - Il est impartial",
-        "B - Il est objectif",
-        "C - Il cherche a faire rire le lecteur",
-        "D - Il presente des faits historiques"
+        "A) Registre lyrique",
+        "B) Registre pathétique",
+        "C) Registre tragique",
+        "D) Registre comique"
       ],
       "reponse": "C",
-      "explication": "Le registre comique vise a faire rire le lecteur en utilisant des procedes tels que l'exagération, l'ironie ou la caricature."
+      "explication": "Le registre tragique est caractérisé par un langage soutenu pour présenter un héros solitaire luttant en vain contre une fatalité."
     },
     {
-      "question": "Quel est l'element caracteristique du registre lyrique?",
+      "question": "Quel est le rôle des délibérations dans le registre tragique ?",
       "type": "qcm",
       "choix": [
-        "A - Un heros solitaire",
-        "B - Une situation inhumaine",
-        "C - Des sentiments personnels",
-        "D - Un langage soutenu"
+        "A) Exprimer les sentiments personnels",
+        "B) Susciter la compassion du lecteur",
+        "C) Présenter un héros solitaire",
+        "D) Provoquer le rire"
       ],
       "reponse": "C",
-      "explication": "Le registre lyrique presente souvent des sentiments personnels tels que la joie, le regret ou la nostalgie, lis a des themes universels comme l'amour, la mort ou le temps qui passe."
+      "explication": "Les délibérations sont utilisées dans le registre tragique pour présenter un héros solitaire luttant en vain contre une fatalité."
     },
     {
-      "question": "Quel est le but de l'utilisation de la metaphore dans le registre pathetique?",
+      "question": "Quel registre littéraire est caractérisé par un décalage entre la réalité et l'attente ?",
       "type": "qcm",
       "choix": [
-        "A - Exagerer la situation",
-        "B - Diminuer la souffrance",
-        "C - Presenter des faits historiques",
-        "D - Faire rire le lecteur"
-      ],
-      "reponse": "A",
-      "explication": "La metaphore est utilisee dans le registre pathetique pour exagerer la situation et ainsi exprimer la souffrance ou la compassion du lecteur."
-    },
-    {
-      "question": "Quel est le ton dominant dans le registre tragique?",
-      "type": "qcm",
-      "choix": [
-        "A - Joyeux",
-        "B - Melancolique",
-        "C - Sombre",
-        "D - Solennel"
+        "A) Registre lyrique",
+        "B) Registre pathétique",
+        "C) Registre tragique",
+        "D) Registre comique"
       ],
       "reponse": "D",
-      "explication": "Le registre tragique presente souvent un ton solennel et sombre, avec des sentiments de desespoir ou de resignation."
+      "explication": "Le registre comique est caractérisé par un décalage entre la réalité et l'attente pour provoquer le rire ou le sourire."
+    },
+    {
+      "question": "Quel est le but du registre lyrique en littérature ?",
+      "type": "qcm",
+      "choix": [
+        "A) Susciter la compassion du lecteur",
+        "B) Exprimer les sentiments personnels",
+        "C) Présenter un héros solitaire",
+        "D) Provoquer le rire"
+      ],
+      "reponse": "B",
+      "explication": "Le registre lyrique vise à exprimer les sentiments personnels liés à des thèmes universels."
+    },
+    {
+      "question": "Quel registre littéraire est caractérisé par l'emploi d'hyperboles ?",
+      "type": "qcm",
+      "choix": [
+        "A) Registre lyrique",
+        "B) Registre pathétique",
+        "C) Registre tragique",
+        "D) Registre comique"
+      ],
+      "reponse": "B",
+      "explication": "Le registre pathétique est caractérisé par l'emploi d'hyperboles pour susciter la compassion du lecteur."
+    },
+    {
+      "question": "Quel est le rôle de la ponctuation expressive dans le registre lyrique ?",
+      "type": "qcm",
+      "choix": [
+        "A) Exprimer la fatalité",
+        "B) Susciter la compassion",
+        "C) Exprimer les sentiments personnels",
+        "D) Provoquer le rire"
+      ],
+      "reponse": "C",
+      "explication": "La ponctuation expressive est utilisée pour exprimer les sentiments personnels dans le registre lyrique."
+    },
+    {
+      "question": "Quel registre littéraire est caractérisé par un langage soutenu ?",
+      "type": "qcm",
+      "choix": [
+        "A) Registre lyrique",
+        "B) Registre pathétique",
+        "C) Registre tragique",
+        "D) Registre comique"
+      ],
+      "reponse": "C",
+      "explication": "Le registre tragique est caractérisé par un langage soutenu pour présenter un héros solitaire luttant en vain contre une fatalité."
+    },
+    {
+      "question": "Quel est le but du registre pathétique en littérature ?",
+      "type": "qcm",
+      "choix": [
+        "A) Exprimer les sentiments personnels",
+        "B) Susciter la compassion du lecteur",
+        "C) Présenter un héros solitaire",
+        "D) Provoquer le rire"
+      ],
+      "reponse": "B",
+      "explication": "Le registre pathétique vise à susciter la compassion du lecteur face à la souffrance de personnages faibles."
+    },
+    {
+      "question": "Quel registre littéraire est caractérisé par l'emploi du 'je' ?",
+      "type": "qcm",
+      "choix": [
+        "A) Registre pathétique",
+        "B) Registre lyrique",
+        "C) Registre tragique",
+        "D) Registre comique"
+      ],
+      "reponse": "B",
+      "explication": "Le registre lyrique est caractérisé par l'emploi du 'je' pour exprimer les sentiments personnels."
+    },
+    {
+      "question": "Quel est le rôle des délibérations dans le registre tragique ?",
+      "type": "qcm",
+      "choix": [
+        "A) Exprimer les sentiments personnels",
+        "B) Susciter la compassion du lecteur",
+        "C) Présenter un héros solitaire",
+        "D) Provoquer le rire"
+      ],
+      "reponse": "C",
+      "explication": "Les délibérations sont utilisées dans le registre tragique pour présenter un héros solitaire luttant en vain contre une fatalité."
     }
   ],
   "exercices": [
     {
-      "enonce": "Analysez le registre litteraire utilise dans le texte suivant : 'Je suis seul et abandonne, la vie est cruelle et injuste.'",
-      "corrige": "Le registre litteraire utilise dans ce texte est le registre pathetique, car il exprime des sentiments de souffrance et de compassion."
+      "enonce": "Analysez le registre littéraire utilisé dans le texte suivant : 'Je suis triste et je ne sais pas pourquoi.'",
+      "corrige": "Le registre littéraire utilisé dans ce texte est le registre lyrique, car il exprime les sentiments personnels de l'auteur."
     },
     {
-      "enonce": "Identifiez les procedes litteraires utilises dans le registre comique pour provoquer le rire ou le sourire.",
-      "corrige": "Les procedes litteraires utilises dans le registre comique pour provoquer le rire ou le sourire incluent l'exagération, l'ironie, la caricature et le decalage entre la realite et la situation decrite."
+      "enonce": "Identifiez les procédés littéraires utilisés dans le registre pathétique.",
+      "corrige": "Les procédés littéraires utilisés dans le registre pathétique incluent les hyperboles, les exclamations et le champ lexical de l'affectivité/souffrance."
     },
     {
-      "enonce": "Expliquez le role de la ponctuation expressive dans le registre lyrique.",
-      "corrige": "La ponctuation expressive est utilisee dans le registre lyrique pour exprimer des sentiments personnels et ainsi donner un ton emotif au texte."
+      "enonce": "Décrivez le registre tragique et ses caractéristiques.",
+      "corrige": "Le registre tragique présente un héros solitaire luttant en vain contre une fatalité ou des forces qui le dépassent. Il est caractérisé par un langage soutenu et des délibérations."
     },
     {
-      "enonce": "Analysez le registre litteraire utilise dans le texte suivant : 'La vie est belle et joyeuse, tout est possible.'",
-      "corrige": "Le registre litteraire utilise dans ce texte est le registre lyrique, car il exprime des sentiments de joie et d'optimisme."
-    },
-    {
-      "enonce": "Identifiez les caracteristiques du registre tragique.",
-      "corrige": "Les caracteristiques du registre tragique incluent un heros solitaire, une situation inhumaine, un langage soutenu et des deliberations."
+      "enonce": "Quel est le but du registre comique en littérature ?",
+      "corrige": "Le registre comique vise à provoquer le rire ou le sourire par un décalage entre la réalité et l'attente."
     }
   ]
 }
