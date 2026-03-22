@@ -1,6 +1,235 @@
 {
-  "error": "JSON invalide reçu de l'IA",
-  "raw_content": "{\n  \"titre\": \"Le 20e Siècle littéraire\",\n  \"matiere\": \"Français\",\n  \"questions\": [\n    {\n      \"question\": \"Quel est le but de la littérature pour les auteurs ?\";\n      \"type\": \"qcm\",\n      \"choix\": [\n        \"A. Exprimer leur vision du monde\",\n        \"B. Créer des personnages\",\n        \"C. Décrire des paysages\",\n        \"D. Résoudre des problèmes mathématiques\"\n      ],\n      \"reponse\": \"A\",\n      \"explication\": \"La littérature permet aux auteurs de partager leur perception de la société et de-questionner les normes établies.\"\n    },\n    {\n      \"question\": \"Quel est le contexte littéraire du 20e siècle ?\";\n      \"type\": \"qcm\",\n      \"choix\": [\n        \"A. Le réalisme\",\n        \"B. Le romantisme\",\n        \"C. Le modernisme\",\n        \"D. Le postmodernisme\"\n      ],\n      \"reponse\": \"C\",\n      \"explication\": \"Le 20e siècle est caractérisé par l'émergence du modernisme, un mouvement qui rompt avec les conventions littéraires traditionnelles.\"\n    },\n    {\n      \"question\": \"Qui est l'auteur de l'œuvre étudiée ?\";\n      \"type\": \"qcm\",\n      \"choix\": [\n        \"A. Jean-Paul Sartre\",\n        \"B. Albert Camus\",\n        \"C. Simone de Beauvoir\",\n        \"D. Samuel Beckett\"\n      ],\n      \"reponse\": \"A\",\n      \"explication\": \"Jean-Paul Sartre est un dramaturge et philosophe majeur du 20e siècle.\"\n    },\n    {\n      \"question\": \"Quel est le thème général du texte ?\";\n      \"type\": \"qcm\",\n      \"choix\": [\n        \"A. L'amour\",\n        \"B. La liberté\",\n        \"C. La condition humaine\",\n        \"D. La nature\"\n      ],\n      \"reponse\": \"C\",\n      \"explication\": \"Le thème général du texte est la condition humaine, qui explore les complexities de l'existence humaine.\"\n    },\n    {\n      \"question\": \"Quelle est la problématique de l'étude ?\";\n      \"type\": \"qcm\",\n      \"choix\": [\n        \"A. Comment l'auteur rend compte de la complexité psychologique du personnage ?\",\n        \"B. Comment l'auteur dénonce une injustice sociale ?\",\n        \"C. Comment l'auteur explore les thèmes de l'amour et de la mort ?\",\n        \"D. Comment l'auteur utilise des éléments de fantasy pour créer un monde imaginaire ?\"\n      ],\n      \"reponse\": \"A\",\n      \"explication\": \"La problématique de l'étude est de comprendre comment l'auteur parvient à rendre compte de la complexité psychologique du personnage.\"\n    },\n    {\n      \"question\": \"Quel est le plan de l'analyse ?\";\n      \"type\": \"qcm\",\n      \"choix\": [\n        \"A. Étudier le contexte historique, puis analyser le texte\",\n        \"B. Analyser le texte, puis étudier le contexte historique\",\n        \"C. Étudier le contexte historique, puis comparer avec d'autres œuvres\",\n        \"D. Analyser le texte, puis comparer avec d'autres œuvres\"\n      ],\n      \"reponse\": \"A\",\n      \"explication\": \"Le plan de l'analyse consiste à étudier le contexte historique, puis à analyser le texte pour comprendre son contenu et sa signification.\"\n    },\n    {\n      \"question\": \"Qu'est-ce que le 'Récap' Express' ?\";\n      \"type\": \"qcm\",\n      \"choix\": [\n        \"A. Un outil pour prendre des notes\",\n        \"B. Un guide pour les transitions\",\n        \"C. Un diagramme pour organiser les idées\",\n        \"D. Un modèle pour structurer un essai\"\n      ],\n      \"reponse\": \"B\",\n      \"explication\": \"Le 'Récap' Express' est un guide pour les transitions, qui aide à relier les idées et à créer un discours cohérent.\"\n    },\n    {\n      \"question\": \"Quel est le but de la littérature pour les auteurs du 20e siècle ?\";\n      \"type\": \"qcm\",\n      \"choix\": [\n        \"A. Exprimer leur vision du monde\",\n        \"B. Créer des personnages\",\n        \"C. Décrire des paysages\",\n        \"D. Résoudre des problèmes mathématiques\"\n      ],\n      \"reponse\": \"A\",\n      \"explication\": \"La littérature permet aux auteurs de partager leur perception de la société et de-questionner les normes établies.\"\n    },\n    {\n      \"question\": \"Qui est l'auteur de l'œuvre 'La Nausée' ?\";\n      \"type\": \"qcm\",\n      \"choix\": [\n        \"A. Jean-Paul Sartre\",\n        \"B. Albert Camus\",\n        \"C. Simone de Beauvoir\",\n        \"D. Samuel Beckett\"\n      ],\n      \"reponse\": \"A\",\n      \"explication\": \"Jean-Paul Sartre est l'auteur de l'œuvre 'La Nausée'.\"\n    },\n    {\n      \"question\": \"Quel est le thème principal de l'œuvre 'La Nausée' ?\";\n      \"type\": \"qcm\",\n      \"choix\": [\n        \"A. L'amour\",\n        \"B. La liberté\",\n        \"C. La condition humaine\",\n        \"D. La nature\"\n      ],\n      \"reponse\": \"C\",\n      \"explication\": \"Le thème principal de l'œuvre 'La Nausée' est la condition humaine, qui explore les complexities de l'existence humaine.\"\n    },\n    {\n      \"question\": \"Qu'est-ce que le 'choc des idées' ?\";\n      \"type\": \"qcm\",\n      \"choix\": [\n        \"A. Un outil pour prendre des notes\",\n        \"B. Un guide pour les transitions\",\n        \"C. Un diagramme pour organiser les idées\",\n        \"D. Un modèle pour structurer un essai\"\n      ],\n      \"reponse\": \"B\",\n      \"explication\": \"Le 'choc des idées' est un guide pour les transitions, qui aide à relier les idées et à créer un discours cohérent.\"\n    },\n    {\n      \"question\": \"Quel est le but de l'étude de l'œuvre 'La Nausée' ?\";\n      \"type\": \"qcm\",\n      \"choix\": [\n        \"A. Comprendre le contexte historique\",\n        \"B. Analyser le texte\",\n        \"C. Étudier le thème principal\",\n        \"D. Toutes les réponses précédentes\"\n      ],\n      \"reponse\": \"D\",\n      \"explication\": \"L'étude de l'œuvre 'La Nausée' vise à comprendre le contexte historique, à analyser le texte et à étudier le thème principal.\"\n    },\n    {\n      \"question\": \"Qui est le personnage principal de l'œuvre 'La Nausée' ?\";\n      \"type\": \"qcm\",\n      \"choix\": [\n        \"A. Antoine Roquentin\",\n        \"B. Anny\",\n        \"C. Le Self-Taught Man\",\n        \"D. Autour de la plaque\"\n      ],\n      \"reponse\": \"A\",\n      \"explication\": \"Le personnage principal de l'œuvre 'La Nausée' est Antoine Roquentin.\"\n    },\n    {\n      \"question\": \"Quel est le ton de l'œuvre 'La Nausée' ?\";\n      \"type\": \"qcm\",\n      \"choix\": [\n        \"A. Optimiste\",\n        \"B. Pessimiste\",\n        \"C. Ironique\",\n        \"D. Satirique\"\n      ],\n      \"reponse\": \"B\",\n      \"explication\": \"Le ton de l'œuvre 'La Nausée' est pessimiste, car il explore les aspects négatifs de la condition humaine.\"\n    },\n    {\n      \"question\": \"Quel est le registre de l'œuvre 'La Nausée' ?\";\n      \"type\": \"qcm\",\n      \"choix\": [\n        \"A. Philosophique\",\n        \"B. Littéraire\",\n        \"C. Historique\",\n        \"D. Scientifique\"\n      ],\n      \"reponse\": \"A\",\n      \"explication\": \"Le registre de l'œuvre 'La Nausée' est philosophique, car il explore les questions fondamentales de l'existence humaine.\"\n    },\n    {\n      \"question\": \"Quel est le but de la littérature pour les auteurs du 20e siècle en termes de 'réalisme' ?\";\n      \"type\": \"qcm\",\n      \"choix\": [\n        \"A. Créer des personnages réalistes\",\n        \"B. Décrire des paysages réalistes\",\n        \"C. Explorer les complexities de la condition humaine\",\n        \"D. Résoudre des problèmes mathématiques\"\n      ],\n      \"reponse\": \"C\",\n      \"explication\": \"La littérature pour les auteurs du 20e siècle vise à explorer les complexities de la condition humaine, ce qui est un aspect clé du réalisme.\"\n    },\n    {\n      \"question\": \"Qu'est-ce que le 'réalisme' en littérature ?\";\n      \"type\": \"qcm\",\n      \"choix\": [\n        \"A. Un mouvement littéraire qui vise à décrire la réalité de manière objective\",\n        \"B. Un mouvement littéraire qui vise à créer des personnages réalistes\",\n        \"C. Un mouvement littéraire qui vise à explorer les complexities de la condition humaine\",\n        \"D. Un mouvement littéraire qui vise à résoudre des problèmes mathématiques\"\n      ],\n      \"reponse\": \"A\",\n      \"explication\": \"Le réalisme est un mouvement littéraire qui vise à décrire la réalité de manière objective, en explorant les aspects concrets de la vie.\"\n    },\n    {\n      \"question\": \"Quel est le lien entre le 'réalisme' et la 'condition humaine' ?\";\n      \"type\": \"qcm\",\n      \"choix\": [\n        \"A. Le réalisme vise à décrire la condition humaine de manière objective\",\n        \"B. Le réalisme vise à créer des personnages réalistes\",\n        \"C. Le réalisme vise à explorer les complexities de la condition humaine\",\n        \"D. Le réalisme vise à résoudre des problèmes mathématiques\"\n      ],\n      \"reponse\": \"C\",\n      \"explication\": \"Le réalisme vise à explorer les complexities de la condition humaine, ce qui est un aspect clé de la littérature du 20e siècle.\"\n    },\n    {\n      \"question\": \"Quel est le but de l'étude de la littérature du 20e siècle ?\";\n      \"type\": \"qcm\",\n      \"choix\": [\n        \"A. Comprendre le contexte historique\",\n        \"B. Analyser les textes\",\n        \"C. Étudier les thèmes principaux\",\n        \"D. Toutes les réponses précédentes\"\n      ],\n      \"reponse\": \"D\",\n      \"explication\": \"L'étude de la littérature du 20e siècle vise à comprendre le contexte historique, à analyser les textes et à étudier les thèmes principaux.\"\n    },\n    {\n      \"question\": \"Qui est l'auteur de l'œuvre 'L'Étranger' ?\";\n      \"type\": \"qcm\",\n      \"choix\": [\n        \"A. Albert Camus\",\n        \"B. Jean-Paul Sartre\",\n        \"C. Simone de Beauvoir\",\n        \"D. Samuel Beckett\"\n      ],\n      \"reponse\": \"A\",\n      \"explication\": \"Albert Camus est l'auteur de l'œuvre 'L'Étranger'.\"\n    },\n    {\n      \"question\": \"Quel est le thème principal de l'œuvre 'L'Étranger' ?\";\n      \"type\": \"qcm\",\n      \"choix\": [\n        \"A. L'amour\",\n        \"B. La liberté\",\n        \"C. La condition humaine\",\n        \"D. La nature\"\n      ],\n      \"reponse\": \"C\",\n      \"explication\": \"Le thème principal de l'œuvre 'L'Étranger' est la condition humaine, qui explore les complexities de l'existence humaine.\"\n    },\n    {\n      \"question\": \"Quel est le ton de l'œuvre 'L'Étranger' ?\";\n      \"type\": \"qcm\",\n      \"choix\": [\n        \"A. Optimiste\",\n        \"B. Pessimiste\",\n        \"C. Ironique\",\n        \"D. Satirique\"\n      ],\n      \"reponse\": \"B\",\n      \"explication\": \"Le ton de l'œuvre 'L'Étranger' est pessimiste, car il explore les aspects négatifs de la condition humaine.\"\n    }\n  ],\n  \"exercices\": [\n    {\n      \"enonce\": \"Analysez le thème de la condition humaine dans l'œuvre 'La Nausée' de Jean-Paul Sartre.\",\n      \"corrige\": \"La condition humaine est un thème central dans l'œuvre 'La Nausée' de Jean-Paul Sartre. Le personnage principal, Antoine Roquentin, est un exemple de l'homme qui cherche à comprendre son existence et sa place dans le monde. La nausée, qui est le sentiment de dégoût et de répulsion que ressent Roquentin, est un symbole de la condition humaine, qui est caractérisée par l'incertitude et l'ambiguïté. Sartre utilise ce thème pour explorer les questions fondamentales de l'existence humaine, telles que la liberté et la responsabilité.\"\n    },\n    {\n      \"enonce\": \"Comparez les thèmes de la condition humaine dans les œuvres 'La Nausée' et 'L'Étranger'.\",\n      \"corrige\": \"Les œuvres 'La Nausée' et 'L'Étranger' partagent un thème commun, celui de la condition humaine. Cependant, les deux auteurs abordent ce thème de manière différente. Sartre, dans 'La Nausée', explore la condition humaine à travers le personnage de Roquentin, qui est un exemple de l'homme qui cherche à comprendre son existence et sa place dans le monde. Camus, dans 'L'Étranger', explore la condition humaine à travers le personnage de Meursault, qui est un exemple de l'homme qui est indifférent à la vie et qui ne cherche pas à comprendre son existence. Les deux auteurs utilisent ce thème pour explorer les questions fondamentales de l'existence humaine, telles que la liberté et la responsabilité, mais ils le font de manière différente et avec des résultats différents.\"\n    }\n  ]\n}",
-  "cleaned_content": "{\n  \"titre\": \"Le 20e Siècle littéraire\",\n  \"matiere\": \"Français\",\n  \"questions\": [\n    {\n      \"question\": \"Quel est le but de la littérature pour les auteurs ?\";\n      \"type\": \"qcm\",\n      \"choix\": [\n        \"A. Exprimer leur vision du monde\",\n        \"B. Créer des personnages\",\n        \"C. Décrire des paysages\",\n        \"D. Résoudre des problèmes mathématiques\"\n      ],\n      \"reponse\": \"A\",\n      \"explication\": \"La littérature permet aux auteurs de partager leur perception de la société et de-questionner les normes établies.\"\n    },\n    {\n      \"question\": \"Quel est le contexte littéraire du 20e siècle ?\";\n      \"type\": \"qcm\",\n      \"choix\": [\n        \"A. Le réalisme\",\n        \"B. Le romantisme\",\n        \"C. Le modernisme\",\n        \"D. Le postmodernisme\"\n      ],\n      \"reponse\": \"C\",\n      \"explication\": \"Le 20e siècle est caractérisé par l'émergence du modernisme, un mouvement qui rompt avec les conventions littéraires traditionnelles.\"\n    },\n    {\n      \"question\": \"Qui est l'auteur de l'œuvre étudiée ?\";\n      \"type\": \"qcm\",\n      \"choix\": [\n        \"A. Jean-Paul Sartre\",\n        \"B. Albert Camus\",\n        \"C. Simone de Beauvoir\",\n        \"D. Samuel Beckett\"\n      ],\n      \"reponse\": \"A\",\n      \"explication\": \"Jean-Paul Sartre est un dramaturge et philosophe majeur du 20e siècle.\"\n    },\n    {\n      \"question\": \"Quel est le thème général du texte ?\";\n      \"type\": \"qcm\",\n      \"choix\": [\n        \"A. L'amour\",\n        \"B. La liberté\",\n        \"C. La condition humaine\",\n        \"D. La nature\"\n      ],\n      \"reponse\": \"C\",\n      \"explication\": \"Le thème général du texte est la condition humaine, qui explore les complexities de l'existence humaine.\"\n    },\n    {\n      \"question\": \"Quelle est la problématique de l'étude ?\";\n      \"type\": \"qcm\",\n      \"choix\": [\n        \"A. Comment l'auteur rend compte de la complexité psychologique du personnage ?\",\n        \"B. Comment l'auteur dénonce une injustice sociale ?\",\n        \"C. Comment l'auteur explore les thèmes de l'amour et de la mort ?\",\n        \"D. Comment l'auteur utilise des éléments de fantasy pour créer un monde imaginaire ?\"\n      ],\n      \"reponse\": \"A\",\n      \"explication\": \"La problématique de l'étude est de comprendre comment l'auteur parvient à rendre compte de la complexité psychologique du personnage.\"\n    },\n    {\n      \"question\": \"Quel est le plan de l'analyse ?\";\n      \"type\": \"qcm\",\n      \"choix\": [\n        \"A. Étudier le contexte historique, puis analyser le texte\",\n        \"B. Analyser le texte, puis étudier le contexte historique\",\n        \"C. Étudier le contexte historique, puis comparer avec d'autres œuvres\",\n        \"D. Analyser le texte, puis comparer avec d'autres œuvres\"\n      ],\n      \"reponse\": \"A\",\n      \"explication\": \"Le plan de l'analyse consiste à étudier le contexte historique, puis à analyser le texte pour comprendre son contenu et sa signification.\"\n    },\n    {\n      \"question\": \"Qu'est-ce que le 'Récap' Express' ?\";\n      \"type\": \"qcm\",\n      \"choix\": [\n        \"A. Un outil pour prendre des notes\",\n        \"B. Un guide pour les transitions\",\n        \"C. Un diagramme pour organiser les idées\",\n        \"D. Un modèle pour structurer un essai\"\n      ],\n      \"reponse\": \"B\",\n      \"explication\": \"Le 'Récap' Express' est un guide pour les transitions, qui aide à relier les idées et à créer un discours cohérent.\"\n    },\n    {\n      \"question\": \"Quel est le but de la littérature pour les auteurs du 20e siècle ?\";\n      \"type\": \"qcm\",\n      \"choix\": [\n        \"A. Exprimer leur vision du monde\",\n        \"B. Créer des personnages\",\n        \"C. Décrire des paysages\",\n        \"D. Résoudre des problèmes mathématiques\"\n      ],\n      \"reponse\": \"A\",\n      \"explication\": \"La littérature permet aux auteurs de partager leur perception de la société et de-questionner les normes établies.\"\n    },\n    {\n      \"question\": \"Qui est l'auteur de l'œuvre 'La Nausée' ?\";\n      \"type\": \"qcm\",\n      \"choix\": [\n        \"A. Jean-Paul Sartre\",\n        \"B. Albert Camus\",\n        \"C. Simone de Beauvoir\",\n        \"D. Samuel Beckett\"\n      ],\n      \"reponse\": \"A\",\n      \"explication\": \"Jean-Paul Sartre est l'auteur de l'œuvre 'La Nausée'.\"\n    },\n    {\n      \"question\": \"Quel est le thème principal de l'œuvre 'La Nausée' ?\";\n      \"type\": \"qcm\",\n      \"choix\": [\n        \"A. L'amour\",\n        \"B. La liberté\",\n        \"C. La condition humaine\",\n        \"D. La nature\"\n      ],\n      \"reponse\": \"C\",\n      \"explication\": \"Le thème principal de l'œuvre 'La Nausée' est la condition humaine, qui explore les complexities de l'existence humaine.\"\n    },\n    {\n      \"question\": \"Qu'est-ce que le 'choc des idées' ?\";\n      \"type\": \"qcm\",\n      \"choix\": [\n        \"A. Un outil pour prendre des notes\",\n        \"B. Un guide pour les transitions\",\n        \"C. Un diagramme pour organiser les idées\",\n        \"D. Un modèle pour structurer un essai\"\n      ],\n      \"reponse\": \"B\",\n      \"explication\": \"Le 'choc des idées' est un guide pour les transitions, qui aide à relier les idées et à créer un discours cohérent.\"\n    },\n    {\n      \"question\": \"Quel est le but de l'étude de l'œuvre 'La Nausée' ?\";\n      \"type\": \"qcm\",\n      \"choix\": [\n        \"A. Comprendre le contexte historique\",\n        \"B. Analyser le texte\",\n        \"C. Étudier le thème principal\",\n        \"D. Toutes les réponses précédentes\"\n      ],\n      \"reponse\": \"D\",\n      \"explication\": \"L'étude de l'œuvre 'La Nausée' vise à comprendre le contexte historique, à analyser le texte et à étudier le thème principal.\"\n    },\n    {\n      \"question\": \"Qui est le personnage principal de l'œuvre 'La Nausée' ?\";\n      \"type\": \"qcm\",\n      \"choix\": [\n        \"A. Antoine Roquentin\",\n        \"B. Anny\",\n        \"C. Le Self-Taught Man\",\n        \"D. Autour de la plaque\"\n      ],\n      \"reponse\": \"A\",\n      \"explication\": \"Le personnage principal de l'œuvre 'La Nausée' est Antoine Roquentin.\"\n    },\n    {\n      \"question\": \"Quel est le ton de l'œuvre 'La Nausée' ?\";\n      \"type\": \"qcm\",\n      \"choix\": [\n        \"A. Optimiste\",\n        \"B. Pessimiste\",\n        \"C. Ironique\",\n        \"D. Satirique\"\n      ],\n      \"reponse\": \"B\",\n      \"explication\": \"Le ton de l'œuvre 'La Nausée' est pessimiste, car il explore les aspects négatifs de la condition humaine.\"\n    },\n    {\n      \"question\": \"Quel est le registre de l'œuvre 'La Nausée' ?\";\n      \"type\": \"qcm\",\n      \"choix\": [\n        \"A. Philosophique\",\n        \"B. Littéraire\",\n        \"C. Historique\",\n        \"D. Scientifique\"\n      ],\n      \"reponse\": \"A\",\n      \"explication\": \"Le registre de l'œuvre 'La Nausée' est philosophique, car il explore les questions fondamentales de l'existence humaine.\"\n    },\n    {\n      \"question\": \"Quel est le but de la littérature pour les auteurs du 20e siècle en termes de 'réalisme' ?\";\n      \"type\": \"qcm\",\n      \"choix\": [\n        \"A. Créer des personnages réalistes\",\n        \"B. Décrire des paysages réalistes\",\n        \"C. Explorer les complexities de la condition humaine\",\n        \"D. Résoudre des problèmes mathématiques\"\n      ],\n      \"reponse\": \"C\",\n      \"explication\": \"La littérature pour les auteurs du 20e siècle vise à explorer les complexities de la condition humaine, ce qui est un aspect clé du réalisme.\"\n    },\n    {\n      \"question\": \"Qu'est-ce que le 'réalisme' en littérature ?\";\n      \"type\": \"qcm\",\n      \"choix\": [\n        \"A. Un mouvement littéraire qui vise à décrire la réalité de manière objective\",\n        \"B. Un mouvement littéraire qui vise à créer des personnages réalistes\",\n        \"C. Un mouvement littéraire qui vise à explorer les complexities de la condition humaine\",\n        \"D. Un mouvement littéraire qui vise à résoudre des problèmes mathématiques\"\n      ],\n      \"reponse\": \"A\",\n      \"explication\": \"Le réalisme est un mouvement littéraire qui vise à décrire la réalité de manière objective, en explorant les aspects concrets de la vie.\"\n    },\n    {\n      \"question\": \"Quel est le lien entre le 'réalisme' et la 'condition humaine' ?\";\n      \"type\": \"qcm\",\n      \"choix\": [\n        \"A. Le réalisme vise à décrire la condition humaine de manière objective\",\n        \"B. Le réalisme vise à créer des personnages réalistes\",\n        \"C. Le réalisme vise à explorer les complexities de la condition humaine\",\n        \"D. Le réalisme vise à résoudre des problèmes mathématiques\"\n      ],\n      \"reponse\": \"C\",\n      \"explication\": \"Le réalisme vise à explorer les complexities de la condition humaine, ce qui est un aspect clé de la littérature du 20e siècle.\"\n    },\n    {\n      \"question\": \"Quel est le but de l'étude de la littérature du 20e siècle ?\";\n      \"type\": \"qcm\",\n      \"choix\": [\n        \"A. Comprendre le contexte historique\",\n        \"B. Analyser les textes\",\n        \"C. Étudier les thèmes principaux\",\n        \"D. Toutes les réponses précédentes\"\n      ],\n      \"reponse\": \"D\",\n      \"explication\": \"L'étude de la littérature du 20e siècle vise à comprendre le contexte historique, à analyser les textes et à étudier les thèmes principaux.\"\n    },\n    {\n      \"question\": \"Qui est l'auteur de l'œuvre 'L'Étranger' ?\";\n      \"type\": \"qcm\",\n      \"choix\": [\n        \"A. Albert Camus\",\n        \"B. Jean-Paul Sartre\",\n        \"C. Simone de Beauvoir\",\n        \"D. Samuel Beckett\"\n      ],\n      \"reponse\": \"A\",\n      \"explication\": \"Albert Camus est l'auteur de l'œuvre 'L'Étranger'.\"\n    },\n    {\n      \"question\": \"Quel est le thème principal de l'œuvre 'L'Étranger' ?\";\n      \"type\": \"qcm\",\n      \"choix\": [\n        \"A. L'amour\",\n        \"B. La liberté\",\n        \"C. La condition humaine\",\n        \"D. La nature\"\n      ],\n      \"reponse\": \"C\",\n      \"explication\": \"Le thème principal de l'œuvre 'L'Étranger' est la condition humaine, qui explore les complexities de l'existence humaine.\"\n    },\n    {\n      \"question\": \"Quel est le ton de l'œuvre 'L'Étranger' ?\";\n      \"type\": \"qcm\",\n      \"choix\": [\n        \"A. Optimiste\",\n        \"B. Pessimiste\",\n        \"C. Ironique\",\n        \"D. Satirique\"\n      ],\n      \"reponse\": \"B\",\n      \"explication\": \"Le ton de l'œuvre 'L'Étranger' est pessimiste, car il explore les aspects négatifs de la condition humaine.\"\n    }\n  ],\n  \"exercices\": [\n    {\n      \"enonce\": \"Analysez le thème de la condition humaine dans l'œuvre 'La Nausée' de Jean-Paul Sartre.\",\n      \"corrige\": \"La condition humaine est un thème central dans l'œuvre 'La Nausée' de Jean-Paul Sartre. Le personnage principal, Antoine Roquentin, est un exemple de l'homme qui cherche à comprendre son existence et sa place dans le monde. La nausée, qui est le sentiment de dégoût et de répulsion que ressent Roquentin, est un symbole de la condition humaine, qui est caractérisée par l'incertitude et l'ambiguïté. Sartre utilise ce thème pour explorer les questions fondamentales de l'existence humaine, telles que la liberté et la responsabilité.\"\n    },\n    {\n      \"enonce\": \"Comparez les thèmes de la condition humaine dans les œuvres 'La Nausée' et 'L'Étranger'.\",\n      \"corrige\": \"Les œuvres 'La Nausée' et 'L'Étranger' partagent un thème commun, celui de la condition humaine. Cependant, les deux auteurs abordent ce thème de manière différente. Sartre, dans 'La Nausée', explore la condition humaine à travers le personnage de Roquentin, qui est un exemple de l'homme qui cherche à comprendre son existence et sa place dans le monde. Camus, dans 'L'Étranger', explore la condition humaine à travers le personnage de Meursault, qui est un exemple de l'homme qui est indifférent à la vie et qui ne cherche pas à comprendre son existence. Les deux auteurs utilisent ce thème pour explorer les questions fondamentales de l'existence humaine, telles que la liberté et la responsabilité, mais ils le font de manière différente et avec des résultats différents.\"\n    }\n  ]\n}",
-  "parse_error": "Expected ',' or '}' after property value in JSON at position 161 (line 6 column 73)"
+  "titre": "Littérature française",
+  "matiere": "Français",
+  "questions": [
+    {
+      "question": "Quel est le rôle de la littérature dans la société ?",
+      "type": "qcm",
+      "choix": [
+        "A) Pour divertir",
+        "B) Pour exprimer la vision du monde de l'auteur",
+        "C) Pour décrire des événements historiques",
+        "D) Pour enseigner des règles grammaticales"
+      ],
+      "reponse": "B",
+      "explication": "La littérature permet aux auteurs d’exprimer leur vision du monde et de questionner la société"
+    },
+    {
+      "question": "Quel siècle a vu naître le mouvement littéraire romantique ?",
+      "type": "qcm",
+      "choix": [
+        "A) 18e siècle",
+        "B) 19e siècle",
+        "C) 20e siècle",
+        "D) 21e siècle"
+      ],
+      "reponse": "B",
+      "explication": "Le siècle de l'auteur qui a vu naître le mouvement romantique est le 19e siècle"
+    },
+    {
+      "question": "Qui est l'auteur de l'œuvre 'Les Misérables' ?",
+      "type": "qcm",
+      "choix": [
+        "A) Victor Hugo",
+        "B) Gustave Flaubert",
+        "C) Charles Baudelaire",
+        "D) Alexandre Dumas"
+      ],
+      "reponse": "A",
+      "explication": "Victor Hugo est l'auteur de l'œuvre 'Les Misérables'"
+    },
+    {
+      "question": "Quel est le thème général de l'œuvre 'Candide' ?",
+      "type": "qcm",
+      "choix": [
+        "A) L'amour et la passion",
+        "B) La satire et la critique sociale",
+        "C) La découverte de soi",
+        "D) L'aventure et le voyage"
+      ],
+      "reponse": "B",
+      "explication": "L'œuvre 'Candide' est une satire qui critique la société de l'époque"
+    },
+    {
+      "question": "Quel est le but de l'étude d'un passage littéraire ?",
+      "type": "qcm",
+      "choix": [
+        "A) Pour analyser la grammaire et la syntaxe",
+        "B) Pour comprendre le contexte historique",
+        "C) Pour étudier les thèmes et les personnages",
+        "D) Pour critiquer l'auteur"
+      ],
+      "reponse": "C",
+      "explication": "L'étude d'un passage littéraire permet de comprendre les thèmes et les personnages"
+    },
+    {
+      "question": "Comment les auteurs utilisent-ils les transitions dans leurs textes ?",
+      "type": "qcm",
+      "choix": [
+        "A) Pour créer des contrastes",
+        "B) Pour renforcer des idées",
+        "C) Pour lier des idées",
+        "D) Pour éliminer des idées"
+      ],
+      "reponse": "C",
+      "explication": "Les transitions permettent de lier des idées et de créer une cohésion dans le texte"
+    },
+    {
+      "question": "Quel est le rôle de la problématique dans l'analyse d'un passage littéraire ?",
+      "type": "qcm",
+      "choix": [
+        "A) Pour définir le thème de l'œuvre",
+        "B) Pour analyser les personnages",
+        "C) Pour étudier le contexte historique",
+        "D) Pour guider l'analyse et la réflexion"
+      ],
+      "reponse": "D",
+      "explication": "La problématique guide l'analyse et la réflexion sur le passage littéraire"
+    },
+    {
+      "question": "Comment les auteurs utilisent-ils le ton et le registre dans leurs textes ?",
+      "type": "qcm",
+      "choix": [
+        "A) Pour créer des effets de manières",
+        "B) Pour exprimer des émotions",
+        "C) Pour convaincre le lecteur",
+        "D) Pour décrire des scènes"
+      ],
+      "reponse": "B",
+      "explication": "Le ton et le registre permettent aux auteurs d'exprimer des émotions et de créer une atmosphère"
+    },
+    {
+      "question": "Quel est le but de l'annonce du plan dans une analyse littéraire ?",
+      "type": "qcm",
+      "choix": [
+        "A) Pour résumer l'œuvre",
+        "B) Pour présenter l'auteur",
+        "C) Pour organiser la réflexion et la présentation",
+        "D) Pour critiquer l'œuvre"
+      ],
+      "reponse": "C",
+      "explication": "L'annonce du plan permet d'organiser la réflexion et la présentation de l'analyse"
+    },
+    {
+      "question": "Comment les mouvements littéraires influencent-ils les auteurs ?",
+      "type": "qcm",
+      "choix": [
+        "A) En les limitant à des genres spécifiques",
+        "B) En leur donnant des idées pour écrire",
+        "C) En les inspirant à créer de nouvelles formes d'expression",
+        "D) En les obligeant à suivre des règles"
+      ],
+      "reponse": "C",
+      "explication": "Les mouvements littéraires inspirent les auteurs à créer de nouvelles formes d'expression"
+    },
+    {
+      "question": "Quel est le rôle de la littérature dans la société contemporaine ?",
+      "type": "qcm",
+      "choix": [
+        "A) Pour divertir le public",
+        "B) Pour éduquer les lecteurs",
+        "C) Pour refléter la réalité et critiquer la société",
+        "D) Pour promouvoir des idées politiques"
+      ],
+      "reponse": "C",
+      "explication": "La littérature reflète la réalité et critique la société"
+    },
+    {
+      "question": "Comment les auteurs utilisent-ils les métaphores et les symboles dans leurs textes ?",
+      "type": "qcm",
+      "choix": [
+        "A) Pour créer des images visuelles",
+        "B) Pour exprimer des idées abstraites",
+        "C) Pour créer des personnages",
+        "D) Pour écrire des dialogues"
+      ],
+      "reponse": "B",
+      "explication": "Les métaphores et les symboles permettent aux auteurs d'exprimer des idées abstraites"
+    },
+    {
+      "question": "Quel est le rôle de l'imagination dans la littérature ?",
+      "type": "qcm",
+      "choix": [
+        "A) Pour créer des mondes fictifs",
+        "B) Pour décrire des événements réels",
+        "C) Pour exprimer des émotions",
+        "D) Pour éduquer les lecteurs"
+      ],
+      "reponse": "A",
+      "explication": "L'imagination permet aux auteurs de créer des mondes fictifs"
+    },
+    {
+      "question": "Comment les auteurs utilisent-ils la ironie dans leurs textes ?",
+      "type": "qcm",
+      "choix": [
+        "A) Pour créer des effets comiques",
+        "B) Pour critiquer la société",
+        "C) Pour exprimer des idées contradictoires",
+        "D) Pour créer des personnages complexes"
+      ],
+      "reponse": "B",
+      "explication": "L'ironie permet aux auteurs de critiquer la société"
+    },
+    {
+      "question": "Quel est le rôle de la structure narrative dans la littérature ?",
+      "type": "qcm",
+      "choix": [
+        "A) Pour créer des suspense",
+        "B) Pour présenter des personnages",
+        "C) Pour organiser la narration",
+        "D) Pour créer des thèmes"
+      ],
+      "reponse": "C",
+      "explication": "La structure narrative permet d'organiser la narration"
+    },
+    {
+      "question": "Comment les auteurs utilisent-ils les descriptions dans leurs textes ?",
+      "type": "qcm",
+      "choix": [
+        "A) Pour créer des images visuelles",
+        "B) Pour exprimer des émotions",
+        "C) Pour présenter des personnages",
+        "D) Pour écrire des dialogues"
+      ],
+      "reponse": "A",
+      "explication": "Les descriptions permettent aux auteurs de créer des images visuelles"
+    },
+    {
+      "question": "Quel est le rôle de la littérature dans la formation de l'identité personnelle ?",
+      "type": "qcm",
+      "choix": [
+        "A) Pour influencer les opinions politiques",
+        "B) Pour former des idées sur la société",
+        "C) Pour créer des modèles de comportement",
+        "D) Pour exprimer des émotions et des pensées"
+      ],
+      "reponse": "D",
+      "explication": "La littérature permet d'exprimer des émotions et des pensées"
+    },
+    {
+      "question": "Comment les auteurs utilisent-ils les personnages pour explorer des thèmes ?",
+      "type": "qcm",
+      "choix": [
+        "A) Pour présenter des idées abstraites",
+        "B) Pour créer des conflits",
+        "C) Pour exprimer des émotions",
+        "D) Pour explorer des thèmes complexes"
+      ],
+      "reponse": "D",
+      "explication": "Les personnages permettent aux auteurs d'explorer des thèmes complexes"
+    },
+    {
+      "question": "Quel est le rôle de la littérature dans la création de la culture ?",
+      "type": "qcm",
+      "choix": [
+        "A) Pour refléter la réalité",
+        "B) Pour influencer les opinions politiques",
+        "C) Pour créer des modèles de comportement",
+        "D) Pour exprimer des valeurs et des croyances"
+      ],
+      "reponse": "D",
+      "explication": "La littérature permet d'exprimer des valeurs et des croyances"
+    }
+  ],
+  "exercices": []
 }
