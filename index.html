@@ -15,10 +15,11 @@
   --green:#2dff9e;--red:#ff4d6d;--orange:#ffb347;
   --text:#e8e8f0;--muted:#50506a;
   --grad:linear-gradient(135deg,var(--a1) 0%,var(--a2) 100%);
+  --font-body:'DM Mono',monospace;
 }
-*{margin:0;padding:0;box-sizing:border-box}
+*{margin:0;padding:0;box-sizing:border-box;font-family:inherit}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--text);font-family:'DM Mono',monospace;min-height:100vh;overflow-x:hidden;transition:background .5s}
+body{background:var(--bg);color:var(--text);font-family:var(--font-body,'DM Mono',monospace);min-height:100vh;overflow-x:hidden;transition:background .5s}
 
 @keyframes fadeUp  {from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
 @keyframes scaleIn {from{opacity:0;transform:scale(.92)}to{opacity:1;transform:scale(1)}}
@@ -125,7 +126,7 @@ body{background:var(--bg);color:var(--text);font-family:'DM Mono',monospace;min-
 .stars-row{display:flex;gap:6px;margin-bottom:12px}
 .star{font-size:24px;cursor:pointer;transition:transform .15s;filter:grayscale(1) brightness(.5);user-select:none}
 .star:hover,.star.on{filter:none;transform:scale(1.15);animation:starPop .2s ease}
-.review-text{width:100%;background:rgba(0,0,0,.3);border:1px solid var(--border);color:var(--text);padding:11px 14px;border-radius:10px;font-family:'DM Mono',monospace;font-size:12px;outline:none;resize:none;height:80px;transition:border-color .2s}
+.review-text{width:100%;background:rgba(0,0,0,.3);border:1px solid var(--border);color:var(--text);padding:11px 14px;border-radius:10px;font-size:12px;outline:none;resize:none;height:80px;transition:border-color .2s}
 .review-text:focus{border-color:var(--accent)}
 .review-text::placeholder{color:var(--muted)}
 .review-submit{width:100%;margin-top:10px;padding:11px;border-radius:10px;border:none;background:var(--grad);color:white;font-family:'Syne',sans-serif;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;cursor:pointer;transition:opacity .2s,transform .2s}
@@ -135,7 +136,7 @@ body{background:var(--bg);color:var(--text);font-family:'DM Mono',monospace;min-
 .review-stars{font-size:13px;letter-spacing:1px}
 .review-date{font-size:9px;color:var(--muted)}
 .review-body{font-size:12px;line-height:1.7;color:rgba(232,232,240,.85);margin-bottom:10px}
-.review-delete{background:none;border:none;color:var(--muted);font-size:11px;cursor:pointer;padding:2px 6px;border-radius:6px;transition:all .15s;font-family:'DM Mono',monospace}
+.review-delete{background:none;border:none;color:var(--muted);font-size:11px;cursor:pointer;padding:2px 6px;border-radius:6px;transition:all .15s}
 .review-delete:hover{color:var(--red);background:rgba(255,77,109,.1)}
 .review-empty{text-align:center;padding:32px 20px;color:var(--muted);font-size:12px;line-height:2}
 .review-empty-icon{font-size:32px;margin-bottom:12px;opacity:.4}
@@ -166,7 +167,7 @@ body{background:var(--bg);color:var(--text);font-family:'DM Mono',monospace;min-
 input[type=color]{width:44px;height:36px;border:1px solid var(--border);border-radius:9px;background:none;cursor:pointer;padding:3px;outline:none}
 input[type=color]::-webkit-color-swatch-wrapper{padding:0}
 input[type=color]::-webkit-color-swatch{border:none;border-radius:6px}
-.color-hex{background:var(--surface-2);border:1px solid var(--border);border-radius:8px;padding:6px 10px;font-family:'DM Mono',monospace;font-size:12px;color:var(--text);width:90px;outline:none;transition:border-color .2s}
+.color-hex{background:var(--surface-2);border:1px solid var(--border);border-radius:8px;padding:6px 10px;font-size:12px;color:var(--text);width:90px;outline:none;transition:border-color .2s}
 .color-hex:focus{border-color:var(--accent)}
 
 /* ══ MAIN ══ */
@@ -233,7 +234,7 @@ input[type=color]::-webkit-color-swatch{border:none;border-radius:6px}
 #file-input{display:none}
 .divider{display:flex;align-items:center;gap:12px;color:var(--muted);font-size:10px;letter-spacing:.2em;text-transform:uppercase;margin-bottom:16px}
 .divider::before,.divider::after{content:'';flex:1;height:1px;background:var(--border)}
-textarea#json-input{width:100%;height:140px;background:rgba(0,0,0,.4);color:#7cff9e;border:1px solid var(--border);padding:14px;border-radius:12px;font-family:'DM Mono',monospace;font-size:12px;outline:none;resize:vertical;transition:border-color .2s}
+textarea#json-input{width:100%;height:140px;background:rgba(0,0,0,.4);color:#7cff9e;border:1px solid var(--border);padding:14px;border-radius:12px;font-size:12px;outline:none;resize:vertical;transition:border-color .2s}
 textarea#json-input:focus{border-color:rgba(124,106,255,.4)}
 .modal-actions{display:flex;gap:10px;margin-top:22px}
 
@@ -254,7 +255,7 @@ textarea#json-input:focus{border-color:rgba(124,106,255,.4)}
 .q-num{font-size:10px;letter-spacing:.3em;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
 .q-text{font-family:'Syne',sans-serif;font-size:clamp(18px,3vw,26px);font-weight:700;line-height:1.35;margin-bottom:32px}
 .choices{display:flex;flex-direction:column;gap:10px}
-.choice{width:100%;padding:16px 20px;border-radius:12px;background:rgba(255,255,255,.03);border:1px solid var(--border);color:var(--text);text-align:left;cursor:pointer;font-family:'DM Mono',monospace;font-size:14px;transition:border-color .2s,background .2s,transform .15s;display:flex;align-items:center;gap:14px}
+.choice{width:100%;padding:16px 20px;border-radius:12px;background:rgba(255,255,255,.03);border:1px solid var(--border);color:var(--text);text-align:left;cursor:pointer;font-size:14px;transition:border-color .2s,background .2s,transform .15s;display:flex;align-items:center;gap:14px}
 .choice:hover:not(:disabled){border-color:rgba(124,106,255,.5);background:rgba(124,106,255,.06);transform:translateX(4px)}
 .choice:disabled{cursor:default}
 .choice-letter{width:26px;height:26px;border-radius:7px;flex-shrink:0;background:rgba(255,255,255,.05);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;font-family:'Syne',sans-serif;transition:all .2s}
@@ -280,6 +281,46 @@ textarea#json-input:focus{border-color:rgba(124,106,255,.4)}
 
 @media(max-width:600px){#main{padding:32px 16px}.page-header{flex-direction:column;align-items:flex-start}}
 
+/* ══ VICTORY ANIMATION ══ */
+@keyframes victoryOverlay{0%{opacity:0}15%{opacity:1}80%{opacity:1}100%{opacity:0;pointer-events:none}}
+@keyframes confettiFall{0%{transform:translateY(-120px) rotate(0deg);opacity:1}100%{transform:translateY(110vh) rotate(720deg);opacity:0}}
+@keyframes victoryCard{0%{opacity:0;transform:scale(.6) translateY(60px)}60%{opacity:1;transform:scale(1.04) translateY(-8px)}80%{transform:scale(.98) translateY(2px)}100%{transform:scale(1) translateY(0)}}
+@keyframes scorePop{0%{transform:scale(0) rotate(-15deg);opacity:0}60%{transform:scale(1.25) rotate(4deg);opacity:1}80%{transform:scale(.95)}100%{transform:scale(1) rotate(0)}}
+@keyframes victoryStarBurst{0%{transform:scale(0) rotate(-30deg);opacity:0}50%{transform:scale(1.3) rotate(10deg);opacity:1}75%{transform:scale(.9)}100%{transform:scale(1) rotate(0);opacity:1}}
+@keyframes ribbonSlide{from{transform:translateX(-110%) skewX(-8deg);opacity:0}to{transform:translateX(0) skewX(-8deg);opacity:1}}
+@keyframes pulseRing{0%{box-shadow:0 0 0 0 rgba(124,106,255,.6)}70%{box-shadow:0 0 0 48px rgba(124,106,255,0)}100%{box-shadow:0 0 0 0 rgba(124,106,255,0)}}
+@keyframes floatBadge{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@keyframes victoryFadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+@keyframes shimmerV{from{background-position:-200% center}to{background-position:200% center}}
+@keyframes particleFloat{0%{transform:translate(0,0) scale(1);opacity:.9}100%{transform:translate(var(--px),var(--py)) scale(0);opacity:0}}
+
+#victory-overlay{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;background:radial-gradient(ellipse at 50% 40%,rgba(124,106,255,.18) 0%,rgba(5,5,8,.96) 65%);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);animation:victoryOverlay 5.2s cubic-bezier(.4,0,.2,1) forwards;pointer-events:all}
+.confetti-piece{position:fixed;top:0;border-radius:2px;animation:confettiFall linear forwards;pointer-events:none}
+.victory-card{position:relative;z-index:2;background:linear-gradient(145deg,#13131c,#0d0d18);border:1px solid rgba(124,106,255,.35);border-radius:28px;padding:52px 56px 44px;text-align:center;max-width:480px;width:90%;box-shadow:0 0 0 1px rgba(124,106,255,.12),0 40px 100px rgba(0,0,0,.7),0 0 80px rgba(124,106,255,.12);animation:victoryCard .75s cubic-bezier(.2,0,0,1) .1s both}
+.victory-card::before{content:'';position:absolute;inset:-2px;border-radius:30px;background:linear-gradient(135deg,rgba(124,106,255,.3),rgba(255,106,158,.3));z-index:-1;filter:blur(20px);animation:pulseRing 2s ease 1s infinite}
+.victory-trophy{font-size:72px;display:block;margin-bottom:8px;animation:floatBadge 3s ease-in-out 1.2s infinite,victoryStarBurst .6s cubic-bezier(.2,0,0,1) .25s both;filter:drop-shadow(0 0 24px rgba(255,179,71,.5))}
+.victory-stars{display:flex;justify-content:center;gap:6px;margin-bottom:18px;font-size:28px}
+.victory-stars span{display:inline-block;animation:victoryStarBurst .4s cubic-bezier(.2,0,0,1) both;filter:drop-shadow(0 0 8px rgba(255,179,71,.7))}
+.victory-stars span:nth-child(1){animation-delay:.5s}.victory-stars span:nth-child(2){animation-delay:.65s}.victory-stars span:nth-child(3){animation-delay:.8s}.victory-stars span:nth-child(4){animation-delay:.95s}.victory-stars span:nth-child(5){animation-delay:1.1s}
+.victory-title{font-family:'Syne',sans-serif;font-size:38px;font-weight:800;letter-spacing:-1.5px;line-height:1;margin-bottom:8px;background:linear-gradient(135deg,#fff 0%,#cfc8ff 30%,#ff6a9e 70%,#ffb347 100%);background-size:200% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:shimmerV 2s linear 1s infinite}
+.victory-sub{font-size:11px;letter-spacing:.25em;text-transform:uppercase;color:rgba(124,106,255,.7);margin-bottom:30px;animation:victoryFadeUp .5s ease .9s both}
+.victory-ribbon{display:inline-block;background:linear-gradient(135deg,rgba(124,106,255,.15),rgba(255,106,158,.1));border:1px solid rgba(124,106,255,.3);border-radius:14px;padding:18px 36px;margin-bottom:28px;animation:ribbonSlide .6s cubic-bezier(.2,0,0,1) .5s both;overflow:hidden;position:relative}
+.victory-ribbon::before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,.05),transparent);animation:shimmerV 2.5s linear 1.2s infinite;background-size:200% auto}
+.victory-score-num{font-family:'Syne',sans-serif;font-size:64px;font-weight:800;line-height:1;background:linear-gradient(135deg,#7c6aff,#ff6a9e);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:scorePop .5s cubic-bezier(.2,0,0,1) .6s both}
+.victory-score-den{font-size:13px;color:rgba(80,80,106,.8);margin-top:2px}
+.victory-score-label{font-size:9px;letter-spacing:.35em;text-transform:uppercase;color:rgba(124,106,255,.5);margin-top:6px}
+.victory-stats{display:flex;gap:1px;margin-bottom:28px;border-radius:14px;overflow:hidden;border:1px solid rgba(255,255,255,.06);animation:victoryFadeUp .5s ease 1.1s both}
+.vs-item{flex:1;padding:14px 10px;background:rgba(255,255,255,.02);text-align:center}
+.vs-item+.vs-item{border-left:1px solid rgba(255,255,255,.06)}
+.vs-num{font-family:'Syne',sans-serif;font-size:22px;font-weight:800;margin-bottom:2px}
+.vs-num.green{color:#2dff9e;text-shadow:0 0 16px rgba(45,255,158,.4)}
+.vs-num.red{color:#ff4d6d;text-shadow:0 0 16px rgba(255,77,109,.3)}
+.vs-num.muted{color:rgba(124,106,255,.8)}
+.vs-lbl{font-size:8px;letter-spacing:.2em;text-transform:uppercase;color:rgba(80,80,106,.7)}
+.victory-btn{padding:14px 36px;border-radius:12px;border:none;background:linear-gradient(135deg,#7c6aff,#ff6a9e);color:white;font-family:'Syne',sans-serif;font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:transform .2s,box-shadow .2s;animation:victoryFadeUp .5s ease 1.3s both;box-shadow:0 12px 32px rgba(124,106,255,.3)}
+.victory-btn:hover{transform:translateY(-3px) scale(1.03);box-shadow:0 20px 48px rgba(124,106,255,.45)}
+.victory-particle{position:fixed;width:8px;height:8px;border-radius:50%;pointer-events:none;animation:particleFloat 1.2s ease-out forwards}
+
 /* ══ LOGIN ══ */
 #login-screen{position:fixed;inset:0;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:2000;text-align:center;padding:24px}
 .login-box{position:relative;z-index:2;animation:scaleIn .8s cubic-bezier(.2,0,0,1) forwards;width:100%;max-width:380px}
@@ -288,7 +329,7 @@ textarea#json-input:focus{border-color:rgba(124,106,255,.4)}
 .login-title{font-family:'Syne',sans-serif;font-size:clamp(32px,8vw,56px);font-weight:800;line-height:.9;letter-spacing:-.04em;margin-bottom:10px;background:linear-gradient(135deg,#fff 0%,#cfc8ff 40%,#ff6a9e 100%);background-size:200% 200%;animation:gradSh 5s ease infinite;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .login-sub{color:var(--muted);font-size:12px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:36px;line-height:1.8}
 .login-input-wrap{position:relative;margin-bottom:12px}
-.login-input{width:100%;padding:16px 50px 16px 18px;background:var(--surface-2);border:1px solid var(--border);border-radius:12px;color:var(--text);font-family:'DM Mono',monospace;font-size:15px;outline:none;transition:border-color .2s,box-shadow .2s;letter-spacing:.05em}
+.login-input{width:100%;padding:16px 50px 16px 18px;background:var(--surface-2);border:1px solid var(--border);border-radius:12px;color:var(--text);font-size:15px;outline:none;transition:border-color .2s,box-shadow .2s;letter-spacing:.05em}
 .login-input:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
 .login-input.error{border-color:var(--red);animation:shake .4s ease}
 .login-eye{position:absolute;right:14px;top:50%;transform:translateY(-50%);background:none;border:none;color:var(--muted);cursor:pointer;font-size:18px;padding:4px;transition:color .2s}
@@ -723,8 +764,8 @@ function applyFont(idx) {
     link.href = 'https://fonts.googleapis.com/css2?family=' + font.g + '&display=swap';
     document.head.appendChild(link);
   }
+  // Mettre à jour la variable CSS — tout le DOM hérite via font-family:inherit
   document.documentElement.style.setProperty('--font-body', font.f);
-  document.body.style.fontFamily = font.f;
   S.theme.fi = idx;
   document.querySelectorAll('.font-swatch').forEach((s,i) => s.classList.toggle('active', i === idx));
 }
@@ -1237,6 +1278,9 @@ function showResults() {
     +'<button class="btn btn-ghost" onclick="startQuiz('+li+')">↺ Recommencer</button>'
     +'<button class="btn btn-primary" onclick="closePlayer()">← Dashboard</button>'
     +'</div></div>';
+
+  // Animation de victoire 🎉
+  showVictory({ score: session.correct, total, correct: session.correct, wrong: total - session.correct });
 }
 
 function closePlayer(){document.getElementById('player').style.display='none';}
@@ -1272,6 +1316,78 @@ const dz=document.getElementById('drop-zone');
 dz.addEventListener('dragover',()=>dz.classList.add('over'));
 dz.addEventListener('dragleave',()=>dz.classList.remove('over'));
 dz.addEventListener('drop',e=>{dz.classList.remove('over');const f=e.dataTransfer.files[0];if(f){const r=new FileReader();r.onload=ev=>{document.getElementById('json-input').value=ev.target.result;};r.readAsText(f);}});
+
+// ── VICTORY ANIMATION ──────────────────────────────
+function showVictory({ score, total, correct, wrong }) {
+  const colors = ['#7c6aff','#ff6a9e','#ffb347','#2dff9e','#fff'];
+
+  // Confettis
+  for (let i = 0; i < 90; i++) {
+    const c = document.createElement('div');
+    c.className = 'confetti-piece';
+    Object.assign(c.style, {
+      left: Math.random()*100 + 'vw',
+      background: colors[Math.floor(Math.random()*colors.length)],
+      width:  (Math.random()*10+5) + 'px',
+      height: (Math.random()*10+5) + 'px',
+      borderRadius: Math.random() > .5 ? '50%' : '2px',
+      animationDelay:    (Math.random()*2.5) + 's',
+      animationDuration: (Math.random()*2+2) + 's',
+    });
+    document.body.appendChild(c);
+    setTimeout(() => c.remove(), 5500);
+  }
+
+  // Particles burst depuis le centre
+  const cx = innerWidth/2, cy = innerHeight/2;
+  for (let i = 0; i < 24; i++) {
+    const p = document.createElement('div');
+    p.className = 'victory-particle';
+    const angle = (i/24)*Math.PI*2;
+    const dist  = 120 + Math.random()*180;
+    Object.assign(p.style, {
+      left: cx + 'px', top: cy + 'px',
+      background: colors[i % colors.length],
+      '--px': Math.cos(angle)*dist + 'px',
+      '--py': Math.sin(angle)*dist + 'px',
+      animationDelay:    (Math.random()*.4) + 's',
+      animationDuration: (.8+Math.random()*.8) + 's',
+    });
+    document.body.appendChild(p);
+    setTimeout(() => p.remove(), 3000);
+  }
+
+  const pct   = Math.round((correct/total)*100);
+  const emoji = pct === 100 ? '🏆' : pct >= 80 ? '🥇' : pct >= 60 ? '🥈' : '🥉';
+  const msg   = pct === 100 ? 'Parfait !' : pct >= 80 ? 'Excellent !' : pct >= 60 ? 'Bien joué !' : 'Continue !';
+  const stars = Math.ceil((pct/100)*5);
+
+  const overlay = document.createElement('div');
+  overlay.id = 'victory-overlay';
+  overlay.innerHTML = `
+    <div class="victory-card">
+      <span class="victory-trophy">${emoji}</span>
+      <div class="victory-stars">
+        ${'<span>⭐</span>'.repeat(stars)}
+        ${'<span style="opacity:.2">⭐</span>'.repeat(5-stars)}
+      </div>
+      <div class="victory-title">${msg}</div>
+      <div class="victory-sub">Quiz terminé · ${pct}% de réussite</div>
+      <div class="victory-ribbon">
+        <div class="victory-score-num">${score}</div>
+        <div class="victory-score-den">sur ${total}</div>
+        <div class="victory-score-label">Score final</div>
+      </div>
+      <div class="victory-stats">
+        <div class="vs-item"><div class="vs-num green">${correct}</div><div class="vs-lbl">Correct</div></div>
+        <div class="vs-item"><div class="vs-num red">${wrong}</div><div class="vs-lbl">Erreurs</div></div>
+        <div class="vs-item"><div class="vs-num muted">${pct}%</div><div class="vs-lbl">Précision</div></div>
+      </div>
+      <button class="victory-btn" onclick="document.getElementById('victory-overlay').remove()">Voir les résultats →</button>
+    </div>`;
+  document.body.appendChild(overlay);
+  setTimeout(() => { if (overlay.parentNode) overlay.remove(); }, 5400);
+}
 
 // ── UTILS ──────────────────────────────────────────
 function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
