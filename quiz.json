@@ -1,228 +1,232 @@
 {
-  "titre": "Les Registres Littéraires",
+  "titre": "L'Épopée du Roman Français",
   "matiere": "Français",
   "questions": [
     {
-      "question": "Quel est le but principal du registre lyrique en littérature ?",
+      "question": "Quel mouvement littéraire du XVIe siècle met l'homme au centre de l'univers ?",
       "type": "qcm",
       "choix": [
-        "A) Susciter la compassion du lecteur",
-        "B) Exprimer les sentiments personnels",
-        "C) Présenter un héros solitaire",
-        "D) Provoquer le rire"
+        "L'Humanisme",
+        "Le Classicisme",
+        "Les Lumières",
+        "Le Romantisme"
       ],
-      "reponse": "B",
-      "explication": "Le registre lyrique vise à exprimer les sentiments personnels liés à des thèmes universels."
+      "reponse": "A",
+      "explication": "L'Humanisme est un mouvement littéraire du XVIe siècle qui se caractérise par la rupture avec l'obscurantisme médiéval et la mise de l'homme au centre de l'univers."
     },
     {
-      "question": "Quel procédé est caractéristique du registre pathétique ?",
+      "question": "Quelle est la caractéristique principale de l'esthétique du XVIIe siècle ?",
       "type": "qcm",
       "choix": [
-        "A) Ponctuation expressive",
-        "B) Hyperboles et exclamations",
-        "C) Langage soutenu",
-        "D) Délibérations"
+        "La liberté d'expression",
+        "La mesure et la clarté",
+        "La sensibilité et la mélancolie",
+        "La raison et l'argumentation"
       ],
       "reponse": "B",
-      "explication": "Le registre pathétique est caractérisé par l'emploi d'hyperboles et d'exclamations pour susciter la compassion du lecteur."
+      "explication": "L'esthétique du XVIIe siècle, caractérisée par le Classicisme, se distingue par la mesure, la clarté et la rigueur."
     },
     {
-      "question": "Quel est le thème principal du registre tragique ?",
+      "question": "Quel est le but du roman pendant le siècle des Lumières ?",
       "type": "qcm",
       "choix": [
-        "A) L'amour",
-        "B) La mort et la fatalité",
-        "C) La politique",
-        "D) La morale"
+        "De divertir le lecteur",
+        "De promouvoir la raison et le progrès social",
+        "De décrire la nature",
+        "De exprimer la subjectivité"
       ],
       "reponse": "B",
-      "explication": "Le registre tragique présente un héros solitaire luttant en vain contre une fatalité ou des forces qui le dépassent."
+      "explication": "Pendant le siècle des Lumières, le roman devient une arme de persuasion pour promouvoir la raison et le progrès social."
     },
     {
-      "question": "Quel est l'effet principal du registre comique en littérature ?",
+      "question": "Quel mouvement littéraire exalte la subjectivité et la sensibilité ?",
       "type": "qcm",
       "choix": [
-        "A) Susciter la compassion du lecteur",
-        "B) Exprimer les sentiments personnels",
-        "C) Présenter un héros solitaire",
-        "D) Provoquer le rire ou le sourire"
+        "Le Romantisme",
+        "Le Réalisme",
+        "Le Classicisme",
+        "Les Lumières"
+      ],
+      "reponse": "A",
+      "explication": "Le Romantisme est un mouvement littéraire qui exalte la subjectivité, la sensibilité et le « mal du siècle »."
+    },
+    {
+      "question": "Quelle est la caractéristique principale du Réalisme ?",
+      "type": "qcm",
+      "choix": [
+        "L'observation de la réalité",
+        "La promotion de la raison",
+        "L'exaltation de la subjectivité",
+        "La description de la nature"
+      ],
+      "reponse": "A",
+      "explication": "Le Réalisme est un mouvement littéraire qui se caractérise par l'observation de la réalité."
+    },
+    {
+      "question": "Quel événement a contribué à la diffusion des idées humanistes ?",
+      "type": "qcm",
+      "choix": [
+        "L'invention de l'imprimerie",
+        "La découverte de l'Amérique",
+        "La Réforme protestante",
+        "La Révolution française"
+      ],
+      "reponse": "A",
+      "explication": "L'invention de l'imprimerie a contribué à la diffusion des idées humanistes en permettant la multiplication des textes et leur dissemination à grande échelle."
+    },
+    {
+      "question": "Quel est le rôle de la nature dans le Romantisme ?",
+      "type": "qcm",
+      "choix": [
+        "Un miroir des états d'âme",
+        "Un décor pour les actions héroïques",
+        "Un objet de description scientifique",
+        "Un symbole de la raison"
+      ],
+      "reponse": "A",
+      "explication": "Dans le Romantisme, la nature devient un miroir des états d'âme et de la mélancolie du héros solitaire."
+    },
+    {
+      "question": "Quel est le conflit qui oppose les écrivains du XVIIe siècle ?",
+      "type": "qcm",
+      "choix": [
+        "Raison et Passion",
+        "Raison et Foi",
+        "Passion et Imagination",
+        "Foi et Morale"
+      ],
+      "reponse": "A",
+      "explication": "Le conflit qui oppose les écrivains du XVIIe siècle est celui entre la Raison et la Passion."
+    },
+    {
+      "question": "Quel mouvement littéraire s'oppose au despotisme et à l'ignorance ?",
+      "type": "qcm",
+      "choix": [
+        "Les Lumières",
+        "Le Romantisme",
+        "Le Classicisme",
+        "Le Réalisme"
+      ],
+      "reponse": "A",
+      "explication": "Les Lumières sont un mouvement littéraire qui combat le despotisme et l'ignorance en promouvant la raison et le progrès social."
+    },
+    {
+      "question": "Quel est le but de l'esthétique classique ?",
+      "type": "qcm",
+      "choix": [
+        "De plaire et d'instruire",
+        "De divertir et d'amuser",
+        "De promouvoir la raison",
+        "De décrire la nature"
+      ],
+      "reponse": "A",
+      "explication": "L'esthétique classique vise à plaire et à instruire, en quête d'une vérité morale universelle."
+    },
+    {
+      "question": "Quel siècle voit l'apparition du Romantisme ?",
+      "type": "qcm",
+      "choix": [
+        "XVIe siècle",
+        "XVIIe siècle",
+        "XVIIIe siècle",
+        "XIXe siècle"
       ],
       "reponse": "D",
-      "explication": "Le registre comique vise à provoquer le rire ou le sourire par un décalage entre la réalité et l'attente."
+      "explication": "Le Romantisme apparaît au début du XIXe siècle."
     },
     {
-      "question": "Quel est le rôle de la ponctuation expressive dans le registre lyrique ?",
+      "question": "Quel est le rôle de l'ironie dans les Lumières ?",
       "type": "qcm",
       "choix": [
-        "A) Exprimer la fatalité",
-        "B) Susciter la compassion",
-        "C) Exprimer les sentiments personnels",
-        "D) Provoquer le rire"
-      ],
-      "reponse": "C",
-      "explication": "La ponctuation expressive est utilisée pour exprimer les sentiments personnels dans le registre lyrique."
-    },
-    {
-      "question": "Quel registre littéraire est caractérisé par l'emploi du 'je' ?",
-      "type": "qcm",
-      "choix": [
-        "A) Registre pathétique",
-        "B) Registre lyrique",
-        "C) Registre tragique",
-        "D) Registre comique"
-      ],
-      "reponse": "B",
-      "explication": "Le registre lyrique est caractérisé par l'emploi du 'je' pour exprimer les sentiments personnels."
-    },
-    {
-      "question": "Quel est le but de l'hyperbole dans le registre pathétique ?",
-      "type": "qcm",
-      "choix": [
-        "A) Exprimer la fatalité",
-        "B) Susciter la compassion du lecteur",
-        "C) Exprimer les sentiments personnels",
-        "D) Provoquer le rire"
-      ],
-      "reponse": "B",
-      "explication": "L'hyperbole est utilisée dans le registre pathétique pour susciter la compassion du lecteur."
-    },
-    {
-      "question": "Quel registre littéraire est caractérisé par un langage soutenu ?",
-      "type": "qcm",
-      "choix": [
-        "A) Registre lyrique",
-        "B) Registre pathétique",
-        "C) Registre tragique",
-        "D) Registre comique"
-      ],
-      "reponse": "C",
-      "explication": "Le registre tragique est caractérisé par un langage soutenu pour présenter un héros solitaire luttant en vain contre une fatalité."
-    },
-    {
-      "question": "Quel est le rôle des délibérations dans le registre tragique ?",
-      "type": "qcm",
-      "choix": [
-        "A) Exprimer les sentiments personnels",
-        "B) Susciter la compassion du lecteur",
-        "C) Présenter un héros solitaire",
-        "D) Provoquer le rire"
-      ],
-      "reponse": "C",
-      "explication": "Les délibérations sont utilisées dans le registre tragique pour présenter un héros solitaire luttant en vain contre une fatalité."
-    },
-    {
-      "question": "Quel registre littéraire est caractérisé par un décalage entre la réalité et l'attente ?",
-      "type": "qcm",
-      "choix": [
-        "A) Registre lyrique",
-        "B) Registre pathétique",
-        "C) Registre tragique",
-        "D) Registre comique"
+        "De promouvoir la raison",
+        "De décrire la nature",
+        "D'exprimer la subjectivité",
+        "D'argumenter en faveur du progrès social"
       ],
       "reponse": "D",
-      "explication": "Le registre comique est caractérisé par un décalage entre la réalité et l'attente pour provoquer le rire ou le sourire."
+      "explication": "L'ironie est utilisée dans les Lumières pour argumenter en faveur du progrès social et pour viser le progrès social."
     },
     {
-      "question": "Quel est le but du registre lyrique en littérature ?",
+      "question": "Quel mouvement littéraire se caractérise par la recherche de la vérité morale universelle ?",
       "type": "qcm",
       "choix": [
-        "A) Susciter la compassion du lecteur",
-        "B) Exprimer les sentiments personnels",
-        "C) Présenter un héros solitaire",
-        "D) Provoquer le rire"
+        "Le Classicisme",
+        "Les Lumières",
+        "Le Romantisme",
+        "Le Réalisme"
+      ],
+      "reponse": "A",
+      "explication": "Le Classicisme se caractérise par la recherche de la vérité morale universelle."
+    },
+    {
+      "question": "Quel est le lien entre le mouvement littéraire et la société ?",
+      "type": "qcm",
+      "choix": [
+        "Le mouvement littéraire reflète la société",
+        "Le mouvement littéraire influence la société",
+        "Le mouvement littéraire est indépendant de la société",
+        "Le mouvement littéraire est en opposition avec la société"
       ],
       "reponse": "B",
-      "explication": "Le registre lyrique vise à exprimer les sentiments personnels liés à des thèmes universels."
+      "explication": "Le mouvement littéraire influence la société en promouvant des idées et des valeurs qui peuvent façonner les mentalités et les comportements."
     },
     {
-      "question": "Quel registre littéraire est caractérisé par l'emploi d'hyperboles ?",
+      "question": "Quel est le rôle de la raison dans les Lumières ?",
       "type": "qcm",
       "choix": [
-        "A) Registre lyrique",
-        "B) Registre pathétique",
-        "C) Registre tragique",
-        "D) Registre comique"
+        "De promouvoir la foi",
+        "De promouvoir la raison",
+        "De décrire la nature",
+        "D'exprimer la subjectivité"
       ],
       "reponse": "B",
-      "explication": "Le registre pathétique est caractérisé par l'emploi d'hyperboles pour susciter la compassion du lecteur."
+      "explication": "La raison est au cœur des Lumières, qui visent à promouvoir la raison et le progrès social."
     },
     {
-      "question": "Quel est le rôle de la ponctuation expressive dans le registre lyrique ?",
+      "question": "Quel est le but du roman au XVIIIe siècle ?",
       "type": "qcm",
       "choix": [
-        "A) Exprimer la fatalité",
-        "B) Susciter la compassion",
-        "C) Exprimer les sentiments personnels",
-        "D) Provoquer le rire"
+        "De divertir le lecteur",
+        "De promouvoir la raison et le progrès social",
+        "De décrire la nature",
+        "D'exprimer la subjectivité"
+      ],
+      "reponse": "B",
+      "explication": "Au XVIIIe siècle, le roman devient une arme de persuasion pour promouvoir la raison et le progrès social."
+    },
+    {
+      "question": "Quel mouvement littéraire se caractérise par l'observation de la réalité ?",
+      "type": "qcm",
+      "choix": [
+        "Le Classicisme",
+        "Les Lumières",
+        "Le Romantisme",
+        "Le Réalisme"
+      ],
+      "reponse": "D",
+      "explication": "Le Réalisme se caractérise par l'observation de la réalité."
+    },
+    {
+      "question": "Quel est le lien entre le Romantisme et la nature ?",
+      "type": "qcm",
+      "choix": [
+        "Le Romantisme décrit la nature de manière scientifique",
+        "Le Romantisme utilise la nature comme un décor",
+        "Le Romantisme voit la nature comme un miroir des états d'âme",
+        "Le Romantisme ignore la nature"
       ],
       "reponse": "C",
-      "explication": "La ponctuation expressive est utilisée pour exprimer les sentiments personnels dans le registre lyrique."
-    },
-    {
-      "question": "Quel registre littéraire est caractérisé par un langage soutenu ?",
-      "type": "qcm",
-      "choix": [
-        "A) Registre lyrique",
-        "B) Registre pathétique",
-        "C) Registre tragique",
-        "D) Registre comique"
-      ],
-      "reponse": "C",
-      "explication": "Le registre tragique est caractérisé par un langage soutenu pour présenter un héros solitaire luttant en vain contre une fatalité."
-    },
-    {
-      "question": "Quel est le but du registre pathétique en littérature ?",
-      "type": "qcm",
-      "choix": [
-        "A) Exprimer les sentiments personnels",
-        "B) Susciter la compassion du lecteur",
-        "C) Présenter un héros solitaire",
-        "D) Provoquer le rire"
-      ],
-      "reponse": "B",
-      "explication": "Le registre pathétique vise à susciter la compassion du lecteur face à la souffrance de personnages faibles."
-    },
-    {
-      "question": "Quel registre littéraire est caractérisé par l'emploi du 'je' ?",
-      "type": "qcm",
-      "choix": [
-        "A) Registre pathétique",
-        "B) Registre lyrique",
-        "C) Registre tragique",
-        "D) Registre comique"
-      ],
-      "reponse": "B",
-      "explication": "Le registre lyrique est caractérisé par l'emploi du 'je' pour exprimer les sentiments personnels."
-    },
-    {
-      "question": "Quel est le rôle des délibérations dans le registre tragique ?",
-      "type": "qcm",
-      "choix": [
-        "A) Exprimer les sentiments personnels",
-        "B) Susciter la compassion du lecteur",
-        "C) Présenter un héros solitaire",
-        "D) Provoquer le rire"
-      ],
-      "reponse": "C",
-      "explication": "Les délibérations sont utilisées dans le registre tragique pour présenter un héros solitaire luttant en vain contre une fatalité."
+      "explication": "Le Romantisme voit la nature comme un miroir des états d'âme et de la mélancolie du héros solitaire."
     }
   ],
   "exercices": [
     {
-      "enonce": "Analysez le registre littéraire utilisé dans le texte suivant : 'Je suis triste et je ne sais pas pourquoi.'",
-      "corrige": "Le registre littéraire utilisé dans ce texte est le registre lyrique, car il exprime les sentiments personnels de l'auteur."
+      "enonce": "Analysez les caractéristiques du Classicisme et de son influence sur la littérature française.",
+      "corrige": "Le Classicisme se caractérise par la recherche de la vérité morale universelle, la mesure, la clarté et la rigueur. Il a eu une influence considérable sur la littérature française en promouvant des idées et des valeurs qui ont façonné les mentalités et les comportements."
     },
     {
-      "enonce": "Identifiez les procédés littéraires utilisés dans le registre pathétique.",
-      "corrige": "Les procédés littéraires utilisés dans le registre pathétique incluent les hyperboles, les exclamations et le champ lexical de l'affectivité/souffrance."
-    },
-    {
-      "enonce": "Décrivez le registre tragique et ses caractéristiques.",
-      "corrige": "Le registre tragique présente un héros solitaire luttant en vain contre une fatalité ou des forces qui le dépassent. Il est caractérisé par un langage soutenu et des délibérations."
-    },
-    {
-      "enonce": "Quel est le but du registre comique en littérature ?",
-      "corrige": "Le registre comique vise à provoquer le rire ou le sourire par un décalage entre la réalité et l'attente."
+      "enonce": "Comparez les mouvements littéraires du XVIIe et du XVIIIe siècle.",
+      "corrige": "Le XVIIe siècle est caractérisé par le Classicisme, qui recherche la vérité morale universelle et promeut la raison et la mesure. Le XVIIIe siècle, quant à lui, est marqué par les Lumières, qui visent à promouvoir la raison et le progrès social en utilisant l'ironie et l'argumentation."
     }
   ]
 }
