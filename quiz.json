@@ -1,235 +1,256 @@
 {
-  "titre": "Les Poètes Symbolistes",
-  "matiere": "Français",
+  "titre": "Les Registres Littéraires",
+  "matiere": "Francais",
   "questions": [
     {
-      "question": "Qui est le poète auteur de 'Une saison en enfer' ?",
+      "question": "Quel est le but principal du registre lyrique en litterature?",
       "type": "qcm",
       "choix": [
-        "Arthur Rimbaud",
-        "Charles Baudelaire",
-        "Verlaine",
-        "Mallarmé"
+        "A - Exprimer des sentiments personnels",
+        "B - Raconter des evenements historiques",
+        "C - Decrir des paysages",
+        "D - Presenter des personnages"
       ],
       "reponse": "A",
-      "explication": "Arthur Rimbaud a écrit 'Une saison en enfer' en 1873"
+      "explication": "Le registre lyrique est utilise pour exprimer des sentiments personnels tels que la joie, le regret ou la nostalgie, souvent lies a des themes universels comme l'amour, la mort ou le temps qui passe."
     },
     {
-      "question": "Quel est le mouvement littéraire de Charles Baudelaire ?",
+      "question": "Quel procede litteraire est souvent utilise dans le registre pathetique?",
       "type": "qcm",
       "choix": [
-        "Romantisme",
-        "Réalistme",
-        "Symbolisme",
-        "Surréalisme"
-      ],
-      "reponse": "C",
-      "explication": "Charles Baudelaire est considéré comme l'un des premiers poètes symbolistes"
-    },
-    {
-      "question": "Qui est l'auteur de 'Les Fleurs du mal' ?",
-      "type": "qcm",
-      "choix": [
-        "Arthur Rimbaud",
-        "Charles Baudelaire",
-        "Verlaine",
-        "Mallarmé"
+        "A - Metaphore",
+        "B - Hyperbole",
+        "C - Personnification",
+        "D - Alliteration"
       ],
       "reponse": "B",
-      "explication": "Charles Baudelaire a écrit 'Les Fleurs du mal' en 1857"
+      "explication": "Le registre pathetique utilise souvent des hyperboles pour exprimer la souffrance ou la compassion du lecteur."
     },
     {
-      "question": "Qui est le compagnon de Verlaine ?",
+      "question": "Quel est le ton dominant dans le registre tragique?",
       "type": "qcm",
       "choix": [
-        "Arthur Rimbaud",
-        "Charles Baudelaire",
-        "Mallarmé",
-        "Francis Ponge"
-      ],
-      "reponse": "A",
-      "explication": "Verlaine était amoureux d'Arthur Rimbaud"
-    },
-    {
-      "question": "Quel est le titre de l'œuvre de Francis Ponge parue en 1942 ?",
-      "type": "qcm",
-      "choix": [
-        "Le Parti pris des Choses",
-        "La rage de l'expression",
-        "Les Poètes Maudits",
-        "Une saison en enfer"
-      ],
-      "reponse": "A",
-      "explication": "Francis Ponge a écrit 'Le Parti pris des Choses' en 1942"
-    },
-    {
-      "question": "Qui est l'auteur de 'Les Poètes Maudits' ?",
-      "type": "qcm",
-      "choix": [
-        "Arthur Rimbaud",
-        "Charles Baudelaire",
-        "Verlaine",
-        "Mallarmé"
+        "A - Joyeux",
+        "B - Melancolique",
+        "C - Sombre",
+        "D - Ironique"
       ],
       "reponse": "C",
-      "explication": "Verlaine a écrit 'Les Poètes Maudits' en 1884 et 1888"
+      "explication": "Le registre tragique presente souvent un ton sombre et solennel, avec un langage soutenu et des deliberations."
     },
     {
-      "question": "Quel est le mouvement littéraire de Francis Ponge ?",
+      "question": "Quel est l'objectif principal du registre comique?",
       "type": "qcm",
       "choix": [
-        "Romantisme",
-        "Réalistme",
-        "Symbolisme",
-        "Surréalisme"
+        "A - Faire rire ou sourire",
+        "B - Eduquer le lecteur",
+        "C - Critiquer la societe",
+        "D - Presenter des faits historiques"
+      ],
+      "reponse": "A",
+      "explication": "Le registre comique vise a provoquer le rire ou le sourire en utilisant des procedes tels que l'exagération ou le decalage entre la realite et la situation decrite."
+    },
+    {
+      "question": "Quel procede litteraire est souvent utilise pour exprimer les sentiments personnels dans le registre lyrique?",
+      "type": "qcm",
+      "choix": [
+        "A - Ponctuation expressive",
+        "B - Langage soutenu",
+        "C - Champ lexical des sentiments",
+        "D - Toutes les reponses"
       ],
       "reponse": "D",
-      "explication": "Francis Ponge est considéré comme un poète surréaliste"
+      "explication": "Le registre lyrique utilise souvent un champ lexical des sentiments, l'emploi du 'je' et une ponctuation expressive pour exprimer les sentiments personnels."
     },
     {
-      "question": "Qui est le poète auteur de 'Le bateau Ivre' ?",
+      "question": "Quel est le role de l'auteur dans le registre pathetique?",
       "type": "qcm",
       "choix": [
-        "Arthur Rimbaud",
-        "Charles Baudelaire",
-        "Verlaine",
-        "Mallarmé"
+        "A - Il est impartial",
+        "B - Il est objectif",
+        "C - Il cherche a susciter la compassion du lecteur",
+        "D - Il presente des faits historiques"
       ],
-      "reponse": "A",
-      "explication": "Arthur Rimbaud a écrit 'Le bateau Ivre' en 1871"
+      "reponse": "C",
+      "explication": "Le registre pathetique vise a susciter la compassion du lecteur face a la souffrance de personnages faibles confrontes a des situations inhumaines."
     },
     {
-      "question": "Quel est le titre de l'œuvre de Charles Baudelaire parue en 1857 ?",
+      "question": "Quel est l'element caracteristique du registre tragique?",
       "type": "qcm",
       "choix": [
-        "Les Fleurs du mal",
-        "Une saison en enfer",
-        "Les Poètes Maudits",
-        "Le Parti pris des Choses"
-      ],
-      "reponse": "A",
-      "explication": "Charles Baudelaire a écrit 'Les Fleurs du mal' en 1857"
-    },
-    {
-      "question": "Qui est l'auteur de 'La rage de l'expression' ?",
-      "type": "qcm",
-      "choix": [
-        "Arthur Rimbaud",
-        "Charles Baudelaire",
-        "Verlaine",
-        "Francis Ponge"
+        "A - Un heros solitaire",
+        "B - Une situation inhumaine",
+        "C - Un langage soutenu",
+        "D - Toutes les reponses"
       ],
       "reponse": "D",
-      "explication": "Francis Ponge a écrit 'La rage de l'expression' en 1952"
+      "explication": "Le registre tragique presente souvent un heros solitaire luttant en vain contre une fatalite ou des forces qui le depassent, avec un langage soutenu et des deliberations."
     },
     {
-      "question": "Quel est le mouvement littéraire de Verlaine ?",
+      "question": "Quel est le but de l'utilisation de l'hyperbole dans le registre pathetique?",
       "type": "qcm",
       "choix": [
-        "Romantisme",
-        "Réalistme",
-        "Symbolisme",
-        "Surréalisme"
-      ],
-      "reponse": "C",
-      "explication": "Verlaine est considéré comme un poète symboliste"
-    },
-    {
-      "question": "Qui est le poète auteur de 'Les Poètes Maudits' ?",
-      "type": "qcm",
-      "choix": [
-        "Arthur Rimbaud",
-        "Charles Baudelaire",
-        "Verlaine",
-        "Mallarmé"
-      ],
-      "reponse": "C",
-      "explication": "Verlaine a écrit 'Les Poètes Maudits' en 1884 et 1888"
-    },
-    {
-      "question": "Quel est le titre de l'œuvre de Arthur Rimbaud parue en 1873 ?",
-      "type": "qcm",
-      "choix": [
-        "Une saison en enfer",
-        "Les Fleurs du mal",
-        "Les Poètes Maudits",
-        "Le Parti pris des Choses"
+        "A - Exagerer la situation",
+        "B - Diminuer la souffrance",
+        "C - Presenter des faits historiques",
+        "D - Faire rire le lecteur"
       ],
       "reponse": "A",
-      "explication": "Arthur Rimbaud a écrit 'Une saison en enfer' en 1873"
+      "explication": "L'hyperbole est utilisee dans le registre pathetique pour exagerer la situation et ainsi exprimer la souffrance ou la compassion du lecteur."
     },
     {
-      "question": "Qui est l'auteur de 'Le bateau Ivre' ?",
+      "question": "Quel est le ton dominant dans le registre lyrique?",
       "type": "qcm",
       "choix": [
-        "Arthur Rimbaud",
-        "Charles Baudelaire",
-        "Verlaine",
-        "Mallarmé"
+        "A - Joyeux",
+        "B - Melancolique",
+        "C - Sombre",
+        "D - Nostalgique"
       ],
-      "reponse": "A",
-      "explication": "Arthur Rimbaud a écrit 'Le bateau Ivre' en 1871"
+      "reponse": "D",
+      "explication": "Le registre lyrique presente souvent un ton nostalgique et emotif, avec des sentiments personnels tels que la joie, le regret ou la nostalgie."
     },
     {
-      "question": "Quel est le mouvement littéraire de Charles Baudelaire ?",
+      "question": "Quel procede litteraire est utilise pour presenter des personnages dans le registre comique?",
       "type": "qcm",
       "choix": [
-        "Romantisme",
-        "Réalistme",
-        "Symbolisme",
-        "Surréalisme"
+        "A - Caricature",
+        "B - Exagération",
+        "C - Ironie",
+        "D - Toutes les reponses"
       ],
-      "reponse": "C",
-      "explication": "Charles Baudelaire est considéré comme l'un des premiers poètes symbolistes"
+      "reponse": "D",
+      "explication": "Le registre comique utilise souvent des procedes tels que la caricature, l'exagération ou l'ironie pour presenter des personnages et provoquer le rire ou le sourire."
     },
     {
-      "question": "Qui est le poète auteur de 'Les Fleurs du mal' ?",
+      "question": "Quel est le role de la ponctuation expressive dans le registre lyrique?",
       "type": "qcm",
       "choix": [
-        "Arthur Rimbaud",
-        "Charles Baudelaire",
-        "Verlaine",
-        "Mallarmé"
+        "A - Elle est utilisee pour presenter des faits historiques",
+        "B - Elle est utilisee pour exprimer des sentiments personnels",
+        "C - Elle est utilisee pour faire rire le lecteur",
+        "D - Elle est utilisee pour critiquer la societe"
       ],
       "reponse": "B",
-      "explication": "Charles Baudelaire a écrit 'Les Fleurs du mal' en 1857"
+      "explication": "La ponctuation expressive est utilisee dans le registre lyrique pour exprimer des sentiments personnels et ainsi donner un ton emotif au texte."
     },
     {
-      "question": "Quel est le titre de l'œuvre de Francis Ponge parue en 1942 ?",
+      "question": "Quel est l'element caracteristique du registre comique?",
       "type": "qcm",
       "choix": [
-        "Le Parti pris des Choses",
-        "La rage de l'expression",
-        "Les Poètes Maudits",
-        "Une saison en enfer"
-      ],
-      "reponse": "A",
-      "explication": "Francis Ponge a écrit 'Le Parti pris des Choses' en 1942"
-    },
-    {
-      "question": "Qui est l'auteur de 'Les Poètes Maudits' ?",
-      "type": "qcm",
-      "choix": [
-        "Arthur Rimbaud",
-        "Charles Baudelaire",
-        "Verlaine",
-        "Mallarmé"
+        "A - Un heros solitaire",
+        "B - Une situation inhumaine",
+        "C - Un decalage entre la realite et la situation decrite",
+        "D - Un langage soutenu"
       ],
       "reponse": "C",
-      "explication": "Verlaine a écrit 'Les Poètes Maudits' en 1884 et 1888"
+      "explication": "Le registre comique presente souvent un decalage entre la realite et la situation decrite, ce qui provoque le rire ou le sourire."
     },
     {
-      "question": "Quel est le mouvement littéraire de Francis Ponge ?",
+      "question": "Quel est le but de l'utilisation de l'ironie dans le registre comique?",
       "type": "qcm",
       "choix": [
-        "Romantisme",
-        "Réalistme",
-        "Symbolisme",
-        "Surréalisme"
+        "A - Exagerer la situation",
+        "B - Diminuer la souffrance",
+        "C - Presenter des faits historiques",
+        "D - Faire rire le lecteur"
       ],
       "reponse": "D",
-      "explication": "Francis Ponge est considéré comme un poète surréaliste"
+      "explication": "L'ironie est utilisee dans le registre comique pour faire rire le lecteur en presentant une situation de maniere inattendue ou contradictoire."
+    },
+    {
+      "question": "Quel est le ton dominant dans le registre pathetique?",
+      "type": "qcm",
+      "choix": [
+        "A - Joyeux",
+        "B - Melancolique",
+        "C - Sombre",
+        "D - Compassionnel"
+      ],
+      "reponse": "D",
+      "explication": "Le registre pathetique presente souvent un ton compassionnel, avec des sentiments de souffrance ou de pitie pour les personnages."
+    },
+    {
+      "question": "Quel procede litteraire est utilise pour presenter des situations dans le registre tragique?",
+      "type": "qcm",
+      "choix": [
+        "A - Description detaillee",
+        "B - Exposition des faits",
+        "C - Deliberations",
+        "D - Toutes les reponses"
+      ],
+      "reponse": "D",
+      "explication": "Le registre tragique utilise souvent des procedes tels que la description detaillee, l'exposition des faits et les deliberations pour presenter des situations et ainsi creer un ton sombre et solennel."
+    },
+    {
+      "question": "Quel est le role de l'auteur dans le registre comique?",
+      "type": "qcm",
+      "choix": [
+        "A - Il est impartial",
+        "B - Il est objectif",
+        "C - Il cherche a faire rire le lecteur",
+        "D - Il presente des faits historiques"
+      ],
+      "reponse": "C",
+      "explication": "Le registre comique vise a faire rire le lecteur en utilisant des procedes tels que l'exagération, l'ironie ou la caricature."
+    },
+    {
+      "question": "Quel est l'element caracteristique du registre lyrique?",
+      "type": "qcm",
+      "choix": [
+        "A - Un heros solitaire",
+        "B - Une situation inhumaine",
+        "C - Des sentiments personnels",
+        "D - Un langage soutenu"
+      ],
+      "reponse": "C",
+      "explication": "Le registre lyrique presente souvent des sentiments personnels tels que la joie, le regret ou la nostalgie, lis a des themes universels comme l'amour, la mort ou le temps qui passe."
+    },
+    {
+      "question": "Quel est le but de l'utilisation de la metaphore dans le registre pathetique?",
+      "type": "qcm",
+      "choix": [
+        "A - Exagerer la situation",
+        "B - Diminuer la souffrance",
+        "C - Presenter des faits historiques",
+        "D - Faire rire le lecteur"
+      ],
+      "reponse": "A",
+      "explication": "La metaphore est utilisee dans le registre pathetique pour exagerer la situation et ainsi exprimer la souffrance ou la compassion du lecteur."
+    },
+    {
+      "question": "Quel est le ton dominant dans le registre tragique?",
+      "type": "qcm",
+      "choix": [
+        "A - Joyeux",
+        "B - Melancolique",
+        "C - Sombre",
+        "D - Solennel"
+      ],
+      "reponse": "D",
+      "explication": "Le registre tragique presente souvent un ton solennel et sombre, avec des sentiments de desespoir ou de resignation."
     }
   ],
-  "exercices": []
+  "exercices": [
+    {
+      "enonce": "Analysez le registre litteraire utilise dans le texte suivant : 'Je suis seul et abandonne, la vie est cruelle et injuste.'",
+      "corrige": "Le registre litteraire utilise dans ce texte est le registre pathetique, car il exprime des sentiments de souffrance et de compassion."
+    },
+    {
+      "enonce": "Identifiez les procedes litteraires utilises dans le registre comique pour provoquer le rire ou le sourire.",
+      "corrige": "Les procedes litteraires utilises dans le registre comique pour provoquer le rire ou le sourire incluent l'exagération, l'ironie, la caricature et le decalage entre la realite et la situation decrite."
+    },
+    {
+      "enonce": "Expliquez le role de la ponctuation expressive dans le registre lyrique.",
+      "corrige": "La ponctuation expressive est utilisee dans le registre lyrique pour exprimer des sentiments personnels et ainsi donner un ton emotif au texte."
+    },
+    {
+      "enonce": "Analysez le registre litteraire utilise dans le texte suivant : 'La vie est belle et joyeuse, tout est possible.'",
+      "corrige": "Le registre litteraire utilise dans ce texte est le registre lyrique, car il exprime des sentiments de joie et d'optimisme."
+    },
+    {
+      "enonce": "Identifiez les caracteristiques du registre tragique.",
+      "corrige": "Les caracteristiques du registre tragique incluent un heros solitaire, une situation inhumaine, un langage soutenu et des deliberations."
+    }
+  ]
 }
