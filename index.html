@@ -152,6 +152,12 @@ body{background:var(--bg);color:var(--text);font-family:'DM Mono',monospace;min-
 .bg-swatch{width:100%;aspect-ratio:1;border-radius:8px;cursor:pointer;border:2px solid transparent;transition:transform .15s,border-color .15s;position:relative}
 .bg-swatch:hover{transform:scale(1.12)}
 .bg-swatch.active{border-color:rgba(255,255,255,.8)}
+.font-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:7px;padding:0 20px 12px}
+.font-swatch{padding:10px 12px;border-radius:10px;background:var(--surface-2);border:2px solid var(--border);cursor:pointer;transition:border-color .18s,background .18s;text-align:center}
+.font-swatch:hover{border-color:var(--accent);background:var(--accent-soft)}
+.font-swatch.active{border-color:var(--accent);background:var(--accent-soft)}
+.font-swatch-name{font-size:11px;color:var(--muted);display:block;margin-bottom:3px;letter-spacing:.05em}
+.font-swatch-preview{font-size:15px;color:var(--text);display:block}
 .bg-swatch::after{content:'✓';position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:11px;color:white;font-weight:800;text-shadow:0 1px 3px rgba(0,0,0,.5);opacity:0;transition:opacity .15s}
 .bg-swatch.active::after{opacity:1}
 .tp-row{padding:0 20px 16px;display:flex;flex-direction:column;gap:8px}
@@ -273,12 +279,50 @@ textarea#json-input:focus{border-color:rgba(124,106,255,.4)}
 #toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
 
 @media(max-width:600px){#main{padding:32px 16px}.page-header{flex-direction:column;align-items:flex-start}}
+
+/* ══ LOGIN ══ */
+#login-screen{position:fixed;inset:0;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:2000;text-align:center;padding:24px}
+.login-box{position:relative;z-index:2;animation:scaleIn .8s cubic-bezier(.2,0,0,1) forwards;width:100%;max-width:380px}
+.login-eyebrow{font-size:10px;letter-spacing:.45em;text-transform:uppercase;color:var(--accent);margin-bottom:20px;display:flex;align-items:center;justify-content:center;gap:14px}
+.login-eyebrow::before,.login-eyebrow::after{content:'';width:36px;height:1px;background:var(--accent)}
+.login-title{font-family:'Syne',sans-serif;font-size:clamp(32px,8vw,56px);font-weight:800;line-height:.9;letter-spacing:-.04em;margin-bottom:10px;background:linear-gradient(135deg,#fff 0%,#cfc8ff 40%,#ff6a9e 100%);background-size:200% 200%;animation:gradSh 5s ease infinite;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.login-sub{color:var(--muted);font-size:12px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:36px;line-height:1.8}
+.login-input-wrap{position:relative;margin-bottom:12px}
+.login-input{width:100%;padding:16px 50px 16px 18px;background:var(--surface-2);border:1px solid var(--border);border-radius:12px;color:var(--text);font-family:'DM Mono',monospace;font-size:15px;outline:none;transition:border-color .2s,box-shadow .2s;letter-spacing:.05em}
+.login-input:focus{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+.login-input.error{border-color:var(--red);animation:shake .4s ease}
+.login-eye{position:absolute;right:14px;top:50%;transform:translateY(-50%);background:none;border:none;color:var(--muted);cursor:pointer;font-size:18px;padding:4px;transition:color .2s}
+.login-eye:hover{color:var(--text)}
+.login-btn{width:100%;padding:16px;border-radius:12px;border:none;background:linear-gradient(135deg,var(--a1),var(--a2));background-size:200% 200%;animation:gradSh 4s ease infinite;color:white;font-family:'Syne',sans-serif;font-size:14px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:transform .2s,box-shadow .2s;margin-bottom:10px}
+.login-btn:hover{transform:translateY(-2px);box-shadow:0 16px 40px var(--accent-glow)}
+.login-error{color:var(--red);font-size:11px;letter-spacing:.1em;height:16px;transition:opacity .2s}
+.login-lock{font-size:40px;margin-bottom:20px;display:block}
 </style>
 </head>
 <body>
 
+<!-- LOGIN -->
+<div id="login-screen">
+  <div class="orb orb-1"></div><div class="orb orb-2"></div>
+  <div class="grid-bg"></div>
+  <div class="login-box">
+    <span class="login-lock">🔐</span>
+    <div class="login-eyebrow">Accès privé</div>
+    <h1 class="login-title">Quiz<br>Engine</h1>
+    <p class="login-sub">Entre le code d'accès<br>pour continuer</p>
+    <div class="login-input-wrap">
+      <input class="login-input" id="login-input" type="password"
+        placeholder="Code d'accès…"
+        onkeydown="if(event.key==='Enter')checkCode()">
+      <button class="login-eye" id="login-eye" onclick="toggleLoginEye()" tabindex="-1">👁</button>
+    </div>
+    <div class="login-error" id="login-error"></div>
+    <button class="login-btn" onclick="checkCode()">Entrer →</button>
+  </div>
+</div>
+
 <!-- WELCOME -->
-<div id="welcome" onclick="enterApp()">
+<div id="welcome" onclick="enterApp()" style="display:none">
   <div class="orb orb-1"></div><div class="orb orb-2"></div>
   <div class="grid-bg"></div>
   <div class="welcome-inner">
@@ -383,6 +427,8 @@ textarea#json-input:focus{border-color:rgba(124,106,255,.4)}
     <div class="accent-grid" id="accent-grid"></div>
     <div class="p-section">Couleur du fond</div>
     <div class="bg-grid" id="bg-grid"></div>
+    <div class="p-section">Police d'écriture</div>
+    <div class="font-grid" id="font-grid"></div>
     <div class="p-section">Fond personnalisé</div>
     <div class="tp-row">
       <span class="tp-row-lbl">Choisis n'importe quelle couleur</span>
@@ -465,6 +511,44 @@ textarea#json-input:focus{border-color:rgba(124,106,255,.4)}
 <div id="toast"></div>
 
 <script>
+
+// ── LOGIN ───────────────────────────────────────────
+const ACCESS_CODE = 'CoursLycée2026Quiz';
+let loginEyeOpen = false;
+
+function checkCode() {
+  const val = document.getElementById('login-input').value;
+  const errEl = document.getElementById('login-error');
+  if (val === ACCESS_CODE) {
+    // Bon code — masquer login, montrer welcome
+    const ls = document.getElementById('login-screen');
+    ls.style.opacity = '0';
+    ls.style.transition = 'opacity .6s ease';
+    setTimeout(() => {
+      ls.style.display = 'none';
+      const w = document.getElementById('welcome');
+      w.style.display = 'flex';
+    }, 600);
+    errEl.textContent = '';
+  } else {
+    errEl.textContent = '❌ Code incorrect';
+    const inp = document.getElementById('login-input');
+    inp.classList.add('error');
+    setTimeout(() => inp.classList.remove('error'), 500);
+    inp.value = '';
+    inp.focus();
+  }
+}
+
+function toggleLoginEye() {
+  loginEyeOpen = !loginEyeOpen;
+  const inp = document.getElementById('login-input');
+  const eye = document.getElementById('login-eye');
+  inp.type = loginEyeOpen ? 'text' : 'password';
+  eye.textContent = loginEyeOpen ? '🙈' : '👁';
+}
+
+
 const GITHUB_USER = 'mathisplassartginnainpro44-ship-it';
 const GITHUB_REPO = 'n8n';
 const GITHUB_FILE = 'quiz.json';
@@ -484,12 +568,80 @@ const ACCENTS = [
   {n:'Nuit',a1:'#667eea',a2:'#764ba2'},{n:'Soleil',a1:'#f6d365',a2:'#fda085'},
 ];
 
+const FONTS = [
+  {n:'DM Mono',     f:"'DM Mono', monospace",       g:'DM+Mono:wght@400;500'},
+  {n:'Inter',       f:"'Inter', sans-serif",          g:'Inter:wght@400;500;700'},
+  {n:'Poppins',     f:"'Poppins', sans-serif",        g:'Poppins:wght@400;500;700'},
+  {n:'Roboto',      f:"'Roboto', sans-serif",         g:'Roboto:wght@400;500;700'},
+  {n:'Playfair',    f:"'Playfair Display', serif",    g:'Playfair+Display:wght@400;700'},
+  {n:'Merriweather',f:"'Merriweather', serif",        g:'Merriweather:wght@400;700'},
+  {n:'Raleway',     f:"'Raleway', sans-serif",        g:'Raleway:wght@400;500;700'},
+  {n:'Nunito',      f:"'Nunito', sans-serif",         g:'Nunito:wght@400;600;700'},
+  {n:'Josefin',     f:"'Josefin Sans', sans-serif",   g:'Josefin+Sans:wght@400;600;700'},
+  {n:'Outfit',      f:"'Outfit', sans-serif",         g:'Outfit:wght@400;500;700'},
+  {n:'Space Grotesk',f:"'Space Grotesk', sans-serif",g:'Space+Grotesk:wght@400;500;700'},
+  {n:'Lato',        f:"'Lato', sans-serif",           g:'Lato:wght@400;700'},
+  {n:'Quicksand',   f:"'Quicksand', sans-serif",      g:'Quicksand:wght@400;500;700'},
+  {n:'Figtree',     f:"'Figtree', sans-serif",        g:'Figtree:wght@400;500;700'},
+  {n:'Plus Jakarta',f:"'Plus Jakarta Sans', sans-serif",g:'Plus+Jakarta+Sans:wght@400;500;700'},
+  {n:'Exo 2',       f:"'Exo 2', sans-serif",          g:'Exo+2:wght@400;500;700'},
+  {n:'Urbanist',    f:"'Urbanist', sans-serif",       g:'Urbanist:wght@400;500;700'},
+  {n:'Manrope',     f:"'Manrope', sans-serif",        g:'Manrope:wght@400;500;700'},
+  {n:'Libre Baskerville',f:"'Libre Baskerville', serif",g:'Libre+Baskerville:wght@400;700'},
+  {n:'Crimson Text',f:"'Crimson Text', serif",        g:'Crimson+Text:wght@400;700'},
+  {n:'Lora',        f:"'Lora', serif",                g:'Lora:wght@400;700'},
+  {n:'Source Serif', f:"'Source Serif 4', serif",     g:'Source+Serif+4:wght@400;700'},
+  {n:'Cormorant',   f:"'Cormorant Garamond', serif",  g:'Cormorant+Garamond:wght@400;700'},
+  {n:'EB Garamond', f:"'EB Garamond', serif",         g:'EB+Garamond:wght@400;700'},
+  {n:'Montserrat',  f:"'Montserrat', sans-serif",     g:'Montserrat:wght@400;500;700'},
+  {n:'Oswald',      f:"'Oswald', sans-serif",         g:'Oswald:wght@400;500;700'},
+  {n:'Fira Code',   f:"'Fira Code', monospace",       g:'Fira+Code:wght@400;500'},
+  {n:'JetBrains',   f:"'JetBrains Mono', monospace",  g:'JetBrains+Mono:wght@400;500'},
+  {n:'IBM Plex Mono',f:"'IBM Plex Mono', monospace",  g:'IBM+Plex+Mono:wght@400;500'},
+  {n:'Courier Prime',f:"'Courier Prime', monospace",  g:'Courier+Prime:wght@400;700'},
+  {n:'Caveat',      f:"'Caveat', cursive",            g:'Caveat:wght@400;700'},
+  {n:'Pacifico',    f:"'Pacifico', cursive",          g:'Pacifico'},
+  {n:'Dancing Script',f:"'Dancing Script', cursive",  g:'Dancing+Script:wght@400;700'},
+  {n:'Satisfy',     f:"'Satisfy', cursive",           g:'Satisfy'},
+  {n:'Permanent Marker',f:"'Permanent Marker', cursive",g:'Permanent+Marker'},
+  {n:'Bebas Neue',  f:"'Bebas Neue', sans-serif",     g:'Bebas+Neue'},
+  {n:'Anton',       f:"'Anton', sans-serif",           g:'Anton'},
+  {n:'Righteous',   f:"'Righteous', sans-serif",      g:'Righteous'},
+  {n:'Cinzel',      f:"'Cinzel', serif",              g:'Cinzel:wght@400;700'},
+  {n:'Abril Fatface',f:"'Abril Fatface', serif",      g:'Abril+Fatface'},
+  {n:'Lobster',     f:"'Lobster', cursive",           g:'Lobster'},
+  {n:'Comfortaa',   f:"'Comfortaa', cursive",         g:'Comfortaa:wght@400;700'},
+  {n:'Varela Round',f:"'Varela Round', sans-serif",   g:'Varela+Round'},
+  {n:'Fredoka',     f:"'Fredoka One', cursive",       g:'Fredoka+One'},
+  {n:'Kalam',       f:"'Kalam', cursive",             g:'Kalam:wght@400;700'},
+  {n:'Patrick Hand',f:"'Patrick Hand', cursive",      g:'Patrick+Hand'},
+  {n:'Handlee',     f:"'Handlee', cursive",           g:'Handlee'},
+  {n:'Architects Daughter',f:"'Architects Daughter', cursive",g:'Architects+Daughter'},
+  {n:'Special Elite',f:"'Special Elite', cursive",    g:'Special+Elite'},
+  {n:'Share Tech Mono',f:"'Share Tech Mono', monospace",g:'Share+Tech+Mono'},
+];
+
 const BG_PRESETS = [
-  '#050508','#0a0a0f','#080810','#0d0d14','#050d05','#08100a',
-  '#0a0f08','#051005','#08050d','#0d0814','#14081c','#1a0a26',
-  '#100505','#180808','#1a0a0a','#200d0d','#05080d','#080d14',
-  '#0a1018','#0d1520','#0a0808','#141010','#1a1414','#201818',
-  '#080808','#101010','#181818','#202020','#050a0a','#0a1414',
+  // Noirs & sombres
+  '#050508','#0d0d14','#111111','#1a1a2e','#0f0f23',
+  // Bleus nuit
+  '#0a0e27','#0d1b2a','#0a1628','#0e2040','#0a1a3a',
+  // Verts sombres
+  '#0a1a0a','#0d1f0d','#0f2318','#0a2010','#061a06',
+  // Violets
+  '#150a2e','#1a0a2e','#200a30','#12062a','#1e0a3c',
+  // Rouge/bordeaux
+  '#1a0505','#200a0a','#2a0808','#1f0606','#250505',
+  // Clairs colorés
+  '#e8f4f8','#f0f4ff','#fff8f0','#f5fff5','#fff0f5',
+  // Pastel
+  '#c8d8e8','#d4c8f0','#f0d4c8','#c8f0d4','#f0c8d4',
+  // Vifs
+  '#1a3a5c','#2d1b69','#1b4332','#7b2d00','#4a0e8f',
+  // Terre
+  '#2c1810','#1c2c10','#10182c','#2c102c','#1a1a10',
+  // Blancs cassés
+  '#f8f5f0','#f5f0f8','#f0f8f5','#fafafa','#f5f5dc',
 ];
 
 // ── STATE ──────────────────────────────────────────
@@ -559,6 +711,24 @@ function onA1Hex(v){if(isHex(v)){applyAccent(v,S.theme.a2,-1);save();}}
 function onA2Picker(v){applyAccent(S.theme.a1,v,-1);save();}
 function onA2Hex(v){if(isHex(v)){applyAccent(S.theme.a1,v,-1);save();}}
 
+function applyFont(idx) {
+  const font = FONTS[idx];
+  if (!font) return;
+  // Charger la police depuis Google Fonts si pas déjà chargée
+  const linkId = 'gf-' + idx;
+  if (!document.getElementById(linkId)) {
+    const link = document.createElement('link');
+    link.id = linkId;
+    link.rel = 'stylesheet';
+    link.href = 'https://fonts.googleapis.com/css2?family=' + font.g + '&display=swap';
+    document.head.appendChild(link);
+  }
+  document.documentElement.style.setProperty('--font-body', font.f);
+  document.body.style.fontFamily = font.f;
+  S.theme.fi = idx;
+  document.querySelectorAll('.font-swatch').forEach((s,i) => s.classList.toggle('active', i === idx));
+}
+
 function buildThemeGrids() {
   const ag=document.getElementById('accent-grid');
   ag.innerHTML=ACCENTS.map((a,i)=>'<div class="a-swatch '+(i===S.theme.ai?'active':'')+'" style="background:linear-gradient(135deg,'+a.a1+','+a.a2+')" title="'+a.n+'" data-i="'+i+'"></div>').join('');
@@ -566,6 +736,19 @@ function buildThemeGrids() {
   const bg=document.getElementById('bg-grid');
   bg.innerHTML=BG_PRESETS.map((c,i)=>'<div class="bg-swatch '+(c===S.theme.bg?'active':'')+'" style="background:'+c+'" data-i="'+i+'" data-c="'+c+'"></div>').join('');
   bg.onclick=function(e){const s=e.target.closest('.bg-swatch');if(!s)return;applyBg(s.dataset.c,+s.dataset.i);save();};
+
+  // Grille polices
+  const fg = document.getElementById('font-grid');
+  fg.innerHTML = FONTS.map((f,i) =>
+    '<div class="font-swatch '+(i===(S.theme.fi||0)?'active':'')+'" data-i="'+i+'" title="'+f.n+'">'
+    +'<span class="font-swatch-name">'+f.n+'</span>'
+    +'<span class="font-swatch-preview" style="font-family:'+f.f+'">Abc 123</span>'
+    +'</div>'
+  ).join('');
+  fg.onclick = function(e) {
+    const s = e.target.closest('.font-swatch'); if (!s) return;
+    applyFont(+s.dataset.i); save();
+  };
 }
 
 // ── GLOBAL SCORE ───────────────────────────────────
@@ -593,7 +776,7 @@ function openPanel(name) {
   if(activePanel===name){closePanel();return;}
   ['stats','reviews','theme','trash'].forEach(n=>document.getElementById(n+'-panel').classList.remove('open'));
   activePanel=name;
-  const W={stats:360,reviews:360,theme:310,trash:320};
+  const W={stats:360,reviews:360,theme:340,trash:320};
   document.getElementById('main').style.marginLeft=(72+W[name])+'px';
   document.getElementById(name+'-panel').classList.add('open');
   if(name==='stats') renderStatsPanel();
@@ -732,6 +915,7 @@ function enterApp() {
     load();
     applyBg(S.theme.bg||'#050508',-1);
     applyAccent(S.theme.a1||'#7c6aff',S.theme.a2||'#ff6a9e',S.theme.ai||0);
+    if (S.theme.fi) applyFont(S.theme.fi);
     renderLibrary();
     renderGlobalScore();
     syncGithub(true);
@@ -740,23 +924,34 @@ function enterApp() {
 
 // ── SYNC ───────────────────────────────────────────
 async function syncGithub(silent) {
-  const badge=document.getElementById('sync-badge');
-  if(badge) badge.style.display='inline-flex';
+  const badge = document.getElementById('sync-badge');
+  if (badge) badge.style.display = 'inline-flex';
   try {
-    const res=await fetch('https://raw.githubusercontent.com/'+GITHUB_USER+'/'+GITHUB_REPO+'/main/'+GITHUB_FILE+'?t='+Date.now());
-    if(!res.ok) throw new Error();
-    const data=await res.json();
-    if(data&&data.titre&&data.questions){
-      const added = upsertQuiz(data);
-      if (added === false) {
-        if(!silent) toast('⚠️ Ce quiz est dans la corbeille — restaure-le pour le réactiver');
-      } else {
-        save(); renderLibrary(); renderGlobalScore();
-        if(!silent) toast('✅ Quiz synchronisé !');
-      }
+    const res = await fetch('https://raw.githubusercontent.com/' + GITHUB_USER + '/' + GITHUB_REPO + '/main/' + GITHUB_FILE + '?t=' + Date.now());
+    if (!res.ok) throw new Error();
+    const data = await res.json();
+
+    // Accepte un objet unique {} ou un tableau []
+    const list = Array.isArray(data) ? data : (data && data.titre ? [data] : []);
+
+    let added = 0, skipped = 0;
+    list.forEach(quiz => {
+      if (!quiz.titre || !quiz.questions) return;
+      const result = upsertQuiz(quiz);
+      if (result === false) skipped++;
+      else added++;
+    });
+
+    if (added > 0) {
+      save(); renderLibrary(); renderGlobalScore();
+      if (!silent) toast('✅ ' + added + ' quiz synchronisé' + (added > 1 ? 's' : '') + ' !');
+    } else if (skipped > 0) {
+      if (!silent) toast('⚠️ Quiz déjà en corbeille — restaure-les pour les réactiver');
+    } else {
+      if (!silent) toast('✅ Bibliothèque à jour');
     }
-  } catch(e){ if(!silent) toast('⚠️ Aucun quiz disponible'); }
-  if(badge) badge.style.display='none';
+  } catch(e) { if (!silent) toast('⚠️ Aucun quiz disponible'); }
+  if (badge) badge.style.display = 'none';
 }
 
 // ── LIBRARY ────────────────────────────────────────
