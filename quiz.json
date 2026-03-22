@@ -3,233 +3,266 @@
   "matiere": "Français",
   "questions": [
     {
+      "question": "Quel est le but premier de la littérature ?",
+      "type": "qcm",
+      "choix": [
+        "Exprimer une vision du monde",
+        "Questionner la société",
+        "Distracter le lecteur",
+        "Informer sur l'actualité"
+      ],
+      "reponse": "A",
+      "explication": "La littérature permet aux auteurs de partager leur perspective sur le monde et de remettre en question les normes sociétales"
+    },
+    {
+      "question": "Quel siècle a vu naître un nouveau mouvement littéraire ?",
+      "type": "qcm",
+      "choix": [
+        "XXe siècle",
+        "XIXe siècle",
+        "XVIIIe siècle",
+        "XXIe siècle"
+      ],
+      "reponse": "A",
+      "explication": "Le XXe siècle a vu émerger de nombreux mouvements littéraires innovants"
+    },
+    {
+      "question": "Qui est l'auteur de l'œuvre ?",
+      "type": "qcm",
+      "choix": [
+        "Un dramaturge",
+        "Un romancier",
+        "Un philosophe",
+        "Un poète"
+      ],
+      "reponse": "A",
+      "explication": "L'auteur en question est un dramaturge de renom"
+    },
+    {
+      "question": "En quelle année a été publiée l'œuvre ?",
+      "type": "qcm",
+      "choix": [
+        "1900",
+        "1950",
+        "2000",
+        "2010"
+      ],
+      "reponse": "B",
+      "explication": "L'œuvre a été publiée en 1950"
+    },
+    {
+      "question": "Quel thème général est abordé dans l'extrait ?",
+      "type": "qcm",
+      "choix": [
+        "L'amour",
+        "La mort",
+        "La liberté",
+        "La justice"
+      ],
+      "reponse": "D",
+      "explication": "L'extrait traite de la justice et de son importance dans la société"
+    },
+    {
+      "question": "Quel est le ton utilisé par l'auteur ?",
+      "type": "qcm",
+      "choix": [
+        "Ironique",
+        "Sérieux",
+        "Critique",
+        "Réflexif"
+      ],
+      "reponse": "C",
+      "explication": "L'auteur utilise un ton critique pour dénoncer les injustices"
+    },
+    {
+      "question": "Quelle est la problématique de l'étude ?",
+      "type": "qcm",
+      "choix": [
+        "Comment l'auteur rend compte de la complexité psychologique du personnage",
+        "Comment l'auteur renouvelle les codes du genre pour dénoncer une injustice",
+        "Comment l'auteur utilise la ironie pour critiquer la société",
+        "Comment l'auteur présente les thèmes de l'amour et de la mort"
+      ],
+      "reponse": "B",
+      "explication": "La problématique de l'étude est de comprendre comment l'auteur utilise le genre pour dénoncer une injustice"
+    },
+    {
+      "question": "Quel est le plan de l'analyse ?",
+      "type": "qcm",
+      "choix": [
+        "Mouvement 1 : Présentation de l'auteur, Mouvement 2 : Analyse de l'extrait",
+        "Mouvement 1 : Analyse de l'extrait, Mouvement 2 : Présentation de l'auteur",
+        "Mouvement 1 : Présentation de l'œuvre, Mouvement 2 : Analyse de l'extrait",
+        "Mouvement 1 : Analyse de l'extrait, Mouvement 2 : Présentation de l'œuvre"
+      ],
+      "reponse": "A",
+      "explication": "Le plan de l'analyse consiste à présenter l'auteur puis à analyser l'extrait"
+    },
+    {
+      "question": "Qu'est-ce que le 'Récap' Express ?",
+      "type": "qcm",
+      "choix": [
+        "Un outil de transition pour les exposés",
+        "Un outil de révision pour les examens",
+        "Un outil de création pour les écrits",
+        "Un outil de correction pour les exercices"
+      ],
+      "reponse": "A",
+      "explication": "Le 'Récap' Express est un outil utilisé pour les transitions dans les exposés"
+    },
+    {
+      "question": "Quel est le rôle de l'auteur dans la société ?",
+      "type": "qcm",
+      "choix": [
+        "D'écrire des romans",
+        "De partager ses idées",
+        "De critiquer la société",
+        "De créer des personnages"
+      ],
+      "reponse": "B",
+      "explication": "L'auteur partage ses idées et sa vision du monde à travers ses écrits"
+    },
+    {
+      "question": "Qu'est-ce que la littérature ?",
+      "type": "qcm",
+      "choix": [
+        "Un art de la langue",
+        "Un moyen de communication",
+        "Un outil de distraction",
+        "Un mode de réflexion"
+      ],
+      "reponse": "A",
+      "explication": "La littérature est un art qui utilise la langue pour exprimer des idées et des émotions"
+    },
+    {
+      "question": "Quel est le but de l'analyse littéraire ?",
+      "type": "qcm",
+      "choix": [
+        "De comprendre l'auteur",
+        "De comprendre le texte",
+        "De critiquer la société",
+        "De partager ses opinions"
+      ],
+      "reponse": "B",
+      "explication": "L'analyse littéraire vise à comprendre le texte et ses différents éléments"
+    },
+    {
+      "question": "Qu'est-ce qu'un mouvement littéraire ?",
+      "type": "qcm",
+      "choix": [
+        "Un groupe d'auteurs",
+        "Un style d'écriture",
+        "Un thème littéraire",
+        "Un courant de pensée"
+      ],
+      "reponse": "D",
+      "explication": "Un mouvement littéraire est un courant de pensée qui regroupe des auteurs partageant des idées et des styles similaires"
+    },
+    {
       "question": "Quel est le rôle de la littérature dans la société ?",
       "type": "qcm",
       "choix": [
-        "A) Pour divertir",
-        "B) Pour exprimer la vision du monde de l'auteur",
-        "C) Pour décrire des événements historiques",
-        "D) Pour enseigner des règles grammaticales"
+        "De divertir",
+        "D'éduquer",
+        "De critiquer",
+        "De refléter"
       ],
-      "reponse": "B",
-      "explication": "La littérature permet aux auteurs d’exprimer leur vision du monde et de questionner la société"
+      "reponse": "D",
+      "explication": "La littérature reflète la société et ses valeurs, mais peut également la critiquer et la remettre en question"
     },
     {
-      "question": "Quel siècle a vu naître le mouvement littéraire romantique ?",
+      "question": "Qu'est-ce que l'ironie ?",
       "type": "qcm",
       "choix": [
-        "A) 18e siècle",
-        "B) 19e siècle",
-        "C) 20e siècle",
-        "D) 21e siècle"
+        "Un ton sérieux",
+        "Un ton critique",
+        "Un ton ironique",
+        "Un ton neutre"
       ],
-      "reponse": "B",
-      "explication": "Le siècle de l'auteur qui a vu naître le mouvement romantique est le 19e siècle"
+      "reponse": "C",
+      "explication": "L'ironie est un ton utilisé pour exprimer une idée opposée à ce que l'on dit"
     },
     {
-      "question": "Qui est l'auteur de l'œuvre 'Les Misérables' ?",
+      "question": "Quel est le but de la problématique ?",
       "type": "qcm",
       "choix": [
-        "A) Victor Hugo",
-        "B) Gustave Flaubert",
-        "C) Charles Baudelaire",
-        "D) Alexandre Dumas"
+        "De poser une question",
+        "De répondre à une question",
+        "De présenter un thème",
+        "De critiquer une idée"
       ],
       "reponse": "A",
-      "explication": "Victor Hugo est l'auteur de l'œuvre 'Les Misérables'"
+      "explication": "La problématique pose une question ou un problème à résoudre"
     },
     {
-      "question": "Quel est le thème général de l'œuvre 'Candide' ?",
+      "question": "Qu'est-ce que le plan de l'analyse ?",
       "type": "qcm",
       "choix": [
-        "A) L'amour et la passion",
-        "B) La satire et la critique sociale",
-        "C) La découverte de soi",
-        "D) L'aventure et le voyage"
-      ],
-      "reponse": "B",
-      "explication": "L'œuvre 'Candide' est une satire qui critique la société de l'époque"
-    },
-    {
-      "question": "Quel est le but de l'étude d'un passage littéraire ?",
-      "type": "qcm",
-      "choix": [
-        "A) Pour analyser la grammaire et la syntaxe",
-        "B) Pour comprendre le contexte historique",
-        "C) Pour étudier les thèmes et les personnages",
-        "D) Pour critiquer l'auteur"
-      ],
-      "reponse": "C",
-      "explication": "L'étude d'un passage littéraire permet de comprendre les thèmes et les personnages"
-    },
-    {
-      "question": "Comment les auteurs utilisent-ils les transitions dans leurs textes ?",
-      "type": "qcm",
-      "choix": [
-        "A) Pour créer des contrastes",
-        "B) Pour renforcer des idées",
-        "C) Pour lier des idées",
-        "D) Pour éliminer des idées"
-      ],
-      "reponse": "C",
-      "explication": "Les transitions permettent de lier des idées et de créer une cohésion dans le texte"
-    },
-    {
-      "question": "Quel est le rôle de la problématique dans l'analyse d'un passage littéraire ?",
-      "type": "qcm",
-      "choix": [
-        "A) Pour définir le thème de l'œuvre",
-        "B) Pour analyser les personnages",
-        "C) Pour étudier le contexte historique",
-        "D) Pour guider l'analyse et la réflexion"
+        "Un plan de travail",
+        "Un plan de presentation",
+        "Un plan de révision",
+        "Un plan d'analyse"
       ],
       "reponse": "D",
-      "explication": "La problématique guide l'analyse et la réflexion sur le passage littéraire"
+      "explication": "Le plan de l'analyse est un plan qui organise les idées et les étapes de l'analyse"
     },
     {
-      "question": "Comment les auteurs utilisent-ils le ton et le registre dans leurs textes ?",
+      "question": "Quel est le rôle de l'extrait dans l'analyse ?",
       "type": "qcm",
       "choix": [
-        "A) Pour créer des effets de manières",
-        "B) Pour exprimer des émotions",
-        "C) Pour convaincre le lecteur",
-        "D) Pour décrire des scènes"
-      ],
-      "reponse": "B",
-      "explication": "Le ton et le registre permettent aux auteurs d'exprimer des émotions et de créer une atmosphère"
-    },
-    {
-      "question": "Quel est le but de l'annonce du plan dans une analyse littéraire ?",
-      "type": "qcm",
-      "choix": [
-        "A) Pour résumer l'œuvre",
-        "B) Pour présenter l'auteur",
-        "C) Pour organiser la réflexion et la présentation",
-        "D) Pour critiquer l'œuvre"
-      ],
-      "reponse": "C",
-      "explication": "L'annonce du plan permet d'organiser la réflexion et la présentation de l'analyse"
-    },
-    {
-      "question": "Comment les mouvements littéraires influencent-ils les auteurs ?",
-      "type": "qcm",
-      "choix": [
-        "A) En les limitant à des genres spécifiques",
-        "B) En leur donnant des idées pour écrire",
-        "C) En les inspirant à créer de nouvelles formes d'expression",
-        "D) En les obligeant à suivre des règles"
-      ],
-      "reponse": "C",
-      "explication": "Les mouvements littéraires inspirent les auteurs à créer de nouvelles formes d'expression"
-    },
-    {
-      "question": "Quel est le rôle de la littérature dans la société contemporaine ?",
-      "type": "qcm",
-      "choix": [
-        "A) Pour divertir le public",
-        "B) Pour éduquer les lecteurs",
-        "C) Pour refléter la réalité et critiquer la société",
-        "D) Pour promouvoir des idées politiques"
-      ],
-      "reponse": "C",
-      "explication": "La littérature reflète la réalité et critique la société"
-    },
-    {
-      "question": "Comment les auteurs utilisent-ils les métaphores et les symboles dans leurs textes ?",
-      "type": "qcm",
-      "choix": [
-        "A) Pour créer des images visuelles",
-        "B) Pour exprimer des idées abstraites",
-        "C) Pour créer des personnages",
-        "D) Pour écrire des dialogues"
-      ],
-      "reponse": "B",
-      "explication": "Les métaphores et les symboles permettent aux auteurs d'exprimer des idées abstraites"
-    },
-    {
-      "question": "Quel est le rôle de l'imagination dans la littérature ?",
-      "type": "qcm",
-      "choix": [
-        "A) Pour créer des mondes fictifs",
-        "B) Pour décrire des événements réels",
-        "C) Pour exprimer des émotions",
-        "D) Pour éduquer les lecteurs"
-      ],
-      "reponse": "A",
-      "explication": "L'imagination permet aux auteurs de créer des mondes fictifs"
-    },
-    {
-      "question": "Comment les auteurs utilisent-ils la ironie dans leurs textes ?",
-      "type": "qcm",
-      "choix": [
-        "A) Pour créer des effets comiques",
-        "B) Pour critiquer la société",
-        "C) Pour exprimer des idées contradictoires",
-        "D) Pour créer des personnages complexes"
-      ],
-      "reponse": "B",
-      "explication": "L'ironie permet aux auteurs de critiquer la société"
-    },
-    {
-      "question": "Quel est le rôle de la structure narrative dans la littérature ?",
-      "type": "qcm",
-      "choix": [
-        "A) Pour créer des suspense",
-        "B) Pour présenter des personnages",
-        "C) Pour organiser la narration",
-        "D) Pour créer des thèmes"
-      ],
-      "reponse": "C",
-      "explication": "La structure narrative permet d'organiser la narration"
-    },
-    {
-      "question": "Comment les auteurs utilisent-ils les descriptions dans leurs textes ?",
-      "type": "qcm",
-      "choix": [
-        "A) Pour créer des images visuelles",
-        "B) Pour exprimer des émotions",
-        "C) Pour présenter des personnages",
-        "D) Pour écrire des dialogues"
-      ],
-      "reponse": "A",
-      "explication": "Les descriptions permettent aux auteurs de créer des images visuelles"
-    },
-    {
-      "question": "Quel est le rôle de la littérature dans la formation de l'identité personnelle ?",
-      "type": "qcm",
-      "choix": [
-        "A) Pour influencer les opinions politiques",
-        "B) Pour former des idées sur la société",
-        "C) Pour créer des modèles de comportement",
-        "D) Pour exprimer des émotions et des pensées"
+        "De présenter l'auteur",
+        "De présenter l'œuvre",
+        "De présenter le thème",
+        "De soutenir l'analyse"
       ],
       "reponse": "D",
-      "explication": "La littérature permet d'exprimer des émotions et des pensées"
+      "explication": "L'extrait est utilisé pour soutenir l'analyse et illustrer les idées"
     },
     {
-      "question": "Comment les auteurs utilisent-ils les personnages pour explorer des thèmes ?",
+      "question": "Qu'est-ce que la critique littéraire ?",
       "type": "qcm",
       "choix": [
-        "A) Pour présenter des idées abstraites",
-        "B) Pour créer des conflits",
-        "C) Pour exprimer des émotions",
-        "D) Pour explorer des thèmes complexes"
+        "Un jugement sur l'auteur",
+        "Un jugement sur l'œuvre",
+        "Un jugement sur le style",
+        "Un jugement sur la société"
       ],
-      "reponse": "D",
-      "explication": "Les personnages permettent aux auteurs d'explorer des thèmes complexes"
+      "reponse": "B",
+      "explication": "La critique littéraire est un jugement sur l'œuvre et son contenu"
     },
     {
-      "question": "Quel est le rôle de la littérature dans la création de la culture ?",
+      "question": "Quel est le but de la révision ?",
       "type": "qcm",
       "choix": [
-        "A) Pour refléter la réalité",
-        "B) Pour influencer les opinions politiques",
-        "C) Pour créer des modèles de comportement",
-        "D) Pour exprimer des valeurs et des croyances"
+        "De corriger les fautes",
+        "De améliorer le style",
+        "De clarifier les idées",
+        "De tout réviser"
       ],
       "reponse": "D",
-      "explication": "La littérature permet d'exprimer des valeurs et des croyances"
+      "explication": "La révision vise à améliorer et à clarifier l'ensemble du texte"
     }
   ],
-  "exercices": []
+  "exercices": [
+    {
+      "enonce": "Analysez l'extrait suivant : 'La littérature est un art de la langue...' ",
+      "corrige": "La littérature est un art qui utilise la langue pour exprimer des idées et des émotions"
+    },
+    {
+      "enonce": "Résumez le plan de l'analyse",
+      "corrige": "Le plan de l'analyse consiste à présenter l'auteur, puis à analyser l'extrait"
+    },
+    {
+      "enonce": "Quelle est la problématique de l'étude ?",
+      "corrige": "La problématique de l'étude est de comprendre comment l'auteur utilise le genre pour dénoncer une injustice"
+    },
+    {
+      "enonce": "Qu'est-ce que le 'Récap' Express ?",
+      "corrige": "Le 'Récap' Express est un outil utilisé pour les transitions dans les exposés"
+    },
+    {
+      "enonce": "Quel est le rôle de l'auteur dans la société ?",
+      "corrige": "L'auteur partage ses idées et sa vision du monde à travers ses écrits"
+    }
+  ]
 }
