@@ -183,6 +183,14 @@ input[type=color]::-webkit-color-swatch{border:none;border-radius:6px}
 .sync-badge{display:none;align-items:center;gap:8px;background:var(--accent-soft);border:1px solid rgba(124,106,255,.25);border-radius:20px;padding:7px 14px;font-size:10px;color:var(--accent);letter-spacing:.1em}
 .sync-dot{width:6px;height:6px;border-radius:50%;background:var(--accent);animation:blink 1s ease infinite}
 
+/* ══ CORBEILLE ══ */
+.trash-card{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:16px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.trash-card-title{font-family:'Syne',sans-serif;font-size:13px;font-weight:700;margin-bottom:3px}
+.trash-card-meta{font-size:10px;color:var(--muted)}
+.trash-actions{display:flex;gap:6px;flex-shrink:0}
+.trash-empty{text-align:center;padding:40px 20px;color:var(--muted);font-size:12px;line-height:2}
+.trash-empty-icon{font-size:32px;margin-bottom:12px;opacity:.4}
+
 /* ══ GROUPES MATIÈRES ══ */
 .matiere-group{margin-bottom:36px}
 .matiere-header{display:flex;align-items:center;gap:10px;margin-bottom:14px;cursor:pointer;user-select:none}
@@ -289,6 +297,8 @@ textarea#json-input:focus{border-color:rgba(124,106,255,.4)}
     <button class="side-btn" onclick="openPanel('stats')"><span>📊</span><span class="side-btn-label">Statistiques</span></button>
     <button class="side-btn" onclick="openPanel('reviews')"><span>⭐</span><span class="side-btn-label">Mes Avis</span></button>
     <div class="side-sep"></div>
+    <button class="side-btn" onclick="openPanel('trash')"><span>🗑️</span><span class="side-btn-label">Corbeille</span></button>
+    <div class="side-sep"></div>
     <button class="side-btn" onclick="openPanel('theme')"><span>🎨</span><span class="side-btn-label">Apparence</span></button>
     <div class="gsw" onclick="openPanel('stats')">
       <div class="gsw-label">Score</div>
@@ -343,6 +353,22 @@ textarea#json-input:focus{border-color:rgba(124,106,255,.4)}
     <div class="review-empty" id="reviews-empty">
       <div class="review-empty-icon">📝</div>
       Aucun avis pour l'instant.
+    </div>
+  </div>
+
+  <!-- Trash panel -->
+  <div id="trash-panel" class="side-panel">
+    <div class="panel-hdr">
+      <div><div class="panel-lbl">Supprimés</div><div class="panel-title">Corbeille <span id="trash-count" style="font-size:13px;color:var(--muted)"></span></div></div>
+      <div class="panel-hdr-r">
+        <button class="btn-warn" onclick="emptyTrash()">Vider</button>
+        <button class="panel-close" onclick="closePanel()">×</button>
+      </div>
+    </div>
+    <div class="p-list" id="trash-list" style="padding-top:16px"></div>
+    <div class="trash-empty" id="trash-empty">
+      <div class="trash-empty-icon">🗑️</div>
+      La corbeille est vide.
     </div>
   </div>
 
@@ -468,6 +494,7 @@ const BG_PRESETS = [
 // ── STATE ──────────────────────────────────────────
 let S = {
   library: [],
+  trash: [],
   theme: { ai:0, bg:'#050508', a1:'#7c6aff', a2:'#ff6a9e' },
   reviews: []
 };
@@ -482,7 +509,9 @@ function load() {
     const raw = localStorage.getItem(STORE_KEY);
     if (raw) S = Object.assign({library:[],theme:{ai:0,bg:'#050508',a1:'#7c6aff',a2:'#ff6a9e'},reviews:[]}, JSON.parse(raw));
     if (!S.library) S.library = [];
+    if (!S.trash)   S.trash   = [];
     if (!S.reviews) S.reviews = [];
+    if (!S.trash)   S.trash   = [];
     // migration clés précédentes
     if (!S.library.length) {
       for (const k of ['qe_v5','quiz_engine_v4','quiz_engine_v3','quiz_engine_lib']) {
@@ -561,17 +590,18 @@ function renderGlobalScore() {
 // ── PANELS ─────────────────────────────────────────
 function openPanel(name) {
   if(activePanel===name){closePanel();return;}
-  ['stats','reviews','theme'].forEach(n=>document.getElementById(n+'-panel').classList.remove('open'));
+  ['stats','reviews','theme','trash'].forEach(n=>document.getElementById(n+'-panel').classList.remove('open'));
   activePanel=name;
-  const W={stats:360,reviews:360,theme:310};
+  const W={stats:360,reviews:360,theme:310,trash:320};
   document.getElementById('main').style.marginLeft=(72+W[name])+'px';
   document.getElementById(name+'-panel').classList.add('open');
   if(name==='stats') renderStatsPanel();
   if(name==='reviews') renderReviewsList();
+  if(name==='trash') renderTrash();
   if(name==='theme') buildThemeGrids();
 }
 function closePanel() {
-  ['stats','reviews','theme'].forEach(n=>document.getElementById(n+'-panel').classList.remove('open'));
+  ['stats','reviews','theme','trash'].forEach(n=>document.getElementById(n+'-panel').classList.remove('open'));
   document.getElementById('main').style.marginLeft='72px';
   activePanel=null;
 }
@@ -721,13 +751,75 @@ function upsertQuiz(data) {
 }
 
 function deleteQuiz(index) {
-  if (confirm("Supprimer ce quiz définitivement ?")) {
+  if (confirm("Mettre ce quiz à la corbeille ?")) {
+    const quiz = S.library[index];
+    // Déplace en corbeille au lieu de supprimer
+    if (!S.trash) S.trash = [];
+    S.trash.push({ ...quiz, _deletedAt: new Date().toLocaleDateString('fr-FR') });
     S.library.splice(index, 1);
-    save();
-    renderLibrary();
-    renderGlobalScore();
+    save(); renderLibrary(); renderGlobalScore();
     if (activePanel === 'stats') renderStatsPanel();
-    toast("Quiz supprimé");
+    toast("Quiz mis à la corbeille — tu peux le restaurer depuis la corbeille");
+  }
+}
+
+function restoreQuiz(trashIndex) {
+  if (!S.trash) return;
+  const quiz = S.trash[trashIndex];
+  delete quiz._deletedAt;
+  S.library.unshift(quiz);
+  S.trash.splice(trashIndex, 1);
+  save(); renderLibrary(); renderGlobalScore(); renderTrash();
+  toast("Quiz restauré !");
+}
+
+function deleteForever(trashIndex) {
+  if (!S.trash) return;
+  if (confirm("Supprimer définitivement ?")) {
+    S.trash.splice(trashIndex, 1);
+    save(); renderTrash();
+    toast("Supprimé définitivement");
+  }
+}
+
+function renderTrash() {
+  const list = document.getElementById('trash-list');
+  const empty = document.getElementById('trash-empty');
+  if (!list) return;
+  if (!S.trash || !S.trash.length) {
+    list.innerHTML = '';
+    if (empty) empty.style.display = 'block';
+    return;
+  }
+  if (empty) empty.style.display = 'none';
+  list.innerHTML = S.trash.map((quiz, i) => {
+    return '<div class="sp-item">'
+      + '<div class="sp-item-title">' + esc(quiz.titre) + '</div>'
+      + '<div style="font-size:10px;color:var(--muted);margin-bottom:8px">Supprimé le ' + quiz._deletedAt + '</div>'
+      + '<div style="display:flex;gap:6px">'
+      + '<button class="btn btn-sm btn-ghost" onclick="restoreQuiz(' + i + ')">↺ Restaurer</button>'
+      + '<button class="btn btn-sm btn-danger" onclick="deleteForever(' + i + ')">Supprimer</button>'
+      + '</div></div>';
+  }).join('');
+}
+
+function changeMatiere(index) {
+  const quiz = S.library[index];
+  if (!quiz) return;
+  const val = prompt('Nouvelle matière :', quiz.matiere || '');
+  if (val === null) return;
+  quiz.matiere = val.trim();
+  save(); renderLibrary();
+  toast('Matière mise à jour');
+}
+
+// Vider la corbeille entière
+function emptyTrash() {
+  if (!S.trash || !S.trash.length) return;
+  if (confirm('Vider définitivement la corbeille ?')) {
+    S.trash = [];
+    save(); renderTrash();
+    toast('Corbeille vidée');
   }
 }
 
@@ -808,7 +900,10 @@ function renderLibrary() {
         <div class="card-title">${esc(quiz.titre)}</div>
         <div class="card-footer">
           ${badge}
-          <button class="btn btn-sm btn-danger" onclick="event.stopPropagation(); deleteQuiz(${i})">Supprimer</button>
+          <div style="display:flex;gap:5px">
+            <button class="btn btn-sm btn-ghost" title="Changer la matière" onclick="event.stopPropagation();changeMatiere(${i})">✏️</button>
+            <button class="btn btn-sm btn-danger" onclick="event.stopPropagation();deleteQuiz(${i})">🗑</button>
+          </div>
         </div>
       </div>`;
     }).join('');
@@ -824,6 +919,10 @@ function renderLibrary() {
     </div>`;
   }).join('');
 }
+
+
+
+
 
 // ── PLAYER ─────────────────────────────────────────
 function startQuiz(index) {
