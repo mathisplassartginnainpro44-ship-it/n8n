@@ -844,14 +844,22 @@ function enterApp() {
 // ═══════════════════════════════════════════════════
 async function syncGithub(silent=false) {
   const badge = document.getElementById('sync-badge');
-  badge.style.display = 'inline-flex';
+  if (badge) badge.style.display = 'inline-flex';
   try {
-    const res  = await fetch(`https://raw.githubusercontent.com/${GITHUB_USER}/${GITHUB_REPO}/main/${GITHUB_FILE}?t=${Date.now()}`);
-    if (!res.ok) throw new Error();
+    const res = await fetch(`https://raw.githubusercontent.com/${GITHUB_USER}/${GITHUB_REPO}/main/${GITHUB_FILE}?t=${Date.now()}`);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const data = await res.json();
-    if (data?.titre && data?.questions) { upsertQuiz(data); save(); renderLibrary(); renderGlobalScore(); if (!silent) toast('✅ Quiz synchronisé !'); }
-  } catch { if (!silent) toast('⚠️ Aucun nouveau quiz disponible'); }
-  badge.style.display = 'none';
+    if (data?.titre && data?.questions) {
+      upsertQuiz(data); save(); renderLibrary(); renderGlobalScore();
+      if (!silent) toast('✅ Quiz synchronisé !');
+    } else {
+      if (!silent) toast('⚠️ Format de quiz invalide');
+    }
+  } catch(e) {
+    if (!silent) toast('⚠️ Aucun nouveau quiz disponible');
+    console.warn('[Sync]', e.message);
+  }
+  if (badge) badge.style.display = 'none';
 }
 
 // ═══════════════════════════════════════════════════
@@ -867,9 +875,12 @@ function upsertQuiz(data) {
   } else state.library.unshift(data);
 }
 
-// FIX SUPPRESSION : via data-attribute DOM, zéro échappement de string
-function deleteQuiz(btn) {
-  const titre = btn.closest('[data-quiz-titre]').dataset.quizTitre;
+// Stockage temporaire titre → index pour la suppression
+const _deleteMap = {};
+
+function deleteQuiz(idx) {
+  const titre = _deleteMap[idx];
+  if (!titre) return;
   showConfirm('🗑️','Supprimer ce module',`"${titre}" sera définitivement supprimé.`,'Supprimer', () => {
     state.library = state.library.filter(q => q.titre !== titre);
     save(); renderLibrary(); renderGlobalScore();
@@ -884,7 +895,10 @@ function renderLibrary() {
     grid.innerHTML = `<div class="empty-state"><div class="empty-icon">📭</div><h3>Bibliothèque vide</h3><p style="margin-bottom:20px">Clique sur "Sync" ou importe un fichier JSON</p><button class="btn btn-primary" onclick="openModal()">Importer</button></div>`;
     return;
   }
-  grid.innerHTML = state.library.map(quiz => {
+  // Vide la map avant de la reconstruire
+  Object.keys(_deleteMap).forEach(k => delete _deleteMap[k]);
+  grid.innerHTML = state.library.map((quiz, idx) => {
+    _deleteMap[idx] = quiz.titre;
     const sc = quiz._score;
     const badge = sc
       ? `<span class="card-badge badge-done">${sc.correct}/${sc.total} · ${Math.round(sc.pct)}%</span>`
@@ -894,7 +908,7 @@ function renderLibrary() {
       <div class="card-title">${quiz.titre}</div>
       <div class="card-footer">
         ${badge}
-        <button class="btn btn-sm btn-danger" onclick="event.stopPropagation();deleteQuiz(this)">Supprimer</button>
+        <button class="btn btn-sm btn-danger" onclick="event.stopPropagation();deleteQuiz(${idx})">Supprimer</button>
       </div>
     </div>`;
   }).join('');
