@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Quiz Engine</title>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <style>
 :root{
   --bg:#050508;--surface:#0d0d14;--surface-2:#13131c;
@@ -667,16 +668,30 @@ document.addEventListener('DOMContentLoaded',()=>{
 });
 
 function submitReview() {
-  const text=document.getElementById('review-text').value.trim();
-  if(!reviewStars){toast('⭐ Choisis une note !');return;}
-  if(!text){toast('✏️ Écris quelque chose !');return;}
-  S.reviews.unshift({id:Date.now(),stars:reviewStars,text,
-    date:new Date().toLocaleDateString('fr-FR',{day:'numeric',month:'short',year:'numeric'})});
+  const text = document.getElementById('review-text').value.trim();
+  if (!reviewStars) { toast('⭐ Choisis une note !'); return; }
+  if (!text)        { toast('✏️ Écris quelque chose !'); return; }
+
+  const date = new Date().toLocaleDateString('fr-FR', {day:'numeric', month:'short', year:'numeric'});
+  const stars = '⭐'.repeat(reviewStars);
+
+  // Sauvegarde local
+  S.reviews.unshift({ id: Date.now(), stars: reviewStars, text, date });
   save();
-  document.getElementById('review-text').value='';
-  reviewStars=0;
-  document.querySelectorAll('.star').forEach(s=>s.classList.remove('on'));
-  renderReviewsList(); toast('✅ Avis enregistré !');
+  document.getElementById('review-text').value = '';
+  reviewStars = 0;
+  document.querySelectorAll('.star').forEach(s => s.classList.remove('on'));
+  renderReviewsList();
+  toast('✅ Avis enregistré !');
+
+  // Envoi par mail via EmailJS
+  emailjs.init('U9xMp02ljxwUbwkpL');
+  emailjs.send('service_1l5uir7', 'template_w31jlg1', {
+    name:    'Quiz Engine',
+    stars:   stars + ' (' + reviewStars + '/5)',
+    date:    date,
+    message: text,
+  }).catch(() => {}); // silencieux si ça échoue
 }
 
 function deleteReview(index) {
@@ -732,8 +747,13 @@ async function syncGithub(silent) {
     if(!res.ok) throw new Error();
     const data=await res.json();
     if(data&&data.titre&&data.questions){
-      upsertQuiz(data); save(); renderLibrary(); renderGlobalScore();
-      if(!silent) toast('✅ Quiz synchronisé !');
+      const added = upsertQuiz(data);
+      if (added === false) {
+        if(!silent) toast('⚠️ Ce quiz est dans la corbeille — restaure-le pour le réactiver');
+      } else {
+        save(); renderLibrary(); renderGlobalScore();
+        if(!silent) toast('✅ Quiz synchronisé !');
+      }
     }
   } catch(e){ if(!silent) toast('⚠️ Aucun quiz disponible'); }
   if(badge) badge.style.display='none';
@@ -741,13 +761,18 @@ async function syncGithub(silent) {
 
 // ── LIBRARY ────────────────────────────────────────
 function upsertQuiz(data) {
-  const idx=S.library.findIndex(q=>q.titre===data.titre);
-  if(idx>=0){
-    const sc=S.library[idx]._score, er=S.library[idx]._errors;
-    S.library[idx]=data;
-    if(sc) S.library[idx]._score=sc;
-    if(er) S.library[idx]._errors=er;
-  } else S.library.unshift(data);
+  // Si le quiz est en corbeille (même titre), on ne le réimporte pas
+  if (S.trash && S.trash.some(q => q.titre === data.titre)) return false;
+  const idx = S.library.findIndex(q => q.titre === data.titre);
+  if (idx >= 0) {
+    const sc = S.library[idx]._score, er = S.library[idx]._errors;
+    S.library[idx] = data;
+    if (sc) S.library[idx]._score = sc;
+    if (er) S.library[idx]._errors = er;
+  } else {
+    S.library.unshift(data);
+  }
+  return true;
 }
 
 function deleteQuiz(index) {
