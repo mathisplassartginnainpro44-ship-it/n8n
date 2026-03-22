@@ -734,8 +734,8 @@ function deleteQuiz(index) {
 // État ouvert/fermé des groupes matières
 const _groupOpen = {};
 
-function toggleGroup(matiere) {
-  _groupOpen[matiere] = !(_groupOpen[matiere] !== false);
+function toggleGroup(key) {
+  _groupOpen[key] = !(_groupOpen[key] !== false);
   renderLibrary();
 }
 
@@ -746,16 +746,58 @@ function renderLibrary() {
     return;
   }
 
-  // Grouper par matière
+  // Normalisation + aliases : variantes → clé canonique
   const groups = {};
+  const groupLabel = {};
+
+  const ALIASES = {
+    // Maths
+    'maths': 'mathematiques', 'math': 'mathematiques', 'mathematique': 'mathematiques',
+    // Physique
+    'physique': 'physique-chimie', 'chimie': 'physique-chimie', 'physique chimie': 'physique-chimie',
+    'physique/chimie': 'physique-chimie',
+    // Sciences de l'ingénieur
+    'si': 'sciences de l ingenieur', 'science de l ingenieur': 'sciences de l ingenieur',
+    'sciences de lingenieur': 'sciences de l ingenieur', 'sci': 'sciences de l ingenieur',
+    'sciences ingenieur': 'sciences de l ingenieur',
+    // Anglais
+    'anglais': 'anglais', 'english': 'anglais', 'lv1': 'anglais', 'lv2 anglais': 'anglais',
+    // Allemand
+    'allemand': 'allemand', 'deutsch': 'allemand', 'lv2 allemand': 'allemand',
+    // Histoire-Géo
+    'histoire': 'histoire-geographie', 'geo': 'histoire-geographie',
+    'geographie': 'histoire-geographie', 'histoire geo': 'histoire-geographie',
+    'histoire geographie': 'histoire-geographie', 'hg': 'histoire-geographie',
+    'histoire-geo': 'histoire-geographie',
+  };
+
+  const CANON_LABELS = {
+    'mathematiques': 'Mathématiques',
+    'physique-chimie': 'Physique-Chimie',
+    'sciences de l ingenieur': "Sciences de l'Ingénieur",
+    'anglais': 'Anglais',
+    'allemand': 'Allemand',
+    'histoire-geographie': 'Histoire-Géographie',
+  };
+
+  function normKey(s) {
+    const n = (s || '').trim().toLowerCase()
+      .normalize('NFD').replace(/[̀-ͯ]/g, '')
+      .replace(/s+/g, ' ');
+    return ALIASES[n] || n;
+  }
+
   S.library.forEach((quiz, i) => {
-    const m = quiz.matiere || 'Sans matière';
-    if (!groups[m]) groups[m] = [];
-    groups[m].push({ quiz, i });
+    const raw = (quiz.matiere || 'Sans matière').trim();
+    const key = normKey(raw);
+    const label = CANON_LABELS[key] || raw;
+    if (!groups[key]) { groups[key] = []; groupLabel[key] = label; }
+    groups[key].push({ quiz, i });
   });
 
-  grid.innerHTML = Object.entries(groups).map(([matiere, items]) => {
-    const isOpen = _groupOpen[matiere] !== false; // ouvert par défaut
+  grid.innerHTML = Object.entries(groups).map(([key, items]) => {
+    const matiere = groupLabel[key];
+    const isOpen = _groupOpen[key] !== false; // ouvert par défaut
     const cards = items.map(({ quiz, i }) => {
       const sc = quiz._score;
       const badge = sc
@@ -771,9 +813,8 @@ function renderLibrary() {
       </div>`;
     }).join('');
 
-    const safeM = matiere.replace(/'/g, "\\'");
     return `<div class="matiere-group">
-      <div class="matiere-header" onclick="toggleGroup('${safeM}')">
+      <div class="matiere-header" onclick="toggleGroup('${key}')">
         <span class="matiere-chevron ${isOpen ? 'open' : ''}">▶</span>
         <span style="font-size:18px">📁</span>
         <span class="matiere-label">${esc(matiere)}</span>
