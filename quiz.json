@@ -1,248 +1,244 @@
 {
-  "titre": "Les écoles amérindiennes",
-  "matiere": "histoire",
+  "titre": "Les internats américains pour les Amérindiens",
+  "matiere": "anglais",
   "questions": [
     {
-      "question": "Quel est l'objectif principal de ces écoles ?",
+      "question": "Quel est l'objectif principal de ces internats?",
       "type": "qcm",
       "choix": [
-        "Intégrer les Amérindiens à la société américaine",
-        "Préserver la culture amérindienne",
-        "Enseigner l'histoire européenne",
-        "Développer l'agriculture"
+        "A) Séparer les Amérindiens de la société américaine",
+        "B) Unir et assimiler les Amérindiens à la société américaine",
+        "C) Apprendre aux Amérindiens leur propre culture",
+        "D) Enseigner aux Amérindiens une nouvelle langue"
       ],
-      "reponse": "A",
-      "explication": "L'objectif principal de ces écoles est d'unir et d'assimiler les Amérindiens à la société américaine"
+      "reponse": "B",
+      "explication": "L'objectif principal de ces internats est de faire disparaître la culture amérindienne et de les intégrer à la société américaine."
     },
     {
-      "question": "Quelles sont les mesures imposées aux enfants dans ces écoles ?",
+      "question": "Quelles étaient les conséquences pour les enfants qui refusaient de parler anglais?",
       "type": "qcm",
       "choix": [
-        "Porter des cheveux longs",
-        "Parler leur langue maternelle",
-        "Porter des vêtements traditionnels",
-        "Avoir les cheveux courts et porter des uniformes"
+        "A) Ils étaient récompensés",
+        "B) Ils étaient ignorés",
+        "C) Ils étaient punis, fouettés et affamés",
+        "D) Ils étaient renvoyés chez eux"
+      ],
+      "reponse": "C",
+      "explication": "Les enfants qui refusaient de parler anglais étaient punis sévèrement, ce qui a conduit à la mort de 500 enfants."
+    },
+    {
+      "question": "Quelles étaient les tâches ménagères assignées aux filles dans ces internats?",
+      "type": "qcm",
+      "choix": [
+        "A) Le nettoyage, la cuisine et la médecine",
+        "B) La lessive, la cuisine et la couture",
+        "C) Le jardinage, la peinture et la sculpture",
+        "D) La musique, la danse et le théâtre"
+      ],
+      "reponse": "B",
+      "explication": "Les filles étaient assignées à des tâches ménagères telles que la lessive, la cuisine et la couture."
+    },
+    {
+      "question": "Quand les États-Unis ont-ils commencé à donner aux tribus le contrôle sur les internats?",
+      "type": "qcm",
+      "choix": [
+        "A) 1950",
+        "B) 1960",
+        "C) 1975",
+        "D) 1980"
+      ],
+      "reponse": "C",
+      "explication": "Les États-Unis ont commencé à donner aux tribus le contrôle sur les internats en 1975."
+    },
+    {
+      "question": "Quel était l'impact de la politique d'assimilation sur les Amérindiens?",
+      "type": "qcm",
+      "choix": [
+        "A) Elle a préservé leur culture",
+        "B) Elle a amélioré leur bien-être",
+        "C) Elle a détruit leur identité",
+        "D) Elle les a rendus plus riches"
+      ],
+      "reponse": "C",
+      "explication": "La politique d'assimilation a eu un impact dévastateur sur les Amérindiens, menaçant leur identité culturelle et leur bien-être."
+    },
+    {
+      "question": "Qu'est-ce que le lavage de cerveau?",
+      "type": "qcm",
+      "choix": [
+        "A) Un processus d'apprentissage",
+        "B) Un processus de persuasion",
+        "C) Un processus de manipulation",
+        "D) Un processus de coercition"
+      ],
+      "reponse": "C",
+      "explication": "Le lavage de cerveau est un processus de manipulation psychologique qui vise à changer les croyances et les comportements d'une personne."
+    },
+    {
+      "question": "Quel est le but de l'endoctrinement?",
+      "type": "qcm",
+      "choix": [
+        "A) D'éduquer",
+        "B) D'informé",
+        "C) De manipuler",
+        "D) De contrôler"
       ],
       "reponse": "D",
-      "explication": "Les enfants sont forcés d'avoir les cheveux courts, de porter des uniformes, de changer leurs noms, de parler anglais et de changer de religion"
+      "explication": "L'endoctrinement est un processus de manipulation qui vise à contrôler les pensées et les comportements d'une personne."
     },
     {
-      "question": "Quelles sont les tâches assignées aux filles et aux garçons dans ces écoles ?",
+      "question": "Qu'est-ce que la menace?",
       "type": "qcm",
       "choix": [
-        "Les filles font la cuisine et les garçons font la lessive",
-        "Les filles font la lessive et les garçons font la cuisine",
-        "Les filles font la lessive, la cuisine et la couture, les garçons font l'agriculture, la métallurgie et la menuiserie",
-        "Les filles font l'agriculture et les garçons font la couture"
+        "A) Une promesse",
+        "B) Une menace",
+        "C) Un avertissement",
+        "D) Une punition"
+      ],
+      "reponse": "B",
+      "explication": "La menace est une déclaration qui vise à intimider ou à contrôler une personne."
+    },
+    {
+      "question": "Qu'est-ce que l'effaceur?",
+      "type": "qcm",
+      "choix": [
+        "A) Un outil d'écriture",
+        "B) Un outil de dessin",
+        "C) Un outil d'effacement",
+        "D) Un outil de calcul"
       ],
       "reponse": "C",
-      "explication": "Les filles ont à faire la lessive, la cuisine et la couture, tandis que les garçons apprennent l'agriculture, la métallurgie et la menuiserie"
+      "explication": "L'effaceur est un outil utilisé pour effacer les marques ou les écritures."
     },
     {
-      "question": "Quelles sont les conséquences pour les enfants qui ne parlent pas anglais ?",
+      "question": "Qu'est-ce que la couture?",
       "type": "qcm",
       "choix": [
-        "Ils sont récompensés",
-        "Ils sont ignorés",
-        "Ils sont punis et fouettés",
-        "Ils sont renvoyés chez eux"
-      ],
-      "reponse": "C",
-      "explication": "Les enfants qui ne parlent pas anglais sont punis, fouettés et affamés, ce qui a entraîné la mort de 500 enfants"
-    },
-    {
-      "question": "Pourquoi les États-Unis ont-ils commencé à donner le contrôle des écoles aux tribus ?",
-      "type": "qcm",
-      "choix": [
-        "En 1975, pour améliorer la qualité de l'éducation",
-        "En 1975, pour donner plus de pouvoir aux tribus",
-        "En 1950, pour réduire les coûts",
-        "En 1960, pour augmenter la scolarisation"
-      ],
-      "reponse": "B",
-      "explication": "Les États-Unis ont commencé à donner le contrôle des écoles aux tribus en 1975, pour donner plus de pouvoir aux tribus"
-    },
-    {
-      "question": "Qu'est-ce que le terme 'brain wash' signifie ?",
-      "type": "qcm",
-      "choix": [
-        "Lavage de cerveau",
-        "Effacement de la mémoire",
-        "Endoctrinement",
-        "Punition corporelle"
-      ],
-      "reponse": "A",
-      "explication": "Le terme 'brain wash' signifie lavage de cerveau"
-    },
-    {
-      "question": "Qu'est-ce qu'un 'boarding school' ?",
-      "type": "qcm",
-      "choix": [
-        "Une école de jour",
-        "Un internat",
-        "Une école spécialisée",
-        "Un centre de loisirs"
-      ],
-      "reponse": "B",
-      "explication": "Un 'boarding school' est un internat"
-    },
-    {
-      "question": "Qu'est-ce que le verbe 'to erase' signifie ?",
-      "type": "qcm",
-      "choix": [
-        "Effacer",
-        "Écrire",
-        "Lire",
-        "Compter"
-      ],
-      "reponse": "A",
-      "explication": "Le verbe 'to erase' signifie effacer"
-    },
-    {
-      "question": "Qu'est-ce qu'un 'eraser' ?",
-      "type": "qcm",
-      "choix": [
-        "Un effaceur",
-        "Un crayon",
-        "Un papier",
-        "Un stylo"
-      ],
-      "reponse": "A",
-      "explication": "Un 'eraser' est un effaceur"
-    },
-    {
-      "question": "Qu'est-ce qu'une 'threat' ?",
-      "type": "qcm",
-      "choix": [
-        "Une menace",
-        "Une promesse",
-        "Une punition",
-        "Une récompense"
-      ],
-      "reponse": "A",
-      "explication": "Une 'threat' est une menace"
-    },
-    {
-      "question": "Qu'est-ce que le verbe 'to indoctrinate' signifie ?",
-      "type": "qcm",
-      "choix": [
-        "Endoctriner",
-        "Éduquer",
-        "Informer",
-        "Punir"
-      ],
-      "reponse": "A",
-      "explication": "Le verbe 'to indoctrinate' signifie endoctriner"
-    },
-    {
-      "question": "Qu'est-ce que le verbe 'to sew' signifie ?",
-      "type": "qcm",
-      "choix": [
-        "Coudre",
-        "Lire",
-        "Écrire",
-        "Compter"
-      ],
-      "reponse": "A",
-      "explication": "Le verbe 'to sew' signifie coudre"
-    },
-    {
-      "question": "Qu'est-ce que le mot 'whipped' signifie ?",
-      "type": "qcm",
-      "choix": [
-        "Fouetté",
-        "Punis",
-        "Récompensé",
-        "Ignoré"
-      ],
-      "reponse": "A",
-      "explication": "Le mot 'whipped' signifie fouetté"
-    },
-    {
-      "question": "Quel est le nombre d'enfants qui sont morts en raison des punitions ?",
-      "type": "qcm",
-      "choix": [
-        "100",
-        "500",
-        "1000",
-        "2000"
-      ],
-      "reponse": "B",
-      "explication": "500 enfants sont morts en raison des punitions"
-    },
-    {
-      "question": "Quelle est la date à laquelle les États-Unis ont commencé à donner le contrôle des écoles aux tribus ?",
-      "type": "qcm",
-      "choix": [
-        "1950",
-        "1960",
-        "1970",
-        "1975"
+        "A) Un sport",
+        "B) Un hobby",
+        "C) Un métier",
+        "D) Un travail ménager"
       ],
       "reponse": "D",
-      "explication": "Les États-Unis ont commencé à donner le contrôle des écoles aux tribus en 1975"
+      "explication": "La couture est un travail ménager qui consiste à coudre des vêtements ou des tissus."
     },
     {
-      "question": "Quel est l'impact de la perte de la culture amérindienne sur les enfants ?",
+      "question": "Qu'est-ce que le fouet?",
       "type": "qcm",
       "choix": [
-        "Les enfants sont plus intégrés à la société américaine",
-        "Les enfants perdent leur identité culturelle",
-        "Les enfants deviennent plus intelligents",
-        "Les enfants deviennent plus forts"
-      ],
-      "reponse": "B",
-      "explication": "La perte de la culture amérindienne a un impact négatif sur les enfants, qui perdent leur identité culturelle"
-    },
-    {
-      "question": "Qu'est-ce que les filles doivent faire pour remplacer leurs activités traditionnelles ?",
-      "type": "qcm",
-      "choix": [
-        "Elles doivent faire la lessive et la cuisine",
-        "Elles doivent faire la couture et la lessive",
-        "Elles doivent faire la cuisine et la couture",
-        "Elles doivent faire l'agriculture et la métallurgie"
-      ],
-      "reponse": "B",
-      "explication": "Les filles doivent faire la lessive, la cuisine et la couture pour remplacer leurs activités traditionnelles"
-    },
-    {
-      "question": "Qu'est-ce que les garçons doivent faire pour remplacer leurs activités traditionnelles ?",
-      "type": "qcm",
-      "choix": [
-        "Ils doivent faire l'agriculture et la métallurgie",
-        "Ils doivent faire la couture et la lessive",
-        "Ils doivent faire la cuisine et la couture",
-        "Ils doivent faire la lessive et la cuisine"
-      ],
-      "reponse": "A",
-      "explication": "Les garçons doivent faire l'agriculture, la métallurgie et la menuiserie pour remplacer leurs activités traditionnelles"
-    },
-    {
-      "question": "Qu'est-ce que les États-Unis ont fait pour améliorer la situation des écoles amérindiennes ?",
-      "type": "qcm",
-      "choix": [
-        "Ils ont augmenté le financement des écoles",
-        "Ils ont réduit le nombre d'écoles",
-        "Ils ont donné le contrôle des écoles aux tribus",
-        "Ils ont fermé les écoles"
+        "A) Un outil de travail",
+        "B) Un outil de sport",
+        "C) Un outil de punition",
+        "D) Un outil de musique"
       ],
       "reponse": "C",
-      "explication": "Les États-Unis ont donné le contrôle des écoles aux tribus pour améliorer la situation des écoles amérindiennes"
+      "explication": "Le fouet est un outil utilisé pour punir ou contrôler une personne."
+    },
+    {
+      "question": "Qu'est-ce que l'internat?",
+      "type": "qcm",
+      "choix": [
+        "A) Un établissement d'enseignement",
+        "B) Un établissement de soins",
+        "C) Un établissement de travail",
+        "D) Un établissement de détention"
+      ],
+      "reponse": "A",
+      "explication": "L'internat est un établissement d'enseignement où les élèves vivent et étudient."
+    },
+    {
+      "question": "Qu'est-ce que l'assimilation?",
+      "type": "qcm",
+      "choix": [
+        "A) Un processus d'apprentissage",
+        "B) Un processus de persuasion",
+        "C) Un processus de manipulation",
+        "D) Un processus d'intégration"
+      ],
+      "reponse": "D",
+      "explication": "L'assimilation est un processus d'intégration qui vise à faire disparaître les différences culturelles et à créer une identité commune."
+    },
+    {
+      "question": "Qu'est-ce que la culture amérindienne?",
+      "type": "qcm",
+      "choix": [
+        "A) Une culture européenne",
+        "B) Une culture africaine",
+        "C) Une culture asiatique",
+        "D) Une culture autochtone"
+      ],
+      "reponse": "D",
+      "explication": "La culture amérindienne est une culture autochtone qui est propre aux peuples amérindiens."
+    },
+    {
+      "question": "Qu'est-ce que la société américaine?",
+      "type": "qcm",
+      "choix": [
+        "A) Une société européenne",
+        "B) Une société africaine",
+        "C) Une société asiatique",
+        "D) Une société multiculturelle"
+      ],
+      "reponse": "D",
+      "explication": "La société américaine est une société multiculturelle qui est composée de personnes de différentes origines et cultures."
+    },
+    {
+      "question": "Qu'est-ce que l'histoire des Amérindiens?",
+      "type": "qcm",
+      "choix": [
+        "A) Une histoire de conquête",
+        "B) Une histoire de découverte",
+        "C) Une histoire de résistance",
+        "D) Une histoire de destruction"
+      ],
+      "reponse": "D",
+      "explication": "L'histoire des Amérindiens est une histoire de destruction qui a été marquée par la conquête, la colonisation et la marginalisation."
+    },
+    {
+      "question": "Qu'est-ce que la préservation de la culture?",
+      "type": "qcm",
+      "choix": [
+        "A) Un processus de destruction",
+        "B) Un processus de manipulation",
+        "C) Un processus de préservation",
+        "D) Un processus d'oubli"
+      ],
+      "reponse": "C",
+      "explication": "La préservation de la culture est un processus de préservation qui vise à protéger et à promouvoir la culture d'un peuple."
+    },
+    {
+      "question": "Qu'est-ce que l'importance de l'éducation?",
+      "type": "qcm",
+      "choix": [
+        "A) C'est un outil de contrôle",
+        "B) C'est un outil de manipulation",
+        "C) C'est un outil d'émancipation",
+        "D) C'est un outil de distraction"
+      ],
+      "reponse": "C",
+      "explication": "L'éducation est un outil d'émancipation qui vise à libérer les individus de l'ignorance et à leur donner les moyens de prendre des décisions éclairées."
+    },
+    {
+      "question": "Qu'est-ce que la responsabilité des éducateurs?",
+      "type": "qcm",
+      "choix": [
+        "A) De contrôler les élèves",
+        "B) De manipuler les élèves",
+        "C) De libérer les élèves",
+        "D) De responsabiliser les élèves"
+      ],
+      "reponse": "D",
+      "explication": "La responsabilité des éducateurs est de responsabiliser les élèves en leur donnant les moyens de prendre des décisions éclairées et de les préparer à une vie autonome."
     }
   ],
   "exercices": [
     {
-      "enonce": "Imaginez que vous êtes un élève amérindien dans une école de type 'boarding school'. Décrivez votre expérience.",
-      "corrige": "Je suis séparé de ma famille et de ma communauté, je suis forcé de porter des vêtements européens et de parler anglais. Je suis puni si je parle ma langue maternelle ou si je pratique mes traditions. Je suis traité comme un inférieur et je suis forcé de travailler dur pour apprendre des compétences européennes."
+      "enonce": "Écrivez un essai sur l'importance de la préservation de la culture amérindienne.",
+      "corrige": "La préservation de la culture amérindienne est essentielle pour préserver l'identité et la dignité des peuples amérindiens. Il est important de reconnaître et de respecter les différences culturelles et de promouvoir la compréhension et la tolérance entre les différentes cultures."
     },
     {
-      "enonce": "Quelles sont les conséquences de la perte de la culture amérindienne sur les enfants ?",
-      "corrige": "La perte de la culture amérindienne a un impact négatif sur les enfants, qui perdent leur identité culturelle et leur sentiment d'appartenance à leur communauté. Cela peut entraîner des problèmes de santé mentale, de délinquance et de pauvreté."
-    },
-    {
-      "enonce": "Imaginez que vous êtes un enseignant dans une école amérindienne. Comment pouvez-vous aider les élèves à préserver leur culture ?",
-      "corrige": "Je peux aider les élèves à préserver leur culture en leur enseignant leur langue maternelle, leur histoire et leurs traditions. Je peux également les encourager à pratiquer leurs rituels et leurs cérémonies, et à partager leurs expériences avec la classe."
+      "enonce": "Créez un projet de préservation de la culture amérindienne.",
+      "corrige": "Le projet pourrait consister à créer un musée ou un centre culturel pour promouvoir la culture amérindienne, à organiser des événements culturels pour célébrer les traditions amérindiennes, ou à créer un programme d'éducation pour enseigner la culture amérindienne aux élèves."
     }
   ]
 }
