@@ -639,22 +639,32 @@ function submitReview() {
   renderReviewsList(); toast('✅ Avis enregistré !');
 }
 
-function deleteReview(id) {
-  S.reviews=S.reviews.filter(r=>r.id!==id); save(); renderReviewsList();
+function deleteReview(index) {
+  S.reviews.splice(index, 1);
+  save();
+  renderReviewsList();
+  toast("Avis supprimé");
 }
 
 function renderReviewsList() {
-  const list=document.getElementById('reviews-list');
-  const empty=document.getElementById('reviews-empty');
-  if(!S.reviews.length){list.innerHTML='';empty.style.display='block';return;}
-  empty.style.display='none';
-  list.innerHTML=S.reviews.map(r=>
-    '<div class="review-card">'
-    +'<div class="review-card-top"><span class="review-stars">'+'⭐'.repeat(r.stars)+'</span><span class="review-date">'+r.date+'</span></div>'
-    +'<div class="review-body">'+esc(r.text).replace(/\n/g,'<br>')+'</div>'
-    +'<button class="review-delete" onclick="deleteReview('+r.id+')">🗑 Supprimer</button>'
-    +'</div>'
-  ).join('');
+  const list = document.getElementById('reviews-list');
+  const empty = document.getElementById('reviews-empty');
+  if (S.reviews.length === 0) {
+    list.innerHTML = "";
+    empty.style.display = "block";
+    return;
+  }
+  empty.style.display = "none";
+  list.innerHTML = S.reviews.map((r, i) => `
+    <div class="review-card">
+      <div class="review-card-top">
+        <div class="review-stars">${"⭐".repeat(r.stars)}</div>
+        <div class="review-date">${r.date}</div>
+      </div>
+      <div class="review-body">${r.text || "Pas de commentaire."}</div>
+      <button class="review-delete" onclick="deleteReview(${i})">Supprimer l'avis</button>
+    </div>
+  `).join('');
 }
 
 // ── WELCOME ────────────────────────────────────────
@@ -700,34 +710,36 @@ function upsertQuiz(data) {
   } else S.library.unshift(data);
 }
 
-// SUPPRESSION PAR INDEX — comme l'ancien code qui fonctionnait
 function deleteQuiz(index) {
-  if(!confirm('Supprimer ce module ?')) return;
-  S.library.splice(index,1);
-  save(); renderLibrary(); renderGlobalScore();
-  if(activePanel==='stats') renderStatsPanel();
-  toast('🗑️ Module supprimé');
+  if (confirm("Supprimer ce quiz définitivement ?")) {
+    S.library.splice(index, 1);
+    save();
+    renderLibrary();
+    renderGlobalScore();
+    if (activePanel === 'stats') renderStatsPanel();
+    toast("Quiz supprimé");
+  }
 }
 
 function renderLibrary() {
-  const grid=document.getElementById('quiz-grid');
-  if(!S.library.length){
-    grid.innerHTML='<div class="empty-state"><div class="empty-icon">📭</div><h3>Bibliothèque vide</h3><p style="margin-bottom:20px">Clique sur "Sync" ou importe un fichier JSON</p><button class="btn btn-primary" onclick="openImportModal()">Importer</button></div>';
+  const grid = document.getElementById('quiz-grid');
+  if (S.library.length === 0) {
+    grid.innerHTML = '<div class="empty-state"><div class="empty-icon">📭</div><h3>Bibliothèque vide</h3><p style="margin-bottom:20px">Clique sur "Sync" ou importe un fichier JSON</p><button class="btn btn-primary" onclick="openImportModal()">Importer</button></div>';
     return;
   }
-  // On génère le HTML et on l'injecte — les index correspondent à l'état actuel de S.library
-  grid.innerHTML=S.library.map((quiz,i)=>{
-    const sc=quiz._score;
-    const badge=sc
+  grid.innerHTML = S.library.map((quiz, i) => {
+    const sc = quiz._score;
+    const badge = sc
       ? '<span class="card-badge badge-done">'+sc.correct+'/'+sc.total+' · '+Math.round(sc.pct)+'%</span>'
       : '<span class="card-badge badge-new">Nouveau</span>';
-    return '<div class="quiz-card" onclick="startQuiz('+i+')">'
-      +'<div class="card-meta">'+(quiz.matiere||'Quiz')+' · '+quiz.questions.length+' questions</div>'
-      +'<div class="card-title">'+esc(quiz.titre)+'</div>'
-      +'<div class="card-footer">'
-      +badge
-      +'<button class="btn btn-sm btn-danger" onclick="event.stopPropagation();deleteQuiz('+i+')">Supprimer</button>'
-      +'</div></div>';
+    return `<div class="quiz-card" onclick="startQuiz(${i})">
+      <div class="card-meta">${quiz.matiere || 'Quiz'} · ${quiz.questions.length} questions</div>
+      <div class="card-title">${esc(quiz.titre)}</div>
+      <div class="card-footer">
+        ${badge}
+        <button class="btn btn-sm btn-danger" onclick="event.stopPropagation(); deleteQuiz(${i})">Supprimer</button>
+      </div>
+    </div>`;
   }).join('');
 }
 
