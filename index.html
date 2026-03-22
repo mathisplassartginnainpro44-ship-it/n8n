@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Quiz Engine IA</title>
+<title>Quiz Engine</title>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -21,132 +21,136 @@
   --muted: #50506a;
   --grad: linear-gradient(135deg, #7c6aff 0%, #ff6a9e 100%);
 }
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { background:var(--bg); color:var(--text); font-family:'DM Mono',monospace; min-height:100vh; overflow-x:hidden; }
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body { background: var(--bg); color: var(--text); font-family: 'DM Mono', monospace; min-height: 100vh; overflow-x: hidden; }
-
-/* ── Animations ── */
-@keyframes fadeUp    { from { opacity:0; transform:translateY(24px) } to { opacity:1; transform:translateY(0) } }
-@keyframes scaleIn   { from { opacity:0; transform:scale(0.92) } to { opacity:1; transform:scale(1) } }
+@keyframes fadeUp    { from{opacity:0;transform:translateY(24px)} to{opacity:1;transform:translateY(0)} }
+@keyframes scaleIn   { from{opacity:0;transform:scale(0.92)} to{opacity:1;transform:scale(1)} }
 @keyframes orbFloat  { 0%,100%{transform:translate(0,0)} 40%{transform:translate(30px,-20px)} 70%{transform:translate(-20px,30px)} }
 @keyframes gradShift { 0%,100%{background-position:0% 50%} 50%{background-position:100% 50%} }
 @keyframes blink     { 0%,100%{opacity:1} 50%{opacity:0.2} }
-@keyframes scoreCountUp { from { opacity:0; transform:scale(0.5) } to { opacity:1; transform:scale(1) } }
-@keyframes barFill   { from { width:0 } }
-@keyframes fadeIn    { from { opacity:0 } to { opacity:1 } }
-@keyframes slideUp   { from { opacity:0; transform:translateY(16px) } to { opacity:1; transform:translateY(0) } }
+@keyframes scoreIn   { from{opacity:0;transform:scale(0.5)} to{opacity:1;transform:scale(1)} }
+@keyframes slideUp   { from{opacity:0;transform:translateY(16px)} to{opacity:1;transform:translateY(0)} }
 @keyframes shake     { 0%,100%{transform:translateX(0)} 20%{transform:translateX(-6px)} 60%{transform:translateX(6px)} 80%{transform:translateX(-3px)} }
-@keyframes correct-pulse { 0%{box-shadow:0 0 0 0 rgba(45,255,158,0.4)} 100%{box-shadow:0 0 0 16px rgba(45,255,158,0)} }
+@keyframes cpulse    { 0%{box-shadow:0 0 0 0 rgba(45,255,158,0.4)} 100%{box-shadow:0 0 0 16px rgba(45,255,158,0)} }
+@keyframes panelIn   { from{opacity:0;transform:translateX(-12px)} to{opacity:1;transform:translateX(0)} }
 
-/* ══════════════════ WELCOME ══════════════════ */
+/* ══ WELCOME ══ */
 #welcome {
   position:fixed; inset:0; background:var(--bg);
   display:flex; flex-direction:column; align-items:center; justify-content:center;
-  z-index:1000; text-align:center; padding:24px;
-  transition:opacity 0.7s ease;
+  z-index:1000; text-align:center; padding:24px; transition:opacity 0.7s ease;
 }
-.orb {
-  position:absolute; border-radius:50%; filter:blur(90px);
-  animation:orbFloat ease-in-out infinite; pointer-events:none;
-}
+.orb { position:absolute; border-radius:50%; filter:blur(90px); animation:orbFloat ease-in-out infinite; pointer-events:none; }
 .orb-1 { width:520px; height:520px; background:rgba(124,106,255,0.12); top:-160px; right:-120px; animation-duration:10s; }
 .orb-2 { width:420px; height:420px; background:rgba(255,106,158,0.09); bottom:-120px; left:-120px; animation-duration:13s; animation-delay:-5s; }
 .grid-bg {
   position:absolute; inset:0;
-  background-image:linear-gradient(rgba(124,106,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(124,106,255,0.04) 1px, transparent 1px);
-  background-size:56px 56px;
-  mask-image:radial-gradient(ellipse 70% 70% at 50% 50%, black, transparent);
+  background-image:linear-gradient(rgba(124,106,255,0.04) 1px,transparent 1px),linear-gradient(90deg,rgba(124,106,255,0.04) 1px,transparent 1px);
+  background-size:56px 56px; mask-image:radial-gradient(ellipse 70% 70% at 50% 50%,black,transparent);
 }
 .welcome-inner { position:relative; z-index:2; animation:scaleIn 0.9s cubic-bezier(0.2,0,0,1) forwards; }
-.eyebrow {
-  font-size:10px; letter-spacing:0.45em; text-transform:uppercase;
-  color:var(--accent); margin-bottom:28px;
-  display:flex; align-items:center; justify-content:center; gap:14px;
-}
+.eyebrow { font-size:10px; letter-spacing:0.45em; text-transform:uppercase; color:var(--accent); margin-bottom:28px; display:flex; align-items:center; justify-content:center; gap:14px; }
 .eyebrow::before,.eyebrow::after { content:''; width:36px; height:1px; background:var(--accent); }
 .welcome-title {
-  font-family:'Syne',sans-serif; font-size:clamp(56px,13vw,140px);
-  font-weight:800; line-height:0.86; letter-spacing:-0.04em; margin-bottom:28px;
-  background:linear-gradient(135deg,#fff 0%,#cfc8ff 30%,#ff6a9e 70%,#ffb347 100%);
-  background-size:200% 200%; animation:gradShift 5s ease infinite;
+  font-family:'Syne',sans-serif; font-size:clamp(56px,13vw,140px); font-weight:800; line-height:0.86; letter-spacing:-0.04em; margin-bottom:28px;
+  background:linear-gradient(135deg,#fff 0%,#cfc8ff 30%,#ff6a9e 70%,#ffb347 100%); background-size:200% 200%; animation:gradShift 5s ease infinite;
   -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
 }
 .welcome-sub { color:var(--muted); font-size:13px; letter-spacing:0.12em; text-transform:uppercase; margin-bottom:44px; line-height:2; }
 .welcome-btn {
   padding:18px 52px; border-radius:8px; border:none;
-  background:linear-gradient(135deg,var(--accent),var(--pink));
-  background-size:200% 200%; animation:gradShift 4s ease infinite;
-  color:white; font-family:'Syne',sans-serif; font-size:14px; font-weight:700;
-  letter-spacing:0.1em; text-transform:uppercase; cursor:pointer;
+  background:linear-gradient(135deg,var(--accent),var(--pink)); background-size:200% 200%; animation:gradShift 4s ease infinite;
+  color:white; font-family:'Syne',sans-serif; font-size:14px; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; cursor:pointer;
   transition:transform 0.2s, box-shadow 0.2s;
 }
 .welcome-btn:hover { transform:translateY(-4px) scale(1.03); box-shadow:0 28px 60px rgba(124,106,255,0.35); }
 .hint { position:absolute; bottom:28px; left:50%; transform:translateX(-50%); font-size:9px; color:rgba(80,80,106,0.5); letter-spacing:0.25em; text-transform:uppercase; white-space:nowrap; }
 
-/* ══════════════════ LAYOUT ══════════════════ */
+/* ══ LAYOUT ══ */
 #app { display:none; min-height:100vh; }
 
-/* ── Sidebar global score ── */
+/* ══ SIDEBAR ══ */
 #sidebar {
   position:fixed; top:0; left:0; bottom:0; width:72px;
   border-right:1px solid var(--border);
   display:flex; flex-direction:column; align-items:center;
-  padding:24px 0; gap:8px; background:var(--surface); z-index:50;
-  transition:width 0.3s cubic-bezier(0.2,0,0,1);
+  padding:24px 0 20px; background:var(--surface); z-index:50;
+  overflow:hidden; transition:width 0.32s cubic-bezier(0.2,0,0,1);
 }
-#sidebar:hover { width:220px; }
+#sidebar:hover { width:230px; }
 .side-logo {
   font-family:'Syne',sans-serif; font-weight:800; font-size:20px;
   background:var(--grad); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
-  margin-bottom:16px; white-space:nowrap; overflow:hidden;
-  width:100%; text-align:center; letter-spacing:-0.02em;
+  margin-bottom:20px; white-space:nowrap; width:100%; text-align:center; flex-shrink:0;
 }
-.side-logo span { display:none; }
-#sidebar:hover .side-logo span { display:inline; }
+.logo-s { display:block; } .logo-f { display:none; }
+#sidebar:hover .logo-s { display:none; } #sidebar:hover .logo-f { display:block; }
 
-/* Score global widget */
-.global-score-widget {
-  margin-top:auto; margin-bottom:8px;
-  width:52px; background:var(--surface-2);
-  border:1px solid var(--border); border-radius:14px;
-  padding:12px 8px; text-align:center;
-  transition:width 0.3s, padding 0.3s;
-  overflow:hidden; cursor:default;
+.gsw {
+  margin-top:auto; width:52px; cursor:pointer;
+  background:var(--surface-2); border:1px solid var(--border); border-radius:14px;
+  padding:12px 8px; text-align:center; flex-shrink:0;
+  transition:width 0.32s cubic-bezier(0.2,0,0,1), padding 0.32s, border-color 0.2s;
 }
-#sidebar:hover .global-score-widget { width:188px; padding:16px 14px; }
-
-.gsw-label { font-size:8px; letter-spacing:0.2em; text-transform:uppercase; color:var(--muted); margin-bottom:6px; white-space:nowrap; overflow:hidden; }
-.gsw-score {
-  font-family:'Syne',sans-serif; font-weight:800;
-  font-size:22px; line-height:1;
+#sidebar:hover .gsw { width:196px; padding:16px; }
+.gsw:hover { border-color:rgba(124,106,255,0.4); }
+.gsw-label { font-size:8px; letter-spacing:0.2em; text-transform:uppercase; color:var(--muted); margin-bottom:6px; white-space:nowrap; }
+.gsw-num {
+  font-family:'Syne',sans-serif; font-weight:800; font-size:22px; line-height:1;
   background:var(--grad); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+  transition:font-size 0.2s;
 }
-#sidebar:hover .gsw-score { font-size:36px; }
+#sidebar:hover .gsw-num { font-size:38px; }
 .gsw-denom { font-size:9px; color:var(--muted); margin-top:2px; }
-.gsw-bar { height:3px; background:rgba(255,255,255,0.05); border-radius:2px; margin-top:8px; overflow:hidden; display:none; }
-#sidebar:hover .gsw-bar { display:block; }
+.gsw-bar-track { height:3px; background:rgba(255,255,255,0.05); border-radius:2px; margin-top:10px; overflow:hidden; display:none; }
+#sidebar:hover .gsw-bar-track { display:block; }
 .gsw-bar-fill { height:100%; background:var(--grad); border-radius:2px; transition:width 0.6s cubic-bezier(0.2,0,0,1); }
-.gsw-count { font-size:9px; color:var(--muted); margin-top:5px; display:none; }
-#sidebar:hover .gsw-count { display:block; }
+.gsw-sub  { font-size:9px; color:var(--muted); margin-top:6px; display:none; white-space:nowrap; }
+.gsw-hint { font-size:8px; color:rgba(124,106,255,0.5); margin-top:4px; display:none; letter-spacing:0.1em; }
+#sidebar:hover .gsw-sub  { display:block; }
+#sidebar:hover .gsw-hint { display:block; }
 
-/* ── Main content ── */
-#main { margin-left:72px; padding:48px 40px; max-width:1100px; transition:margin 0.3s; }
+/* ══ STATS PANEL ══ */
+#stats-panel {
+  position:fixed; top:0; left:72px; bottom:0; width:340px;
+  background:var(--surface); border-right:1px solid var(--border);
+  z-index:49; display:none; flex-direction:column; overflow-y:auto;
+}
+#stats-panel.open { display:flex; animation:panelIn 0.3s cubic-bezier(0.2,0,0,1); }
+.sp-header { padding:32px 24px 20px; border-bottom:1px solid var(--border); display:flex; justify-content:space-between; align-items:flex-start; flex-shrink:0; }
+.sp-title { font-family:'Syne',sans-serif; font-size:18px; font-weight:800; }
+.sp-close { background:none; border:none; color:var(--muted); font-size:24px; cursor:pointer; line-height:1; padding:4px; transition:color 0.2s; }
+.sp-close:hover { color:var(--text); }
 
-/* ══════════════════ HEADER ══════════════════ */
+.sp-avg { margin:24px; padding:24px; border-radius:16px; background:var(--surface-2); border:1px solid var(--border); text-align:center; flex-shrink:0; }
+.sp-avg-label { font-size:9px; letter-spacing:0.3em; text-transform:uppercase; color:var(--muted); margin-bottom:8px; }
+.sp-avg-num { font-family:'Syne',sans-serif; font-size:56px; font-weight:800; line-height:1; background:var(--grad); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; animation:scoreIn 0.5s cubic-bezier(0.2,0,0,1); }
+.sp-avg-denom { font-size:14px; color:var(--muted); margin-top:4px; }
+.sp-avg-bar-track { height:4px; background:rgba(255,255,255,0.05); border-radius:2px; margin-top:14px; overflow:hidden; }
+.sp-avg-bar-fill { height:100%; background:var(--grad); border-radius:2px; transition:width 0.8s cubic-bezier(0.2,0,0,1); }
+
+.sp-section-label { font-size:9px; letter-spacing:0.3em; text-transform:uppercase; color:var(--muted); padding:0 24px 12px; flex-shrink:0; }
+.sp-list { padding:0 24px 24px; display:flex; flex-direction:column; gap:10px; }
+.sp-item { background:var(--surface-2); border:1px solid var(--border); border-radius:12px; padding:14px 16px; animation:slideUp 0.3s ease both; }
+.sp-item-title { font-family:'Syne',sans-serif; font-size:13px; font-weight:700; margin-bottom:8px; line-height:1.3; }
+.sp-item-row { display:flex; justify-content:space-between; align-items:center; gap:8px; }
+.sp-item-stat { font-size:11px; color:var(--muted); white-space:nowrap; }
+.sp-item-note { font-family:'Syne',sans-serif; font-size:15px; font-weight:800; background:var(--grad); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; white-space:nowrap; }
+.sp-item-bar-track { flex:1; height:3px; background:rgba(255,255,255,0.05); border-radius:2px; overflow:hidden; }
+.sp-item-bar-fill { height:100%; border-radius:2px; transition:width 0.6s cubic-bezier(0.2,0,0,1); }
+.sp-empty { padding:0 24px 24px; color:var(--muted); font-size:12px; text-align:center; line-height:2; }
+
+/* ══ MAIN ══ */
+#main { margin-left:72px; padding:48px 40px; max-width:1100px; transition:margin-left 0.32s cubic-bezier(0.2,0,0,1); }
+
 .page-header { display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:16px; margin-bottom:48px; animation:fadeUp 0.6s ease forwards; }
 .page-title-label { font-size:10px; letter-spacing:0.35em; color:var(--accent); text-transform:uppercase; margin-bottom:6px; }
 .page-title { font-family:'Syne',sans-serif; font-size:36px; font-weight:800; letter-spacing:-1px; }
 .header-actions { display:flex; gap:10px; align-items:center; flex-wrap:wrap; }
 
-/* ══════════════════ BUTTONS ══════════════════ */
-.btn {
-  padding:11px 22px; border-radius:10px; border:none;
-  font-family:'Syne',sans-serif; font-weight:700; cursor:pointer;
-  transition:transform 0.2s, box-shadow 0.2s, filter 0.2s;
-  font-size:12px; text-transform:uppercase; letter-spacing:0.08em;
-  display:inline-flex; align-items:center; gap:8px;
-}
+.btn { padding:11px 22px; border-radius:10px; border:none; font-family:'Syne',sans-serif; font-weight:700; cursor:pointer; transition:transform 0.2s, filter 0.2s; font-size:12px; text-transform:uppercase; letter-spacing:0.08em; display:inline-flex; align-items:center; gap:8px; }
 .btn:hover { transform:translateY(-2px); filter:brightness(1.15); }
 .btn-primary { background:var(--accent); color:white; box-shadow:0 8px 24px var(--accent-glow); }
 .btn-ghost { background:rgba(255,255,255,0.04); color:var(--text); border:1px solid var(--border); }
@@ -155,247 +159,137 @@ body { background: var(--bg); color: var(--text); font-family: 'DM Mono', monosp
 .btn-danger { background:rgba(255,77,109,0.1); color:var(--red); border:1px solid rgba(255,77,109,0.2); }
 .btn-danger:hover { background:rgba(255,77,109,0.2); }
 
-/* ══════════════════ SYNC BADGE ══════════════════ */
 .sync-badge { display:none; align-items:center; gap:8px; background:var(--accent-soft); border:1px solid rgba(124,106,255,0.25); border-radius:20px; padding:7px 14px; font-size:10px; color:var(--accent); letter-spacing:0.1em; }
 .sync-dot { width:6px; height:6px; border-radius:50%; background:var(--accent); animation:blink 1s ease infinite; }
 
-/* ══════════════════ DASHBOARD GRID ══════════════════ */
+/* ══ QUIZ GRID ══ */
 .quiz-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:18px; }
-
-.quiz-card {
-  background:var(--surface); border:1px solid var(--border);
-  border-radius:18px; padding:26px; cursor:pointer;
-  transition:border-color 0.25s, transform 0.25s, background 0.25s;
-  animation:fadeUp 0.5s ease forwards; opacity:0;
-  position:relative; overflow:hidden;
-}
-.quiz-card::before {
-  content:''; position:absolute; inset:0;
-  background:linear-gradient(135deg,var(--accent),var(--pink));
-  opacity:0; transition:opacity 0.3s;
-}
+.quiz-card { background:var(--surface); border:1px solid var(--border); border-radius:18px; padding:26px; cursor:pointer; transition:border-color 0.25s, transform 0.25s, background 0.25s; animation:fadeUp 0.5s ease forwards; opacity:0; position:relative; overflow:hidden; }
+.quiz-card::before { content:''; position:absolute; inset:0; background:linear-gradient(135deg,var(--accent),var(--pink)); opacity:0; transition:opacity 0.3s; }
 .quiz-card:hover { border-color:rgba(124,106,255,0.4); transform:translateY(-6px); background:var(--surface-2); }
 .quiz-card:hover::before { opacity:0.03; }
-.quiz-card:nth-child(1){animation-delay:0s}
-.quiz-card:nth-child(2){animation-delay:0.07s}
-.quiz-card:nth-child(3){animation-delay:0.14s}
-.quiz-card:nth-child(4){animation-delay:0.21s}
-.quiz-card:nth-child(5){animation-delay:0.28s}
-
+.quiz-card:nth-child(1){animation-delay:0s} .quiz-card:nth-child(2){animation-delay:.07s} .quiz-card:nth-child(3){animation-delay:.14s} .quiz-card:nth-child(4){animation-delay:.21s} .quiz-card:nth-child(5){animation-delay:.28s}
 .card-meta { font-size:9px; letter-spacing:0.25em; color:var(--accent); text-transform:uppercase; margin-bottom:10px; font-weight:700; }
 .card-title { font-family:'Syne',sans-serif; font-size:19px; font-weight:700; line-height:1.25; margin-bottom:18px; }
 .card-footer { display:flex; justify-content:space-between; align-items:center; }
-.card-score-badge {
-  font-size:10px; padding:4px 10px; border-radius:20px;
-  font-weight:700; letter-spacing:0.05em;
-}
+.card-score-badge { font-size:10px; padding:4px 10px; border-radius:20px; font-weight:700; letter-spacing:0.05em; }
 .badge-done { background:rgba(45,255,158,0.1); color:var(--green); border:1px solid rgba(45,255,158,0.2); }
 .badge-new  { background:rgba(124,106,255,0.1); color:var(--accent); border:1px solid rgba(124,106,255,0.2); }
-
-.empty-state {
-  grid-column:1/-1; text-align:center; padding:80px 20px;
-  border:2px dashed rgba(255,255,255,0.07); border-radius:20px; color:var(--muted);
-  animation:fadeUp 0.6s ease forwards;
-}
+.empty-state { grid-column:1/-1; text-align:center; padding:80px 20px; border:2px dashed rgba(255,255,255,0.07); border-radius:20px; color:var(--muted); animation:fadeUp 0.6s ease forwards; }
 .empty-icon { font-size:40px; margin-bottom:20px; opacity:0.5; }
 .empty-state h3 { font-family:'Syne',sans-serif; font-size:20px; color:var(--text); margin-bottom:8px; }
 
-/* ══════════════════ MODAL ══════════════════ */
-#modal-backdrop {
-  position:fixed; inset:0; background:rgba(0,0,0,0.92);
-  display:none; align-items:center; justify-content:center;
-  z-index:200; padding:20px;
-  backdrop-filter:blur(8px);
-}
-.modal-box {
-  width:100%; max-width:560px; background:var(--surface);
-  border:1px solid var(--border); border-radius:24px; padding:36px;
-  animation:scaleIn 0.3s cubic-bezier(0.2,0,0,1);
-}
+/* ══ MODAL ══ */
+#modal-backdrop { position:fixed; inset:0; background:rgba(0,0,0,0.92); display:none; align-items:center; justify-content:center; z-index:200; padding:20px; backdrop-filter:blur(8px); }
+.modal-box { width:100%; max-width:560px; background:var(--surface); border:1px solid var(--border); border-radius:24px; padding:36px; animation:scaleIn 0.3s cubic-bezier(0.2,0,0,1); }
 .modal-title { font-family:'Syne',sans-serif; font-size:22px; font-weight:800; margin-bottom:24px; }
-.drop-zone {
-  border:2px dashed rgba(124,106,255,0.2); border-radius:14px;
-  padding:32px; text-align:center; cursor:pointer;
-  transition:border-color 0.2s, background 0.2s; margin-bottom:20px;
-}
+.drop-zone { border:2px dashed rgba(124,106,255,0.2); border-radius:14px; padding:32px; text-align:center; cursor:pointer; transition:border-color 0.2s, background 0.2s; margin-bottom:20px; }
 .drop-zone:hover,.drop-zone.over { border-color:var(--accent); background:var(--accent-soft); }
 .drop-zone-icon { font-size:32px; margin-bottom:10px; display:block; }
 #file-input { display:none; }
 .divider { display:flex; align-items:center; gap:12px; color:var(--muted); font-size:10px; letter-spacing:0.2em; text-transform:uppercase; margin-bottom:16px; }
 .divider::before,.divider::after { content:''; flex:1; height:1px; background:var(--border); }
-textarea#json-input {
-  width:100%; height:140px; background:rgba(0,0,0,0.4);
-  color:#7cff9e; border:1px solid var(--border);
-  padding:14px; border-radius:12px;
-  font-family:'DM Mono',monospace; font-size:12px;
-  outline:none; resize:vertical; transition:border-color 0.2s;
-}
+textarea#json-input { width:100%; height:140px; background:rgba(0,0,0,0.4); color:#7cff9e; border:1px solid var(--border); padding:14px; border-radius:12px; font-family:'DM Mono',monospace; font-size:12px; outline:none; resize:vertical; transition:border-color 0.2s; }
 textarea#json-input:focus { border-color:rgba(124,106,255,0.4); }
 .modal-actions { display:flex; gap:10px; margin-top:22px; }
 
-/* ══════════════════ QUIZ PLAYER ══════════════════ */
-#player {
-  position:fixed; inset:0; background:var(--bg);
-  z-index:100; display:none; overflow-y:auto;
-}
+/* ══ PLAYER ══ */
+#player { position:fixed; inset:0; background:var(--bg); z-index:100; display:none; overflow-y:auto; }
 .player-inner { max-width:720px; margin:0 auto; padding:40px 24px 80px; }
-
-/* Header du player avec score live */
-.player-header {
-  display:flex; justify-content:space-between; align-items:center;
-  margin-bottom:36px; gap:16px;
-}
+.player-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:36px; gap:16px; }
 .player-back { background:none; border:none; color:var(--muted); cursor:pointer; font-size:22px; transition:color 0.2s; padding:4px; }
 .player-back:hover { color:var(--text); }
-.player-meta { flex:1; text-align:center; }
-.player-quiz-title { font-family:'Syne',sans-serif; font-size:14px; font-weight:700; color:var(--muted); }
+.player-quiz-title { font-family:'Syne',sans-serif; font-size:14px; font-weight:700; color:var(--muted); text-align:center; flex:1; }
+.live-score { display:flex; align-items:center; background:var(--surface-2); border:1px solid var(--border); border-radius:40px; padding:8px 16px; font-family:'Syne',sans-serif; font-weight:800; transition:transform 0.25s cubic-bezier(0.2,0,0,1); }
+.ls-num { font-size:20px; line-height:1; background:var(--grad); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
+.ls-denom { font-size:12px; color:var(--muted); }
+.ls-label { font-size:9px; letter-spacing:0.2em; text-transform:uppercase; color:var(--muted); margin-bottom:2px; }
 
-/* Score live badge */
-.live-score {
-  display:flex; align-items:center; gap:6px;
-  background:var(--surface-2); border:1px solid var(--border);
-  border-radius:40px; padding:8px 16px;
-  font-family:'Syne',sans-serif; font-weight:800;
-  transition:all 0.3s;
-}
-.live-score-num {
-  font-size:20px; line-height:1;
-  background:var(--grad); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
-}
-.live-score-denom { font-size:12px; color:var(--muted); }
-.live-score-label { font-size:9px; letter-spacing:0.2em; text-transform:uppercase; color:var(--muted); }
+.progress-track { height:4px; background:rgba(255,255,255,0.05); border-radius:2px; margin-bottom:40px; overflow:hidden; }
+.progress-fill { height:100%; background:var(--grad); border-radius:2px; width:0%; transition:width 0.5s cubic-bezier(0.2,0,0,1); }
 
-/* Progress bar améliorée */
-.progress-track {
-  height:4px; background:rgba(255,255,255,0.05);
-  border-radius:2px; margin-bottom:40px; overflow:hidden;
-  position:relative;
-}
-.progress-fill {
-  height:100%; background:var(--grad);
-  border-radius:2px; width:0%;
-  transition:width 0.5s cubic-bezier(0.2,0,0,1);
-}
-.progress-glow {
-  position:absolute; right:0; top:-3px;
-  width:8px; height:10px;
-  background:white; border-radius:50%;
-  filter:blur(3px); opacity:0.6;
-  transition:left 0.5s cubic-bezier(0.2,0,0,1);
-}
-
-/* Question */
 .q-wrap { animation:slideUp 0.4s ease forwards; }
 .q-num { font-size:10px; letter-spacing:0.3em; text-transform:uppercase; color:var(--accent); margin-bottom:12px; }
 .q-text { font-family:'Syne',sans-serif; font-size:clamp(18px,3vw,26px); font-weight:700; line-height:1.35; margin-bottom:32px; }
-
-/* Choix */
 .choices { display:flex; flex-direction:column; gap:10px; }
-.choice {
-  width:100%; padding:16px 20px; border-radius:12px;
-  background:rgba(255,255,255,0.03); border:1px solid var(--border);
-  color:var(--text); text-align:left; cursor:pointer;
-  font-family:'DM Mono',monospace; font-size:14px;
-  transition:border-color 0.2s, background 0.2s, transform 0.15s;
-  display:flex; align-items:center; gap:14px;
-}
+.choice { width:100%; padding:16px 20px; border-radius:12px; background:rgba(255,255,255,0.03); border:1px solid var(--border); color:var(--text); text-align:left; cursor:pointer; font-family:'DM Mono',monospace; font-size:14px; transition:border-color 0.2s, background 0.2s, transform 0.15s; display:flex; align-items:center; gap:14px; }
 .choice:hover:not(:disabled) { border-color:rgba(124,106,255,0.5); background:rgba(124,106,255,0.06); transform:translateX(4px); }
 .choice:disabled { cursor:default; }
-.choice-letter {
-  width:26px; height:26px; border-radius:7px; flex-shrink:0;
-  background:rgba(255,255,255,0.05); border:1px solid var(--border);
-  display:flex; align-items:center; justify-content:center;
-  font-size:11px; font-weight:700; font-family:'Syne',sans-serif;
-  transition:all 0.2s;
-}
-.choice.correct { border-color:var(--green)!important; background:rgba(45,255,158,0.07)!important; color:var(--green)!important; animation:correct-pulse 0.6s ease-out; }
+.choice-letter { width:26px; height:26px; border-radius:7px; flex-shrink:0; background:rgba(255,255,255,0.05); border:1px solid var(--border); display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:700; font-family:'Syne',sans-serif; transition:all 0.2s; }
+.choice.correct { border-color:var(--green)!important; background:rgba(45,255,158,0.07)!important; color:var(--green)!important; animation:cpulse 0.6s ease-out; }
 .choice.correct .choice-letter { background:rgba(45,255,158,0.2)!important; border-color:var(--green)!important; color:var(--green)!important; }
 .choice.wrong { border-color:var(--red)!important; background:rgba(255,77,109,0.07)!important; color:var(--red)!important; animation:shake 0.4s ease; }
 .choice.wrong .choice-letter { background:rgba(255,77,109,0.2)!important; border-color:var(--red)!important; color:var(--red)!important; }
-
-/* Feedback explication */
-.feedback-box {
-  margin-top:24px; padding:20px 24px;
-  background:var(--surface-2); border-left:3px solid var(--accent);
-  border-radius:0 12px 12px 0;
-  animation:slideUp 0.3s ease;
-}
+.feedback-box { margin-top:24px; padding:20px 24px; background:var(--surface-2); border-left:3px solid var(--accent); border-radius:0 12px 12px 0; animation:slideUp 0.3s ease; }
 .feedback-icon { font-size:20px; margin-bottom:8px; }
 .feedback-text { font-size:13px; line-height:1.7; color:rgba(232,232,240,0.8); }
 .next-btn { margin-top:20px; width:100%; }
 
-/* ══════════════════ RÉSULTATS ══════════════════ */
 .results-wrap { text-align:center; animation:fadeUp 0.6s ease; }
 .result-label { font-size:10px; letter-spacing:0.35em; text-transform:uppercase; color:var(--muted); margin-bottom:20px; }
-.result-score-big {
-  font-family:'Syne',sans-serif; font-size:clamp(80px,20vw,130px);
-  font-weight:800; line-height:0.9; letter-spacing:-0.04em;
-  background:var(--grad); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
-  animation:scoreCountUp 0.6s cubic-bezier(0.2,0,0,1);
-  margin-bottom:12px;
-}
+.result-score-big { font-family:'Syne',sans-serif; font-size:clamp(80px,20vw,130px); font-weight:800; line-height:0.9; letter-spacing:-0.04em; background:var(--grad); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; animation:scoreIn 0.6s cubic-bezier(0.2,0,0,1); margin-bottom:12px; }
 .result-detail { font-size:14px; color:var(--muted); margin-bottom:8px; }
-.result-note-20 {
-  display:inline-block; margin:16px auto 32px;
-  background:var(--surface-2); border:1px solid var(--border);
-  border-radius:12px; padding:12px 28px;
-  font-family:'Syne',sans-serif; font-size:22px; font-weight:800;
-}
+.result-note-20 { display:inline-block; margin:16px auto 32px; background:var(--surface-2); border:1px solid var(--border); border-radius:12px; padding:12px 28px; font-family:'Syne',sans-serif; font-size:22px; font-weight:800; }
 .result-note-label { font-size:9px; color:var(--muted); letter-spacing:0.2em; text-transform:uppercase; display:block; margin-bottom:4px; }
 .note-val { background:var(--grad); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text; }
 .result-actions { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; }
 
-/* ══════════════════ TOAST ══════════════════ */
-#toast {
-  position:fixed; bottom:32px; left:50%; transform:translateX(-50%) translateY(20px);
-  background:var(--surface-2); border:1px solid var(--border);
-  color:var(--text); padding:12px 24px; border-radius:30px;
-  font-size:13px; z-index:9999; opacity:0;
-  transition:opacity 0.3s, transform 0.3s;
-  white-space:nowrap; pointer-events:none;
-}
+#toast { position:fixed; bottom:32px; left:50%; transform:translateX(-50%) translateY(20px); background:var(--surface-2); border:1px solid var(--border); color:var(--text); padding:12px 24px; border-radius:30px; font-size:13px; z-index:9999; opacity:0; transition:opacity 0.3s, transform 0.3s; white-space:nowrap; pointer-events:none; }
 #toast.show { opacity:1; transform:translateX(-50%) translateY(0); }
 
-/* ══════════════════ RESPONSIVE ══════════════════ */
-@media (max-width:600px) {
-  #main { padding:32px 16px; }
-  .page-header { flex-direction:column; align-items:flex-start; }
-}
+@media (max-width:600px) { #main { padding:32px 16px; } .page-header { flex-direction:column; align-items:flex-start; } }
 </style>
 </head>
 <body>
 
-<!-- ══ WELCOME ══ -->
+<!-- WELCOME -->
 <div id="welcome" onclick="enterApp()">
   <div class="orb orb-1"></div>
   <div class="orb orb-2"></div>
   <div class="grid-bg"></div>
   <div class="welcome-inner">
-    <div class="eyebrow">Quiz Engine IA</div>
+    <div class="eyebrow">Mes Révisions</div>
     <h1 class="welcome-title">Quiz<br>Engine</h1>
-    <p class="welcome-sub">Tes cours transformés en quiz<br>intelligents par l'IA</p>
+    <p class="welcome-sub">Tes cours transformés<br>en quiz interactifs</p>
     <button class="welcome-btn" onclick="event.stopPropagation();enterApp()">Commencer →</button>
   </div>
   <div class="hint">Cliquer n'importe où pour continuer</div>
 </div>
 
-<!-- ══ APP ══ -->
+<!-- APP -->
 <div id="app">
 
-  <!-- Sidebar avec score global -->
   <nav id="sidebar">
-    <div class="side-logo">Q<span>uiz Engine</span></div>
-
-    <div class="global-score-widget" id="gsw" title="Score global sur 20">
-      <div class="gsw-label">Score Global</div>
-      <div class="gsw-score" id="gsw-score">—</div>
+    <div class="side-logo"><span class="logo-s">Q</span><span class="logo-f">Quiz Engine</span></div>
+    <div class="gsw" onclick="toggleStats()" title="Voir mes statistiques">
+      <div class="gsw-label">Score</div>
+      <div class="gsw-num" id="gsw-num">—</div>
       <div class="gsw-denom">/20</div>
-      <div class="gsw-bar"><div class="gsw-bar-fill" id="gsw-bar" style="width:0%"></div></div>
-      <div class="gsw-count" id="gsw-count">Aucun quiz complété</div>
+      <div class="gsw-bar-track"><div class="gsw-bar-fill" id="gsw-bar" style="width:0%"></div></div>
+      <div class="gsw-sub" id="gsw-sub">Aucun quiz complété</div>
+      <div class="gsw-hint">↗ Voir le détail</div>
     </div>
   </nav>
 
-  <!-- Dashboard -->
+  <!-- Panneau stats -->
+  <div id="stats-panel">
+    <div class="sp-header">
+      <div>
+        <div class="page-title-label" style="margin-bottom:4px">Statistiques</div>
+        <div class="sp-title">Mes Résultats</div>
+      </div>
+      <button class="sp-close" onclick="toggleStats()">×</button>
+    </div>
+    <div class="sp-avg">
+      <div class="sp-avg-label">Moyenne générale</div>
+      <div class="sp-avg-num" id="sp-avg-num">—</div>
+      <div class="sp-avg-denom">/20</div>
+      <div class="sp-avg-bar-track"><div class="sp-avg-bar-fill" id="sp-avg-bar" style="width:0%"></div></div>
+    </div>
+    <div class="sp-section-label">Détail par quiz</div>
+    <div class="sp-list" id="sp-list"></div>
+  </div>
+
   <main id="main">
     <div class="page-header">
       <div>
@@ -404,44 +298,36 @@ textarea#json-input:focus { border-color:rgba(124,106,255,0.4); }
       </div>
       <div class="header-actions">
         <div class="sync-badge" id="sync-badge"><div class="sync-dot"></div> Synchronisation…</div>
-        <button class="btn btn-ghost" onclick="syncGithub()">🔄 Sync IA</button>
+        <button class="btn btn-ghost" onclick="syncGithub()">🔄 Sync</button>
         <button class="btn btn-ghost" onclick="openModal()">📂 Importer</button>
       </div>
     </div>
-
     <div class="quiz-grid" id="quiz-grid"></div>
   </main>
 
-  <!-- Quiz Player -->
+  <!-- Player -->
   <div id="player">
     <div class="player-inner">
       <div class="player-header">
-        <button class="player-back" onclick="closePlayer()" title="Retour">←</button>
-        <div class="player-meta">
-          <div class="player-quiz-title" id="player-title"></div>
-        </div>
-        <!-- Score en temps réel -->
-        <div class="live-score" id="live-score">
+        <button class="player-back" onclick="closePlayer()">←</button>
+        <div class="player-quiz-title" id="player-title"></div>
+        <div class="live-score">
           <div>
-            <div class="live-score-label">Score</div>
+            <div class="ls-label">Score</div>
             <div style="display:flex;align-items:baseline;gap:2px;">
-              <span class="live-score-num" id="ls-num">0</span>
-              <span class="live-score-denom" id="ls-denom">/0</span>
+              <span class="ls-num" id="ls-num">0</span>
+              <span class="ls-denom" id="ls-denom">/0</span>
             </div>
           </div>
         </div>
       </div>
-
-      <div class="progress-track">
-        <div class="progress-fill" id="prog-fill"></div>
-      </div>
-
+      <div class="progress-track"><div class="progress-fill" id="prog-fill"></div></div>
       <div id="player-content"></div>
     </div>
   </div>
 
-  <!-- Modal Import -->
-  <div id="modal-backdrop" onclick="e => { if(e.target===this) closeModal(); }">
+  <!-- Modal -->
+  <div id="modal-backdrop">
     <div class="modal-box" onclick="event.stopPropagation()">
       <div class="modal-title">Ajouter un Quiz</div>
       <div class="drop-zone" id="drop-zone" onclick="document.getElementById('file-input').click()">
@@ -457,222 +343,221 @@ textarea#json-input:focus { border-color:rgba(124,106,255,0.4); }
       </div>
     </div>
   </div>
-
 </div>
 
-<!-- Toast -->
 <div id="toast"></div>
 
 <script>
-// ══════════════════════════════════════════════════
-//  CONFIG
-// ══════════════════════════════════════════════════
 const GITHUB_USER = 'mathisplassartginnainpro44-ship-it';
 const GITHUB_REPO = 'n8n';
 const GITHUB_FILE = 'quiz.json';
 const STORE_KEY   = 'quiz_engine_v2';
 const LETTERS     = ['A','B','C','D','E'];
 
-// ══════════════════════════════════════════════════
-//  STATE
-// ══════════════════════════════════════════════════
-let state = {
-  library: [],      // [{...quiz, _score?: {correct, total, pct}}]
-};
-let session = {
-  quiz: null,
-  idx: 0,
-  correct: 0,
-  answered: 0,
-};
+let state   = { library: [] };
+let session = { quiz: null, idx: 0, correct: 0 };
+let statsOpen = false;
 
-// ══════════════════════════════════════════════════
-//  PERSISTANCE
-// ══════════════════════════════════════════════════
+// ── Persistance ──────────────────────────────────
 function save() { localStorage.setItem(STORE_KEY, JSON.stringify(state)); }
 function load() {
-  try { const d = localStorage.getItem(STORE_KEY); if (d) state = JSON.parse(d); }
-  catch {}
+  try {
+    const d = localStorage.getItem(STORE_KEY);
+    if (d) state = JSON.parse(d);
+    // Migration depuis ancienne clé
+    if (!state.library?.length) {
+      const old = localStorage.getItem('quiz_engine_lib');
+      if (old) {
+        const p = JSON.parse(old);
+        state.library = Array.isArray(p) ? p : [p];
+        save();
+      }
+    }
+  } catch {}
 }
 
-// ══════════════════════════════════════════════════
-//  SCORE GLOBAL
-// ══════════════════════════════════════════════════
+// ── Score global ─────────────────────────────────
 function computeGlobal() {
   const done = state.library.filter(q => q._score);
   if (!done.length) return null;
   const avg = done.reduce((s, q) => s + q._score.pct, 0) / done.length;
-  return { note: Math.round(avg * 20) / 100, pct: avg, count: done.length, total: state.library.length };
+  return { note: avg / 5, pct: avg, count: done.length, total: state.library.length };
 }
 
 function renderGlobalScore() {
   const g = computeGlobal();
-  const numEl  = document.getElementById('gsw-score');
-  const barEl  = document.getElementById('gsw-bar');
-  const cntEl  = document.getElementById('gsw-count');
   if (!g) {
-    numEl.textContent = '—';
-    barEl.style.width = '0%';
-    cntEl.textContent = 'Aucun quiz complété';
+    document.getElementById('gsw-num').textContent = '—';
+    document.getElementById('gsw-bar').style.width = '0%';
+    document.getElementById('gsw-sub').textContent = 'Aucun quiz complété';
+  } else {
+    document.getElementById('gsw-num').textContent = g.note.toFixed(1).replace('.', ',');
+    document.getElementById('gsw-bar').style.width = g.pct + '%';
+    document.getElementById('gsw-sub').textContent = `${g.count}/${g.total} quiz fait${g.count > 1 ? 's' : ''}`;
+  }
+}
+
+// ── Panneau stats ────────────────────────────────
+function toggleStats() {
+  statsOpen = !statsOpen;
+  document.getElementById('stats-panel').classList.toggle('open', statsOpen);
+  document.getElementById('main').style.marginLeft = statsOpen ? (72 + 340) + 'px' : '72px';
+  if (statsOpen) renderStatsPanel();
+}
+
+function renderStatsPanel() {
+  const g = computeGlobal();
+  if (!g) {
+    document.getElementById('sp-avg-num').textContent = '—';
+    document.getElementById('sp-avg-bar').style.width = '0%';
+    document.getElementById('sp-list').innerHTML = `<div class="sp-empty">Tu n'as pas encore complété de quiz.<br>Lance-toi ! 🚀</div>`;
     return;
   }
-  const note = g.note.toFixed(1).replace('.', ',');
-  numEl.textContent = note;
-  barEl.style.width = g.pct + '%';
-  cntEl.textContent = `${g.count} quiz sur ${g.total} fait${g.count > 1 ? 's' : ''}`;
+  document.getElementById('sp-avg-num').textContent = g.note.toFixed(2).replace('.', ',');
+  setTimeout(() => { document.getElementById('sp-avg-bar').style.width = g.pct + '%'; }, 50);
+
+  const done = state.library.filter(q => q._score);
+  document.getElementById('sp-list').innerHTML = done.map((q, i) => {
+    const note  = (q._score.correct / q._score.total * 20).toFixed(1).replace('.', ',');
+    const pct   = q._score.pct;
+    const color = pct >= 70 ? 'var(--green)' : pct >= 40 ? '#ffb347' : 'var(--red)';
+    return `
+      <div class="sp-item" style="animation-delay:${i * 0.06}s">
+        <div class="sp-item-title">${q.titre}</div>
+        <div class="sp-item-row">
+          <span class="sp-item-stat">${q._score.correct}/${q._score.total} · ${Math.round(pct)}%</span>
+          <div class="sp-item-bar-track"><div class="sp-item-bar-fill" style="width:${pct}%;background:${color}"></div></div>
+          <span class="sp-item-note">${note}/20</span>
+        </div>
+      </div>`;
+  }).join('');
 }
 
-// ══════════════════════════════════════════════════
-//  LIVE SCORE (pendant le quiz)
-// ══════════════════════════════════════════════════
-function updateLiveScore() {
-  const total = session.quiz ? session.quiz.questions.length : 0;
-  document.getElementById('ls-num').textContent  = session.correct;
-  document.getElementById('ls-denom').textContent = '/' + total;
-
-  // Animation flash
-  const el = document.getElementById('live-score');
-  el.style.transform = 'scale(1.12)';
-  setTimeout(() => { el.style.transform = 'scale(1)'; el.style.transition = 'transform 0.25s cubic-bezier(0.2,0,0,1)'; }, 150);
-}
-
-// ══════════════════════════════════════════════════
-//  WELCOME
-// ══════════════════════════════════════════════════
+// ── Welcome ──────────────────────────────────────
 function enterApp() {
   const w = document.getElementById('welcome');
   w.style.opacity = '0';
   setTimeout(() => {
     w.style.display = 'none';
     document.getElementById('app').style.display = 'block';
-    load();
-    renderLibrary();
-    renderGlobalScore();
+    load(); renderLibrary(); renderGlobalScore();
     syncGithub(true);
   }, 700);
 }
 
-// ══════════════════════════════════════════════════
-//  SYNC GITHUB
-// ══════════════════════════════════════════════════
+// ── GitHub sync ──────────────────────────────────
 async function syncGithub(silent = false) {
   const badge = document.getElementById('sync-badge');
   badge.style.display = 'inline-flex';
   try {
-    const url = `https://raw.githubusercontent.com/${GITHUB_USER}/${GITHUB_REPO}/main/${GITHUB_FILE}?t=${Date.now()}`;
+    const url  = `https://raw.githubusercontent.com/${GITHUB_USER}/${GITHUB_REPO}/main/${GITHUB_FILE}?t=${Date.now()}`;
     const res  = await fetch(url);
     if (!res.ok) throw new Error();
     const data = await res.json();
     if (data?.titre && data?.questions) {
-      const idx = state.library.findIndex(q => q.titre === data.titre);
-      if (idx >= 0) { const sc = state.library[idx]._score; state.library[idx] = data; if (sc) state.library[idx]._score = sc; }
-      else state.library.unshift(data);
-      save(); renderLibrary(); renderGlobalScore();
-      if (!silent) toast('✅ Quiz synchronisé depuis l\'IA !');
+      upsertQuiz(data); save(); renderLibrary(); renderGlobalScore();
+      if (!silent) toast('✅ Quiz synchronisé !');
     }
-  } catch {
-    if (!silent) toast('⚠️ Aucun nouveau quiz disponible');
-  }
+  } catch { if (!silent) toast('⚠️ Aucun nouveau quiz disponible'); }
   badge.style.display = 'none';
 }
 
-// ══════════════════════════════════════════════════
-//  LIBRARY RENDER
-// ══════════════════════════════════════════════════
+// ── Library helpers ──────────────────────────────
+function upsertQuiz(data) {
+  const idx = state.library.findIndex(q => q.titre === data.titre);
+  if (idx >= 0) { const sc = state.library[idx]._score; state.library[idx] = data; if (sc) state.library[idx]._score = sc; }
+  else state.library.unshift(data);
+}
+
+// FIX: suppression par titre, pas par index
+function deleteQuiz(titre) {
+  if (!confirm('Supprimer ce module ?')) return;
+  state.library = state.library.filter(q => q.titre !== titre);
+  save(); renderLibrary(); renderGlobalScore();
+  if (statsOpen) renderStatsPanel();
+}
+
+// ── Render library ───────────────────────────────
 function renderLibrary() {
   const grid = document.getElementById('quiz-grid');
   if (!state.library.length) {
-    grid.innerHTML = `<div class="empty-state"><div class="empty-icon">📭</div><h3>Bibliothèque vide</h3><p style="margin-bottom:20px">Clique sur "Sync IA" pour charger le dernier quiz généré par l'IA</p><button class="btn btn-primary" onclick="openModal()">Importer manuellement</button></div>`;
+    grid.innerHTML = `<div class="empty-state"><div class="empty-icon">📭</div><h3>Bibliothèque vide</h3><p style="margin-bottom:20px">Clique sur "Sync" ou importe un fichier JSON</p><button class="btn btn-primary" onclick="openModal()">Importer</button></div>`;
     return;
   }
-  grid.innerHTML = state.library.map((quiz, i) => {
-    const sc = quiz._score;
+  grid.innerHTML = state.library.map(quiz => {
+    const sc    = quiz._score;
     const badge = sc
       ? `<span class="card-score-badge badge-done">${sc.correct}/${sc.total} · ${Math.round(sc.pct)}%</span>`
       : `<span class="card-score-badge badge-new">Nouveau</span>`;
+    const safeT = encodeURIComponent(quiz.titre);
+    const safeQ = quiz.titre.replace(/\\/g,'\\\\').replace(/'/g,"\\'");
     return `
-      <div class="quiz-card" onclick="startQuiz(${i})" style="animation-delay:${i*0.07}s">
-        <div class="card-meta">${quiz.matiere || 'Quiz'} · ${quiz.questions.length} questions</div>
+      <div class="quiz-card" onclick="startQuiz('${safeT}')">
+        <div class="card-meta">${quiz.questions.length} questions</div>
         <div class="card-title">${quiz.titre}</div>
         <div class="card-footer">
           ${badge}
-          <button class="btn btn-sm btn-danger" onclick="event.stopPropagation();deleteQuiz(${i})">Supprimer</button>
+          <button class="btn btn-sm btn-danger" onclick="event.stopPropagation();deleteQuiz('${safeQ}')">Supprimer</button>
         </div>
-      </div>
-    `;
+      </div>`;
   }).join('');
 }
 
-// ══════════════════════════════════════════════════
-//  QUIZ PLAYER
-// ══════════════════════════════════════════════════
-function startQuiz(idx) {
-  session = { quiz: state.library[idx], idx: 0, correct: 0, answered: 0 };
-  document.getElementById('player-title').textContent = session.quiz.titre;
+// ── Player ───────────────────────────────────────
+function startQuiz(encodedTitre) {
+  const titre = decodeURIComponent(encodedTitre);
+  const quiz  = state.library.find(q => q.titre === titre);
+  if (!quiz) return;
+  session = { quiz, idx: 0, correct: 0 };
+  document.getElementById('player-title').textContent = quiz.titre;
   document.getElementById('player').style.display = 'block';
   document.getElementById('player').scrollTop = 0;
-  updateLiveScore();
-  renderQuestion();
+  updateLiveScore(); renderQuestion();
 }
 
 function normalizeAnswer(reponse, choix) {
   const t = (reponse || '').trim();
-  if (/^[A-E]$/i.test(t)) {
-    const i = LETTERS.indexOf(t.toUpperCase());
-    if (i >= 0 && choix?.[i]) return choix[i];
-  }
+  if (/^[A-E]$/i.test(t)) { const i = LETTERS.indexOf(t.toUpperCase()); if (i >= 0 && choix?.[i]) return choix[i]; }
   return t;
 }
 
+function updateLiveScore() {
+  const total = session.quiz?.questions.length || 0;
+  document.getElementById('ls-num').textContent   = session.correct;
+  document.getElementById('ls-denom').textContent = '/' + total;
+  const el = document.querySelector('.live-score');
+  el.style.transform = 'scale(1.12)';
+  setTimeout(() => { el.style.transform = 'scale(1)'; }, 150);
+}
+
 function renderQuestion() {
-  const q     = session.quiz.questions[session.idx];
+  const q = session.quiz.questions[session.idx];
   const total = session.quiz.questions.length;
-  const pct   = (session.idx / total) * 100;
-
-  document.getElementById('prog-fill').style.width = pct + '%';
-
-  const content = document.getElementById('player-content');
-  content.innerHTML = `
+  document.getElementById('prog-fill').style.width = (session.idx / total * 100) + '%';
+  document.getElementById('player-content').innerHTML = `
     <div class="q-wrap">
       <div class="q-num">Question ${session.idx + 1} sur ${total}</div>
       <div class="q-text">${q.question}</div>
-      <div class="choices" id="choices">
+      <div class="choices">
         ${q.choix.map((c, i) => `
-          <button class="choice" onclick="answer(this, ${i})">
+          <button class="choice" onclick="answer(this,${i})">
             <span class="choice-letter">${LETTERS[i]}</span>
             <span>${c}</span>
-          </button>
-        `).join('')}
+          </button>`).join('')}
       </div>
       <div id="feedback" style="display:none"></div>
-    </div>
-  `;
+    </div>`;
 }
 
 function answer(btn, choiceIdx) {
   const q = session.quiz.questions[session.idx];
   const correctText = normalizeAnswer(q.reponse, q.choix);
-  const chosenText  = q.choix[choiceIdx];
-  const isCorrect   = chosenText === correctText;
-
-  // Désactiver tous les boutons
+  const isCorrect   = q.choix[choiceIdx] === correctText;
   const btns = document.querySelectorAll('.choice');
   btns.forEach(b => b.disabled = true);
-
-  // Marquer correct / wrong
-  if (isCorrect) {
-    btn.classList.add('correct');
-    session.correct++;
-  } else {
-    btn.classList.add('wrong');
-    btns.forEach((b, i) => { if (q.choix[i] === correctText) b.classList.add('correct'); });
-  }
-  session.answered++;
-
-  // Mise à jour score live
+  if (isCorrect) { btn.classList.add('correct'); session.correct++; }
+  else { btn.classList.add('wrong'); btns.forEach((b,i) => { if (q.choix[i] === correctText) b.classList.add('correct'); }); }
   updateLiveScore();
-
-  // Feedback
   const fb = document.getElementById('feedback');
   fb.style.display = 'block';
   fb.innerHTML = `
@@ -682,37 +567,29 @@ function answer(btn, choiceIdx) {
       <button class="btn btn-primary next-btn" onclick="nextStep()">
         ${session.idx + 1 < session.quiz.questions.length ? 'Suivant →' : 'Voir les résultats →'}
       </button>
-    </div>
-  `;
+    </div>`;
 }
 
 function nextStep() {
   session.idx++;
-  if (session.idx < session.quiz.questions.length) {
-    renderQuestion();
-  } else {
-    showResults();
-  }
+  if (session.idx < session.quiz.questions.length) renderQuestion(); else showResults();
   document.getElementById('player').scrollTop = 0;
 }
 
 function showResults() {
   const total  = session.quiz.questions.length;
-  const pct    = Math.round((session.correct / total) * 100);
+  const pct    = Math.round(session.correct / total * 100);
   const note20 = (session.correct / total * 20).toFixed(2).replace('.', ',');
-
-  // Barre pleine
   document.getElementById('prog-fill').style.width = '100%';
 
-  // Sauvegarde le score dans la bibliothèque
   const libIdx = state.library.findIndex(q => q.titre === session.quiz.titre);
   if (libIdx >= 0) {
     state.library[libIdx]._score = { correct: session.correct, total, pct };
-    save();
-    renderLibrary();
-    renderGlobalScore();
+    save(); renderLibrary(); renderGlobalScore();
+    if (statsOpen) renderStatsPanel();
   }
 
+  const safeT = encodeURIComponent(session.quiz.titre);
   document.getElementById('player-content').innerHTML = `
     <div class="results-wrap">
       <div class="result-label">Résultat final</div>
@@ -723,23 +600,16 @@ function showResults() {
         <span class="note-val">${note20} / 20</span>
       </div>
       <div class="result-actions">
-        <button class="btn btn-ghost" onclick="startQuiz(${state.library.findIndex(q => q.titre === session.quiz.titre)})">↺ Recommencer</button>
+        <button class="btn btn-ghost" onclick="startQuiz('${safeT}')">↺ Recommencer</button>
         <button class="btn btn-primary" onclick="closePlayer()">← Dashboard</button>
       </div>
-    </div>
-  `;
+    </div>`;
 }
 
-function closePlayer() {
-  document.getElementById('player').style.display = 'none';
-}
+function closePlayer() { document.getElementById('player').style.display = 'none'; }
 
-// ══════════════════════════════════════════════════
-//  MODAL IMPORT
-// ══════════════════════════════════════════════════
-function openModal() {
-  document.getElementById('modal-backdrop').style.display = 'flex';
-}
+// ── Modal ────────────────────────────────────────
+function openModal()  { document.getElementById('modal-backdrop').style.display = 'flex'; }
 function closeModal() {
   document.getElementById('modal-backdrop').style.display = 'none';
   document.getElementById('json-input').value = '';
@@ -749,19 +619,16 @@ function closeModal() {
 function saveImport() {
   try {
     const raw  = document.getElementById('json-input').value;
-    const data = JSON.parse(raw.replace(/```json|```/g, '').trim());
+    const data = JSON.parse(raw.replace(/```json|```/g,'').trim());
     if (!data.titre || !data.questions) throw new Error();
-    const idx  = state.library.findIndex(q => q.titre === data.titre);
-    if (idx >= 0) { const sc = state.library[idx]._score; state.library[idx] = data; if (sc) state.library[idx]._score = sc; }
-    else state.library.unshift(data);
-    save(); renderLibrary(); renderGlobalScore();
+    upsertQuiz(data); save(); renderLibrary(); renderGlobalScore();
+    if (statsOpen) renderStatsPanel();
     closeModal(); toast('✅ Quiz ajouté !');
   } catch { toast('❌ JSON invalide ou format incorrect'); }
 }
 
 function handleFile(e) {
-  const f = e.target.files[0];
-  if (!f) return;
+  const f = e.target.files[0]; if (!f) return;
   const r = new FileReader();
   r.onload = ev => {
     document.getElementById('json-input').value = ev.target.result;
@@ -770,7 +637,6 @@ function handleFile(e) {
   r.readAsText(f);
 }
 
-// Drag & drop
 const dz = document.getElementById('drop-zone');
 ['dragenter','dragover','dragleave','drop'].forEach(ev => dz.addEventListener(ev, e => { e.preventDefault(); e.stopPropagation(); }));
 dz.addEventListener('dragover',  () => dz.classList.add('over'));
@@ -780,20 +646,13 @@ dz.addEventListener('drop', e => {
   const f = e.dataTransfer.files[0];
   if (f) { const r = new FileReader(); r.onload = ev => { document.getElementById('json-input').value = ev.target.result; }; r.readAsText(f); }
 });
+document.getElementById('modal-backdrop').addEventListener('click', function(e) { if (e.target === this) closeModal(); });
 
-// Fermer modal en cliquant backdrop
-document.getElementById('modal-backdrop').addEventListener('click', function(e) {
-  if (e.target === this) closeModal();
-});
-
-// ══════════════════════════════════════════════════
-//  TOAST
-// ══════════════════════════════════════════════════
+// ── Toast ────────────────────────────────────────
 let toastTimer;
 function toast(msg) {
   const el = document.getElementById('toast');
-  el.textContent = msg;
-  el.classList.add('show');
+  el.textContent = msg; el.classList.add('show');
   clearTimeout(toastTimer);
   toastTimer = setTimeout(() => el.classList.remove('show'), 3000);
 }
