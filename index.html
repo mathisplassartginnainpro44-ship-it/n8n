@@ -276,6 +276,39 @@ textarea#json-input:focus{border-color:rgba(124,106,255,.4)}
 .note-val{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .result-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
 
+/* ══ SIGNALER ERREUR ══ */
+@keyframes modalIn{from{opacity:0;transform:scale(.9) translateY(20px)}to{opacity:1;transform:scale(1) translateY(0)}}
+#report-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.85);display:none;align-items:center;justify-content:center;z-index:300;padding:20px;backdrop-filter:blur(10px)}
+.report-box{width:100%;max-width:500px;background:var(--surface);border:1px solid rgba(255,179,71,.2);border-radius:22px;padding:32px;animation:modalIn .3s cubic-bezier(.2,0,0,1)}
+.report-title{font-family:'Syne',sans-serif;font-size:18px;font-weight:800;margin-bottom:6px;color:var(--orange)}
+.report-sub{font-size:11px;color:var(--muted);margin-bottom:24px;line-height:1.7}
+.report-label{font-size:10px;letter-spacing:.25em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.report-question-preview{background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:10px;padding:12px 14px;font-size:13px;color:var(--text);margin-bottom:20px;line-height:1.5}
+.report-input{width:100%;background:rgba(0,0,0,.3);border:1px solid var(--border);color:var(--text);padding:12px 14px;border-radius:10px;font-size:13px;outline:none;transition:border-color .2s;font-family:var(--font-body)}
+.report-input:focus{border-color:var(--orange)}
+.report-input::placeholder{color:var(--muted)}
+.report-choices-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:20px}
+.report-choice-btn{padding:10px 12px;border-radius:10px;background:rgba(255,255,255,.03);border:1px solid var(--border);color:var(--text);cursor:pointer;font-size:12px;text-align:left;transition:all .2s;display:flex;align-items:center;gap:8px}
+.report-choice-btn:hover{border-color:rgba(255,179,71,.4);background:rgba(255,179,71,.06)}
+.report-choice-btn.selected{border-color:var(--orange)!important;background:rgba(255,179,71,.12)!important;color:var(--orange)!important}
+.report-choice-letter{width:22px;height:22px;border-radius:6px;background:rgba(255,255,255,.05);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;font-family:'Syne',sans-serif;flex-shrink:0}
+.report-choice-btn.selected .report-choice-letter{background:rgba(255,179,71,.2);border-color:var(--orange);color:var(--orange)}
+.report-actions{display:flex;gap:10px;margin-top:24px}
+.btn-orange{background:rgba(255,179,71,.15);color:var(--orange);border:1px solid rgba(255,179,71,.3);font-family:'Syne',sans-serif;font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:.08em;padding:12px 22px;border-radius:10px;cursor:pointer;transition:all .2s;display:flex;align-items:center;gap:8px}
+.btn-orange:hover{background:rgba(255,179,71,.25);transform:translateY(-1px)}
+
+/* ══ JSON EXPORT MODAL ══ */
+#json-export-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.92);display:none;align-items:center;justify-content:center;z-index:400;padding:20px;backdrop-filter:blur(10px)}
+.json-export-box{width:100%;max-width:640px;background:var(--surface);border:1px solid var(--border);border-radius:22px;padding:32px;animation:modalIn .3s cubic-bezier(.2,0,0,1)}
+.json-export-title{font-family:'Syne',sans-serif;font-size:18px;font-weight:800;margin-bottom:6px}
+.json-export-sub{font-size:12px;color:var(--muted);margin-bottom:20px;line-height:1.8}
+.json-export-steps{display:flex;flex-direction:column;gap:8px;margin-bottom:20px}
+.json-export-step{display:flex;align-items:flex-start;gap:12px;background:var(--surface-2);border:1px solid var(--border);border-radius:10px;padding:12px 14px}
+.step-num{width:22px;height:22px;border-radius:50%;background:var(--accent-soft);border:1px solid rgba(124,106,255,.3);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:var(--accent);flex-shrink:0;font-family:'Syne',sans-serif}
+.step-text{font-size:12px;color:var(--text);line-height:1.6}
+.json-export-area{width:100%;height:180px;background:rgba(0,0,0,.5);color:#7cff9e;border:1px solid var(--border);padding:14px;border-radius:12px;font-size:11px;outline:none;resize:none;font-family:'DM Mono',monospace;margin-bottom:16px}
+.json-export-actions{display:flex;gap:10px}
+
 #toast{position:fixed;bottom:32px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--surface-2);border:1px solid var(--border);color:var(--text);padding:12px 24px;border-radius:30px;font-size:13px;z-index:9999;opacity:0;transition:opacity .3s,transform .3s;white-space:nowrap;pointer-events:none}
 #toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
 
@@ -549,6 +582,53 @@ textarea#json-input:focus{border-color:rgba(124,106,255,.4)}
   </div>
 
 </div>
+
+<!-- ══ MODAL SIGNALER UNE ERREUR ══ -->
+<div id="report-backdrop" onclick="if(event.target===this)closeReportModal()">
+  <div class="report-box">
+    <div class="report-title">⚠️ Signaler une erreur</div>
+    <div class="report-sub">La réponse marquée correcte est fausse ? Indique quelle réponse est la vraie bonne réponse. Le point te sera attribué et le quiz sera corrigé localement.</div>
+    <div class="report-label">Question</div>
+    <div class="report-question-preview" id="report-q-preview">—</div>
+    <div class="report-label" style="margin-bottom:10px">Quelle est la vraie bonne réponse ?</div>
+    <div class="report-choices-grid" id="report-choices-grid"></div>
+    <div class="report-actions">
+      <button class="btn-orange" style="flex:2" onclick="confirmReport()">✓ Confirmer la correction</button>
+      <button class="btn btn-ghost" style="flex:1" onclick="closeReportModal()">Annuler</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══ MODAL JSON EXPORT (correction à appliquer sur GitHub) ══ -->
+<div id="json-export-backdrop" onclick="if(event.target===this)closeJsonExport()">
+  <div class="json-export-box">
+    <div class="json-export-title">📋 Correction enregistrée</div>
+    <div class="json-export-sub">
+      Le point t'a été attribué ✅<br>
+      Pour que la correction soit permanente dans ton <code>quiz.json</code> sur GitHub, suis ces étapes :
+    </div>
+    <div class="json-export-steps">
+      <div class="json-export-step">
+        <div class="step-num">1</div>
+        <div class="step-text">Copie le JSON ci-dessous (quiz entier corrigé)</div>
+      </div>
+      <div class="json-export-step">
+        <div class="step-num">2</div>
+        <div class="step-text">Ouvre ton fichier <strong>quiz.json</strong> sur GitHub et remplace son contenu</div>
+      </div>
+      <div class="json-export-step">
+        <div class="step-num">3</div>
+        <div class="step-text">Commit les changements → la correction sera active au prochain Sync</div>
+      </div>
+    </div>
+    <textarea class="json-export-area" id="json-export-area" readonly></textarea>
+    <div class="json-export-actions">
+      <button class="btn btn-primary" style="flex:2" onclick="copyJsonExport()">📋 Copier le JSON</button>
+      <button class="btn btn-ghost" style="flex:1" onclick="closeJsonExport()">Fermer</button>
+    </div>
+  </div>
+</div>
+
 <div id="toast"></div>
 
 <script>
@@ -561,7 +641,6 @@ function checkCode() {
   const val = document.getElementById('login-input').value;
   const errEl = document.getElementById('login-error');
   if (val === ACCESS_CODE) {
-    // Bon code — masquer login, montrer welcome
     const ls = document.getElementById('login-screen');
     ls.style.opacity = '0';
     ls.style.transition = 'opacity .6s ease';
@@ -663,25 +742,15 @@ const FONTS = [
 ];
 
 const BG_PRESETS = [
-  // Noirs & sombres
   '#050508','#0d0d14','#111111','#1a1a2e','#0f0f23',
-  // Bleus nuit
   '#0a0e27','#0d1b2a','#0a1628','#0e2040','#0a1a3a',
-  // Verts sombres
   '#0a1a0a','#0d1f0d','#0f2318','#0a2010','#061a06',
-  // Violets
   '#150a2e','#1a0a2e','#200a30','#12062a','#1e0a3c',
-  // Rouge/bordeaux
   '#1a0505','#200a0a','#2a0808','#1f0606','#250505',
-  // Clairs colorés
   '#e8f4f8','#f0f4ff','#fff8f0','#f5fff5','#fff0f5',
-  // Pastel
   '#c8d8e8','#d4c8f0','#f0d4c8','#c8f0d4','#f0c8d4',
-  // Vifs
   '#1a3a5c','#2d1b69','#1b4332','#7b2d00','#4a0e8f',
-  // Terre
   '#2c1810','#1c2c10','#10182c','#2c102c','#1a1a10',
-  // Blancs cassés
   '#f8f5f0','#f5f0f8','#f0f8f5','#fafafa','#f5f5dc',
 ];
 
@@ -696,6 +765,13 @@ let session     = { quiz:null, idx:0, correct:0, errors:[] };
 let activePanel = null;
 let reviewStars = 0;
 
+// État pour le signalement d'erreur
+let reportState = {
+  questionIdx: null,
+  selectedChoice: null,
+  answeredChoiceIdx: null,  // l'index que l'utilisateur avait cliqué
+};
+
 // ── PERSISTANCE ────────────────────────────────────
 function save() { localStorage.setItem(STORE_KEY, JSON.stringify(S)); }
 function load() {
@@ -705,8 +781,6 @@ function load() {
     if (!S.library) S.library = [];
     if (!S.trash)   S.trash   = [];
     if (!S.reviews) S.reviews = [];
-    if (!S.trash)   S.trash   = [];
-    // migration clés précédentes
     if (!S.library.length) {
       for (const k of ['qe_v5','quiz_engine_v4','quiz_engine_v3','quiz_engine_lib']) {
         const old = localStorage.getItem(k);
@@ -755,7 +829,6 @@ function onA2Hex(v){if(isHex(v)){applyAccent(S.theme.a1,v,-1);save();}}
 function applyFont(idx) {
   const font = FONTS[idx];
   if (!font) return;
-  // Charger la police depuis Google Fonts si pas déjà chargée
   const linkId = 'gf-' + idx;
   if (!document.getElementById(linkId)) {
     const link = document.createElement('link');
@@ -764,7 +837,6 @@ function applyFont(idx) {
     link.href = 'https://fonts.googleapis.com/css2?family=' + font.g + '&display=swap';
     document.head.appendChild(link);
   }
-  // Mettre à jour la variable CSS — tout le DOM hérite via font-family:inherit
   document.documentElement.style.setProperty('--font-body', font.f);
   S.theme.fi = idx;
   document.querySelectorAll('.font-swatch').forEach((s,i) => s.classList.toggle('active', i === idx));
@@ -778,7 +850,6 @@ function buildThemeGrids() {
   bg.innerHTML=BG_PRESETS.map((c,i)=>'<div class="bg-swatch '+(c===S.theme.bg?'active':'')+'" style="background:'+c+'" data-i="'+i+'" data-c="'+c+'"></div>').join('');
   bg.onclick=function(e){const s=e.target.closest('.bg-swatch');if(!s)return;applyBg(s.dataset.c,+s.dataset.i);save();};
 
-  // Grille polices
   const fg = document.getElementById('font-grid');
   fg.innerHTML = FONTS.map((f,i) =>
     '<div class="font-swatch '+(i===(S.theme.fi||0)?'active':'')+'" data-i="'+i+'" title="'+f.n+'">'
@@ -899,7 +970,6 @@ function submitReview() {
   const date = new Date().toLocaleDateString('fr-FR', {day:'numeric', month:'short', year:'numeric'});
   const stars = '⭐'.repeat(reviewStars);
 
-  // Sauvegarde local
   S.reviews.unshift({ id: Date.now(), stars: reviewStars, text, date });
   save();
   document.getElementById('review-text').value = '';
@@ -908,14 +978,13 @@ function submitReview() {
   renderReviewsList();
   toast('✅ Avis enregistré !');
 
-  // Envoi par mail via EmailJS
   emailjs.init('U9xMp02ljxwUbwkpL');
   emailjs.send('service_1l5uir7', 'template_w31jlg1', {
     name:    'Quiz Engine',
     stars:   stars + ' (' + reviewStars + '/5)',
     date:    date,
     message: text,
-  }).catch(() => {}); // silencieux si ça échoue
+  }).catch(() => {});
 }
 
 function deleteReview(index) {
@@ -972,7 +1041,6 @@ async function syncGithub(silent) {
     if (!res.ok) throw new Error();
     const data = await res.json();
 
-    // Accepte un objet unique {} ou un tableau []
     const list = Array.isArray(data) ? data : (data && data.titre ? [data] : []);
 
     let added = 0, skipped = 0;
@@ -997,7 +1065,6 @@ async function syncGithub(silent) {
 
 // ── LIBRARY ────────────────────────────────────────
 function upsertQuiz(data) {
-  // Si le quiz est en corbeille (même titre), on ne le réimporte pas
   if (S.trash && S.trash.some(q => q.titre === data.titre)) return false;
   const idx = S.library.findIndex(q => q.titre === data.titre);
   if (idx >= 0) {
@@ -1014,7 +1081,6 @@ function upsertQuiz(data) {
 function deleteQuiz(index) {
   if (confirm("Mettre ce quiz à la corbeille ?")) {
     const quiz = S.library[index];
-    // Déplace en corbeille au lieu de supprimer
     if (!S.trash) S.trash = [];
     S.trash.push({ ...quiz, _deletedAt: new Date().toLocaleDateString('fr-FR') });
     S.library.splice(index, 1);
@@ -1074,7 +1140,6 @@ function changeMatiere(index) {
   toast('Matière mise à jour');
 }
 
-// Vider la corbeille entière
 function emptyTrash() {
   if (!S.trash || !S.trash.length) return;
   if (confirm('Vider définitivement la corbeille ?')) {
@@ -1084,7 +1149,6 @@ function emptyTrash() {
   }
 }
 
-// État ouvert/fermé des groupes matières
 const _groupOpen = {};
 
 function toggleGroup(key) {
@@ -1099,25 +1163,18 @@ function renderLibrary() {
     return;
   }
 
-  // Normalisation + aliases : variantes → clé canonique
   const groups = {};
   const groupLabel = {};
 
   const ALIASES = {
-    // Maths
     'maths': 'mathematiques', 'math': 'mathematiques', 'mathematique': 'mathematiques',
-    // Physique
     'physique': 'physique-chimie', 'chimie': 'physique-chimie', 'physique chimie': 'physique-chimie',
     'physique/chimie': 'physique-chimie',
-    // Sciences de l'ingénieur
     'si': 'sciences de l ingenieur', 'science de l ingenieur': 'sciences de l ingenieur',
     'sciences de lingenieur': 'sciences de l ingenieur', 'sci': 'sciences de l ingenieur',
     'sciences ingenieur': 'sciences de l ingenieur',
-    // Anglais
     'anglais': 'anglais', 'english': 'anglais', 'lv1': 'anglais', 'lv2 anglais': 'anglais',
-    // Allemand
     'allemand': 'allemand', 'deutsch': 'allemand', 'lv2 allemand': 'allemand',
-    // Histoire-Géo
     'histoire': 'histoire-geographie', 'geo': 'histoire-geographie',
     'geographie': 'histoire-geographie', 'histoire geo': 'histoire-geographie',
     'histoire geographie': 'histoire-geographie', 'hg': 'histoire-geographie',
@@ -1135,8 +1192,8 @@ function renderLibrary() {
 
   function normKey(s) {
     const n = (s || '').trim().toLowerCase()
-      .normalize('NFD').replace(/[̀-ͯ]/g, '')
-      .replace(/s+/g, ' ');
+      .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+      .replace(/\s+/g, ' ');
     return ALIASES[n] || n;
   }
 
@@ -1150,7 +1207,7 @@ function renderLibrary() {
 
   grid.innerHTML = Object.entries(groups).map(([key, items]) => {
     const matiere = groupLabel[key];
-    const isOpen = _groupOpen[key] !== false; // ouvert par défaut
+    const isOpen = _groupOpen[key] !== false;
     const cards = items.map(({ quiz, i }) => {
       const sc = quiz._score;
       const badge = sc
@@ -1182,14 +1239,11 @@ function renderLibrary() {
 }
 
 
-
-
-
 // ── PLAYER ─────────────────────────────────────────
 function startQuiz(index) {
   const quiz=S.library[index];
   if(!quiz) return;
-  session={quiz,idx:0,correct:0,errors:[]};
+  session={quiz,idx:0,correct:0,errors:[],quizLibraryIndex:index};
   document.getElementById('player-title').textContent=quiz.titre;
   document.getElementById('player').style.display='block';
   document.getElementById('player').scrollTop=0;
@@ -1240,14 +1294,24 @@ function answer(btn) {
     session.errors.push({question:q.question,given:q.choix[i],correct:cor});
   }
   updateLiveScore();
+
+  // Bouton "Signaler une erreur" visible seulement quand la réponse est marquée fausse
+  const reportBtn = !ok
+    ? '<button class="btn-warn" style="margin-top:12px;width:100%;justify-content:center;display:flex;align-items:center;gap:8px;padding:10px 16px;border-radius:10px;font-size:11px" onclick="openReportModal('+session.idx+','+i+')">'
+      + '⚠️ Signaler une erreur dans ce quiz'
+      + '</button>'
+    : '';
+
   const fb=document.getElementById('feedback');
   fb.style.display='block';
   fb.innerHTML='<div class="feedback-box">'
     +'<div class="feedback-icon">'+(ok?'✅':'❌')+'</div>'
     +'<div class="feedback-text">'+(q.explication||(ok?'Bonne réponse !':'Mauvaise réponse.'))+'</div>'
+    +'</div>'
+    +reportBtn
     +'<button class="btn btn-primary next-btn" onclick="nextStep()">'
     +(session.idx+1<session.quiz.questions.length?'Suivant →':'Voir les résultats →')
-    +'</button></div>';
+    +'</button>';
 }
 
 function nextStep() {
@@ -1279,11 +1343,127 @@ function showResults() {
     +'<button class="btn btn-primary" onclick="closePlayer()">← Dashboard</button>'
     +'</div></div>';
 
-  // Animation de victoire 🎉
   showVictory({ score: session.correct, total, correct: session.correct, wrong: total - session.correct });
 }
 
 function closePlayer(){document.getElementById('player').style.display='none';}
+
+
+// ── SIGNALER UNE ERREUR ──────────────────────────────
+function openReportModal(questionIdx, answeredChoiceIdx) {
+  const q = session.quiz.questions[questionIdx];
+  reportState = { questionIdx, selectedChoice: null, answeredChoiceIdx };
+
+  document.getElementById('report-q-preview').textContent = q.question;
+
+  // Afficher les choix disponibles
+  const grid = document.getElementById('report-choices-grid');
+  grid.innerHTML = q.choix.map((c, i) =>
+    '<button class="report-choice-btn" data-i="'+i+'" onclick="selectReportChoice(this,'+i+')">'
+    + '<span class="report-choice-letter">'+LETTERS[i]+'</span>'
+    + '<span style="flex:1;font-size:12px;line-height:1.4">'+esc(c)+'</span>'
+    + '</button>'
+  ).join('');
+
+  // Pré-sélectionner la réponse que l'utilisateur avait choisie
+  const btns = grid.querySelectorAll('.report-choice-btn');
+  if (btns[answeredChoiceIdx]) {
+    btns[answeredChoiceIdx].classList.add('selected');
+    reportState.selectedChoice = answeredChoiceIdx;
+  }
+
+  document.getElementById('report-backdrop').style.display = 'flex';
+}
+
+function selectReportChoice(btn, idx) {
+  document.querySelectorAll('.report-choice-btn').forEach(b => b.classList.remove('selected'));
+  btn.classList.add('selected');
+  reportState.selectedChoice = idx;
+}
+
+function closeReportModal() {
+  document.getElementById('report-backdrop').style.display = 'none';
+  reportState = { questionIdx: null, selectedChoice: null, answeredChoiceIdx: null };
+}
+
+function confirmReport() {
+  if (reportState.selectedChoice === null) {
+    toast('⚠️ Sélectionne la bonne réponse !');
+    return;
+  }
+
+  const q = session.quiz.questions[reportState.questionIdx];
+  const newCorrectChoice = q.choix[reportState.selectedChoice];
+  const oldAnswer = q.choix[reportState.answeredChoiceIdx];
+
+  // 1. Corriger localement dans la bibliothèque
+  const libIdx = session.quizLibraryIndex;
+  if (libIdx >= 0 && S.library[libIdx]) {
+    S.library[libIdx].questions[reportState.questionIdx].reponse = newCorrectChoice;
+  }
+  // Aussi corriger dans session.quiz (pour ce quiz en cours)
+  session.quiz.questions[reportState.questionIdx].reponse = newCorrectChoice;
+
+  // 2. Retirer l'erreur de session.errors si elle y est
+  session.errors = session.errors.filter(e =>
+    !(e.question === q.question && e.given === oldAnswer)
+  );
+
+  // 3. Attribuer le point si ce n'était pas encore compté
+  const wasWrong = (oldAnswer !== newCorrectChoice);
+  if (wasWrong) {
+    session.correct++;
+    updateLiveScore();
+    // Mettre à jour l'affichage des choix : retirer wrong, mettre correct
+    document.querySelectorAll('.choice').forEach((btn, j) => {
+      btn.classList.remove('wrong', 'correct');
+      if (j === reportState.answeredChoiceIdx) {
+        btn.classList.add('correct');
+        btn.querySelector('.choice-letter').style.background = 'rgba(45,255,158,.2)';
+        btn.querySelector('.choice-letter').style.borderColor = 'var(--green)';
+        btn.querySelector('.choice-letter').style.color = 'var(--green)';
+      }
+    });
+    // Mettre à jour le feedback
+    const fb = document.getElementById('feedback');
+    if (fb) {
+      const box = fb.querySelector('.feedback-box');
+      if (box) {
+        box.querySelector('.feedback-icon').textContent = '✅';
+        box.style.borderLeftColor = 'var(--green)';
+      }
+    }
+  }
+
+  save();
+  closeReportModal();
+
+  // 4. Générer le JSON corrigé pour mise à jour sur GitHub
+  const quizCleaned = JSON.parse(JSON.stringify(S.library[libIdx]));
+  delete quizCleaned._score;
+  delete quizCleaned._errors;
+  const jsonStr = JSON.stringify(quizCleaned, null, 2);
+  document.getElementById('json-export-area').value = jsonStr;
+  document.getElementById('json-export-backdrop').style.display = 'flex';
+
+  toast('✅ Point attribué ! Copie le JSON pour corriger GitHub.');
+}
+
+function closeJsonExport() {
+  document.getElementById('json-export-backdrop').style.display = 'none';
+}
+
+function copyJsonExport() {
+  const area = document.getElementById('json-export-area');
+  navigator.clipboard.writeText(area.value).then(() => {
+    toast('📋 JSON copié dans le presse-papier !');
+  }).catch(() => {
+    area.select();
+    document.execCommand('copy');
+    toast('📋 JSON copié !');
+  });
+}
+
 
 // ── IMPORT ─────────────────────────────────────────
 function openImportModal(){document.getElementById('modal-backdrop').style.display='flex';}
@@ -1321,7 +1501,6 @@ dz.addEventListener('drop',e=>{dz.classList.remove('over');const f=e.dataTransfe
 function showVictory({ score, total, correct, wrong }) {
   const colors = ['#7c6aff','#ff6a9e','#ffb347','#2dff9e','#fff'];
 
-  // Confettis
   for (let i = 0; i < 90; i++) {
     const c = document.createElement('div');
     c.className = 'confetti-piece';
@@ -1338,7 +1517,6 @@ function showVictory({ score, total, correct, wrong }) {
     setTimeout(() => c.remove(), 5500);
   }
 
-  // Particles burst depuis le centre
   const cx = innerWidth/2, cy = innerHeight/2;
   for (let i = 0; i < 24; i++) {
     const p = document.createElement('div');
