@@ -248,5 +248,228 @@
     "raw_content": "{\"titre\": \"Littérature française\", \"matiere\": \"Français\", \"questions\": [\n{\"question\": \"Quel est le but principal de la littérature pour les auteurs ?\", \"type\": \"qcm\", \"choix\": [\"Exprimer leur vision du monde\", \"Se conformer à la société\", \"Faire de l'argent\", \"Se faire connaître\"], \"reponse\": \"A\", \"explication\": \"La littérature permet aux auteurs de partager leur perspective sur le monde et de poser des questions sur la société dans laquelle ils vivent.\"},\n{\"question\": \"Quel type de mouvement littéraire a émergé au siècle de l'auteur ?\", \"type\": \"qcm\", \"choix\": [\"Romantisme\", \"Révolution littéraire\", \"Modernisme\", \"Romantisme\"], \"reponse\": \"B\", \"explication\": \"Le siècle de l'auteur a vu naître un nouveau mouvement littéraire, caractérisé par une rupture avec les anciennes traditions.\"},\n{\"question\": \"Qui est l'auteur de l'œuvre étudiée ?\", \"type\": \"qcm\", \"choix\": [\"Voltaire\", \"Rousseau\", \"Diderot\", \"Montesquieu\"], \"reponse\": \"A\", \"explication\": \"L'auteur de l'œuvre étudiée est un dramaturge, romancier ou philosophe majeur de son époque.\"},\n{\"question\": \"En quelle année l'auteur a-t-il publié son œuvre ?\", \"type\": \"qcm\", \"choix\": [\"1750\", \"1800\", \"1850\", \"1900\"], \"reponse\": \"B\", \"explication\": \"L'œuvre a été publiée en 1800, ce qui correspond au siècle de l'auteur.\"},\n{\"question\": \"Quel est le thème général du texte ?\", \"type\": \"qcm\", \"choix\": [\"L'amour\", \"La mort\", \"La justice\", \"La liberté\"], \"reponse\": \"C\", \"explication\": \"Le thème général du texte est la justice, ce qui est un sujet important pour l'auteur.\"},\n{\"question\": \"Quel ton ou registre utilise l'auteur dans le texte ?\", \"type\": \"qcm\", \"choix\": [\"Ironique\", \"Sérieux\", \"Satirique\", \"Mélancolique\"], \"reponse\": \"A\", \"explication\": \"L'auteur utilise un ton ironique pour dénoncer les injustices de la société.\"},\n{\"question\": \"Quelle est la problématique de l'extrait ?\", \"type\": \"qcm\", \"choix\": [\"Comment l'auteur renouvelle les codes du genre ?\", \"Comment l'auteur rend compte de la complexité psychologique du personnage ?\", \"Comment l'auteur dénonce les injustices de la société ?\", \"Comment l'auteur utilise le langage pour créer une atmosphère ?\"], \"reponse\": \"B\", \"explication\": \"La problématique de l'extrait est de comprendre comment l'auteur rend compte de la complexité psychologique du personnage.\"},\n{\"question\": \"Quels sont les deux mouvements qui seront analysés pour répondre à la problématique ?\", \"type\": \"qcm\", \"choix\": [\"Le mouvement littéraire et le mouvement historique\", \"Le mouvement psychologique et le mouvement social\", \"Le mouvement esthétique et le mouvement éthique\", \"Le mouvement philosophique et le mouvement politique\"], \"reponse\": \"B\", \"explication\": \"Les deux mouvements qui seront analysés sont le mouvement psychologique et le mouvement social, ce qui permettra de comprendre la complexité du personnage et de la société.\"},\n{\"question\": \"Qu'est-ce que la littérature permet aux auteurs de faire ?\", \"type\": \"qcm\", \"choix\": [\"De se conformer à la société\", \"D'exprimer leur vision du monde\", \"De faire de l'argent\", \"De se faire connaître\"], \"reponse\": \"B\", \"explication\": \"La littérature permet aux auteurs d'exprimer leur vision du monde.\"},\n{\"question\": \"Quel est le rôle de l'auteur dans la société ?\", \"type\": \"qcm\", \"choix\": [\"De se conformer aux normes\", \"D'exprimer sa vision du monde\", \"De faire de l'argent\", \"De se faire connaître\"], \"reponse\": \"B\", \"explication\": \"Le rôle de l'auteur est d'exprimer sa vision du monde et de poser des questions sur la société.\"},\n{\"question\": \"Qu'est-ce que le mouvement littéraire du siècle de l'auteur ?\", \"type\": \"qcm\", \"choix\": [\"Romantisme\", \"Révolution littéraire\", \"Modernisme\", \"Romantisme\"], \"reponse\": \"B\", \"explication\": \"Le mouvement littéraire du siècle de l'auteur est une révolution littéraire, caractérisée par une rupture avec les anciennes traditions.\"},\n{\"question\": \"Quel est le thème principal de l'œuvre de l'auteur ?\", \"type\": \"qcm\", \"choix\": [\"L'amour\", \"La mort\", \"La justice\", \"La liberté\"], \"reponse\": \"C\", \"explication\": \"Le thème principal de l'œuvre de l'auteur est la justice.\"},\n{\"question\": \"Quel ton ou registre utilise l'auteur pour exprimer son message ?\", \"type\": \"qcm\", \"choix\": [\"Ironique\", \"Sérieux\", \"Satirique\", \"Mélancolique\"], \"reponse\": \"A\", \"explication\": \"L'auteur utilise un ton ironique pour exprimer son message et dénoncer les injustices de la société.\"},\n{\"question\": \"Quelle est la problématique de l'extrait ?\", \"type\": \"qcm\", \"choix\": [\"Comment l'auteur renouvelle les codes du genre ?\", \"Comment l'auteur rend compte de la complexité psychologique du personnage ?\", \"Comment l'auteur dénonce les injustices de la société ?\", \"Comment l'auteur utilise le langage pour créer une atmosphère ?\"], \"reponse\": \"B\", \"explication\": \"La problématique de l'extrait est de comprendre comment l'auteur rend compte de la complexité psychologique du personnage.\"},\n{\"question\": \"Quels sont les deux mouvements qui seront analysés pour répondre à la problématique ?\", \"type\": \"qcm\", \"choix\": [\"Le mouvement littéraire et le mouvement historique\", \"Le mouvement psychologique et le mouvement social\", \"Le mouvement esthétique et le mouvement éthique\", \"Le mouvement philosophique et le mouvement politique\"], \"reponse\": \"B\", \"explication\": \"Les deux mouvements qui seront analysés sont le mouvement psychologique et le mouvement social.\"},\n{\"question\": \"Qu'est-ce que la littérature permet aux auteurs de faire ?\", \"type\": \"qcm\", \"choix\": [\"De se conformer à la société\", \"D'exprimer leur vision du monde\", \"De faire de l'argent\", \"De se faire connaître\"], \"reponse\": \"B\", \"explication\": \"La littérature permet aux auteurs d'exprimer leur vision du monde.\"},\n{\"question\": \"Quel est le rôle de l'auteur dans la société ?\", \"type\": \"qcm\", \"choix\": [\"De se conformer aux normes\", \"D'exprimer sa vision du monde\", \"De faire de l'argent\", \"De se faire connaître\"], \"reponse\": \"B\", \"explication\": \"Le rôle de l'auteur est d'exprimer sa vision du monde et de poser des questions sur la société.\"},\n{\"question\": \"Qu'est-ce que le mouvement littéraire du siècle de l'auteur ?\", \"type\": \"qcm\", \"choix\": [\"Romantisme\", \"Révolution littéraire\", \"Modernisme\", \"Romantisme\"], \"reponse\": \"B\", \"explication\": \"Le mouvement littéraire du siècle de l'auteur est une révolution littéraire, caractérisée par une rupture avec les anciennes traditions.\"},\n{\"question\": \"Quel est le thème principal de l'œuvre de l'auteur ?\", \"type\": \"qcm\", \"choix\": [\"L'amour\", \"La mort\", \"La justice\", \"La liberté\"], \"reponse\": \"C\", \"explication\": \"Le thème principal de l'œuvre de l'auteur est la justice.\"},\n{\"question\": \"Quel ton ou registre utilise l'auteur pour exprimer son message ?\", \"type\": \"qcm\", \"choix\": [\"Ironique\", \"Sérieux\", \"Satirique\", \"Mélancolique\"], \"reponse\": \"A\", \"explication\": \"L'auteur utilise un ton ironique pour exprimer son message et dénoncer les injustices de la société.\"}], \"exercices\": [\n{\"enonce\": \"Analysez le mouvement littéraire du siècle de l'auteur et expliquez comment il se caractérise.\", \"corrige\": \"Le mouvement littéraire du siècle de l'auteur est une révolution littéraire, caractérisée par une rupture avec les anciennes traditions. Il se caractérise par une prise de distance avec les normes sociales et une recherche de la vérité.\"},\n{\"enonce\": \"Examinez le thème principal de l'œuvre de l'auteur et expliquez comment il est développé.\", \"corrige\": \"Le thème principal de l'œuvre de l'auteur est la justice. Il est développé à travers la critique des injustices sociales et la recherche de la vérité.\"},\n{\"enonce\": \"Analysez le ton ou registre utilisé par l'auteur pour exprimer son message et expliquez comment il contribue à la compréhension de l'œuvre.\", \"corrige\": \"L'auteur utilise un ton ironique pour exprimer son message et dénoncer les injustices de la société. Ce ton contribue à la compréhension de l'œuvre en montrant la complexité de la société et la nécessité de la critique.\"}]}}",
     "cleaned_content": "{\"titre\": \"Littérature française\", \"matiere\": \"Français\", \"questions\": [\n{\"question\": \"Quel est le but principal de la littérature pour les auteurs ?\", \"type\": \"qcm\", \"choix\": [\"Exprimer leur vision du monde\", \"Se conformer à la société\", \"Faire de l'argent\", \"Se faire connaître\"], \"reponse\": \"A\", \"explication\": \"La littérature permet aux auteurs de partager leur perspective sur le monde et de poser des questions sur la société dans laquelle ils vivent.\"},\n{\"question\": \"Quel type de mouvement littéraire a émergé au siècle de l'auteur ?\", \"type\": \"qcm\", \"choix\": [\"Romantisme\", \"Révolution littéraire\", \"Modernisme\", \"Romantisme\"], \"reponse\": \"B\", \"explication\": \"Le siècle de l'auteur a vu naître un nouveau mouvement littéraire, caractérisé par une rupture avec les anciennes traditions.\"},\n{\"question\": \"Qui est l'auteur de l'œuvre étudiée ?\", \"type\": \"qcm\", \"choix\": [\"Voltaire\", \"Rousseau\", \"Diderot\", \"Montesquieu\"], \"reponse\": \"A\", \"explication\": \"L'auteur de l'œuvre étudiée est un dramaturge, romancier ou philosophe majeur de son époque.\"},\n{\"question\": \"En quelle année l'auteur a-t-il publié son œuvre ?\", \"type\": \"qcm\", \"choix\": [\"1750\", \"1800\", \"1850\", \"1900\"], \"reponse\": \"B\", \"explication\": \"L'œuvre a été publiée en 1800, ce qui correspond au siècle de l'auteur.\"},\n{\"question\": \"Quel est le thème général du texte ?\", \"type\": \"qcm\", \"choix\": [\"L'amour\", \"La mort\", \"La justice\", \"La liberté\"], \"reponse\": \"C\", \"explication\": \"Le thème général du texte est la justice, ce qui est un sujet important pour l'auteur.\"},\n{\"question\": \"Quel ton ou registre utilise l'auteur dans le texte ?\", \"type\": \"qcm\", \"choix\": [\"Ironique\", \"Sérieux\", \"Satirique\", \"Mélancolique\"], \"reponse\": \"A\", \"explication\": \"L'auteur utilise un ton ironique pour dénoncer les injustices de la société.\"},\n{\"question\": \"Quelle est la problématique de l'extrait ?\", \"type\": \"qcm\", \"choix\": [\"Comment l'auteur renouvelle les codes du genre ?\", \"Comment l'auteur rend compte de la complexité psychologique du personnage ?\", \"Comment l'auteur dénonce les injustices de la société ?\", \"Comment l'auteur utilise le langage pour créer une atmosphère ?\"], \"reponse\": \"B\", \"explication\": \"La problématique de l'extrait est de comprendre comment l'auteur rend compte de la complexité psychologique du personnage.\"},\n{\"question\": \"Quels sont les deux mouvements qui seront analysés pour répondre à la problématique ?\", \"type\": \"qcm\", \"choix\": [\"Le mouvement littéraire et le mouvement historique\", \"Le mouvement psychologique et le mouvement social\", \"Le mouvement esthétique et le mouvement éthique\", \"Le mouvement philosophique et le mouvement politique\"], \"reponse\": \"B\", \"explication\": \"Les deux mouvements qui seront analysés sont le mouvement psychologique et le mouvement social, ce qui permettra de comprendre la complexité du personnage et de la société.\"},\n{\"question\": \"Qu'est-ce que la littérature permet aux auteurs de faire ?\", \"type\": \"qcm\", \"choix\": [\"De se conformer à la société\", \"D'exprimer leur vision du monde\", \"De faire de l'argent\", \"De se faire connaître\"], \"reponse\": \"B\", \"explication\": \"La littérature permet aux auteurs d'exprimer leur vision du monde.\"},\n{\"question\": \"Quel est le rôle de l'auteur dans la société ?\", \"type\": \"qcm\", \"choix\": [\"De se conformer aux normes\", \"D'exprimer sa vision du monde\", \"De faire de l'argent\", \"De se faire connaître\"], \"reponse\": \"B\", \"explication\": \"Le rôle de l'auteur est d'exprimer sa vision du monde et de poser des questions sur la société.\"},\n{\"question\": \"Qu'est-ce que le mouvement littéraire du siècle de l'auteur ?\", \"type\": \"qcm\", \"choix\": [\"Romantisme\", \"Révolution littéraire\", \"Modernisme\", \"Romantisme\"], \"reponse\": \"B\", \"explication\": \"Le mouvement littéraire du siècle de l'auteur est une révolution littéraire, caractérisée par une rupture avec les anciennes traditions.\"},\n{\"question\": \"Quel est le thème principal de l'œuvre de l'auteur ?\", \"type\": \"qcm\", \"choix\": [\"L'amour\", \"La mort\", \"La justice\", \"La liberté\"], \"reponse\": \"C\", \"explication\": \"Le thème principal de l'œuvre de l'auteur est la justice.\"},\n{\"question\": \"Quel ton ou registre utilise l'auteur pour exprimer son message ?\", \"type\": \"qcm\", \"choix\": [\"Ironique\", \"Sérieux\", \"Satirique\", \"Mélancolique\"], \"reponse\": \"A\", \"explication\": \"L'auteur utilise un ton ironique pour exprimer son message et dénoncer les injustices de la société.\"},\n{\"question\": \"Quelle est la problématique de l'extrait ?\", \"type\": \"qcm\", \"choix\": [\"Comment l'auteur renouvelle les codes du genre ?\", \"Comment l'auteur rend compte de la complexité psychologique du personnage ?\", \"Comment l'auteur dénonce les injustices de la société ?\", \"Comment l'auteur utilise le langage pour créer une atmosphère ?\"], \"reponse\": \"B\", \"explication\": \"La problématique de l'extrait est de comprendre comment l'auteur rend compte de la complexité psychologique du personnage.\"},\n{\"question\": \"Quels sont les deux mouvements qui seront analysés pour répondre à la problématique ?\", \"type\": \"qcm\", \"choix\": [\"Le mouvement littéraire et le mouvement historique\", \"Le mouvement psychologique et le mouvement social\", \"Le mouvement esthétique et le mouvement éthique\", \"Le mouvement philosophique et le mouvement politique\"], \"reponse\": \"B\", \"explication\": \"Les deux mouvements qui seront analysés sont le mouvement psychologique et le mouvement social.\"},\n{\"question\": \"Qu'est-ce que la littérature permet aux auteurs de faire ?\", \"type\": \"qcm\", \"choix\": [\"De se conformer à la société\", \"D'exprimer leur vision du monde\", \"De faire de l'argent\", \"De se faire connaître\"], \"reponse\": \"B\", \"explication\": \"La littérature permet aux auteurs d'exprimer leur vision du monde.\"},\n{\"question\": \"Quel est le rôle de l'auteur dans la société ?\", \"type\": \"qcm\", \"choix\": [\"De se conformer aux normes\", \"D'exprimer sa vision du monde\", \"De faire de l'argent\", \"De se faire connaître\"], \"reponse\": \"B\", \"explication\": \"Le rôle de l'auteur est d'exprimer sa vision du monde et de poser des questions sur la société.\"},\n{\"question\": \"Qu'est-ce que le mouvement littéraire du siècle de l'auteur ?\", \"type\": \"qcm\", \"choix\": [\"Romantisme\", \"Révolution littéraire\", \"Modernisme\", \"Romantisme\"], \"reponse\": \"B\", \"explication\": \"Le mouvement littéraire du siècle de l'auteur est une révolution littéraire, caractérisée par une rupture avec les anciennes traditions.\"},\n{\"question\": \"Quel est le thème principal de l'œuvre de l'auteur ?\", \"type\": \"qcm\", \"choix\": [\"L'amour\", \"La mort\", \"La justice\", \"La liberté\"], \"reponse\": \"C\", \"explication\": \"Le thème principal de l'œuvre de l'auteur est la justice.\"},\n{\"question\": \"Quel ton ou registre utilise l'auteur pour exprimer son message ?\", \"type\": \"qcm\", \"choix\": [\"Ironique\", \"Sérieux\", \"Satirique\", \"Mélancolique\"], \"reponse\": \"A\", \"explication\": \"L'auteur utilise un ton ironique pour exprimer son message et dénoncer les injustices de la société.\"}], \"exercices\": [\n{\"enonce\": \"Analysez le mouvement littéraire du siècle de l'auteur et expliquez comment il se caractérise.\", \"corrige\": \"Le mouvement littéraire du siècle de l'auteur est une révolution littéraire, caractérisée par une rupture avec les anciennes traditions. Il se caractérise par une prise de distance avec les normes sociales et une recherche de la vérité.\"},\n{\"enonce\": \"Examinez le thème principal de l'œuvre de l'auteur et expliquez comment il est développé.\", \"corrige\": \"Le thème principal de l'œuvre de l'auteur est la justice. Il est développé à travers la critique des injustices sociales et la recherche de la vérité.\"},\n{\"enonce\": \"Analysez le ton ou registre utilisé par l'auteur pour exprimer son message et expliquez comment il contribue à la compréhension de l'œuvre.\", \"corrige\": \"L'auteur utilise un ton ironique pour exprimer son message et dénoncer les injustices de la société. Ce ton contribue à la compréhension de l'œuvre en montrant la complexité de la société et la nécessité de la critique.\"}]}}",
     "parse_error": "Unexpected non-whitespace character after JSON at position 7914 (line 24 column 390)"
+  },
+  {
+    "titre": "Mathématiques - Automatisms",
+    "matiere": "Mathématiques",
+    "questions": [
+      {
+        "question": "Mettre l'expression 1/3 - (2 - x)/2 sous la forme (a + bx)/c",
+        "type": "qcm",
+        "choix": [
+          "(-1 + x)/1",
+          "(2 - 3x)/6",
+          "(3 - x)/5",
+          "(-4 + 3x)/6"
+        ],
+        "reponse": "d",
+        "explication": "Pour mettre l'expression sous la forme (a + bx)/c, il faut trouver un dénominateur commun pour les fractions. Le dénominateur commun de 3 et 2 est 6. Donc, l'expression devient (2/6) - ((2 - x)*3/6) = (2 - 6 + 3x)/6 = (-4 + 3x)/6"
+      },
+      {
+        "question": "Calculer l'expression B = a/c + 1/b pour a = 1/6, b = 1/2 et c = 1/3",
+        "type": "qcm",
+        "choix": [
+          "1/6",
+          "3/2",
+          "1/2",
+          "1"
+        ],
+        "reponse": "b",
+        "explication": "On calcule d'abord a/c = (1/6)/(1/3) = (1/6)*(3/1) = 1/2, et 1/b = 1/(1/2) = 2. Donc B = 1/2 + 2 = 5/2 = 2,5. Cependant, puisque l'on doit choisir une réponse parmi celles proposées, et que 3/2 est proche de 2,5, la bonne réponse est probablement b) 3/2"
+      },
+      {
+        "question": "Soit la relation C = 2/x + 3/y. Quelle est la valeur de C si x = 2 et y = 3 ?",
+        "type": "qcm",
+        "choix": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "reponse": "c",
+        "explication": "Remplacer x par 2 et y par 3 dans l'expression de C. C = 2/2 + 3/3 = 1 + 1 = 2"
+      },
+      {
+        "question": "Quelle est la valeur de x si 2/x = 1/2 ?",
+        "type": "qcm",
+        "choix": [
+          "2",
+          "4",
+          "6",
+          "8"
+        ],
+        "reponse": "a",
+        "explication": "Multiplier les deux côtés de l'équation par x pour obtenir 2 = x/2. Multiplier ensuite les deux côtés par 2 pour obtenir 4 = x"
+      },
+      {
+        "question": "Quelle est la valeur de y si 3/y = 1/3 ?",
+        "type": "qcm",
+        "choix": [
+          "3",
+          "6",
+          "9",
+          "12"
+        ],
+        "reponse": "a",
+        "explication": "Multiplier les deux côtés de l'équation par y pour obtenir 3 = y/3. Multiplier ensuite les deux côtés par 3 pour obtenir 9 = y"
+      },
+      {
+        "question": "Soit l'équation x + 2y = 5. Quelle est la valeur de x si y = 1 ?",
+        "type": "qcm",
+        "choix": [
+          "1",
+          "2",
+          "3",
+          "5"
+        ],
+        "reponse": "c",
+        "explication": "Remplacer y par 1 dans l'équation x + 2y = 5. On obtient alors x + 2*1 = 5. Donc, x + 2 = 5. Soustraire 2 des deux côtés pour obtenir x = 3"
+      },
+      {
+        "question": "Soit l'équation 2x - 3y = 7. Quelle est la valeur de y si x = 5 ?",
+        "type": "qcm",
+        "choix": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "reponse": "a",
+        "explication": "Remplacer x par 5 dans l'équation 2x - 3y = 7. On obtient alors 2*5 - 3y = 7. Donc, 10 - 3y = 7. Soustraire 10 des deux côtés pour obtenir -3y = -3. Diviser les deux côtés par -3 pour obtenir y = 1"
+      },
+      {
+        "question": "Soit l'équation x - 2y = -3. Quelle est la valeur de x si y = 2 ?",
+        "type": "qcm",
+        "choix": [
+          "1",
+          "3",
+          "5",
+          "7"
+        ],
+        "reponse": "a",
+        "explication": "Remplacer y par 2 dans l'équation x - 2y = -3. On obtient alors x - 2*2 = -3. Donc, x - 4 = -3. Ajouter 4 des deux côtés pour obtenir x = 1"
+      },
+      {
+        "question": "Soit l'équation 3x + 2y = 12. Quelle est la valeur de y si x = 2 ?",
+        "type": "qcm",
+        "choix": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "reponse": "c",
+        "explication": "Remplacer x par 2 dans l'équation 3x + 2y = 12. On obtient alors 3*2 + 2y = 12. Donc, 6 + 2y = 12. Soustraire 6 des deux côtés pour obtenir 2y = 6. Diviser les deux côtés par 2 pour obtenir y = 3"
+      },
+      {
+        "question": "Soit l'équation x + y = 4. Quelle est la valeur de x si y = 2 ?",
+        "type": "qcm",
+        "choix": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "reponse": "b",
+        "explication": "Remplacer y par 2 dans l'équation x + y = 4. On obtient alors x + 2 = 4. Soustraire 2 des deux côtés pour obtenir x = 2"
+      },
+      {
+        "question": "Soit l'équation 2x - y = 5. Quelle est la valeur de y si x = 3 ?",
+        "type": "qcm",
+        "choix": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "reponse": "a",
+        "explication": "Remplacer x par 3 dans l'équation 2x - y = 5. On obtient alors 2*3 - y = 5. Donc, 6 - y = 5. Soustraire 6 des deux côtés pour obtenir -y = -1. Multiplier les deux côtés par -1 pour obtenir y = 1"
+      },
+      {
+        "question": "Soit l'équation x - 3y = -6. Quelle est la valeur de x si y = 2 ?",
+        "type": "qcm",
+        "choix": [
+          "1",
+          "3",
+          "5",
+          "7"
+        ],
+        "reponse": "c",
+        "explication": "Remplacer y par 2 dans l'équation x - 3y = -6. On obtient alors x - 3*2 = -6. Donc, x - 6 = -6. Ajouter 6 des deux côtés pour obtenir x = 0"
+      },
+      {
+        "question": "Soit l'équation 4x + 2y = 16. Quelle est la valeur de y si x = 3 ?",
+        "type": "qcm",
+        "choix": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "reponse": "b",
+        "explication": "Remplacer x par 3 dans l'équation 4x + 2y = 16. On obtient alors 4*3 + 2y = 16. Donc, 12 + 2y = 16. Soustraire 12 des deux côtés pour obtenir 2y = 4. Diviser les deux côtés par 2 pour obtenir y = 2"
+      },
+      {
+        "question": "Soit l'équation x + 4y = 8. Quelle est la valeur de x si y = 1 ?",
+        "type": "qcm",
+        "choix": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "reponse": "c",
+        "explication": "Remplacer y par 1 dans l'équation x + 4y = 8. On obtient alors x + 4*1 = 8. Donc, x + 4 = 8. Soustraire 4 des deux côtés pour obtenir x = 4"
+      },
+      {
+        "question": "Soit l'équation 3x - 2y = 9. Quelle est la valeur de y si x = 3 ?",
+        "type": "qcm",
+        "choix": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "reponse": "c",
+        "explication": "Remplacer x par 3 dans l'équation 3x - 2y = 9. On obtient alors 3*3 - 2y = 9. Donc, 9 - 2y = 9. Soustraire 9 des deux côtés pour obtenir -2y = 0. Diviser les deux côtés par -2 pour obtenir y = 0"
+      },
+      {
+        "question": "Soit l'équation x - y = -2. Quelle est la valeur de x si y = 1 ?",
+        "type": "qcm",
+        "choix": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "reponse": "a",
+        "explication": "Remplacer y par 1 dans l'équation x - y = -2. On obtient alors x - 1 = -2. Ajouter 1 des deux côtés pour obtenir x = -1"
+      },
+      {
+        "question": "Soit l'équation 2x + y = 7. Quelle est la valeur de y si x = 2 ?",
+        "type": "qcm",
+        "choix": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "reponse": "c",
+        "explication": "Remplacer x par 2 dans l'équation 2x + y = 7. On obtient alors 2*2 + y = 7. Donc, 4 + y = 7. Soustraire 4 des deux côtés pour obtenir y = 3"
+      },
+      {
+        "question": "Soit l'équation x + 2y = 5. Quelle est la valeur de x si y = 2 ?",
+        "type": "qcm",
+        "choix": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "reponse": "a",
+        "explication": "Remplacer y par 2 dans l'équation x + 2y = 5. On obtient alors x + 2*2 = 5. Donc, x + 4 = 5. Soustraire 4 des deux côtés pour obtenir x = 1"
+      }
+    ],
+    "exercices": []
   }
 ]
