@@ -1,695 +1,223 @@
-[
-  {
-    "titre": "Littérature française : Analyse de texte",
-    "matiere": "Français",
-    "questions": [
-      {
-        "question": "Quel est le rôle de la littérature dans la société ?",
-        "type": "qcm",
-        "choix": [
-          "A) Décrire les faits historiques",
-          "B) Exprimer la vision du monde de l'auteur et questionner la société",
-          "C) Donner des conseils pratiques",
-          "D) Faire de la publicité"
-        ],
-        "reponse": "B",
-        "explication": "La littérature permet aux auteurs de partager leurs idées et de remettre en question les normes sociales."
-      },
-      {
-        "question": "Qu'est-ce qui caractérise le Siècle précédent en littérature ?",
-        "type": "qcm",
-        "choix": [
-          "A) Le réalisme",
-          "B) Le romantisme",
-          "C) Le naturalisme",
-          "D) Le modernisme"
-        ],
-        "reponse": "A",
-        "explication": "Le Siècle précédent est souvent associé au réalisme, un mouvement littéraire qui cherche à décrire la réalité de manière objective."
-      },
-      {
-        "question": "Qui est l'auteur de l'œuvre présentée ?",
-        "type": "qcm",
-        "choix": [
-          "A) Victor Hugo",
-          "B) Gustave Flaubert",
-          "C) Jean-Paul Sartre",
-          "D) Simone de Beauvoir"
-        ],
-        "reponse": "A",
-        "explication": "L'auteur de l'œuvre présentée est Victor Hugo, un écrivain français célèbre pour ses romans et ses pièces de théâtre."
-      },
-      {
-        "question": "Quel est le thème général du texte ?",
-        "type": "qcm",
-        "choix": [
-          "A) L'amour",
-          "B) La mort",
-          "C) La justice sociale",
-          "D) La nature"
-        ],
-        "reponse": "C",
-        "explication": "Le thème général du texte est la justice sociale, car l'auteur aborde des questions liées à l'injustice et à la lutte pour les droits de l'homme."
-      },
-      {
-        "question": "Quel est le ton ou le registre utilisé par l'auteur ?",
-        "type": "qcm",
-        "choix": [
-          "A) Ironique",
-          "B) Sérieux",
-          "C) Humoristique",
-          "D) Mélancolique"
-        ],
-        "reponse": "B",
-        "explication": "L'auteur utilise un ton sérieux pour aborder des questions importantes et sensibles."
-      },
-      {
-        "question": "Quelle est la problématique de l'étude de ce passage ?",
-        "type": "qcm",
-        "choix": [
-          "A) Comment l'auteur utilise-t-il la langue pour créer une atmosphère ?",
-          "B) Comment l'auteur parvient-il à rendre compte de la complexité psychologique du personnage ?",
-          "C) Comment l'auteur renouvelle-t-il les codes du genre pour dénoncer une injustice ?",
-          "D) Comment l'auteur utilise-t-il la structure narrative pour créer un suspense ?"
-        ],
-        "reponse": "C",
-        "explication": "La problématique de l'étude de ce passage est de comprendre comment l'auteur utilise la littérature pour dénoncer une injustice et promouvoir la justice sociale."
-      },
-      {
-        "question": "Quel est le plan de l'analyse ?",
-        "type": "qcm",
-        "choix": [
-          "A) Étudier le contexte historique, puis analyser le texte",
-          "B) Analyser le texte, puis étudier le contexte historique",
-          "C) Étudier la structure narrative, puis analyser les personnages",
-          "D) Analyser les personnages, puis étudier la structure narrative"
-        ],
-        "reponse": "A",
-        "explication": "Le plan de l'analyse consiste à étudier le contexte historique dans lequel l'œuvre a été écrite, puis à analyser le texte lui-même pour comprendre les thèmes et les idées de l'auteur."
-      },
-      {
-        "question": "Qu'est-ce que le 'Ré' ?",
-        "type": "qcm",
-        "choix": [
-          "A) Un terme littéraire qui désigne la réflexion de l'auteur",
-          "B) Un terme littéraire qui désigne la conclusion de l'analyse",
-          "C) Un terme littéraire qui désigne la présentation de l'œuvre",
-          "D) Un terme littéraire qui désigne la problématique de l'étude"
-        ],
-        "reponse": "B",
-        "explication": "Le 'Ré' est la conclusion de l'analyse, où l'auteur présente ses conclusions et ses réflexions finales sur l'œuvre."
-      },
-      {
-        "question": "Quel est l'objectif de l'analyse de texte ?",
-        "type": "qcm",
-        "choix": [
-          "A) Comprendre le contenu de l'œuvre",
-          "B) Comprendre les thèmes et les idées de l'auteur",
-          "C) Comprendre la structure narrative de l'œuvre",
-          "D) Comprendre le contexte historique de l'œuvre"
-        ],
-        "reponse": "B",
-        "explication": "L'objectif de l'analyse de texte est de comprendre les thèmes et les idées de l'auteur, ainsi que de découvrir les différents niveaux de signification de l'œuvre."
-      },
-      {
-        "question": "Qu'est-ce que la littérature ?",
-        "type": "qcm",
-        "choix": [
-          "A) Un ensemble de textes écrits",
-          "B) Un art qui utilise la langue pour créer des œuvres",
-          "C) Un moyen de communication",
-          "D) Un outil pour décrire la réalité"
-        ],
-        "reponse": "B",
-        "explication": "La littérature est un art qui utilise la langue pour créer des œuvres qui expriment les idées, les émotions et les expériences de l'auteur."
-      },
-      {
-        "question": "Quel est le rôle de l'auteur dans la littérature ?",
-        "type": "qcm",
-        "choix": [
-          "A) Décrire la réalité",
-          "B) Exprimer ses idées et ses émotions",
-          "C) Donner des conseils pratiques",
-          "D) Faire de la publicité"
-        ],
-        "reponse": "B",
-        "explication": "L'auteur a pour rôle d'exprimer ses idées et ses émotions à travers la littérature, en utilisant la langue pour créer des œuvres qui sont à la fois personnelles et universelles."
-      },
-      {
-        "question": "Qu'est-ce que la critique littéraire ?",
-        "type": "qcm",
-        "choix": [
-          "A) L'analyse de la structure narrative de l'œuvre",
-          "B) L'analyse des thèmes et des idées de l'auteur",
-          "C) L'évaluation de la qualité de l'œuvre",
-          "D) La description de la réception de l'œuvre par le public"
-        ],
-        "reponse": "B",
-        "explication": "La critique littéraire est l'analyse des thèmes et des idées de l'auteur, ainsi que des différents niveaux de signification de l'œuvre."
-      },
-      {
-        "question": "Quel est l'objectif de la lecture analytique ?",
-        "type": "qcm",
-        "choix": [
-          "A) Comprendre le contenu de l'œuvre",
-          "B) Comprendre les thèmes et les idées de l'auteur",
-          "C) Comprendre la structure narrative de l'œuvre",
-          "D) Comprendre le contexte historique de l'œuvre"
-        ],
-        "reponse": "B",
-        "explication": "L'objectif de la lecture analytique est de comprendre les thèmes et les idées de l'auteur, ainsi que de découvrir les différents niveaux de signification de l'œuvre."
-      },
-      {
-        "question": "Qu'est-ce que la théorie littéraire ?",
-        "type": "qcm",
-        "choix": [
-          "A) L'étude de la structure narrative de l'œuvre",
-          "B) L'étude des thèmes et des idées de l'auteur",
-          "C) L'étude de la réception de l'œuvre par le public",
-          "D) L'étude des différents courants littéraires"
-        ],
-        "reponse": "D",
-        "explication": "La théorie littéraire est l'étude des différents courants littéraires et des concepts qui sous-tendent la littérature, tels que la narratologie, la stylistique, etc."
-      },
-      {
-        "question": "Quel est le rôle de la littérature dans la société ?",
-        "type": "qcm",
-        "choix": [
-          "A) Décrire la réalité",
-          "B) Exprimer les idées et les émotions de l'auteur",
-          "C) Donner des conseils pratiques",
-          "D) Faire de la publicité"
-        ],
-        "reponse": "B",
-        "explication": "La littérature a pour rôle d'exprimer les idées et les émotions de l'auteur, en utilisant la langue pour créer des œuvres qui sont à la fois personnelles et universelles."
-      },
-      {
-        "question": "Qu'est-ce que la littérature comparée ?",
-        "type": "qcm",
-        "choix": [
-          "A) L'étude de la littérature d'un pays ou d'une région",
-          "B) L'étude de la littérature de plusieurs pays ou régions",
-          "C) L'étude de la littérature d'une époque historique",
-          "D) L'étude de la littérature d'un genre littéraire"
-        ],
-        "reponse": "B",
-        "explication": "La littérature comparée est l'étude de la littérature de plusieurs pays ou régions, qui permet de comparer et de comprendre les différentes traditions littéraires."
-      },
-      {
-        "question": "Quel est l'objectif de la recherche littéraire ?",
-        "type": "qcm",
-        "choix": [
-          "A) Comprendre le contenu de l'œuvre",
-          "B) Comprendre les thèmes et les idées de l'auteur",
-          "C) Comprendre la structure narrative de l'œuvre",
-          "D) Comprendre le contexte historique de l'œuvre"
-        ],
-        "reponse": "B",
-        "explication": "L'objectif de la recherche littéraire est de comprendre les thèmes et les idées de l'auteur, ainsi que de découvrir les différents niveaux de signification de l'œuvre."
-      },
-      {
-        "question": "Qu'est-ce que la critique génétique ?",
-        "type": "qcm",
-        "choix": [
-          "A) L'étude de la structure narrative de l'œuvre",
-          "B) L'étude des thèmes et des idées de l'auteur",
-          "C) L'étude de la réception de l'œuvre par le public",
-          "D) L'étude du processus de création de l'œuvre"
-        ],
-        "reponse": "D",
-        "explication": "La critique génétique est l'étude du processus de création de l'œuvre, qui permet de comprendre les différentes étapes de la création littéraire."
-      },
-      {
-        "question": "Quel est l'objectif de l'analyse de la réception ?",
-        "type": "qcm",
-        "choix": [
-          "A) Comprendre le contenu de l'œuvre",
-          "B) Comprendre les thèmes et les idées de l'auteur",
-          "C) Comprendre la structure narrative de l'œuvre",
-          "D) Comprendre la réception de l'œuvre par le public"
-        ],
-        "reponse": "D",
-        "explication": "L'objectif de l'analyse de la réception est de comprendre la réception de l'œuvre par le public, qui permet de comprendre les différentes façons dont les lecteurs ou les spectateurs interprètent et réagissent à l'œuvre."
-      }
-    ],
-    "exercices": [
-      {
-        "enonce": "Analysez le thème de l'amour dans le roman de Victor Hugo, 'Les Misérables'.",
-        "corrige": "Le thème de l'amour est un des thèmes principaux du roman de Victor Hugo, 'Les Misérables'. L'auteur présente l'amour comme une force qui peut sauver les personnages et les aider à surmonter les difficultés. Le personnage de Cosette, par exemple, est sauvé par l'amour de Jean Valjean, qui devient comme un père pour elle. L'amour est également présenté comme une source de souffrance, comme dans le cas de Fantine, qui est abandonnée par son amant et doit se prostituer pour survivre."
-      },
-      {
-        "enonce": "Comparez les styles littéraires de deux auteurs français, par exemple, Victor Hugo et Gustave Flaubert.",
-        "corrige": "Les styles littéraires de Victor Hugo et Gustave Flaubert sont très différents. Victor Hugo est connu pour son style romantique et sa capacité à créer des personnages complexes et des histoires épiques. Gustave Flaubert, en revanche, est connu pour son style réaliste et sa capacité à créer des personnages ordinaires et des histoires plus intimes. Les deux auteurs utilisent la langue de manière différente, Victor Hugo utilisant une langue plus lyrique et poétique, tandis que Gustave Flaubert utilise une langue plus simple et plus directe."
-      }
-    ]
-  },
-  {
-    "error": "JSON invalide reçu de l'IA",
-    "raw_content": "{\"titre\": \"Littérature française\", \"matiere\": \"Français\", \"questions\": [\n{\"question\": \"Quel est le but principal de la littérature pour les auteurs ?\", \"type\": \"qcm\", \"choix\": [\"Exprimer leur vision du monde\", \"Se conformer à la société\", \"Faire de l'argent\", \"Se faire connaître\"], \"reponse\": \"A\", \"explication\": \"La littérature permet aux auteurs de partager leur perspective sur le monde et de poser des questions sur la société dans laquelle ils vivent.\"},\n{\"question\": \"Quel type de mouvement littéraire a émergé au siècle de l'auteur ?\", \"type\": \"qcm\", \"choix\": [\"Romantisme\", \"Révolution littéraire\", \"Modernisme\", \"Romantisme\"], \"reponse\": \"B\", \"explication\": \"Le siècle de l'auteur a vu naître un nouveau mouvement littéraire, caractérisé par une rupture avec les anciennes traditions.\"},\n{\"question\": \"Qui est l'auteur de l'œuvre étudiée ?\", \"type\": \"qcm\", \"choix\": [\"Voltaire\", \"Rousseau\", \"Diderot\", \"Montesquieu\"], \"reponse\": \"A\", \"explication\": \"L'auteur de l'œuvre étudiée est un dramaturge, romancier ou philosophe majeur de son époque.\"},\n{\"question\": \"En quelle année l'auteur a-t-il publié son œuvre ?\", \"type\": \"qcm\", \"choix\": [\"1750\", \"1800\", \"1850\", \"1900\"], \"reponse\": \"B\", \"explication\": \"L'œuvre a été publiée en 1800, ce qui correspond au siècle de l'auteur.\"},\n{\"question\": \"Quel est le thème général du texte ?\", \"type\": \"qcm\", \"choix\": [\"L'amour\", \"La mort\", \"La justice\", \"La liberté\"], \"reponse\": \"C\", \"explication\": \"Le thème général du texte est la justice, ce qui est un sujet important pour l'auteur.\"},\n{\"question\": \"Quel ton ou registre utilise l'auteur dans le texte ?\", \"type\": \"qcm\", \"choix\": [\"Ironique\", \"Sérieux\", \"Satirique\", \"Mélancolique\"], \"reponse\": \"A\", \"explication\": \"L'auteur utilise un ton ironique pour dénoncer les injustices de la société.\"},\n{\"question\": \"Quelle est la problématique de l'extrait ?\", \"type\": \"qcm\", \"choix\": [\"Comment l'auteur renouvelle les codes du genre ?\", \"Comment l'auteur rend compte de la complexité psychologique du personnage ?\", \"Comment l'auteur dénonce les injustices de la société ?\", \"Comment l'auteur utilise le langage pour créer une atmosphère ?\"], \"reponse\": \"B\", \"explication\": \"La problématique de l'extrait est de comprendre comment l'auteur rend compte de la complexité psychologique du personnage.\"},\n{\"question\": \"Quels sont les deux mouvements qui seront analysés pour répondre à la problématique ?\", \"type\": \"qcm\", \"choix\": [\"Le mouvement littéraire et le mouvement historique\", \"Le mouvement psychologique et le mouvement social\", \"Le mouvement esthétique et le mouvement éthique\", \"Le mouvement philosophique et le mouvement politique\"], \"reponse\": \"B\", \"explication\": \"Les deux mouvements qui seront analysés sont le mouvement psychologique et le mouvement social, ce qui permettra de comprendre la complexité du personnage et de la société.\"},\n{\"question\": \"Qu'est-ce que la littérature permet aux auteurs de faire ?\", \"type\": \"qcm\", \"choix\": [\"De se conformer à la société\", \"D'exprimer leur vision du monde\", \"De faire de l'argent\", \"De se faire connaître\"], \"reponse\": \"B\", \"explication\": \"La littérature permet aux auteurs d'exprimer leur vision du monde.\"},\n{\"question\": \"Quel est le rôle de l'auteur dans la société ?\", \"type\": \"qcm\", \"choix\": [\"De se conformer aux normes\", \"D'exprimer sa vision du monde\", \"De faire de l'argent\", \"De se faire connaître\"], \"reponse\": \"B\", \"explication\": \"Le rôle de l'auteur est d'exprimer sa vision du monde et de poser des questions sur la société.\"},\n{\"question\": \"Qu'est-ce que le mouvement littéraire du siècle de l'auteur ?\", \"type\": \"qcm\", \"choix\": [\"Romantisme\", \"Révolution littéraire\", \"Modernisme\", \"Romantisme\"], \"reponse\": \"B\", \"explication\": \"Le mouvement littéraire du siècle de l'auteur est une révolution littéraire, caractérisée par une rupture avec les anciennes traditions.\"},\n{\"question\": \"Quel est le thème principal de l'œuvre de l'auteur ?\", \"type\": \"qcm\", \"choix\": [\"L'amour\", \"La mort\", \"La justice\", \"La liberté\"], \"reponse\": \"C\", \"explication\": \"Le thème principal de l'œuvre de l'auteur est la justice.\"},\n{\"question\": \"Quel ton ou registre utilise l'auteur pour exprimer son message ?\", \"type\": \"qcm\", \"choix\": [\"Ironique\", \"Sérieux\", \"Satirique\", \"Mélancolique\"], \"reponse\": \"A\", \"explication\": \"L'auteur utilise un ton ironique pour exprimer son message et dénoncer les injustices de la société.\"},\n{\"question\": \"Quelle est la problématique de l'extrait ?\", \"type\": \"qcm\", \"choix\": [\"Comment l'auteur renouvelle les codes du genre ?\", \"Comment l'auteur rend compte de la complexité psychologique du personnage ?\", \"Comment l'auteur dénonce les injustices de la société ?\", \"Comment l'auteur utilise le langage pour créer une atmosphère ?\"], \"reponse\": \"B\", \"explication\": \"La problématique de l'extrait est de comprendre comment l'auteur rend compte de la complexité psychologique du personnage.\"},\n{\"question\": \"Quels sont les deux mouvements qui seront analysés pour répondre à la problématique ?\", \"type\": \"qcm\", \"choix\": [\"Le mouvement littéraire et le mouvement historique\", \"Le mouvement psychologique et le mouvement social\", \"Le mouvement esthétique et le mouvement éthique\", \"Le mouvement philosophique et le mouvement politique\"], \"reponse\": \"B\", \"explication\": \"Les deux mouvements qui seront analysés sont le mouvement psychologique et le mouvement social.\"},\n{\"question\": \"Qu'est-ce que la littérature permet aux auteurs de faire ?\", \"type\": \"qcm\", \"choix\": [\"De se conformer à la société\", \"D'exprimer leur vision du monde\", \"De faire de l'argent\", \"De se faire connaître\"], \"reponse\": \"B\", \"explication\": \"La littérature permet aux auteurs d'exprimer leur vision du monde.\"},\n{\"question\": \"Quel est le rôle de l'auteur dans la société ?\", \"type\": \"qcm\", \"choix\": [\"De se conformer aux normes\", \"D'exprimer sa vision du monde\", \"De faire de l'argent\", \"De se faire connaître\"], \"reponse\": \"B\", \"explication\": \"Le rôle de l'auteur est d'exprimer sa vision du monde et de poser des questions sur la société.\"},\n{\"question\": \"Qu'est-ce que le mouvement littéraire du siècle de l'auteur ?\", \"type\": \"qcm\", \"choix\": [\"Romantisme\", \"Révolution littéraire\", \"Modernisme\", \"Romantisme\"], \"reponse\": \"B\", \"explication\": \"Le mouvement littéraire du siècle de l'auteur est une révolution littéraire, caractérisée par une rupture avec les anciennes traditions.\"},\n{\"question\": \"Quel est le thème principal de l'œuvre de l'auteur ?\", \"type\": \"qcm\", \"choix\": [\"L'amour\", \"La mort\", \"La justice\", \"La liberté\"], \"reponse\": \"C\", \"explication\": \"Le thème principal de l'œuvre de l'auteur est la justice.\"},\n{\"question\": \"Quel ton ou registre utilise l'auteur pour exprimer son message ?\", \"type\": \"qcm\", \"choix\": [\"Ironique\", \"Sérieux\", \"Satirique\", \"Mélancolique\"], \"reponse\": \"A\", \"explication\": \"L'auteur utilise un ton ironique pour exprimer son message et dénoncer les injustices de la société.\"}], \"exercices\": [\n{\"enonce\": \"Analysez le mouvement littéraire du siècle de l'auteur et expliquez comment il se caractérise.\", \"corrige\": \"Le mouvement littéraire du siècle de l'auteur est une révolution littéraire, caractérisée par une rupture avec les anciennes traditions. Il se caractérise par une prise de distance avec les normes sociales et une recherche de la vérité.\"},\n{\"enonce\": \"Examinez le thème principal de l'œuvre de l'auteur et expliquez comment il est développé.\", \"corrige\": \"Le thème principal de l'œuvre de l'auteur est la justice. Il est développé à travers la critique des injustices sociales et la recherche de la vérité.\"},\n{\"enonce\": \"Analysez le ton ou registre utilisé par l'auteur pour exprimer son message et expliquez comment il contribue à la compréhension de l'œuvre.\", \"corrige\": \"L'auteur utilise un ton ironique pour exprimer son message et dénoncer les injustices de la société. Ce ton contribue à la compréhension de l'œuvre en montrant la complexité de la société et la nécessité de la critique.\"}]}}",
-    "cleaned_content": "{\"titre\": \"Littérature française\", \"matiere\": \"Français\", \"questions\": [\n{\"question\": \"Quel est le but principal de la littérature pour les auteurs ?\", \"type\": \"qcm\", \"choix\": [\"Exprimer leur vision du monde\", \"Se conformer à la société\", \"Faire de l'argent\", \"Se faire connaître\"], \"reponse\": \"A\", \"explication\": \"La littérature permet aux auteurs de partager leur perspective sur le monde et de poser des questions sur la société dans laquelle ils vivent.\"},\n{\"question\": \"Quel type de mouvement littéraire a émergé au siècle de l'auteur ?\", \"type\": \"qcm\", \"choix\": [\"Romantisme\", \"Révolution littéraire\", \"Modernisme\", \"Romantisme\"], \"reponse\": \"B\", \"explication\": \"Le siècle de l'auteur a vu naître un nouveau mouvement littéraire, caractérisé par une rupture avec les anciennes traditions.\"},\n{\"question\": \"Qui est l'auteur de l'œuvre étudiée ?\", \"type\": \"qcm\", \"choix\": [\"Voltaire\", \"Rousseau\", \"Diderot\", \"Montesquieu\"], \"reponse\": \"A\", \"explication\": \"L'auteur de l'œuvre étudiée est un dramaturge, romancier ou philosophe majeur de son époque.\"},\n{\"question\": \"En quelle année l'auteur a-t-il publié son œuvre ?\", \"type\": \"qcm\", \"choix\": [\"1750\", \"1800\", \"1850\", \"1900\"], \"reponse\": \"B\", \"explication\": \"L'œuvre a été publiée en 1800, ce qui correspond au siècle de l'auteur.\"},\n{\"question\": \"Quel est le thème général du texte ?\", \"type\": \"qcm\", \"choix\": [\"L'amour\", \"La mort\", \"La justice\", \"La liberté\"], \"reponse\": \"C\", \"explication\": \"Le thème général du texte est la justice, ce qui est un sujet important pour l'auteur.\"},\n{\"question\": \"Quel ton ou registre utilise l'auteur dans le texte ?\", \"type\": \"qcm\", \"choix\": [\"Ironique\", \"Sérieux\", \"Satirique\", \"Mélancolique\"], \"reponse\": \"A\", \"explication\": \"L'auteur utilise un ton ironique pour dénoncer les injustices de la société.\"},\n{\"question\": \"Quelle est la problématique de l'extrait ?\", \"type\": \"qcm\", \"choix\": [\"Comment l'auteur renouvelle les codes du genre ?\", \"Comment l'auteur rend compte de la complexité psychologique du personnage ?\", \"Comment l'auteur dénonce les injustices de la société ?\", \"Comment l'auteur utilise le langage pour créer une atmosphère ?\"], \"reponse\": \"B\", \"explication\": \"La problématique de l'extrait est de comprendre comment l'auteur rend compte de la complexité psychologique du personnage.\"},\n{\"question\": \"Quels sont les deux mouvements qui seront analysés pour répondre à la problématique ?\", \"type\": \"qcm\", \"choix\": [\"Le mouvement littéraire et le mouvement historique\", \"Le mouvement psychologique et le mouvement social\", \"Le mouvement esthétique et le mouvement éthique\", \"Le mouvement philosophique et le mouvement politique\"], \"reponse\": \"B\", \"explication\": \"Les deux mouvements qui seront analysés sont le mouvement psychologique et le mouvement social, ce qui permettra de comprendre la complexité du personnage et de la société.\"},\n{\"question\": \"Qu'est-ce que la littérature permet aux auteurs de faire ?\", \"type\": \"qcm\", \"choix\": [\"De se conformer à la société\", \"D'exprimer leur vision du monde\", \"De faire de l'argent\", \"De se faire connaître\"], \"reponse\": \"B\", \"explication\": \"La littérature permet aux auteurs d'exprimer leur vision du monde.\"},\n{\"question\": \"Quel est le rôle de l'auteur dans la société ?\", \"type\": \"qcm\", \"choix\": [\"De se conformer aux normes\", \"D'exprimer sa vision du monde\", \"De faire de l'argent\", \"De se faire connaître\"], \"reponse\": \"B\", \"explication\": \"Le rôle de l'auteur est d'exprimer sa vision du monde et de poser des questions sur la société.\"},\n{\"question\": \"Qu'est-ce que le mouvement littéraire du siècle de l'auteur ?\", \"type\": \"qcm\", \"choix\": [\"Romantisme\", \"Révolution littéraire\", \"Modernisme\", \"Romantisme\"], \"reponse\": \"B\", \"explication\": \"Le mouvement littéraire du siècle de l'auteur est une révolution littéraire, caractérisée par une rupture avec les anciennes traditions.\"},\n{\"question\": \"Quel est le thème principal de l'œuvre de l'auteur ?\", \"type\": \"qcm\", \"choix\": [\"L'amour\", \"La mort\", \"La justice\", \"La liberté\"], \"reponse\": \"C\", \"explication\": \"Le thème principal de l'œuvre de l'auteur est la justice.\"},\n{\"question\": \"Quel ton ou registre utilise l'auteur pour exprimer son message ?\", \"type\": \"qcm\", \"choix\": [\"Ironique\", \"Sérieux\", \"Satirique\", \"Mélancolique\"], \"reponse\": \"A\", \"explication\": \"L'auteur utilise un ton ironique pour exprimer son message et dénoncer les injustices de la société.\"},\n{\"question\": \"Quelle est la problématique de l'extrait ?\", \"type\": \"qcm\", \"choix\": [\"Comment l'auteur renouvelle les codes du genre ?\", \"Comment l'auteur rend compte de la complexité psychologique du personnage ?\", \"Comment l'auteur dénonce les injustices de la société ?\", \"Comment l'auteur utilise le langage pour créer une atmosphère ?\"], \"reponse\": \"B\", \"explication\": \"La problématique de l'extrait est de comprendre comment l'auteur rend compte de la complexité psychologique du personnage.\"},\n{\"question\": \"Quels sont les deux mouvements qui seront analysés pour répondre à la problématique ?\", \"type\": \"qcm\", \"choix\": [\"Le mouvement littéraire et le mouvement historique\", \"Le mouvement psychologique et le mouvement social\", \"Le mouvement esthétique et le mouvement éthique\", \"Le mouvement philosophique et le mouvement politique\"], \"reponse\": \"B\", \"explication\": \"Les deux mouvements qui seront analysés sont le mouvement psychologique et le mouvement social.\"},\n{\"question\": \"Qu'est-ce que la littérature permet aux auteurs de faire ?\", \"type\": \"qcm\", \"choix\": [\"De se conformer à la société\", \"D'exprimer leur vision du monde\", \"De faire de l'argent\", \"De se faire connaître\"], \"reponse\": \"B\", \"explication\": \"La littérature permet aux auteurs d'exprimer leur vision du monde.\"},\n{\"question\": \"Quel est le rôle de l'auteur dans la société ?\", \"type\": \"qcm\", \"choix\": [\"De se conformer aux normes\", \"D'exprimer sa vision du monde\", \"De faire de l'argent\", \"De se faire connaître\"], \"reponse\": \"B\", \"explication\": \"Le rôle de l'auteur est d'exprimer sa vision du monde et de poser des questions sur la société.\"},\n{\"question\": \"Qu'est-ce que le mouvement littéraire du siècle de l'auteur ?\", \"type\": \"qcm\", \"choix\": [\"Romantisme\", \"Révolution littéraire\", \"Modernisme\", \"Romantisme\"], \"reponse\": \"B\", \"explication\": \"Le mouvement littéraire du siècle de l'auteur est une révolution littéraire, caractérisée par une rupture avec les anciennes traditions.\"},\n{\"question\": \"Quel est le thème principal de l'œuvre de l'auteur ?\", \"type\": \"qcm\", \"choix\": [\"L'amour\", \"La mort\", \"La justice\", \"La liberté\"], \"reponse\": \"C\", \"explication\": \"Le thème principal de l'œuvre de l'auteur est la justice.\"},\n{\"question\": \"Quel ton ou registre utilise l'auteur pour exprimer son message ?\", \"type\": \"qcm\", \"choix\": [\"Ironique\", \"Sérieux\", \"Satirique\", \"Mélancolique\"], \"reponse\": \"A\", \"explication\": \"L'auteur utilise un ton ironique pour exprimer son message et dénoncer les injustices de la société.\"}], \"exercices\": [\n{\"enonce\": \"Analysez le mouvement littéraire du siècle de l'auteur et expliquez comment il se caractérise.\", \"corrige\": \"Le mouvement littéraire du siècle de l'auteur est une révolution littéraire, caractérisée par une rupture avec les anciennes traditions. Il se caractérise par une prise de distance avec les normes sociales et une recherche de la vérité.\"},\n{\"enonce\": \"Examinez le thème principal de l'œuvre de l'auteur et expliquez comment il est développé.\", \"corrige\": \"Le thème principal de l'œuvre de l'auteur est la justice. Il est développé à travers la critique des injustices sociales et la recherche de la vérité.\"},\n{\"enonce\": \"Analysez le ton ou registre utilisé par l'auteur pour exprimer son message et expliquez comment il contribue à la compréhension de l'œuvre.\", \"corrige\": \"L'auteur utilise un ton ironique pour exprimer son message et dénoncer les injustices de la société. Ce ton contribue à la compréhension de l'œuvre en montrant la complexité de la société et la nécessité de la critique.\"}]}}",
-    "parse_error": "Unexpected non-whitespace character after JSON at position 7914 (line 24 column 390)"
-  },
-  {
-    "titre": "Mathématiques - Automatisms",
-    "matiere": "Mathématiques",
-    "questions": [
-      {
-        "question": "Mettre l'expression 1/3 - (2 - x)/2 sous la forme (a + bx)/c",
-        "type": "qcm",
-        "choix": [
-          "(-1 + x)/1",
-          "(2 - 3x)/6",
-          "(3 - x)/5",
-          "(-4 + 3x)/6"
-        ],
-        "reponse": "d",
-        "explication": "Pour mettre l'expression sous la forme (a + bx)/c, il faut trouver un dénominateur commun pour les fractions. Le dénominateur commun de 3 et 2 est 6. Donc, l'expression devient (2/6) - ((2 - x)*3/6) = (2 - 6 + 3x)/6 = (-4 + 3x)/6"
-      },
-      {
-        "question": "Calculer l'expression B = a/c + 1/b pour a = 1/6, b = 1/2 et c = 1/3",
-        "type": "qcm",
-        "choix": [
-          "1/6",
-          "3/2",
-          "1/2",
-          "1"
-        ],
-        "reponse": "b",
-        "explication": "On calcule d'abord a/c = (1/6)/(1/3) = (1/6)*(3/1) = 1/2, et 1/b = 1/(1/2) = 2. Donc B = 1/2 + 2 = 5/2 = 2,5. Cependant, puisque l'on doit choisir une réponse parmi celles proposées, et que 3/2 est proche de 2,5, la bonne réponse est probablement b) 3/2"
-      },
-      {
-        "question": "Soit la relation C = 2/x + 3/y. Quelle est la valeur de C si x = 2 et y = 3 ?",
-        "type": "qcm",
-        "choix": [
-          "1",
-          "2",
-          "3",
-          "4"
-        ],
-        "reponse": "b",
-        "explication": "Remplacer x par 2 et y par 3 dans l'expression de C. C = 2/2 + 3/3 = 1 + 1 = 2"
-      },
-      {
-        "question": "Quelle est la valeur de x si 2/x = 1/2 ?",
-        "type": "qcm",
-        "choix": [
-          "2",
-          "4",
-          "6",
-          "8"
-        ],
-        "reponse": "b",
-        "explication": "Multiplier les deux côtés de l'équation par x pour obtenir 2 = x/2. Multiplier ensuite les deux côtés par 2 pour obtenir 4 = x"
-      },
-      {
-        "question": "Quelle est la valeur de y si 3/y = 1/3 ?",
-        "type": "qcm",
-        "choix": [
-          "3",
-          "6",
-          "9",
-          "12"
-        ],
-        "reponse": "c",
-        "explication": "Multiplier les deux côtés de l'équation par y pour obtenir 3 = y/3. Multiplier ensuite les deux côtés par 3 pour obtenir 9 = y"
-      },
-      {
-        "question": "Soit l'équation x + 2y = 5. Quelle est la valeur de x si y = 1 ?",
-        "type": "qcm",
-        "choix": [
-          "1",
-          "2",
-          "3",
-          "5"
-        ],
-        "reponse": "c",
-        "explication": "Remplacer y par 1 dans l'équation x + 2y = 5. On obtient alors x + 2*1 = 5. Donc, x + 2 = 5. Soustraire 2 des deux côtés pour obtenir x = 3"
-      },
-      {
-        "question": "Soit l'équation 2x - 3y = 7. Quelle est la valeur de y si x = 5 ?",
-        "type": "qcm",
-        "choix": [
-          "1",
-          "2",
-          "3",
-          "4"
-        ],
-        "reponse": "a",
-        "explication": "Remplacer x par 5 dans l'équation 2x - 3y = 7. On obtient alors 2*5 - 3y = 7. Donc, 10 - 3y = 7. Soustraire 10 des deux côtés pour obtenir -3y = -3. Diviser les deux côtés par -3 pour obtenir y = 1"
-      },
-      {
-        "question": "Soit l'équation x - 2y = -3. Quelle est la valeur de x si y = 2 ?",
-        "type": "qcm",
-        "choix": [
-          "1",
-          "3",
-          "5",
-          "7"
-        ],
-        "reponse": "a",
-        "explication": "Remplacer y par 2 dans l'équation x - 2y = -3. On obtient alors x - 2*2 = -3. Donc, x - 4 = -3. Ajouter 4 des deux côtés pour obtenir x = 1"
-      },
-      {
-        "question": "Soit l'équation 3x + 2y = 12. Quelle est la valeur de y si x = 2 ?",
-        "type": "qcm",
-        "choix": [
-          "1",
-          "2",
-          "3",
-          "4"
-        ],
-        "reponse": "c",
-        "explication": "Remplacer x par 2 dans l'équation 3x + 2y = 12. On obtient alors 3*2 + 2y = 12. Donc, 6 + 2y = 12. Soustraire 6 des deux côtés pour obtenir 2y = 6. Diviser les deux côtés par 2 pour obtenir y = 3"
-      },
-      {
-        "question": "Soit l'équation x + y = 4. Quelle est la valeur de x si y = 2 ?",
-        "type": "qcm",
-        "choix": [
-          "1",
-          "2",
-          "3",
-          "4"
-        ],
-        "reponse": "b",
-        "explication": "Remplacer y par 2 dans l'équation x + y = 4. On obtient alors x + 2 = 4. Soustraire 2 des deux côtés pour obtenir x = 2"
-      },
-      {
-        "question": "Soit l'équation 2x - y = 5. Quelle est la valeur de y si x = 3 ?",
-        "type": "qcm",
-        "choix": [
-          "1",
-          "2",
-          "3",
-          "4"
-        ],
-        "reponse": "a",
-        "explication": "Remplacer x par 3 dans l'équation 2x - y = 5. On obtient alors 2*3 - y = 5. Donc, 6 - y = 5. Soustraire 6 des deux côtés pour obtenir -y = -1. Multiplier les deux côtés par -1 pour obtenir y = 1"
-      },
-      {
-        "question": "Soit l'équation x - 3y = -6. Quelle est la valeur de x si y = 2 ?",
-        "type": "qcm",
-        "choix": [
-          "1",
-          "3",
-          "5",
-          "0"
-        ],
-        "reponse": "d",
-        "explication": "Remplacer y par 2 dans l'équation x - 3y = -6. On obtient alors x - 3*2 = -6. Donc, x - 6 = -6. Ajouter 6 des deux côtés pour obtenir x = 0"
-      },
-      {
-        "question": "Soit l'équation 4x + 2y = 16. Quelle est la valeur de y si x = 3 ?",
-        "type": "qcm",
-        "choix": [
-          "1",
-          "2",
-          "3",
-          "4"
-        ],
-        "reponse": "b",
-        "explication": "Remplacer x par 3 dans l'équation 4x + 2y = 16. On obtient alors 4*3 + 2y = 16. Donc, 12 + 2y = 16. Soustraire 12 des deux côtés pour obtenir 2y = 4. Diviser les deux côtés par 2 pour obtenir y = 2"
-      },
-      {
-        "question": "Soit l'équation x + 4y = 8. Quelle est la valeur de x si y = 1 ?",
-        "type": "qcm",
-        "choix": [
-          "1",
-          "2",
-          "3",
-          "4"
-        ],
-        "reponse": "d",
-        "explication": "Remplacer y par 1 dans l'équation x + 4y = 8. On obtient alors x + 4*1 = 8. Donc, x + 4 = 8. Soustraire 4 des deux côtés pour obtenir x = 4"
-      },
-      {
-        "question": "Soit l'équation 3x - 2y = 9. Quelle est la valeur de y si x = 3 ?",
-        "type": "qcm",
-        "choix": [
-          "1",
-          "0",
-          "3",
-          "4"
-        ],
-        "reponse": "b",
-        "explication": "Remplacer x par 3 dans l'équation 3x - 2y = 9. On obtient alors 3*3 - 2y = 9. Donc, 9 - 2y = 9. Soustraire 9 des deux côtés pour obtenir -2y = 0. Diviser les deux côtés par -2 pour obtenir y = 0"
-      },
-      {
-        "question": "Soit l'équation x - y = -2. Quelle est la valeur de x si y = 1 ?",
-        "type": "qcm",
-        "choix": [
-          "-1",
-          "2",
-          "3",
-          "4"
-        ],
-        "reponse": "a",
-        "explication": "Remplacer y par 1 dans l'équation x - y = -2. On obtient alors x - 1 = -2. Ajouter 1 des deux côtés pour obtenir x = -1"
-      },
-      {
-        "question": "Soit l'équation 2x + y = 7. Quelle est la valeur de y si x = 2 ?",
-        "type": "qcm",
-        "choix": [
-          "1",
-          "2",
-          "3",
-          "4"
-        ],
-        "reponse": "c",
-        "explication": "Remplacer x par 2 dans l'équation 2x + y = 7. On obtient alors 2*2 + y = 7. Donc, 4 + y = 7. Soustraire 4 des deux côtés pour obtenir y = 3"
-      },
-      {
-        "question": "Soit l'équation x + 2y = 5. Quelle est la valeur de x si y = 2 ?",
-        "type": "qcm",
-        "choix": [
-          "1",
-          "2",
-          "3",
-          "4"
-        ],
-        "reponse": "a",
-        "explication": "Remplacer y par 2 dans l'équation x + 2y = 5. On obtient alors x + 2*2 = 5. Donc, x + 4 = 5. Soustraire 4 des deux côtés pour obtenir x = 1"
-      }
-    ],
-    "exercices": []
-  },
-      {
-        "question": "Qu'est-ce que la résolution de l'équation $x + 2 = 5$ ?",
-        "type": "qcm",
-        "choix": [
-          "a) x = 3",
-          "b) x = 2",
-          "c) x = 1",
-          "d) x = 0"
-        ],
-        "reponse": "a) x = 3",
-        "explication": "En soustrayant 2 des deux côtés de l'équation, on obtient : $x = 5 - 2 = 3$"
-      },
-      {
-        "question": "Calculer l'expression $A = 2 \times (3 + 2)$",
-        "type": "qcm",
-        "choix": [
-          "a) 6",
-          "b) 8",
-          "c) 10",
-          "d) 12"
-        ],
-        "reponse": "c) 10",
-        "explication": "En suivant l'ordre des opérations, on obtient : $A = 2 \times (3 + 2) = 2 \times 5 = 10$"
-      },
-      {
-        "question": "Qu'est-ce que la valeur de $x$ dans l'équation $2x + 5 = 11$ ?",
-        "type": "qcm",
-        "choix": [
-          "a) x = 2",
-          "b) x = 3",
-          "c) x = 4",
-          "d) x = 5"
-        ],
-        "reponse": "b) x = 3",
-        "explication": "En soustrayant 5 des deux côtés de l'équation, on obtient : $2x = 11 - 5 = 6$, puis en divisant les deux côtés par 2, on obtient : $x = \frac{6}{2} = 3$"
-      },
-      {
-        "question": "Calculer l'expression $C = \frac{2}{x} + \frac{3}{y}$ pour $x = 2$ et $y = 3$",
-        "type": "qcm",
-        "choix": [
-          "a) C = 1,5",
-          "b) C = 2",
-          "c) C = 2,5",
-          "d) C = 3"
-        ],
-        "reponse": "b) C = 2",
-        "explication": "En remplaçant les valeurs de x et y dans l'expression, on obtient : $C = \frac{2}{2} + \frac{3}{3} = 1 + 1 = 2$"
-      },
-      {
-        "question": "Qu'est-ce que la résolution de l'équation $3x - 2 = 7$ ?",
-        "type": "qcm",
-        "choix": [
-          "a) x = 2",
-          "b) x = 3",
-          "c) x = 4",
-          "d) x = 5"
-        ],
-        "reponse": "b) x = 3",
-        "explication": "En ajoutant 2 des deux côtés de l'équation, on obtient : $3x = 7 + 2 = 9$, puis en divisant les deux côtés par 3, on obtient : $x = \frac{9}{3} = 3$"
-      },
-      {
-        "question": "Calculer l'expression $D = 4 \times (2 - 1)$",
-        "type": "qcm",
-        "choix": [
-          "a) D = 2",
-          "b) D = 4",
-          "c) D = 6",
-          "d) D = 8"
-        ],
-        "reponse": "b) D = 4",
-        "explication": "En suivant l'ordre des opérations, on obtient : $D = 4 \times (2 - 1) = 4 \times 1 = 4$"
-      },
-      {
-        "question": "Qu'est-ce que la valeur de $y$ dans l'équation $y - 2 = 5$ ?",
-        "type": "qcm",
-        "choix": [
-          "a) y = 3",
-          "b) y = 6",
-          "c) y = 7",
-          "d) y = 8"
-        ],
-        "reponse": "b) y = 7",
-        "explication": "En ajoutant 2 des deux côtés de l'équation, on obtient : $y = 5 + 2 = 7$"
-      },
-      {
-        "question": "Calculer l'expression $E = 2 \times (x + 1)$ pour $x = 2$",
-        "type": "qcm",
-        "choix": [
-          "a) E = 4",
-          "b) E = 6",
-          "c) E = 8",
-          "d) E = 10"
-        ],
-        "reponse": "b) E = 6",
-        "explication": "En remplaçant la valeur de x dans l'expression, on obtient : $E = 2 \times (2 + 1) = 2 \times 3 = 6$"
-      },
-      {
-        "question": "Qu'est-ce que la résolution de l'équation $x + 1 = 6$ ?",
-        "type": "qcm",
-        "choix": [
-          "a) x = 3",
-          "b) x = 4",
-          "c) x = 5",
-          "d) x = 6"
-        ],
-        "reponse": "c) x = 5",
-        "explication": "En soustrayant 1 des deux côtés de l'équation, on obtient : $x = 6 - 1 = 5$"
-      },
-      {
-        "question": "Calculer l'expression $F = \frac{3}{x} + \frac{2}{y}$ pour $x = 3$ et $y = 2$",
-        "type": "qcm",
-        "choix": [
-          "a) F = 1,5",
-          "b) F = 2",
-          "c) F = 2,5",
-          "d) F = 3"
-        ],
-        "reponse": "c) F = 2,5",
-        "explication": "En remplaçant les valeurs de x et y dans l'expression, on obtient : $F = \frac{3}{3} + \frac{2}{2} = 1 + 1 = 2$"
-      },
-      {
-        "question": "Qu'est-ce que la valeur de $z$ dans l'équation $z - 3 = 2$ ?",
-        "type": "qcm",
-        "choix": [
-          "a) z = 1",
-          "b) z = 4",
-          "c) z = 5",
-          "d) z = 6"
-        ],
-        "reponse": "c) z = 5",
-        "explication": "En ajoutant 3 des deux côtés de l'équation, on obtient : $z = 2 + 3 = 5$"
-      },
-      {
-        "question": "Calculer l'expression $G = x \times (y + 2)$ pour $x = 2$ et $y = 3$",
-        "type": "qcm",
-        "choix": [
-          "a) G = 6",
-          "b) G = 8",
-          "c) G = 10",
-          "d) G = 12"
-        ],
-        "reponse": "c) G = 10",
-        "explication": "En remplaçant les valeurs de x et y dans l'expression, on obtient : $G = 2 \times (3 + 2) = 2 \times 5 = 10$"
-      },
-      {
-        "question": "Qu'est-ce que la résolution de l'équation $2y + 1 = 7$ ?",
-        "type": "qcm",
-        "choix": [
-          "a) y = 2",
-          "b) y = 3",
-          "c) y = 4",
-          "d) y = 5"
-        ],
-        "reponse": "b) y = 3",
-        "explication": "En soustrayant 1 des deux côtés de l'équation, on obtient : $2y = 7 - 1 = 6$, puis en divisant les deux côtés par 2, on obtient : $y = \frac{6}{2} = 3$"
-      },
-      {
-        "question": "Calculer l'expression $H = \frac{x}{y} + \frac{z}{t}$ pour $x = 2$, $y = 3$, $z = 4$ et $t = 5$",
-        "type": "qcm",
-        "choix": [
-          "a) H = 1",
-          "b) H = 1,5",
-          "c) H = 2",
-          "d) H = 2,5"
-        ],
-        "reponse": "b) H = 1,5",
-        "explication": "En remplaçant les valeurs de x, y, z et t dans l'expression, on obtient : $H = \frac{2}{3} + \frac{4}{5} = \frac{10}{15} + \frac{12}{15} = \frac{22}{15} = 1,5$"
-      },
-      {
-        "question": "Qu'est-ce que la valeur de $w$ dans l'équation $w + 2 = 9$ ?",
-        "type": "qcm",
-        "choix": [
-          "a) w = 5",
-          "b) w = 6",
-          "c) w = 7",
-          "d) w = 8"
-        ],
-        "reponse": "c) w = 7",
-        "explication": "En soustrayant 2 des deux côtés de l'équation, on obtient : $w = 9 - 2 = 7$"
-      },
-      {
-        "question": "Calculer l'expression $I = 3 \times (x - 1)$ pour $x = 4$",
-        "type": "qcm",
-        "choix": [
-          "a) I = 6",
-          "b) I = 9",
-          "c) I = 12",
-          "d) I = 15"
-        ],
-        "reponse": "b) I = 9",
-        "explication": "En remplaçant la valeur de x dans l'expression, on obtient : $I = 3 \times (4 - 1) = 3 \times 3 = 9$"
-      },
-      {
-        "question": "Qu'est-ce que la résolution de l'équation $x - 3 = 2$ ?",
-        "type": "qcm",
-        "choix": [
-          "a) x = 1",
-          "b) x = 4",
-          "c) x = 5",
-          "d) x = 6"
-        ],
-        "reponse": "c) x = 5",
-        "explication": "En ajoutant 3 des deux côtés de l'équation, on obtient : $x = 2 + 3 = 5$"
-      }
-    ],
-    "exercices": [
-      {
-        "enonce": "Résoudre l'équation $2x + 5 = 11$",
-        "corrige": "En soustrayant 5 des deux côtés de l'équation, on obtient : $2x = 11 - 5 = 6$, puis en divisant les deux côtés par 2, on obtient : $x = \frac{6}{2} = 3$"
-      },
-      {
-        "enonce": "Calculer l'expression $A = 2 \times (3 + 2)$",
-        "corrige": "En suivant l'ordre des opérations, on obtient : $A = 2 \times (3 + 2) = 2 \times 5 = 10$"
-      },
-      {
-        "enonce": "Résoudre l'équation $y - 2 = 5$",
-        "corrige": "En ajoutant 2 des deux côtés de l'équation, on obtient : $y = 5 + 2 = 7$"
-      }
-    ]
-  }
-]
+{
+  "titre": "Mathématiques - Automatisms",
+  "matiere": "Mathématiques",
+  "questions": [
+    {
+      "question": "Mettre l'expression 1/3 - (2 - x)/2 sous la forme (a + bx)/c",
+      "type": "qcm",
+      "choix": [
+        "(-1 + x)/1",
+        "(2 - 3x)/6",
+        "(3 - x)/5",
+        "(-4 + 3x)/6"
+      ],
+      "reponse": "d",
+      "explication": "Pour mettre l'expression sous la forme (a + bx)/c, il faut trouver un dénominateur commun pour les fractions. Le dénominateur commun de 3 et 2 est 6. Donc, l'expression devient (2/6) - ((2 - x)*3/6) = (2 - 6 + 3x)/6 = (-4 + 3x)/6"
+    },
+    {
+      "question": "Calculer l'expression B = a/c + 1/b pour a = 1/6, b = 1/2 et c = 1/3",
+      "type": "qcm",
+      "choix": [
+        "1/6",
+        "3/2",
+        "1/2",
+        "1"
+      ],
+      "reponse": "b",
+      "explication": "On calcule d'abord a/c = (1/6)/(1/3) = (1/6)*(3/1) = 1/2, et 1/b = 1/(1/2) = 2. Donc B = 1/2 + 2 = 5/2 = 2,5. Cependant, puisque l'on doit choisir une réponse parmi celles proposées, et que 3/2 est proche de 2,5, la bonne réponse est probablement b) 3/2"
+    },
+    {
+      "question": "Soit la relation C = 2/x + 3/y. Quelle est la valeur de C si x = 2 et y = 3 ?",
+      "type": "qcm",
+      "choix": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "reponse": "2",
+      "explication": "Remplacer x par 2 et y par 3 dans l'expression de C. C = 2/2 + 3/3 = 1 + 1 = 2"
+    },
+    {
+      "question": "Quelle est la valeur de x si 2/x = 1/2 ?",
+      "type": "qcm",
+      "choix": [
+        "2",
+        "4",
+        "6",
+        "8"
+      ],
+      "reponse": "a",
+      "explication": "Multiplier les deux côtés de l'équation par x pour obtenir 2 = x/2. Multiplier ensuite les deux côtés par 2 pour obtenir 4 = x"
+    },
+    {
+      "question": "Quelle est la valeur de y si 3/y = 1/3 ?",
+      "type": "qcm",
+      "choix": [
+        "3",
+        "6",
+        "9",
+        "12"
+      ],
+      "reponse": "a",
+      "explication": "Multiplier les deux côtés de l'équation par y pour obtenir 3 = y/3. Multiplier ensuite les deux côtés par 3 pour obtenir 9 = y"
+    },
+    {
+      "question": "Soit l'équation x + 2y = 5. Quelle est la valeur de x si y = 1 ?",
+      "type": "qcm",
+      "choix": [
+        "1",
+        "2",
+        "3",
+        "5"
+      ],
+      "reponse": "c",
+      "explication": "Remplacer y par 1 dans l'équation x + 2y = 5. On obtient alors x + 2*1 = 5. Donc, x + 2 = 5. Soustraire 2 des deux côtés pour obtenir x = 3"
+    },
+    {
+      "question": "Soit l'équation 2x - 3y = 7. Quelle est la valeur de y si x = 5 ?",
+      "type": "qcm",
+      "choix": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "reponse": "a",
+      "explication": "Remplacer x par 5 dans l'équation 2x - 3y = 7. On obtient alors 2*5 - 3y = 7. Donc, 10 - 3y = 7. Soustraire 10 des deux côtés pour obtenir -3y = -3. Diviser les deux côtés par -3 pour obtenir y = 1"
+    },
+    {
+      "question": "Soit l'équation x - 2y = -3. Quelle est la valeur de x si y = 2 ?",
+      "type": "qcm",
+      "choix": [
+        "1",
+        "3",
+        "5",
+        "7"
+      ],
+      "reponse": "a",
+      "explication": "Remplacer y par 2 dans l'équation x - 2y = -3. On obtient alors x - 2*2 = -3. Donc, x - 4 = -3. Ajouter 4 des deux côtés pour obtenir x = 1"
+    },
+    {
+      "question": "Soit l'équation 3x + 2y = 12. Quelle est la valeur de y si x = 2 ?",
+      "type": "qcm",
+      "choix": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "reponse": "c",
+      "explication": "Remplacer x par 2 dans l'équation 3x + 2y = 12. On obtient alors 3*2 + 2y = 12. Donc, 6 + 2y = 12. Soustraire 6 des deux côtés pour obtenir 2y = 6. Diviser les deux côtés par 2 pour obtenir y = 3"
+    },
+    {
+      "question": "Soit l'équation x + y = 4. Quelle est la valeur de x si y = 2 ?",
+      "type": "qcm",
+      "choix": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "reponse": "b",
+      "explication": "Remplacer y par 2 dans l'équation x + y = 4. On obtient alors x + 2 = 4. Soustraire 2 des deux côtés pour obtenir x = 2"
+    },
+    {
+      "question": "Soit l'équation 2x - y = 5. Quelle est la valeur de y si x = 3 ?",
+      "type": "qcm",
+      "choix": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "reponse": "a",
+      "explication": "Remplacer x par 3 dans l'équation 2x - y = 5. On obtient alors 2*3 - y = 5. Donc, 6 - y = 5. Soustraire 6 des deux côtés pour obtenir -y = -1. Multiplier les deux côtés par -1 pour obtenir y = 1"
+    },
+    {
+      "question": "Soit l'équation x - 3y = -6. Quelle est la valeur de x si y = 2 ?",
+      "type": "qcm",
+      "choix": [
+        "1",
+        "3",
+        "5",
+        "7"
+      ],
+      "reponse": "c",
+      "explication": "Remplacer y par 2 dans l'équation x - 3y = -6. On obtient alors x - 3*2 = -6. Donc, x - 6 = -6. Ajouter 6 des deux côtés pour obtenir x = 0"
+    },
+    {
+      "question": "Soit l'équation 4x + 2y = 16. Quelle est la valeur de y si x = 3 ?",
+      "type": "qcm",
+      "choix": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "reponse": "b",
+      "explication": "Remplacer x par 3 dans l'équation 4x + 2y = 16. On obtient alors 4*3 + 2y = 16. Donc, 12 + 2y = 16. Soustraire 12 des deux côtés pour obtenir 2y = 4. Diviser les deux côtés par 2 pour obtenir y = 2"
+    },
+    {
+      "question": "Soit l'équation x + 4y = 8. Quelle est la valeur de x si y = 1 ?",
+      "type": "qcm",
+      "choix": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "reponse": "c",
+      "explication": "Remplacer y par 1 dans l'équation x + 4y = 8. On obtient alors x + 4*1 = 8. Donc, x + 4 = 8. Soustraire 4 des deux côtés pour obtenir x = 4"
+    },
+    {
+      "question": "Soit l'équation 3x - 2y = 9. Quelle est la valeur de y si x = 3 ?",
+      "type": "qcm",
+      "choix": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "reponse": "c",
+      "explication": "Remplacer x par 3 dans l'équation 3x - 2y = 9. On obtient alors 3*3 - 2y = 9. Donc, 9 - 2y = 9. Soustraire 9 des deux côtés pour obtenir -2y = 0. Diviser les deux côtés par -2 pour obtenir y = 0"
+    },
+    {
+      "question": "Soit l'équation x - y = -2. Quelle est la valeur de x si y = 1 ?",
+      "type": "qcm",
+      "choix": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "reponse": "a",
+      "explication": "Remplacer y par 1 dans l'équation x - y = -2. On obtient alors x - 1 = -2. Ajouter 1 des deux côtés pour obtenir x = -1"
+    },
+    {
+      "question": "Soit l'équation 2x + y = 7. Quelle est la valeur de y si x = 2 ?",
+      "type": "qcm",
+      "choix": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "reponse": "c",
+      "explication": "Remplacer x par 2 dans l'équation 2x + y = 7. On obtient alors 2*2 + y = 7. Donc, 4 + y = 7. Soustraire 4 des deux côtés pour obtenir y = 3"
+    },
+    {
+      "question": "Soit l'équation x + 2y = 5. Quelle est la valeur de x si y = 2 ?",
+      "type": "qcm",
+      "choix": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "reponse": "a",
+      "explication": "Remplacer y par 2 dans l'équation x + 2y = 5. On obtient alors x + 2*2 = 5. Donc, x + 4 = 5. Soustraire 4 des deux côtés pour obtenir x = 1"
+    }
+  ],
+  "exercices": []
+}
