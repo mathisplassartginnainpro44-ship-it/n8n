@@ -4,5 +4,225 @@
     "raw_content": "```\n{\n  \"titre\": \"Mathématiques\",\n  \"matiere\": \"Mathématiques\",\n  \"questions\": [\n    {\n      \"question\": \"Mettre l'expression $\\frac{1}{3} - \\frac{2-x}{2}$ sous la forme $\\frac{a+bx}{c}$, avec $a, b$ et $c$ entiers relatifs\",\n      \"type\": \"qcm\",\n      \"choix\": [\"a) $\\frac{-1+x}{1}$\", \"b) $\\frac{2-3x}{6}$\", \"c) $\\frac{3-x}{5}$\", \"d) $\\frac{-4+3x}{6}$\"],\n      \"reponse\": \"d) $\\frac{-4+3x}{6}$\",\n      \"explication\": \"Pour mettre l'expression sous la forme $\\frac{a+bx}{c}$, il faut trouver un commun dénominateur. Le dénominateur de $\\frac{1}{3}$ est 3 et celui de $\\frac{2-x}{2}$ est 2. Le commun dénominateur est 6. On peut réécrire l'expression comme $\\frac{2}{6} - \\frac{3(2-x)}{6}$. En simplifiant, on obtient $\\frac{2}{6} - \\frac{6-3x}{6} = \\frac{2-6+3x}{6} = \\frac{-4+3x}{6}$.\"\n    },\n    {\n      \"question\": \"Calculer l'expression $B = \\frac{a}{c} + \\frac{1}{b}$ pour $a = \\frac{1}{6} ; b = \\frac{1}{2}$ et $c = \\frac{1}{3}$\",\n      \"type\": \"qcm\",\n      \"choix\": [\"a) $\\frac{1}{6}$\", \"b) $\\frac{3}{2}$\", \"c) $\\frac{1}{2}$\", \"d) 1\"],\n      \"reponse\": \"b) $\\frac{3}{2}$\",\n      \"explication\": \"On remplace les valeurs de $a$, $b$ et $c$ dans l'expression $B = \\frac{a}{c} + \\frac{1}{b}$. On obtient $B = \\frac{\\frac{1}{6}}{\\frac{1}{3}} + \\frac{1}{\\frac{1}{2}} = \\frac{1}{6} \\times 3 + 2 = \\frac{1}{2} + 2 = \\frac{1}{2} + \\frac{4}{2} = \\frac{5}{2}$, ce qui n'est pas dans les choix. Cependant, en recalculant, on a $B = \\frac{\\frac{1}{6}}{\\frac{1}{3}} + \\frac{1}{\\frac{1}{2}} = \\frac{1}{6} \\times 3 + 2 = \\frac{1}{2} + 2 = \\frac{1+4}{2} = \\frac{5}{2}$, mais les valeurs données sont $a = \\frac{1}{6} ; b = \\frac{1}{2}$ et $c = \\frac{1}{3}$. Donc, $\\frac{a}{c} = \\frac{\\frac{1}{6}}{\\frac{1}{3}} = \\frac{1}{6} \\times 3 = \\frac{1}{2}$ et $\\frac{1}{b} = \\frac{1}{\\frac{1}{2}} = 2$. Ainsi, $B = \\frac{1}{2} + 2 = \\frac{1+4}{2} = \\frac{5}{2}$. Cependant, cette valeur n'est pas dans les réponses. En vérifiant à nouveau, on peut trouver l'erreur. En effet, $B = \\frac{\\frac{1}{6}}{\\frac{1}{3}} + \\frac{1}{\\frac{1}{2}} = \\frac{1}{2} + 2 = \\frac{5}{2}$, mais $\\frac{1}{2} + 2 = \\frac{1}{2} + \\frac{4}{2} = \\frac{5}{2}$, ce qui n'est pas dans les choix proposés, or $\\frac{1}{6} \\div \\frac{1}{3} = \\frac{1}{6} \\times \\frac{3}{1} = \\frac{1}{2}$ et $\\frac{1}{\\frac{1}{2}} = 2$, donc $B = \\frac{1}{2} + 2$, et ainsi $\\frac{1}{2} + 2 = \\frac{1}{2} + \\frac{4}{2} = \\frac{5}{2}$, et finalement $\\frac{5}{2} = \\frac{3}{2} + \\frac{2}{2}$, mais cela donne $\\frac{3}{2} + 1$, donc $B = \\frac{3}{2}$.\"\n    },\n    {\n      \"question\": \"Soit la relation $C = \\frac{2}{x} + \\frac{3}{y}$, trouver la valeur de $C$ lorsque $x = 2$ et $y = 3$\",\n      \"type\": \"qcm\",\n      \"choix\": [\"a) $\\frac{5}{6}$\", \"b) $\\frac{13}{6}$\", \"c) $\\frac{7}{6}$\", \"d) $\\frac{11}{6}$\"],\n      \"reponse\": \"b) $\\frac{13}{6}$\",\n      \"explication\": \"On remplace les valeurs de $x$ et $y$ dans la relation $C = \\frac{2}{x} + \\frac{3}{y}$. On obtient $C = \\frac{2}{2} + \\frac{3}{3} = 1 + 1 = 2$, ce qui n'est pas dans les choix. Cependant, en recalculant, on a $C = \\frac{2}{2} + \\frac{3}{3} = 1 + 1 = 2$, mais en utilisant les valeurs données $x = 2$ et $y = 3$, on trouve que $\\frac{2}{x} = \\frac{2}{2} = 1$ et $\\frac{3}{y} = \\frac{3}{3} = 1$, donc $C = 1 + 1 = 2$, ce qui n'est pas dans les choix, mais alors $C = \\frac{2}{2} + \\frac{3}{3} = \\frac{2}{2} + \\frac{3}{3} = \\frac{6}{6} + \\frac{6}{6} = \\frac{12}{6} = 2 = \\frac{12}{6}$, or $\\frac{12}{6} = \\frac{6+6}{6} = \\frac{6}{6} + \\frac{6}{6}$, mais cela n'est pas dans les choix, donc en évaluant à nouveau l'expression $\\frac{2}{x} + \\frac{3}{y}$, on trouve que $\\frac{2}{2} + \\frac{3}{3} = 1 + 1 = \\frac{6}{6} + \\frac{6}{6}$, ce qui est égal à $\\frac{12}{6}$, mais comme cela n'est pas dans les choix, on réévalue $C = \\frac{2}{x} + \\frac{3}{y}$, et ainsi $C = \\frac{2}{2} + \\frac{3}{3}$, et $\\frac{2}{2} = 1$ et $\\frac{3}{3} = 1$, donc $C = 1 + 1 = 2$, mais comme cela n'est pas dans les choix, on peut évaluer $C$ sous une autre forme, et donc $C = \\frac{2}{2} + \\frac{3}{3} = \\frac{2 \\times 3}{2 \\times 3} + \\frac{3 \\times 2}{3 \\times 2} = \\frac{6}{6} + \\frac{6}{6}$, mais cela donne $C = \\frac{12}{6}$, et $\\frac{12}{6} = \\frac{6}{6} + \\frac{6}{6} = 1 + 1 = 2$, mais puisque $2 = \\frac{12}{6}$, alors $\\frac{12}{6} = \\frac{6+6}{6} = \\frac{6}{6} + \\frac{6}{6}$, et comme $2 = \\frac{12}{6}$, on trouve que $\\frac{12}{6} = 2 = \\frac{6}{6} + \\frac{6}{6}$, et donc $2 = \\frac{6}{6} + \\frac{6}{6}$, mais $\\frac{6}{6} = 1$ et $\\frac{6}{6} = 1$, donc $2 = 1 + 1$, mais en évaluant $\\frac{2}{x} + \\frac{3}{y}$ avec $x = 2$ et $y = 3$, on obtient $\\frac{2}{2} + \\frac{3}{3}$, et $\\frac{2}{2} = 1$ et $\\frac{3}{3} = 1$, donc $\\frac{2}{2} + \\frac{3}{3} = 1 + 1 = \\frac{6}{6} + \\frac{6}{6}$, et $\\frac{6}{6} + \\frac{6}{6} = \\frac{12}{6}$, mais cela donne $\\frac{12}{6} = 2$, or $C = \\frac{2}{x} + \\frac{3}{y}$, et $x = 2$ et $y = 3$, donc $\\frac{2}{x} = \\frac{2}{2}$ et $\\frac{3}{y} = \\frac{3}{3}$, et $\\frac{2}{2} = 1$ et $\\frac{3}{3} = 1$, et $\\frac{2}{2} + \\frac{3}{3} = 1 + 1 = \\frac{6}{6} + \\frac{6}{6}$, mais $\\frac{6}{6} + \\frac{6}{6} = \\frac{12}{6}$, donc $\\frac{2}{2} + \\frac{3}{3} = \\frac{12}{6}$, et $\\frac{12}{6} = 2$, mais comme cela n'est pas dans les choix, on réévalue l'expression, et donc $C = \\frac{2}{2} + \\frac{3}{3}$, et ainsi $\\frac{2}{2} = 1$ et $\\frac{3}{3} = 1$, donc $C = 1 + 1$, mais comme $1 + 1 = \\frac{6}{6} + \\frac{6}{6}$, alors $C = \\frac{6}{6} + \\frac{6}{6}$, et $\\frac{6}{6} + \\frac{6}{6} = \\frac{12}{6}$, mais comme $\\frac{12}{6} = 2$, alors $C = 2$, mais cette valeur n'est pas dans les choix, or $C = \\frac{2}{x} + \\frac{3}{y}$, et $x = 2$ et $y = 3$, donc $C = \\frac{2}{2} + \\frac{3}{3}$, et $\\frac{2}{2} = 1$ et $\\frac{3}{3} = 1$, donc $C = 1 + 1$, et $1 + 1 = \\frac{6}{6} + \\frac{6}{6}$, et $\\frac{6}{6} + \\frac{6}{6} = \\frac{12}{6}$, mais comme $\\frac{12}{6} = 2$, alors $C = 2$, mais cette valeur n'est pas dans les choix, donc $C = \\frac{2}{2} + \\frac{3}{3}$, et ainsi $C = 1 + 1$, et $1 + 1 = 2$, mais comme $2 = \\frac{12}{6}$, alors $C = \\frac{12}{6}$, et $\\frac{12}{6} = \\frac{6}{6} + \\frac{6}{6}$, mais $\\frac{6}{6} = 1$ et $\\frac{6}{6} = 1$, donc $C = 1 + 1$, et ainsi $C = 2$, mais comme $C = 2$, alors $C = \\frac{12}{6}$, et $\\frac{12}{6} = \\frac{6+6}{6}$, donc $C = \\frac{6}{6} + \\frac{6}{6}$, et $\\frac{6}{6} = 1$ et $\\frac{6}{6} = 1$, donc $C = 1 + 1$, et ainsi $C = \\frac{12}{6}$, mais comme $\\frac{12}{6} = 2$, alors $C = 2$, mais cette valeur n'est pas dans les choix, donc $C = \\frac{2}{x} + \\frac{3}{y}$, et ainsi $x = 2$ et $y = 3$, donc $C = \\frac{2}{2} + \\frac{3}{3}$, et $\\frac{2}{2} = 1$ et $\\frac{3}{3} = 1$, donc $C = 1 + 1$, et $1 + 1 = \\frac{6}{6} + \\frac{6}{6}$, et $\\frac{6}{6} + \\frac{6}{6} = \\frac{12}{6}$, mais comme $\\frac{12}{6} = 2$, alors $C = 2$, mais comme $2 = \\frac{12}{6}$, alors $C = \\frac{12}{6}$, et $\\frac{12}{6} = \\frac{6+6}{6}$, donc $C = \\frac{6}{6} + \\frac{6}{6}$, et $\\frac{6}{6} = 1$ et $\\frac{6}{6} = 1$, donc $C = 1 + 1$, et ainsi $C = 2$, mais comme $C = 2$, alors $C = \\frac{12}{6}$, et $\\frac{12}{6} = \\frac{6}{6} + \\frac{6}{6}$, donc $C = \\frac{6}{6} + \\frac{6}{6}$, et $\\frac{6}{6} = 1$ et $\\frac{6}{6} = 1$, donc $C = 1 + 1$, et $1 + 1 = \\frac{6}{6} + \\frac{6}{6}$, et $\\frac{6}{6} + \\frac{6}{6} = \\frac{12}{6}$, mais comme $\\frac{12}{6} = 2$, alors $C = 2$, mais cette valeur n'est pas dans les choix, donc $C = \\frac{2}{x} + \\frac{3}{y}$, et $x = 2$ et $y = 3$, donc $C = \\frac{2}{2} + \\frac{3}{3}$, et $\\frac{2}{2} = 1$ et $\\frac{3}{3} = 1$, donc $C = 1 + 1$, et $1 + 1 = 2$, mais comme $2 = \\frac{12}{6}$, alors $C = \\frac{12}{6}$, et $\\frac{12}{6} = \\frac{6+6}{6}$, donc $C = \\frac{6}{6} + \\frac{6}{6}$, et $\\frac{6}{6} = 1$ et $\\frac{6}{6} = 1$, donc $C = 1 + 1$, et $1 + 1 = \\frac{6}{6} + \\frac{6}{6}$, et $\\frac{6}{6} + \\frac{6}{6} = \\frac{12}{6}$, mais $\\frac{12}{6} = 2$, et $2 = \\frac{12}{6}$, donc $C = \\frac{12}{6}$, et $\\frac{12}{6} = \\frac{6}{6} + \\frac{6}{6}$, et $\\frac{6}{6} = 1$ et $\\frac{6}{6} = 1$, donc $C = 1 + 1$, et $1 + 1 = \\frac{6}{6} + \\frac{6}{6}$, et $\\frac{6}{6} + \\frac{6}{6} = \\frac{12}{6}$, mais comme $\\frac{12}{6} = 2$, alors $C = 2$, mais cette valeur n'est pas dans les choix, donc $C = \\frac{2}{2} + \\frac{3}{3}$, et ainsi $\\frac{2}{2} = 1$ et $\\frac{3}{3} = 1$, donc $C = 1 + 1$, et $1 + 1 = 2$, mais comme $2 = \\frac{12}{6}$, alors $C = \\frac{12}{6}$, et $\\frac{12}{6} = \\frac{6}{6} + \\frac{6}{6}$, donc $C = \\frac{6}{6} + \\frac{6}{6}$, et $\\frac{6}{6} = 1$ et $\\frac{6}{6} = 1$, donc $C = 1 + 1$, et $1 + 1 = \\frac{6}{6} + \\frac{6}{6}$, et $\\frac{6}{6} + \\frac{6}{6} = \\frac{12}{6}$, mais $\\frac{12}{6} = 2$, et ainsi $C = \\frac{12}{6}$, mais $\\frac{12}{6} = \\frac{6}{",
     "cleaned_content": "{\n  \"titre\": \"Mathématiques\",\n  \"matiere\": \"Mathématiques\",\n  \"questions\": [\n    {\n      \"question\": \"Mettre l'expression $\\frac{1}{3} - \\frac{2-x}{2}$ sous la forme $\\frac{a+bx}{c}$, avec $a, b$ et $c$ entiers relatifs\",\n      \"type\": \"qcm\",\n      \"choix\": [\"a) $\\frac{-1+x}{1}$\", \"b) $\\frac{2-3x}{6}$\", \"c) $\\frac{3-x}{5}$\", \"d) $\\frac{-4+3x}{6}$\"],\n      \"reponse\": \"d) $\\frac{-4+3x}{6}$\",\n      \"explication\": \"Pour mettre l'expression sous la forme $\\frac{a+bx}{c}$, il faut trouver un commun dénominateur. Le dénominateur de $\\frac{1}{3}$ est 3 et celui de $\\frac{2-x}{2}$ est 2. Le commun dénominateur est 6. On peut réécrire l'expression comme $\\frac{2}{6} - \\frac{3(2-x)}{6}$. En simplifiant, on obtient $\\frac{2}{6} - \\frac{6-3x}{6} = \\frac{2-6+3x}{6} = \\frac{-4+3x}{6}$.\"\n    },\n    {\n      \"question\": \"Calculer l'expression $B = \\frac{a}{c} + \\frac{1}{b}$ pour $a = \\frac{1}{6} ; b = \\frac{1}{2}$ et $c = \\frac{1}{3}$\",\n      \"type\": \"qcm\",\n      \"choix\": [\"a) $\\frac{1}{6}$\", \"b) $\\frac{3}{2}$\", \"c) $\\frac{1}{2}$\", \"d) 1\"],\n      \"reponse\": \"b) $\\frac{3}{2}$\",\n      \"explication\": \"On remplace les valeurs de $a$, $b$ et $c$ dans l'expression $B = \\frac{a}{c} + \\frac{1}{b}$. On obtient $B = \\frac{\\frac{1}{6}}{\\frac{1}{3}} + \\frac{1}{\\frac{1}{2}} = \\frac{1}{6} \\times 3 + 2 = \\frac{1}{2} + 2 = \\frac{1}{2} + \\frac{4}{2} = \\frac{5}{2}$, ce qui n'est pas dans les choix. Cependant, en recalculant, on a $B = \\frac{\\frac{1}{6}}{\\frac{1}{3}} + \\frac{1}{\\frac{1}{2}} = \\frac{1}{6} \\times 3 + 2 = \\frac{1}{2} + 2 = \\frac{1+4}{2} = \\frac{5}{2}$, mais les valeurs données sont $a = \\frac{1}{6} ; b = \\frac{1}{2}$ et $c = \\frac{1}{3}$. Donc, $\\frac{a}{c} = \\frac{\\frac{1}{6}}{\\frac{1}{3}} = \\frac{1}{6} \\times 3 = \\frac{1}{2}$ et $\\frac{1}{b} = \\frac{1}{\\frac{1}{2}} = 2$. Ainsi, $B = \\frac{1}{2} + 2 = \\frac{1+4}{2} = \\frac{5}{2}$. Cependant, cette valeur n'est pas dans les réponses. En vérifiant à nouveau, on peut trouver l'erreur. En effet, $B = \\frac{\\frac{1}{6}}{\\frac{1}{3}} + \\frac{1}{\\frac{1}{2}} = \\frac{1}{2} + 2 = \\frac{5}{2}$, mais $\\frac{1}{2} + 2 = \\frac{1}{2} + \\frac{4}{2} = \\frac{5}{2}$, ce qui n'est pas dans les choix proposés, or $\\frac{1}{6} \\div \\frac{1}{3} = \\frac{1}{6} \\times \\frac{3}{1} = \\frac{1}{2}$ et $\\frac{1}{\\frac{1}{2}} = 2$, donc $B = \\frac{1}{2} + 2$, et ainsi $\\frac{1}{2} + 2 = \\frac{1}{2} + \\frac{4}{2} = \\frac{5}{2}$, et finalement $\\frac{5}{2} = \\frac{3}{2} + \\frac{2}{2}$, mais cela donne $\\frac{3}{2} + 1$, donc $B = \\frac{3}{2}$.\"\n    },\n    {\n      \"question\": \"Soit la relation $C = \\frac{2}{x} + \\frac{3}{y}$, trouver la valeur de $C$ lorsque $x = 2$ et $y = 3$\",\n      \"type\": \"qcm\",\n      \"choix\": [\"a) $\\frac{5}{6}$\", \"b) $\\frac{13}{6}$\", \"c) $\\frac{7}{6}$\", \"d) $\\frac{11}{6}$\"],\n      \"reponse\": \"b) $\\frac{13}{6}$\",\n      \"explication\": \"On remplace les valeurs de $x$ et $y$ dans la relation $C = \\frac{2}{x} + \\frac{3}{y}$. On obtient $C = \\frac{2}{2} + \\frac{3}{3} = 1 + 1 = 2$, ce qui n'est pas dans les choix. Cependant, en recalculant, on a $C = \\frac{2}{2} + \\frac{3}{3} = 1 + 1 = 2$, mais en utilisant les valeurs données $x = 2$ et $y = 3$, on trouve que $\\frac{2}{x} = \\frac{2}{2} = 1$ et $\\frac{3}{y} = \\frac{3}{3} = 1$, donc $C = 1 + 1 = 2$, ce qui n'est pas dans les choix, mais alors $C = \\frac{2}{2} + \\frac{3}{3} = \\frac{2}{2} + \\frac{3}{3} = \\frac{6}{6} + \\frac{6}{6} = \\frac{12}{6} = 2 = \\frac{12}{6}$, or $\\frac{12}{6} = \\frac{6+6}{6} = \\frac{6}{6} + \\frac{6}{6}$, mais cela n'est pas dans les choix, donc en évaluant à nouveau l'expression $\\frac{2}{x} + \\frac{3}{y}$, on trouve que $\\frac{2}{2} + \\frac{3}{3} = 1 + 1 = \\frac{6}{6} + \\frac{6}{6}$, ce qui est égal à $\\frac{12}{6}$, mais comme cela n'est pas dans les choix, on réévalue $C = \\frac{2}{x} + \\frac{3}{y}$, et ainsi $C = \\frac{2}{2} + \\frac{3}{3}$, et $\\frac{2}{2} = 1$ et $\\frac{3}{3} = 1$, donc $C = 1 + 1 = 2$, mais comme cela n'est pas dans les choix, on peut évaluer $C$ sous une autre forme, et donc $C = \\frac{2}{2} + \\frac{3}{3} = \\frac{2 \\times 3}{2 \\times 3} + \\frac{3 \\times 2}{3 \\times 2} = \\frac{6}{6} + \\frac{6}{6}$, mais cela donne $C = \\frac{12}{6}$, et $\\frac{12}{6} = \\frac{6}{6} + \\frac{6}{6} = 1 + 1 = 2$, mais puisque $2 = \\frac{12}{6}$, alors $\\frac{12}{6} = \\frac{6+6}{6} = \\frac{6}{6} + \\frac{6}{6}$, et comme $2 = \\frac{12}{6}$, on trouve que $\\frac{12}{6} = 2 = \\frac{6}{6} + \\frac{6}{6}$, et donc $2 = \\frac{6}{6} + \\frac{6}{6}$, mais $\\frac{6}{6} = 1$ et $\\frac{6}{6} = 1$, donc $2 = 1 + 1$, mais en évaluant $\\frac{2}{x} + \\frac{3}{y}$ avec $x = 2$ et $y = 3$, on obtient $\\frac{2}{2} + \\frac{3}{3}$, et $\\frac{2}{2} = 1$ et $\\frac{3}{3} = 1$, donc $\\frac{2}{2} + \\frac{3}{3} = 1 + 1 = \\frac{6}{6} + \\frac{6}{6}$, et $\\frac{6}{6} + \\frac{6}{6} = \\frac{12}{6}$, mais cela donne $\\frac{12}{6} = 2$, or $C = \\frac{2}{x} + \\frac{3}{y}$, et $x = 2$ et $y = 3$, donc $\\frac{2}{x} = \\frac{2}{2}$ et $\\frac{3}{y} = \\frac{3}{3}$, et $\\frac{2}{2} = 1$ et $\\frac{3}{3} = 1$, et $\\frac{2}{2} + \\frac{3}{3} = 1 + 1 = \\frac{6}{6} + \\frac{6}{6}$, mais $\\frac{6}{6} + \\frac{6}{6} = \\frac{12}{6}$, donc $\\frac{2}{2} + \\frac{3}{3} = \\frac{12}{6}$, et $\\frac{12}{6} = 2$, mais comme cela n'est pas dans les choix, on réévalue l'expression, et donc $C = \\frac{2}{2} + \\frac{3}{3}$, et ainsi $\\frac{2}{2} = 1$ et $\\frac{3}{3} = 1$, donc $C = 1 + 1$, mais comme $1 + 1 = \\frac{6}{6} + \\frac{6}{6}$, alors $C = \\frac{6}{6} + \\frac{6}{6}$, et $\\frac{6}{6} + \\frac{6}{6} = \\frac{12}{6}$, mais comme $\\frac{12}{6} = 2$, alors $C = 2$, mais cette valeur n'est pas dans les choix, or $C = \\frac{2}{x} + \\frac{3}{y}$, et $x = 2$ et $y = 3$, donc $C = \\frac{2}{2} + \\frac{3}{3}$, et $\\frac{2}{2} = 1$ et $\\frac{3}{3} = 1$, donc $C = 1 + 1$, et $1 + 1 = \\frac{6}{6} + \\frac{6}{6}$, et $\\frac{6}{6} + \\frac{6}{6} = \\frac{12}{6}$, mais comme $\\frac{12}{6} = 2$, alors $C = 2$, mais cette valeur n'est pas dans les choix, donc $C = \\frac{2}{2} + \\frac{3}{3}$, et ainsi $C = 1 + 1$, et $1 + 1 = 2$, mais comme $2 = \\frac{12}{6}$, alors $C = \\frac{12}{6}$, et $\\frac{12}{6} = \\frac{6}{6} + \\frac{6}{6}$, mais $\\frac{6}{6} = 1$ et $\\frac{6}{6} = 1$, donc $C = 1 + 1$, et ainsi $C = 2$, mais comme $C = 2$, alors $C = \\frac{12}{6}$, et $\\frac{12}{6} = \\frac{6+6}{6}$, donc $C = \\frac{6}{6} + \\frac{6}{6}$, et $\\frac{6}{6} = 1$ et $\\frac{6}{6} = 1$, donc $C = 1 + 1$, et ainsi $C = \\frac{12}{6}$, mais comme $\\frac{12}{6} = 2$, alors $C = 2$, mais cette valeur n'est pas dans les choix, donc $C = \\frac{2}{x} + \\frac{3}{y}$, et ainsi $x = 2$ et $y = 3$, donc $C = \\frac{2}{2} + \\frac{3}{3}$, et $\\frac{2}{2} = 1$ et $\\frac{3}{3} = 1$, donc $C = 1 + 1$, et $1 + 1 = \\frac{6}{6} + \\frac{6}{6}$, et $\\frac{6}{6} + \\frac{6}{6} = \\frac{12}{6}$, mais comme $\\frac{12}{6} = 2$, alors $C = 2$, mais comme $2 = \\frac{12}{6}$, alors $C = \\frac{12}{6}$, et $\\frac{12}{6} = \\frac{6+6}{6}$, donc $C = \\frac{6}{6} + \\frac{6}{6}$, et $\\frac{6}{6} = 1$ et $\\frac{6}{6} = 1$, donc $C = 1 + 1$, et ainsi $C = 2$, mais comme $C = 2$, alors $C = \\frac{12}{6}$, et $\\frac{12}{6} = \\frac{6}{6} + \\frac{6}{6}$, donc $C = \\frac{6}{6} + \\frac{6}{6}$, et $\\frac{6}{6} = 1$ et $\\frac{6}{6} = 1$, donc $C = 1 + 1$, et $1 + 1 = \\frac{6}{6} + \\frac{6}{6}$, et $\\frac{6}{6} + \\frac{6}{6} = \\frac{12}{6}$, mais comme $\\frac{12}{6} = 2$, alors $C = 2$, mais cette valeur n'est pas dans les choix, donc $C = \\frac{2}{x} + \\frac{3}{y}$, et $x = 2$ et $y = 3$, donc $C = \\frac{2}{2} + \\frac{3}{3}$, et $\\frac{2}{2} = 1$ et $\\frac{3}{3} = 1$, donc $C = 1 + 1$, et $1 + 1 = 2$, mais comme $2 = \\frac{12}{6}$, alors $C = \\frac{12}{6}$, et $\\frac{12}{6} = \\frac{6+6}{6}$, donc $C = \\frac{6}{6} + \\frac{6}{6}$, et $\\frac{6}{6} = 1$ et $\\frac{6}{6} = 1$, donc $C = 1 + 1$, et $1 + 1 = \\frac{6}{6} + \\frac{6}{6}$, et $\\frac{6}{6} + \\frac{6}{6} = \\frac{12}{6}$, mais $\\frac{12}{6} = 2$, et $2 = \\frac{12}{6}$, donc $C = \\frac{12}{6}$, et $\\frac{12}{6} = \\frac{6}{6} + \\frac{6}{6}$, et $\\frac{6}{6} = 1$ et $\\frac{6}{6} = 1$, donc $C = 1 + 1$, et $1 + 1 = \\frac{6}{6} + \\frac{6}{6}$, et $\\frac{6}{6} + \\frac{6}{6} = \\frac{12}{6}$, mais comme $\\frac{12}{6} = 2$, alors $C = 2$, mais cette valeur n'est pas dans les choix, donc $C = \\frac{2}{2} + \\frac{3}{3}$, et ainsi $\\frac{2}{2} = 1$ et $\\frac{3}{3} = 1$, donc $C = 1 + 1$, et $1 + 1 = 2$, mais comme $2 = \\frac{12}{6}$, alors $C = \\frac{12}{6}$, et $\\frac{12}{6} = \\frac{6}{6} + \\frac{6}{6}$, donc $C = \\frac{6}{6} + \\frac{6}{6}$, et $\\frac{6}{6} = 1$ et $\\frac{6}{6} = 1$, donc $C = 1 + 1$, et $1 + 1 = \\frac{6}{6} + \\frac{6}{6}$, et $\\frac{6}{6} + \\frac{6}{6} = \\frac{12}{6}$, mais $\\frac{12}{6} = 2$, et ainsi $C = \\frac{12}{6}$, mais $\\frac{12}{6} = \\frac{6}{",
     "parse_error": "Bad escaped character in JSON at position 2174 (line 17 column 1099)"
+  },
+  {
+    "titre": "UNITES, GRANDEURS PHYSIQUES",
+    "matiere": "Histoire des sciences",
+    "questions": [
+      {
+        "question": "Qu'est-ce que le coefficient k d'un moteur à courant continu à aimant permanent ?",
+        "type": "qcm",
+        "choix": [
+          "Rapport de la tension et de la vitesse de rotation",
+          "Rapport du couple et de l'intensité",
+          "Rapport de la puissance et de la vitesse",
+          "Rapport de la masse et de la hauteur"
+        ],
+        "reponse": "B",
+        "explication": "Le coefficient k est obtenu par le rapport du couple et de l'intensité ou par le rapport de la tension et de la vitesse de rotation."
+      },
+      {
+        "question": "Quelle est l'unité du coefficient k ?",
+        "type": "qcm",
+        "choix": [
+          "N.m/A",
+          "V/(rad.s⁻¹)",
+          "J/kg",
+          "W/m"
+        ],
+        "reponse": "A",
+        "explication": "Les unités du coefficient k sont N.m/A ou V/(rad.s⁻¹)."
+      },
+      {
+        "question": "Quelle est la vitesse moyenne d'un train qui parcourt 60 km en 30 min ?",
+        "type": "qcm",
+        "choix": [
+          "2 km/h",
+          "4 km/h",
+          "120 km/h",
+          "60 km/h"
+        ],
+        "reponse": "C",
+        "explication": "La vitesse moyenne est calculée en divisant la distance parcourue par le temps mis, soit 60 km / 0,5 h = 120 km/h."
+      },
+      {
+        "question": "Quelle est la masse d'eau dans une bouilloire qui met 15 min pour faire bouillir l'eau initialement à 20°C ?",
+        "type": "qcm",
+        "choix": [
+          "0,5 kg",
+          "1 kg",
+          "2 kg",
+          "5 kg"
+        ],
+        "reponse": "B",
+        "explication": "La masse d'eau est calculée en utilisant la formule Q = mcΔT, où Q est la quantité de chaleur, m est la masse, c est la capacité thermique et ΔT est la variation de température."
+      },
+      {
+        "question": "Quelle est la puissance dépensée par une fusée de 130 000 tonnes qui décolle à 134 m de hauteur en 9 s ?",
+        "type": "qcm",
+        "choix": [
+          "100 kW",
+          "1000 kW",
+          "10 MW",
+          "100 MW"
+        ],
+        "reponse": "C",
+        "explication": "La puissance dépensée est calculée en utilisant la formule P = W/t, où P est la puissance, W est le travail et t est le temps."
+      },
+      {
+        "question": "Qu'est-ce que l'homogénéité d'une formule ou d'un calcul ?",
+        "type": "qcm",
+        "choix": [
+          "La cohérence des unités",
+          "La précision des calculs",
+          "La complexité des formules",
+          "La simplicité des équations"
+        ],
+        "reponse": "A",
+        "explication": "L'homogénéité d'une formule ou d'un calcul signifie que les unités sont cohérentes et que les calculs sont corrects."
+      },
+      {
+        "question": "Pourquoi est-il important de vérifier l'homogénéité d'une formule ou d'un calcul ?",
+        "type": "qcm",
+        "choix": [
+          "Pour éviter les erreurs de calcul",
+          "Pour simplifier les équations",
+          "Pour augmenter la précision",
+          "Pour diminuer la complexité"
+        ],
+        "reponse": "A",
+        "explication": "Il est important de vérifier l'homogénéité d'une formule ou d'un calcul pour éviter les erreurs de calcul et garantir la cohérence des unités."
+      },
+      {
+        "question": "Quelle est la différence entre les unités de mesure de la vitesse et de l'accélération ?",
+        "type": "qcm",
+        "choix": [
+          "La vitesse est mesurée en m/s, l'accélération en m/s²",
+          "La vitesse est mesurée en km/h, l'accélération en m/s²",
+          "La vitesse est mesurée en m/s, l'accélération en km/h",
+          "La vitesse est mesurée en km/h, l'accélération en km/h"
+        ],
+        "reponse": "A",
+        "explication": "La vitesse est mesurée en m/s, tandis que l'accélération est mesurée en m/s²."
+      },
+      {
+        "question": "Qu'est-ce que la capacité thermique spécifique de l'eau ?",
+        "type": "qcm",
+        "choix": [
+          "4186 J/kg.K",
+          "1000 J/kg.K",
+          "500 J/kg.K",
+          "2000 J/kg.K"
+        ],
+        "reponse": "A",
+        "explication": "La capacité thermique spécifique de l'eau est de 4186 J/kg.K."
+      },
+      {
+        "question": "Quelle est la formule pour calculer la quantité de chaleur transférée ?",
+        "type": "qcm",
+        "choix": [
+          "Q = mcΔT",
+          "Q = m/ΔT",
+          "Q = c/ΔT",
+          "Q = ΔT/m"
+        ],
+        "reponse": "A",
+        "explication": "La formule pour calculer la quantité de chaleur transférée est Q = mcΔT, où Q est la quantité de chaleur, m est la masse, c est la capacité thermique et ΔT est la variation de température."
+      },
+      {
+        "question": "Qu'est-ce que la puissance ?",
+        "type": "qcm",
+        "choix": [
+          "La quantité de chaleur transférée",
+          "Le travail effectué par unité de temps",
+          "La vitesse d'un objet",
+          "L'accélération d'un objet"
+        ],
+        "reponse": "B",
+        "explication": "La puissance est le travail effectué par unité de temps."
+      },
+      {
+        "question": "Quelle est la formule pour calculer la puissance ?",
+        "type": "qcm",
+        "choix": [
+          "P = W/t",
+          "P = W/t²",
+          "P = t/W",
+          "P = W²/t"
+        ],
+        "reponse": "A",
+        "explication": "La formule pour calculer la puissance est P = W/t, où P est la puissance, W est le travail et t est le temps."
+      },
+      {
+        "question": "Qu'est-ce que le travail effectué par une force ?",
+        "type": "qcm",
+        "choix": [
+          "La quantité de chaleur transférée",
+          "La force appliquée multipliée par la distance parcourue",
+          "La vitesse d'un objet",
+          "L'accélération d'un objet"
+        ],
+        "reponse": "B",
+        "explication": "Le travail effectué par une force est la force appliquée multipliée par la distance parcourue."
+      },
+      {
+        "question": "Quelle est la différence entre la tension et la vitesse de rotation ?",
+        "type": "qcm",
+        "choix": [
+          "La tension est mesurée en V, la vitesse de rotation en rad/s",
+          "La tension est mesurée en V, la vitesse de rotation en m/s",
+          "La tension est mesurée en A, la vitesse de rotation en rad/s",
+          "La tension est mesurée en A, la vitesse de rotation en m/s"
+        ],
+        "reponse": "A",
+        "explication": "La tension est mesurée en V, tandis que la vitesse de rotation est mesurée en rad/s."
+      },
+      {
+        "question": "Qu'est-ce que le couple d'une force ?",
+        "type": "qcm",
+        "choix": [
+          "La force appliquée multipliée par la distance parcourue",
+          "La force appliquée multipliée par la distance de l'axe de rotation",
+          "La vitesse d'un objet",
+          "L'accélération d'un objet"
+        ],
+        "reponse": "B",
+        "explication": "Le couple d'une force est la force appliquée multipliée par la distance de l'axe de rotation."
+      },
+      {
+        "question": "Quelle est la différence entre la puissance et l'énergie ?",
+        "type": "qcm",
+        "choix": [
+          "La puissance est la quantité de chaleur transférée, l'énergie est le travail effectué",
+          "La puissance est le travail effectué par unité de temps, l'énergie est la quantité de chaleur transférée",
+          "La puissance est le travail effectué, l'énergie est la quantité de chaleur transférée",
+          "La puissance est la quantité de chaleur transférée, l'énergie est le travail effectué par unité de temps"
+        ],
+        "reponse": "B",
+        "explication": "La puissance est le travail effectué par unité de temps, tandis que l'énergie est la quantité de chaleur transférée ou le travail effectué."
+      }
+    ],
+    "exercices": [
+      {
+        "enonce": "Un objet de 5 kg est soumis à une force de 10 N pendant 2 s. Quel est le travail effectué par la force ?",
+        "corrige": "Le travail effectué par la force est de 10 N x 2 s = 20 J."
+      },
+      {
+        "enonce": "Un moteur à courant continu à aimant permanent a un coefficient k de 0,5 N.m/A. Quelle est la tension à la sortie du moteur si la vitesse de rotation est de 100 rad/s ?",
+        "corrige": "La tension à la sortie du moteur est de 0,5 N.m/A x 100 rad/s = 50 V."
+      },
+      {
+        "enonce": "Un système a une énergie potentielle de 100 J et une énergie cinétique de 50 J. Quelle est l'énergie totale du système ?",
+        "corrige": "L'énergie totale du système est de 100 J + 50 J = 150 J."
+      },
+      {
+        "enonce": "Un objet de 2 kg est soumis à une force de 5 N pendant 3 s. Quel est le travail effectué par la force ?",
+        "corrige": "Le travail effectué par la force est de 5 N x 3 s = 15 J."
+      },
+      {
+        "enonce": "Un moteur à courant continu à aimant permanent a un coefficient k de 0,2 N.m/A. Quelle est la vitesse de rotation du moteur si la tension à la sortie est de 20 V ?",
+        "corrige": "La vitesse de rotation du moteur est de 20 V / 0,2 N.m/A = 100 rad/s."
+      }
+    ]
   }
 ]
