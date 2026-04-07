@@ -7,34 +7,22 @@
   },
   {
     "titre": "UNITES, GRANDEURS PHYSIQUES",
-    "matiere": "Histoire des sciences",
+    "matiere": "Sciences de l'Ingénieur",
     "questions": [
       {
-        "question": "Qu'est-ce que le coefficient k d'un moteur à courant continu à aimant permanent ?",
-        "type": "qcm",
-        "choix": [
-          "Rapport de la tension et de la vitesse de rotation",
-          "Rapport du couple et de l'intensité",
-          "Rapport de la puissance et de la vitesse",
-          "Rapport de la masse et de la hauteur"
-        ],
-        "reponse": "B",
-        "explication": "Le coefficient k est obtenu par le rapport du couple et de l'intensité ou par le rapport de la tension et de la vitesse de rotation."
-      },
-      {
-        "question": "Quelle est l'unité du coefficient k ?",
+        "question": "Quelle est l'unité du coefficient k d'un moteur à courant continu à aimant permanent?",
         "type": "qcm",
         "choix": [
           "N.m/A",
           "V/(rad.s⁻¹)",
-          "J/kg",
-          "W/m"
+          "J.kg⁻¹.K⁻¹",
+          "W"
         ],
-        "reponse": "A",
-        "explication": "Les unités du coefficient k sont N.m/A ou V/(rad.s⁻¹)."
+        "reponse": "N.m/A",
+        "explication": "Le coefficient k est obtenu par le rapport couple/intensité ou par le rapport de la tension / la vitesse de rotation."
       },
       {
-        "question": "Quelle est la vitesse moyenne d'un train qui parcourt 60 km en 30 min ?",
+        "question": "Quelle est la vitesse moyenne d'un train qui parcourt 60 km en 30 min?",
         "type": "qcm",
         "choix": [
           "2 km/h",
@@ -42,11 +30,11 @@
           "120 km/h",
           "60 km/h"
         ],
-        "reponse": "C",
-        "explication": "La vitesse moyenne est calculée en divisant la distance parcourue par le temps mis, soit 60 km / 0,5 h = 120 km/h."
+        "reponse": "2 km/h",
+        "explication": "La vitesse moyenne est calculée en divisant la distance parcourue par le temps mis, en convertissant le temps en heures."
       },
       {
-        "question": "Quelle est la masse d'eau dans une bouilloire qui met 15 min pour faire bouillir l'eau initialement à 20°C ?",
+        "question": "Quelle est la masse d'eau dont il faut 4 186 J.kg⁻¹.K⁻¹ pour faire bouillir l'eau initialement à 20°C avec une bouilloire de 1300 W en 15 min?",
         "type": "qcm",
         "choix": [
           "0,5 kg",
@@ -54,174 +42,226 @@
           "2 kg",
           "5 kg"
         ],
-        "reponse": "B",
-        "explication": "La masse d'eau est calculée en utilisant la formule Q = mcΔT, où Q est la quantité de chaleur, m est la masse, c est la capacité thermique et ΔT est la variation de température."
+        "reponse": "1 kg",
+        "explication": "La masse d'eau est calculée en divisant l'énergie nécessaire pour faire bouillir l'eau par la constante de chaleur spécifique de l'eau."
       },
       {
-        "question": "Quelle est la puissance dépensée par une fusée de 130 000 tonnes qui décolle à 134 m de hauteur en 9 s ?",
+        "question": "Quelle est la puissance dépensée par une fusée de 130 000 tonnes qui décolle à 134 m de hauteur en 9 s?",
         "type": "qcm",
         "choix": [
-          "100 kW",
-          "1000 kW",
-          "10 MW",
-          "100 MW"
+          "1000 W",
+          "10000 W",
+          "1000000 W",
+          "100000000 W"
         ],
-        "reponse": "C",
-        "explication": "La puissance dépensée est calculée en utilisant la formule P = W/t, où P est la puissance, W est le travail et t est le temps."
+        "reponse": "1000000 W",
+        "explication": "La puissance est calculée en divisant l'énergie nécessaire pour décoller la fusée par le temps mis, en convertissant l'énergie en watt."
       },
       {
-        "question": "Qu'est-ce que l'homogénéité d'une formule ou d'un calcul ?",
+        "question": "Quelle est l'unité de mesure de la puissance?",
         "type": "qcm",
         "choix": [
-          "La cohérence des unités",
-          "La précision des calculs",
-          "La complexité des formules",
-          "La simplicité des équations"
+          "Watt",
+          "Joule",
+          "Newton",
+          "Kilogramme"
         ],
-        "reponse": "A",
-        "explication": "L'homogénéité d'une formule ou d'un calcul signifie que les unités sont cohérentes et que les calculs sont corrects."
+        "reponse": "Watt",
+        "explication": "La puissance est mesurée en watt, qui est l'unité de mesure de la puissance dans le système international."
       },
       {
-        "question": "Pourquoi est-il important de vérifier l'homogénéité d'une formule ou d'un calcul ?",
+        "question": "Qu'est-ce que le coefficient k d'un moteur à courant continu à aimant permanent?",
         "type": "qcm",
         "choix": [
-          "Pour éviter les erreurs de calcul",
-          "Pour simplifier les équations",
-          "Pour augmenter la précision",
-          "Pour diminuer la complexité"
+          "Le rapport couple/intensité",
+          "Le rapport tension/vitesse de rotation",
+          "Le rapport puissance/énergie",
+          "Le rapport masse/volume"
         ],
-        "reponse": "A",
-        "explication": "Il est important de vérifier l'homogénéité d'une formule ou d'un calcul pour éviter les erreurs de calcul et garantir la cohérence des unités."
+        "reponse": "Le rapport couple/intensité",
+        "explication": "Le coefficient k est obtenu par le rapport couple/intensité ou par le rapport de la tension / la vitesse de rotation."
       },
       {
-        "question": "Quelle est la différence entre les unités de mesure de la vitesse et de l'accélération ?",
+        "question": "Quelle est la constante de chaleur spécifique de l'eau?",
         "type": "qcm",
         "choix": [
-          "La vitesse est mesurée en m/s, l'accélération en m/s²",
-          "La vitesse est mesurée en km/h, l'accélération en m/s²",
-          "La vitesse est mesurée en m/s, l'accélération en km/h",
-          "La vitesse est mesurée en km/h, l'accélération en km/h"
+          "4 186 J.kg⁻¹.K⁻¹",
+          "4186 J.kg⁻¹.K⁻¹",
+          "418,6 J.kg⁻¹.K⁻¹",
+          "41,86 J.kg⁻¹.K⁻¹"
         ],
-        "reponse": "A",
-        "explication": "La vitesse est mesurée en m/s, tandis que l'accélération est mesurée en m/s²."
+        "reponse": "4 186 J.kg⁻¹.K⁻¹",
+        "explication": "La constante de chaleur spécifique de l'eau est de 4 186 J.kg⁻¹.K⁻¹."
       },
       {
-        "question": "Qu'est-ce que la capacité thermique spécifique de l'eau ?",
+        "question": "Qu'est-ce que l'homogénéité d'une formule ou d'un calcul?",
         "type": "qcm",
         "choix": [
-          "4186 J/kg.K",
-          "1000 J/kg.K",
-          "500 J/kg.K",
-          "2000 J/kg.K"
+          "La vérification de l'unité de mesure",
+          "La vérification de la cohérence des unités",
+          "La vérification de la précision du résultat",
+          "La vérification de la complexité du calcul"
         ],
-        "reponse": "A",
-        "explication": "La capacité thermique spécifique de l'eau est de 4186 J/kg.K."
+        "reponse": "La vérification de la cohérence des unités",
+        "explication": "L'homogénéité d'une formule ou d'un calcul est la vérification de la cohérence des unités utilisées."
       },
       {
-        "question": "Quelle est la formule pour calculer la quantité de chaleur transférée ?",
+        "question": "Quelle est la vitesse de rotation d'un moteur à courant continu à aimant permanent?",
         "type": "qcm",
         "choix": [
-          "Q = mcΔT",
-          "Q = m/ΔT",
-          "Q = c/ΔT",
-          "Q = ΔT/m"
+          "En radian par seconde",
+          "En tour par minute",
+          "En kilomètre par heure",
+          "En mètre par seconde"
         ],
-        "reponse": "A",
-        "explication": "La formule pour calculer la quantité de chaleur transférée est Q = mcΔT, où Q est la quantité de chaleur, m est la masse, c est la capacité thermique et ΔT est la variation de température."
+        "reponse": "En radian par seconde",
+        "explication": "La vitesse de rotation d'un moteur à courant continu à aimant permanent est mesurée en radian par seconde."
       },
       {
-        "question": "Qu'est-ce que la puissance ?",
+        "question": "Qu'est-ce que le couple d'un moteur à courant continu à aimant permanent?",
         "type": "qcm",
         "choix": [
-          "La quantité de chaleur transférée",
-          "Le travail effectué par unité de temps",
-          "La vitesse d'un objet",
-          "L'accélération d'un objet"
+          "La force exercée par le moteur",
+          "Le moment exercé par le moteur",
+          "La puissance exercée par le moteur",
+          "L'énergie exercée par le moteur"
         ],
-        "reponse": "B",
-        "explication": "La puissance est le travail effectué par unité de temps."
+        "reponse": "Le moment exercé par le moteur",
+        "explication": "Le couple d'un moteur à courant continu à aimant permanent est le moment exercé par le moteur."
       },
       {
-        "question": "Quelle est la formule pour calculer la puissance ?",
+        "question": "Quelle est la puissance de la bouilloire en watt?",
         "type": "qcm",
         "choix": [
-          "P = W/t",
-          "P = W/t²",
-          "P = t/W",
-          "P = W²/t"
+          "1000 W",
+          "1300 W",
+          "1500 W",
+          "2000 W"
         ],
-        "reponse": "A",
-        "explication": "La formule pour calculer la puissance est P = W/t, où P est la puissance, W est le travail et t est le temps."
+        "reponse": "1300 W",
+        "explication": "La puissance de la bouilloire est de 1300 W."
       },
       {
-        "question": "Qu'est-ce que le travail effectué par une force ?",
+        "question": "Qu'est-ce que la constante de gravitation?",
         "type": "qcm",
         "choix": [
-          "La quantité de chaleur transférée",
-          "La force appliquée multipliée par la distance parcourue",
-          "La vitesse d'un objet",
-          "L'accélération d'un objet"
+          "9,81 m/s²",
+          "9,8 m/s²",
+          "10 m/s²",
+          "11 m/s²"
         ],
-        "reponse": "B",
-        "explication": "Le travail effectué par une force est la force appliquée multipliée par la distance parcourue."
+        "reponse": "9,81 m/s²",
+        "explication": "La constante de gravitation est de 9,81 m/s²."
       },
       {
-        "question": "Quelle est la différence entre la tension et la vitesse de rotation ?",
+        "question": "Quelle est la masse de la fusée en kilogramme?",
         "type": "qcm",
         "choix": [
-          "La tension est mesurée en V, la vitesse de rotation en rad/s",
-          "La tension est mesurée en V, la vitesse de rotation en m/s",
-          "La tension est mesurée en A, la vitesse de rotation en rad/s",
-          "La tension est mesurée en A, la vitesse de rotation en m/s"
+          "130 000 kg",
+          "130 000 000 kg",
+          "1 300 000 kg",
+          "13 000 000 kg"
         ],
-        "reponse": "A",
-        "explication": "La tension est mesurée en V, tandis que la vitesse de rotation est mesurée en rad/s."
+        "reponse": "130 000 kg",
+        "explication": "La masse de la fusée est de 130 000 kg."
       },
       {
-        "question": "Qu'est-ce que le couple d'une force ?",
+        "question": "Qu'est-ce que l'énergie nécessaire pour faire bouillir l'eau?",
         "type": "qcm",
         "choix": [
-          "La force appliquée multipliée par la distance parcourue",
-          "La force appliquée multipliée par la distance de l'axe de rotation",
-          "La vitesse d'un objet",
-          "L'accélération d'un objet"
+          "4 186 J.kg⁻¹.K⁻¹",
+          "4186 J.kg⁻¹.K⁻¹",
+          "418,6 J.kg⁻¹.K⁻¹",
+          "41,86 J.kg⁻¹.K⁻¹"
         ],
-        "reponse": "B",
-        "explication": "Le couple d'une force est la force appliquée multipliée par la distance de l'axe de rotation."
+        "reponse": "4 186 J.kg⁻¹.K⁻¹",
+        "explication": "L'énergie nécessaire pour faire bouillir l'eau est de 4 186 J.kg⁻¹.K⁻¹."
       },
       {
-        "question": "Quelle est la différence entre la puissance et l'énergie ?",
+        "question": "Quelle est la distance parcourue par le train en mètre?",
         "type": "qcm",
         "choix": [
-          "La puissance est la quantité de chaleur transférée, l'énergie est le travail effectué",
-          "La puissance est le travail effectué par unité de temps, l'énergie est la quantité de chaleur transférée",
-          "La puissance est le travail effectué, l'énergie est la quantité de chaleur transférée",
-          "La puissance est la quantité de chaleur transférée, l'énergie est le travail effectué par unité de temps"
+          "60 000 m",
+          "60 m",
+          "600 m",
+          "6 000 m"
         ],
-        "reponse": "B",
-        "explication": "La puissance est le travail effectué par unité de temps, tandis que l'énergie est la quantité de chaleur transférée ou le travail effectué."
+        "reponse": "60 000 m",
+        "explication": "La distance parcourue par le train est de 60 000 m."
+      },
+      {
+        "question": "Qu'est-ce que la vitesse de décollage de la fusée?",
+        "type": "qcm",
+        "choix": [
+          "En mètre par seconde",
+          "En kilomètre par heure",
+          "En tour par minute",
+          "En radian par seconde"
+        ],
+        "reponse": "En mètre par seconde",
+        "explication": "La vitesse de décollage de la fusée est mesurée en mètre par seconde."
+      },
+      {
+        "question": "Quelle est la hauteur de décollage de la fusée en mètre?",
+        "type": "qcm",
+        "choix": [
+          "134 m",
+          "1340 m",
+          "13 400 m",
+          "134 000 m"
+        ],
+        "reponse": "134 m",
+        "explication": "La hauteur de décollage de la fusée est de 134 m."
+      },
+      {
+        "question": "Qu'est-ce que le temps de décollage de la fusée en seconde?",
+        "type": "qcm",
+        "choix": [
+          "9 s",
+          "90 s",
+          "900 s",
+          "9000 s"
+        ],
+        "reponse": "9 s",
+        "explication": "Le temps de décollage de la fusée est de 9 s."
+      },
+      {
+        "question": "Quelle est la puissance de la bouilloire en cheval-vapeur?",
+        "type": "qcm",
+        "choix": [
+          "1,73 ch",
+          "2 ch",
+          "3 ch",
+          "4 ch"
+        ],
+        "reponse": "1,73 ch",
+        "explication": "La puissance de la bouilloire est de 1,73 ch."
+      },
+      {
+        "question": "Qu'est-ce que la température initiale de l'eau en degré Celsius?",
+        "type": "qcm",
+        "choix": [
+          "20°C",
+          "50°C",
+          "100°C",
+          "200°C"
+        ],
+        "reponse": "20°C",
+        "explication": "La température initiale de l'eau est de 20°C."
       }
     ],
     "exercices": [
       {
-        "enonce": "Un objet de 5 kg est soumis à une force de 10 N pendant 2 s. Quel est le travail effectué par la force ?",
-        "corrige": "Le travail effectué par la force est de 10 N x 2 s = 20 J."
+        "enonce": "Calculer la vitesse moyenne d'un train qui parcourt 60 km en 30 min.",
+        "corrige": "La vitesse moyenne est de 2 km/h."
       },
       {
-        "enonce": "Un moteur à courant continu à aimant permanent a un coefficient k de 0,5 N.m/A. Quelle est la tension à la sortie du moteur si la vitesse de rotation est de 100 rad/s ?",
-        "corrige": "La tension à la sortie du moteur est de 0,5 N.m/A x 100 rad/s = 50 V."
+        "enonce": "Calculer la masse d'eau dont il faut 4 186 J.kg⁻¹.K⁻¹ pour faire bouillir l'eau initialement à 20°C avec une bouilloire de 1300 W en 15 min.",
+        "corrige": "La masse d'eau est de 1 kg."
       },
       {
-        "enonce": "Un système a une énergie potentielle de 100 J et une énergie cinétique de 50 J. Quelle est l'énergie totale du système ?",
-        "corrige": "L'énergie totale du système est de 100 J + 50 J = 150 J."
-      },
-      {
-        "enonce": "Un objet de 2 kg est soumis à une force de 5 N pendant 3 s. Quel est le travail effectué par la force ?",
-        "corrige": "Le travail effectué par la force est de 5 N x 3 s = 15 J."
-      },
-      {
-        "enonce": "Un moteur à courant continu à aimant permanent a un coefficient k de 0,2 N.m/A. Quelle est la vitesse de rotation du moteur si la tension à la sortie est de 20 V ?",
-        "corrige": "La vitesse de rotation du moteur est de 20 V / 0,2 N.m/A = 100 rad/s."
+        "enonce": "Calculer la puissance dépensée par une fusée de 130 000 tonnes qui décolle à 134 m de hauteur en 9 s.",
+        "corrige": "La puissance est de 1000000 W."
       }
     ]
   }
